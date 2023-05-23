@@ -3,11 +3,11 @@
   <title>CoderZone</title>
   
   <subtitle>前端coder</subtitle>
-  <link href="https://lhlsnowing.github.io/atom.xml" rel="self"/>
+  <link href="https://www.example.com/atom.xml" rel="self"/>
   
-  <link href="https://lhlsnowing.github.io/"/>
+  <link href="https://www.example.com/"/>
   <updated>2023-05-22T08:54:25.935Z</updated>
-  <id>https://lhlsnowing.github.io/</id>
+  <id>https://www.example.com/</id>
   
   <author>
     <name>CoderLHL</name>
@@ -18,8 +18,8 @@
   
   <entry>
     <title>newdraft</title>
-    <link href="https://lhlsnowing.github.io/2023/05/22/newdraft/"/>
-    <id>https://lhlsnowing.github.io/2023/05/22/newdraft/</id>
+    <link href="https://www.example.com/2023/05/22/newdraft/"/>
+    <id>https://www.example.com/2023/05/22/newdraft/</id>
     <published>2023-05-22T08:54:25.000Z</published>
     <updated>2023-05-22T08:54:25.935Z</updated>
     
@@ -27,14 +27,14 @@
     
     
     
-    <category term="this is newfraft" scheme="https://lhlsnowing.github.io/tags/this-is-newfraft/"/>
+    <category term="this is newfraft" scheme="https://www.example.com/tags/this-is-newfraft/"/>
     
   </entry>
   
   <entry>
     <title>first blog</title>
-    <link href="https://lhlsnowing.github.io/2023/05/22/first-blog/"/>
-    <id>https://lhlsnowing.github.io/2023/05/22/first-blog/</id>
+    <link href="https://www.example.com/2023/05/22/first-blog/"/>
+    <id>https://www.example.com/2023/05/22/first-blog/</id>
     <published>2023-05-22T08:19:36.000Z</published>
     <updated>2023-05-22T08:21:46.397Z</updated>
     
@@ -42,14 +42,14 @@
     
     
     
-    <category term="重写博客喽" scheme="https://lhlsnowing.github.io/tags/%E9%87%8D%E5%86%99%E5%8D%9A%E5%AE%A2%E5%96%BD/"/>
+    <category term="重写博客喽" scheme="https://www.example.com/tags/%E9%87%8D%E5%86%99%E5%8D%9A%E5%AE%A2%E5%96%BD/"/>
     
   </entry>
   
   <entry>
     <title>Hello World</title>
-    <link href="https://lhlsnowing.github.io/2023/05/22/hello-world/"/>
-    <id>https://lhlsnowing.github.io/2023/05/22/hello-world/</id>
+    <link href="https://www.example.com/2023/05/22/hello-world/"/>
+    <id>https://www.example.com/2023/05/22/hello-world/</id>
     <published>2023-05-22T07:32:31.418Z</published>
     <updated>2023-05-22T07:32:31.418Z</updated>
     
