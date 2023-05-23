@@ -4,8 +4,9 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="newpage, 落雪L">
-    <meta name="description" content="没有理所当然的成功，也没有毫无道理的平庸">
+    <meta name="keywords" content="GET和POST的请求的区别, 落雪L">
+    <meta name="description" content="GET和POST的请求的区别Post 和 Get 是 HTTP 请求的两种方法，其区别如下：
+应用场景：GET 请求是一个幂等的请求，一般 Get 请求用于对服务器资源不会产生影响的场景，比如说请求一个网页的资源。而 Post 不是一个幂等">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -17,7 +18,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>newpage | 落雪L</title>
+    <title>GET和POST的请求的区别 | 落雪L</title>
     <link rel="icon" type="image/png" href="/snow.png">
     
     <style>
@@ -324,12 +325,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/15.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/20.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">newpage</h1>
+                    <h1 class="description center-align post-title">GET和POST的请求的区别</h1>
                 </div>
             </div>
         </div>
@@ -351,12 +352,25 @@
             <div class="row tag-cate">
                 <div class="col s7">
                     
-                          <div class="article-tag">
-                            <span class="chip bg-color">No tag</span>
-                          </div>
+                    <div class="article-tag">
+                        
+                            <a href="/tags/%E7%BD%91%E7%BB%9C%E8%AF%B7%E6%B1%82-get-post/">
+                                <span class="chip bg-color">网络请求 get post</span>
+                            </a>
+                        
+                    </div>
                     
                 </div>
                 <div class="col s5 right-align">
+                    
+                    <div class="post-cate">
+                        <i class="fas fa-bookmark fa-fw icon-category"></i>
+                        
+                            <a href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/" class="post-category">
+                                计算机网络
+                            </a>
+                        
+                    </div>
                     
                 </div>
             </div>
@@ -365,7 +379,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>Publish Date:&nbsp;&nbsp;
-                    2023-05-23
+                    2023-05-24
                 </div>
                 
 
@@ -374,7 +388,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>Word Count:&nbsp;&nbsp;
-                    0
+                    320
                 </div>
                 
 
@@ -394,7 +408,14 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                
+                <h1 id="GET和POST的请求的区别"><a href="#GET和POST的请求的区别" class="headerlink" title="GET和POST的请求的区别"></a>GET和POST的请求的区别</h1><p>Post 和 Get 是 HTTP 请求的两种方法，其区别如下：</p>
+<h3 id="应用场景："><a href="#应用场景：" class="headerlink" title="应用场景："></a>应用场景：</h3><p>GET 请求是一个幂等的请求，一般 Get 请求用于对服务器资源不会产生影响的场景，比如说请求一个网页的资源。而 Post 不是一个幂等的请求，一般用于对服务器资源会产生影响的情景，比如注册用户这一类的操作。</p>
+<h3 id="是否缓存："><a href="#是否缓存：" class="headerlink" title="是否缓存："></a>是否缓存：</h3><p>因为两者应用场景不同，浏览器一般会对 Get 请求缓存，但很少对 Post 请求缓存。</p>
+<h3 id="发送的报文格式："><a href="#发送的报文格式：" class="headerlink" title="发送的报文格式："></a>发送的报文格式：</h3><p>Get 请求的报文中实体部分为空，Post 请求的报文中实体部分一般为向服务器发送的数据。</p>
+<h3 id="安全性："><a href="#安全性：" class="headerlink" title="安全性："></a>安全性：</h3><p>Get 请求可以将请求的参数放入 url 中向服务器发送，这样的做法相对于 Post 请求来说是不太安全的，因为请求的 url 会被保留在历史记录中。</p>
+<h3 id="请求长度："><a href="#请求长度：" class="headerlink" title="请求长度："></a>请求长度：</h3><p>浏览器由于对 url 长度的限制，所以会影响 get 请求发送数据时的长度。这个限制是浏览器规定的，并不是 RFC 规定的。</p>
+<h2 id="参数类型："><a href="#参数类型：" class="headerlink" title="参数类型："></a>参数类型：</h2><p>post 的参数传递支持更多的数据类型。</p>
+
                 
             </div>
             <hr/>
@@ -420,7 +441,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://lhlsnowing.github.io/newpage/index.html">https://lhlsnowing.github.io/newpage/index.html</a>
+                    <a href="https://lhlsnowing.github.io/2023/05/24/get-he-post-de-qing-qiu-de-qu-bie/">https://lhlsnowing.github.io/2023/05/24/get-he-post-de-qing-qiu-de-qu-bie/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -457,7 +478,11 @@
                 <div class="post-meta__tag-list" style="display: inline-block;">
                     
                         <div class="article-tag">
-                            <span class="chip bg-color">No tag</span>
+                            
+                                <a href="/tags/%E7%BD%91%E7%BB%9C%E8%AF%B7%E6%B1%82-get-post/">
+                                    <span class="chip bg-color">网络请求 get post</span>
+                                </a>
+                            
                         </div>
                     
                 </div>
@@ -750,13 +775,13 @@
                 <i class="far fa-dot-circle"></i>&nbsp;Current
             </div>
             <div class="card">
-                <a href="/newpage/index.html">
+                <a href="/2023/05/24/get-he-post-de-qing-qiu-de-qu-bie/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/15.jpg" class="responsive-img" alt="newpage">
+                        <img src="/medias/featureimages/20.jpg" class="responsive-img" alt="GET和POST的请求的区别">
                         
-                        <span class="card-title">newpage</span>
+                        <span class="card-title">GET和POST的请求的区别</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -767,17 +792,29 @@
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2023-05-23
+                                <i class="far fa-clock fa-fw icon-date"></i>2023-05-24
                             </span>
                         <span class="publish-author">
                             
-                            <i class="fas fa-user fa-fw"></i>
-                            落雪L
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/" class="post-category">
+                                    计算机网络
+                                </a>
+                            
                             
                         </span>
                     </div>
                 </div>
 
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/%E7%BD%91%E7%BB%9C%E8%AF%B7%E6%B1%82-get-post/">
+                        <span class="chip bg-color">网络请求 get post</span>
+                    </a>
+                    
+                </div>
                 
             </div>
         </div>
@@ -785,16 +822,16 @@
         
         <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge right-badge text-color">
-                Current&nbsp;<i class="far fa-dot-circle"></i>
+                Next&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/newpage/index.html">
+                <a href="/2023/05/23/yu-fa-fen-xi/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/15.jpg" class="responsive-img" alt="newpage">
+                        <img src="/medias/featureimages/18.jpg" class="responsive-img" alt="语法分析">
                         
-                        <span class="card-title">newpage</span>
+                        <span class="card-title">语法分析</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -809,13 +846,24 @@
                             </span>
                         <span class="publish-author">
                             
-                            <i class="fas fa-user fa-fw"></i>
-                            落雪L
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/%E7%BC%96%E8%AF%91%E5%8E%9F%E7%90%86/" class="post-category">
+                                    编译原理
+                                </a>
+                            
                             
                         </span>
                     </div>
                 </div>
-
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/%E8%AF%AD%E6%B3%95%E5%88%86%E6%9E%90/">
+                        <span class="chip bg-color">语法分析</span>
+                    </a>
+                    
+                </div>
                 
             </div>
         </div>

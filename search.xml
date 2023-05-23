@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>GET和POST的请求的区别</title>
+      <link href="/2023/05/24/get-he-post-de-qing-qiu-de-qu-bie/"/>
+      <url>/2023/05/24/get-he-post-de-qing-qiu-de-qu-bie/</url>
+      
+        <content type="html"><![CDATA[<h1 id="GET和POST的请求的区别"><a href="#GET和POST的请求的区别" class="headerlink" title="GET和POST的请求的区别"></a>GET和POST的请求的区别</h1><p>Post 和 Get 是 HTTP 请求的两种方法，其区别如下：</p><h3 id="应用场景："><a href="#应用场景：" class="headerlink" title="应用场景："></a>应用场景：</h3><p>GET 请求是一个幂等的请求，一般 Get 请求用于对服务器资源不会产生影响的场景，比如说请求一个网页的资源。而 Post 不是一个幂等的请求，一般用于对服务器资源会产生影响的情景，比如注册用户这一类的操作。</p><h3 id="是否缓存："><a href="#是否缓存：" class="headerlink" title="是否缓存："></a>是否缓存：</h3><p>因为两者应用场景不同，浏览器一般会对 Get 请求缓存，但很少对 Post 请求缓存。</p><h3 id="发送的报文格式："><a href="#发送的报文格式：" class="headerlink" title="发送的报文格式："></a>发送的报文格式：</h3><p>Get 请求的报文中实体部分为空，Post 请求的报文中实体部分一般为向服务器发送的数据。</p><h3 id="安全性："><a href="#安全性：" class="headerlink" title="安全性："></a>安全性：</h3><p>Get 请求可以将请求的参数放入 url 中向服务器发送，这样的做法相对于 Post 请求来说是不太安全的，因为请求的 url 会被保留在历史记录中。</p><h3 id="请求长度："><a href="#请求长度：" class="headerlink" title="请求长度："></a>请求长度：</h3><p>浏览器由于对 url 长度的限制，所以会影响 get 请求发送数据时的长度。这个限制是浏览器规定的，并不是 RFC 规定的。</p><h2 id="参数类型："><a href="#参数类型：" class="headerlink" title="参数类型："></a>参数类型：</h2><p>post 的参数传递支持更多的数据类型。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 计算机网络 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 网络请求 get post </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>语法分析</title>
       <link href="/2023/05/23/yu-fa-fen-xi/"/>
       <url>/2023/05/23/yu-fa-fen-xi/</url>
@@ -71,25 +96,6 @@
         <tags>
             
             <tag> 词法分析 </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>first blog</title>
-      <link href="/2023/05/22/first-blog/"/>
-      <url>/2023/05/22/first-blog/</url>
-      
-        <content type="html"><![CDATA[]]></content>
-      
-      
-      
-        <tags>
-            
-            <tag> 重写博客喽 </tag>
             
         </tags>
       
