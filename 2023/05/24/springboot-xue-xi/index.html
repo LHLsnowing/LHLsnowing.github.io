@@ -4,12 +4,11 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="Vue后台管理系统项目总结, 落雪L">
-    <meta name="description" content="2023-5-20
-Vue后台项目总结
-token、路由导航守卫、劫持request添加authorization
-组件分类及命名，eslint检测，熟悉配置文件
-接口请求、跨域、301永久重定向，不允许更换请求（出现服务器请求服务器状况）">
+    <meta name="keywords" content="springboot学习, 落雪L">
+    <meta name="description" content="springboot项目启动不自动启动tomcat问题pom.xml需要按照以下顺序配置
+&amp;lt;dependencies&amp;gt;
+    &amp;lt;!-- 这个dependcy放在最前面 --&amp;gt;
+        &amp;lt;depende">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -21,7 +20,7 @@ token、路由导航守卫、劫持request添加authorization
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>Vue后台管理系统项目总结 | 落雪L</title>
+    <title>springboot学习 | 落雪L</title>
     <link rel="icon" type="image/png" href="/snow.png">
     
     <style>
@@ -328,12 +327,12 @@ token、路由导航守卫、劫持request添加authorization
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/10.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/15.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">Vue后台管理系统项目总结</h1>
+                    <h1 class="description center-align post-title">springboot学习</h1>
                 </div>
             </div>
         </div>
@@ -357,12 +356,8 @@ token、路由导航守卫、劫持request添加authorization
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/Vue/">
-                                <span class="chip bg-color">Vue</span>
-                            </a>
-                        
-                            <a href="/tags/%E9%A1%B9%E7%9B%AE/">
-                                <span class="chip bg-color">项目</span>
+                            <a href="/tags/springboot/">
+                                <span class="chip bg-color">springboot</span>
                             </a>
                         
                     </div>
@@ -373,8 +368,8 @@ token、路由导航守卫、劫持request添加authorization
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/Vue/" class="post-category">
-                                Vue
+                            <a href="/categories/springboot/" class="post-category">
+                                springboot
                             </a>
                         
                     </div>
@@ -395,7 +390,7 @@ token、路由导航守卫、劫持request添加authorization
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>Word Count:&nbsp;&nbsp;
-                    208
+                    96
                 </div>
                 
 
@@ -415,25 +410,19 @@ token、路由导航守卫、劫持request添加authorization
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p>2023-5-20</p>
-<h1 id="Vue后台项目总结"><a href="#Vue后台项目总结" class="headerlink" title="Vue后台项目总结"></a>Vue后台项目总结</h1><ol>
-<li>token、路由导航守卫、劫持request添加authorization</li>
-<li>组件分类及命名，eslint检测，熟悉配置文件</li>
-<li>接口请求、跨域、301永久重定向，不允许更换请求（出现服务器请求服务器状况）、前端请求代理、熟悉后端部分</li>
-<li>熟悉element-ui，cascader 部分有个动态属性类，用它改变样式，之前还有bug</li>
-<li>全局css、按需引入等</li>
-<li>性能优化：vue ui使用<blockquote>
-<p>1） babel.config.js 配置插件 发布时不带console<br>2） vue.config.js 自定义配置webpack<br>3） externals 加载外部CDN资源 直接房dist里 index.js cdn引入<br>4） gzip压缩等</p>
-</blockquote>
-</li>
-<li>配置https SSL证书  <a target="_blank" rel="noopener" href="https://freessl.org/">https://freessl.org</a>,    pm2管理</li>
-<li>git流程</li>
-</ol>
-<h2 id="缺点"><a href="#缺点" class="headerlink" title="缺点"></a>缺点</h2><ol>
-<li>面包屑部分没封装， axios暴漏</li>
-</ol>
-<hr>
-<p><a target="_blank" rel="noopener" href="https://gitee.com/lhlsnowing/vue_shop_project">这个用的Gitee，在这里！https://gitee.com/lhlsnowing/vue_shop_project</a></p>
+                <h3 id="springboot项目启动不自动启动tomcat问题"><a href="#springboot项目启动不自动启动tomcat问题" class="headerlink" title="springboot项目启动不自动启动tomcat问题"></a>springboot项目启动不自动启动tomcat问题</h3><p>pom.xml需要按照以下顺序配置</p>
+<pre class="line-numbers language-markup" data-language="markup"><code class="language-markup"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>dependencies</span><span class="token punctuation">&gt;</span></span>
+    <span class="token comment">&lt;!-- 这个dependcy放在最前面 --&gt;</span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>dependency</span><span class="token punctuation">&gt;</span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>groupId</span><span class="token punctuation">&gt;</span></span>org.springframework.boot<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>groupId</span><span class="token punctuation">&gt;</span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>artifactId</span><span class="token punctuation">&gt;</span></span>spring-boot-starter-test<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>artifactId</span><span class="token punctuation">&gt;</span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>scope</span><span class="token punctuation">&gt;</span></span>test<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>scope</span><span class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>dependency</span><span class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>dependency</span><span class="token punctuation">&gt;</span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>groupId</span><span class="token punctuation">&gt;</span></span>org.springframework.boot<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>groupId</span><span class="token punctuation">&gt;</span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>artifactId</span><span class="token punctuation">&gt;</span></span>spring-boot-starter-web<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>artifactId</span><span class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>dependency</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>dependencies</span><span class="token punctuation">&gt;</span></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
                 
             </div>
@@ -460,7 +449,7 @@ token、路由导航守卫、劫持request添加authorization
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://lhlsnowing.github.io/2023/05/24/vue-hou-tai-guan-li-xi-tong-xiang-mu-zong-jie/">https://lhlsnowing.github.io/2023/05/24/vue-hou-tai-guan-li-xi-tong-xiang-mu-zong-jie/</a>
+                    <a href="https://lhlsnowing.github.io/2023/05/24/springboot-xue-xi/">https://lhlsnowing.github.io/2023/05/24/springboot-xue-xi/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -498,12 +487,8 @@ token、路由导航守卫、劫持request添加authorization
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/Vue/">
-                                    <span class="chip bg-color">Vue</span>
-                                </a>
-                            
-                                <a href="/tags/%E9%A1%B9%E7%9B%AE/">
-                                    <span class="chip bg-color">项目</span>
+                                <a href="/tags/springboot/">
+                                    <span class="chip bg-color">springboot</span>
                                 </a>
                             
                         </div>
@@ -797,13 +782,13 @@ token、路由导航守卫、劫持request添加authorization
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;Previous</div>
             <div class="card">
-                <a href="/2023/05/24/springboot-xue-xi/">
+                <a href="/2023/05/24/javascript-bi-ji/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/15.jpg" class="responsive-img" alt="springboot学习">
+                        <img src="/medias/featureimages/17.jpg" class="responsive-img" alt="Javascript笔记">
                         
-                        <span class="card-title">springboot学习</span>
+                        <span class="card-title">Javascript笔记</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -820,8 +805,8 @@ token、路由导航守卫、劫持request添加authorization
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/springboot/" class="post-category">
-                                    springboot
+                            <a href="/categories/javascript/" class="post-category">
+                                    javascript
                                 </a>
                             
                             
@@ -831,8 +816,8 @@ token、路由导航守卫、劫持request添加authorization
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/springboot/">
-                        <span class="chip bg-color">springboot</span>
+                    <a href="/tags/javascript/">
+                        <span class="chip bg-color">javascript</span>
                     </a>
                     
                 </div>
@@ -846,13 +831,13 @@ token、路由导航守卫、劫持request添加authorization
                 Next&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2023/05/24/cao-zuo-xi-tong-pian/">
+                <a href="/2023/05/24/vue-hou-tai-guan-li-xi-tong-xiang-mu-zong-jie/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/20.jpg" class="responsive-img" alt="操作系统篇">
+                        <img src="/medias/featureimages/10.jpg" class="responsive-img" alt="Vue后台管理系统项目总结">
                         
-                        <span class="card-title">操作系统篇</span>
+                        <span class="card-title">Vue后台管理系统项目总结</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -869,8 +854,8 @@ token、路由导航守卫、劫持request添加authorization
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E7%AF%87/" class="post-category">
-                                    操作系统篇
+                            <a href="/categories/Vue/" class="post-category">
+                                    Vue
                                 </a>
                             
                             
@@ -880,12 +865,12 @@ token、路由导航守卫、劫持request添加authorization
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/">
-                        <span class="chip bg-color">操作系统</span>
+                    <a href="/tags/Vue/">
+                        <span class="chip bg-color">Vue</span>
                     </a>
                     
-                    <a href="/tags/%E8%BF%9B%E7%A8%8B%E7%BA%BF%E7%A8%8B/">
-                        <span class="chip bg-color">进程线程</span>
+                    <a href="/tags/%E9%A1%B9%E7%9B%AE/">
+                        <span class="chip bg-color">项目</span>
                     </a>
                     
                 </div>
