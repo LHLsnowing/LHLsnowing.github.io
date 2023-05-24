@@ -6,7 +6,7 @@
   <link href="https://lhlsnowing.github.io/atom.xml" rel="self"/>
   
   <link href="https://lhlsnowing.github.io/"/>
-  <updated>2023-05-23T16:30:17.735Z</updated>
+  <updated>2023-05-24T02:55:44.615Z</updated>
   <id>https://lhlsnowing.github.io/</id>
   
   <author>
@@ -17,18 +17,18 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>GET和POST的请求的区别</title>
-    <link href="https://lhlsnowing.github.io/2023/05/24/get-he-post-de-qing-qiu-de-qu-bie/"/>
-    <id>https://lhlsnowing.github.io/2023/05/24/get-he-post-de-qing-qiu-de-qu-bie/</id>
+    <title>计算机网络篇</title>
+    <link href="https://lhlsnowing.github.io/2023/05/24/ji-suan-ji-wang-luo-pian/"/>
+    <id>https://lhlsnowing.github.io/2023/05/24/ji-suan-ji-wang-luo-pian/</id>
     <published>2023-05-23T16:21:58.000Z</published>
-    <updated>2023-05-23T16:30:17.735Z</updated>
+    <updated>2023-05-24T02:55:44.615Z</updated>
     
     
       
       
         
         
-    <summary type="html">&lt;h1 id=&quot;GET和POST的请求的区别&quot;&gt;&lt;a href=&quot;#GET和POST的请求的区别&quot; class=&quot;headerlink&quot; title=&quot;GET和POST的请求的区别&quot;&gt;&lt;/a&gt;GET和POST的请求的区别&lt;/h1&gt;&lt;p&gt;Post 和 Get 是 HTTP</summary>
+    <summary type="html">&lt;h1 id=&quot;计算机网络篇&quot;&gt;&lt;a href=&quot;#计算机网络篇&quot; class=&quot;headerlink&quot; title=&quot;计算机网络篇&quot;&gt;&lt;/a&gt;计算机网络篇&lt;/h1&gt;&lt;h2 id=&quot;1、GET和POST的请求的区别&quot;&gt;&lt;a href=&quot;#1、GET和POST的请求的区别&quot;</summary>
         
       
     
@@ -37,7 +37,19 @@
     <category term="计算机网络" scheme="https://lhlsnowing.github.io/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/"/>
     
     
-    <category term="网络请求 get post" scheme="https://lhlsnowing.github.io/tags/%E7%BD%91%E7%BB%9C%E8%AF%B7%E6%B1%82-get-post/"/>
+    <category term="网络请求区别" scheme="https://lhlsnowing.github.io/tags/%E7%BD%91%E7%BB%9C%E8%AF%B7%E6%B1%82%E5%8C%BA%E5%88%AB/"/>
+    
+    <category term="HTTP和HTTPS" scheme="https://lhlsnowing.github.io/tags/HTTP%E5%92%8CHTTPS/"/>
+    
+    <category term="HTTP状态码" scheme="https://lhlsnowing.github.io/tags/HTTP%E7%8A%B6%E6%80%81%E7%A0%81/"/>
+    
+    <category term="TCP和UDP" scheme="https://lhlsnowing.github.io/tags/TCP%E5%92%8CUDP/"/>
+    
+    <category term="网络传输层" scheme="https://lhlsnowing.github.io/tags/%E7%BD%91%E7%BB%9C%E4%BC%A0%E8%BE%93%E5%B1%82/"/>
+    
+    <category term="Websocket" scheme="https://lhlsnowing.github.io/tags/Websocket/"/>
+    
+    <category term="DNS" scheme="https://lhlsnowing.github.io/tags/DNS/"/>
     
   </entry>
   
