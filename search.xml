@@ -4,6 +4,60 @@
   
     
     <entry>
+      <title>Vue后台管理系统项目总结</title>
+      <link href="/2023/05/24/vue-hou-tai-guan-li-xi-tong-xiang-mu-zong-jie/"/>
+      <url>/2023/05/24/vue-hou-tai-guan-li-xi-tong-xiang-mu-zong-jie/</url>
+      
+        <content type="html"><![CDATA[<p>2023-5-20</p><h1 id="Vue后台项目总结"><a href="#Vue后台项目总结" class="headerlink" title="Vue后台项目总结"></a>Vue后台项目总结</h1><ol><li>token、路由导航守卫、劫持request添加authorization</li><li>组件分类及命名，eslint检测，熟悉配置文件</li><li>接口请求、跨域、301永久重定向，不允许更换请求（出现服务器请求服务器状况）、前端请求代理、熟悉后端部分</li><li>熟悉element-ui，cascader 部分有个动态属性类，用它改变样式，之前还有bug</li><li>全局css、按需引入等</li><li>性能优化：vue ui使用<blockquote><p>1） babel.config.js 配置插件 发布时不带console<br>2） vue.config.js 自定义配置webpack<br>3） externals 加载外部CDN资源 直接房dist里 index.js cdn引入<br>4） gzip压缩等</p></blockquote></li><li>配置https SSL证书  <a href="https://freessl.org/">https://freessl.org</a>,    pm2管理</li><li>git流程</li></ol><h2 id="缺点"><a href="#缺点" class="headerlink" title="缺点"></a>缺点</h2><ol><li>面包屑部分没封装， axios暴漏</li></ol><hr><p><a href="https://gitee.com/lhlsnowing/vue_shop_project">这个用的Gitee，在这里！https://gitee.com/lhlsnowing/vue_shop_project</a></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> Vue </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Vue </tag>
+            
+            <tag> 项目 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>操作系统篇</title>
+      <link href="/2023/05/24/cao-zuo-xi-tong-pian/"/>
+      <url>/2023/05/24/cao-zuo-xi-tong-pian/</url>
+      
+        <content type="html"><![CDATA[<h1 id="操作系统篇"><a href="#操作系统篇" class="headerlink" title="操作系统篇"></a>操作系统篇</h1><h2 id="一、操作系统的概念、功能和目标"><a href="#一、操作系统的概念、功能和目标" class="headerlink" title="一、操作系统的概念、功能和目标"></a>一、操作系统的概念、功能和目标</h2><p><img src="https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/14a0b1654b994d8d8a48496b729e0b58~tplv-k3u1fbpfcp-zoom-in-crop-mark:4536:0:0:0.awebp"></p><hr><h2 id="二、操作系统的4个特征"><a href="#二、操作系统的4个特征" class="headerlink" title="二、操作系统的4个特征"></a>二、操作系统的4个特征</h2><p><img src="https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/a3d62f68bff8410e8ba4b316de842851~tplv-k3u1fbpfcp-zoom-in-crop-mark:4536:0:0:0.awebp"></p><hr><h2 id="三、操作系统运行机制和体系结构"><a href="#三、操作系统运行机制和体系结构" class="headerlink" title="三、操作系统运行机制和体系结构"></a>三、操作系统运行机制和体系结构</h2><p><img src="https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/1370116b9fe0477fac917c5a77b4f608~tplv-k3u1fbpfcp-zoom-in-crop-mark:4536:0:0:0.awebp"></p><hr><h2 id="四、进程与线程"><a href="#四、进程与线程" class="headerlink" title="四、进程与线程"></a>四、进程与线程</h2><p><a href="https://juejin.cn/post/6844903801321685000">这篇文章讲的好，看这个！</a></p><hr><p>待更…</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 操作系统篇 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 操作系统 </tag>
+            
+            <tag> 进程线程 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>数据库篇</title>
       <link href="/2023/05/24/shu-ju-ku-pian/"/>
       <url>/2023/05/24/shu-ju-ku-pian/</url>
