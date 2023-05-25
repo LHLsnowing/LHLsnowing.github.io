@@ -6,7 +6,7 @@
   <link href="https://lhlsnowing.github.io/atom.xml" rel="self"/>
   
   <link href="https://lhlsnowing.github.io/"/>
-  <updated>2023-05-24T16:21:43.809Z</updated>
+  <updated>2023-05-25T10:16:05.098Z</updated>
   <id>https://lhlsnowing.github.io/</id>
   
   <author>
@@ -15,6 +15,27 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>JDBC</title>
+    <link href="https://lhlsnowing.github.io/2023/05/25/jdbc/"/>
+    <id>https://lhlsnowing.github.io/2023/05/25/jdbc/</id>
+    <published>2023-05-25T10:05:50.000Z</published>
+    <updated>2023-05-25T10:16:05.098Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;JDBC&quot;&gt;&lt;a href=&quot;#JDBC&quot; class=&quot;headerlink&quot; title=&quot;JDBC&quot;&gt;&lt;/a&gt;JDBC&lt;/h1&gt;&lt;h2 id=&quot;JDBC概念&quot;&gt;&lt;a href=&quot;#JDBC概念&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
   
   <entry>
     <title>Javascript笔记</title>
@@ -47,7 +68,7 @@
     <link href="https://lhlsnowing.github.io/2023/05/24/springboot-xue-xi/"/>
     <id>https://lhlsnowing.github.io/2023/05/24/springboot-xue-xi/</id>
     <published>2023-05-24T12:05:19.000Z</published>
-    <updated>2023-05-24T16:18:33.340Z</updated>
+    <updated>2023-05-25T04:04:13.852Z</updated>
     
     
       
