@@ -4,6 +4,33 @@
   
     
     <entry>
+      <title>编译原理习题—中间代码生成</title>
+      <link href="/2023/05/25/bian-yi-yuan-li-xi-ti-zhong-jian-dai-ma-sheng-cheng/"/>
+      <url>/2023/05/25/bian-yi-yuan-li-xi-ti-zhong-jian-dai-ma-sheng-cheng/</url>
+      
+        <content type="html"><![CDATA[<h1 id="编译原理中间代码生成例题"><a href="#编译原理中间代码生成例题" class="headerlink" title="编译原理中间代码生成例题"></a>编译原理中间代码生成例题</h1><h2 id="例题1"><a href="#例题1" class="headerlink" title="例题1"></a>例题1</h2><p>语句：<code>if A and B and C&gt;D then if A&lt;B then F=1; else F=0; else G=G+1;</code><br>按照条件和赋值的翻译过程将上面的语句翻译成中间代码（用三地址码或四元式都可以）。</p><ul><li>解答<br><strong>中间代码（三地址码）：</strong></li></ul><pre class="line-numbers language-none"><code class="language-none">1. t1 = A and B and C&gt;D2. if t1 goto 43. G = G + 14. t2 = A &lt; B5. if t2 goto 76. F = 07. F = 1<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><p><strong>中间代码（四元式）：</strong></p><pre class="line-numbers language-none"><code class="language-none">1. (and, A, B, t1)2. (&gt;, C, D, t2)3. (and, t1, t2, t3)4. (if_true, t3, _, 7)5. (add, G, 1, G)6. (goto, _, _, 8)7. (if_false, t3, _, 9)8. (assign, 0, _, F)9. (assign, 1, _, F)<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><hr><h2 id="例题2"><a href="#例题2" class="headerlink" title="例题2"></a>例题2</h2><p>语句：<code>while a&gt;b do if c==5 then while x&lt;y do x=x+1; else x=y;</code><br>按照条件和赋值的翻译过程将上面的语句翻译成中间代码（用三地址码或四元式都可以）。</p><p><strong>中间代码（三地址码）：</strong></p><pre class="line-numbers language-none"><code class="language-none">1. label1: if a &gt; b goto 22. t1 = c == 53. if t1 goto 54. goto 95. label2: if x &lt; y goto 67. goto 46. x = x + 1;8. goto 59. t2 = x if y10. x = t2 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><p><strong>中间代码（四元式）：</strong></p><pre class="line-numbers language-none"><code class="language-none">1. (label, _, _, label1)2. (&gt;, a, b, t1)3. (if_true, t1, _, 4)4. (goto, _, _, label2)5. (==, c, 5, t2)6. (if_true, t2, _, 8)7. (goto, _, _, 3)8. (label, _, _, label2)9. (&lt;, x, y, t3)10. (if_true, t3, _, 11)11. (goto, _, _, 7)12. (add, x, 1, t4)13. (assign, t4, _, x)14. (goto, _, _, 9)<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><hr><h2 id="例题3"><a href="#例题3" class="headerlink" title="例题3"></a>例题3</h2><p>针对如下三地址码</p><pre class="line-numbers language-none"><code class="language-none">    j=0L1：i=0    if i&lt;8 goto L3L2：a=b+c    b=d*cL3：if b==0 goto L4    b=a+b    goto L5L4：i=i+1    if i&lt;8 goto L2L5：j=j+1    if j&lt;=3 goto L1    b=8<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><p>（1）划分出基本块<br>（2）绘制程序的流程图（流图）<br>（3）求出流图中各结点的必经结点集（支配节点集）<br>（4）找出流图中的回边，给出回边对应的循环结点（自然循环）</p><p><strong>(1) 基本块划分：</strong></p><pre class="line-numbers language-none"><code class="language-none">基本块1：j=0基本块2：L1：i=0   if i&lt;8 goto L3基本块3：L2：a=b+c   b=d*c基本块4：L3：if b==0 goto L4   b=a+b   goto L5基本块5：L4：i=i+1   if i&lt;8 goto L2基本块6：L5：j=j+1   if j&lt;=3 goto L1   b=8<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><p><strong>(2) 程序的流程图：</strong><br>结合（1）大概是这样</p><pre class="line-numbers language-none"><code class="language-none">+-----+     +-----+|  1  |----&gt;|  2  |+-----+     +-----+   ^           |   |           v+-----+     +-----+|  3  |----&gt;|  4  |+-----+     +-----+   ^           |   |           v+-----+     +-----+|  5  |     |  6  |+-----+     +-----+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><p><strong>(3) 流图中各结点的必经结点集：</strong></p><blockquote><p>B1: {B1}<br>B2: {B1, B2}<br>B3: {B1, B2, B3}<br>B4: {B1, B2, B3, B4}<br>B5: {B1, B2, B3, B5}<br>B6: {B1, B2, B3, B6}</p></blockquote><p><strong>(4) 回边对应的循环结点：</strong></p><blockquote><p>回边：B5 -&gt; B2<br>循环结点：{B2, B3, B4, B5} （自然循环）</p></blockquote>]]></content>
+      
+      
+      <categories>
+          
+          <category> 编译原理 </category>
+          
+          <category> 习题 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 中间代码生成 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>JDBC</title>
       <link href="/2023/05/25/jdbc/"/>
       <url>/2023/05/25/jdbc/</url>

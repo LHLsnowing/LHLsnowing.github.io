@@ -6,7 +6,7 @@
   <link href="https://lhlsnowing.github.io/atom.xml" rel="self"/>
   
   <link href="https://lhlsnowing.github.io/"/>
-  <updated>2023-05-25T10:17:04.489Z</updated>
+  <updated>2023-05-25T16:06:03.583Z</updated>
   <id>https://lhlsnowing.github.io/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>编译原理习题—中间代码生成</title>
+    <link href="https://lhlsnowing.github.io/2023/05/25/bian-yi-yuan-li-xi-ti-zhong-jian-dai-ma-sheng-cheng/"/>
+    <id>https://lhlsnowing.github.io/2023/05/25/bian-yi-yuan-li-xi-ti-zhong-jian-dai-ma-sheng-cheng/</id>
+    <published>2023-05-25T15:42:02.000Z</published>
+    <updated>2023-05-25T16:06:03.583Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;编译原理中间代码生成例题&quot;&gt;&lt;a href=&quot;#编译原理中间代码生成例题&quot; class=&quot;headerlink&quot; title=&quot;编译原理中间代码生成例题&quot;&gt;&lt;/a&gt;编译原理中间代码生成例题&lt;/h1&gt;&lt;h2 id=&quot;例题1&quot;&gt;&lt;a href=&quot;#例题1&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="编译原理" scheme="https://lhlsnowing.github.io/categories/%E7%BC%96%E8%AF%91%E5%8E%9F%E7%90%86/"/>
+    
+    <category term="习题" scheme="https://lhlsnowing.github.io/categories/%E7%BC%96%E8%AF%91%E5%8E%9F%E7%90%86/%E4%B9%A0%E9%A2%98/"/>
+    
+    
+    <category term="中间代码生成" scheme="https://lhlsnowing.github.io/tags/%E4%B8%AD%E9%97%B4%E4%BB%A3%E7%A0%81%E7%94%9F%E6%88%90/"/>
+    
+  </entry>
   
   <entry>
     <title>JDBC</title>

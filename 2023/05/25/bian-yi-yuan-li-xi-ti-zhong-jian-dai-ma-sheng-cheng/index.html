@@ -4,8 +4,8 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="JDBC, 落雪L">
-    <meta name="description" content="JDBCJDBC概念JDBC ( Java DataBaseConnectivity java数据库连接) 是一种用于执行SQL语句的Java API，可以为多种关系型数据库提供统一访问，它是由一组用Java语言编写的类和接口组成的。本质：">
+    <meta name="keywords" content="编译原理习题—中间代码生成, 落雪L">
+    <meta name="description" content="编译原理中间代码生成例题例题1语句：if A and B and C&amp;gt;D then if A&amp;lt;B then F=1; else F=0; else G=G+1;按照条件和赋值的翻译过程将上面的语句翻译成中间代码（用三地址码或四元">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -17,7 +17,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>JDBC | 落雪L</title>
+    <title>编译原理习题—中间代码生成 | 落雪L</title>
     <link rel="icon" type="image/png" href="/snow.png">
     
     <style>
@@ -324,12 +324,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/11.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/0.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">JDBC</h1>
+                    <h1 class="description center-align post-title">编译原理习题—中间代码生成</h1>
                 </div>
             </div>
         </div>
@@ -353,8 +353,8 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/JDBC/">
-                                <span class="chip bg-color">JDBC</span>
+                            <a href="/tags/%E4%B8%AD%E9%97%B4%E4%BB%A3%E7%A0%81%E7%94%9F%E6%88%90/">
+                                <span class="chip bg-color">中间代码生成</span>
                             </a>
                         
                     </div>
@@ -365,8 +365,12 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/Java/" class="post-category">
-                                Java
+                            <a href="/categories/%E7%BC%96%E8%AF%91%E5%8E%9F%E7%90%86/" class="post-category">
+                                编译原理
+                            </a>
+                        
+                            <a href="/categories/%E7%BC%96%E8%AF%91%E5%8E%9F%E7%90%86/%E4%B9%A0%E9%A2%98/" class="post-category">
+                                习题
                             </a>
                         
                     </div>
@@ -387,7 +391,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>Word Count:&nbsp;&nbsp;
-                    648
+                    659
                 </div>
                 
 
@@ -407,60 +411,114 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="JDBC"><a href="#JDBC" class="headerlink" title="JDBC"></a>JDBC</h1><h2 id="JDBC概念"><a href="#JDBC概念" class="headerlink" title="JDBC概念"></a>JDBC概念</h2><p><strong>JDBC ( Java DataBaseConnectivity java数据库连接)</strong> 是一种用于执行SQL语句的Java API，可以为多种关系型数据库提供统一访问，它是由一组用Java语言编写的类和接口组成的。<br><strong>本质</strong>：其实就是java官方提供的一套规范(接口)。用于帮助开发人员快速实现不同关系型数据库的连接!</p>
-<p>直接上代码！</p>
-<pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token keyword">import</span> <span class="token import"><span class="token namespace">java<span class="token punctuation">.</span>sql<span class="token punctuation">.</span></span><span class="token class-name">Connection</span></span><span class="token punctuation">;</span>
-<span class="token keyword">import</span> <span class="token import"><span class="token namespace">java<span class="token punctuation">.</span>sql<span class="token punctuation">.</span></span><span class="token class-name">DriverManager</span></span><span class="token punctuation">;</span>
-<span class="token keyword">import</span> <span class="token import"><span class="token namespace">java<span class="token punctuation">.</span>sql<span class="token punctuation">.</span></span><span class="token class-name">ResultSet</span></span><span class="token punctuation">;</span>
-<span class="token keyword">import</span> <span class="token import"><span class="token namespace">java<span class="token punctuation">.</span>sql<span class="token punctuation">.</span></span><span class="token class-name">Statement</span></span><span class="token punctuation">;</span>
+                <h1 id="编译原理中间代码生成例题"><a href="#编译原理中间代码生成例题" class="headerlink" title="编译原理中间代码生成例题"></a>编译原理中间代码生成例题</h1><h2 id="例题1"><a href="#例题1" class="headerlink" title="例题1"></a>例题1</h2><p>语句：<code>if A and B and C&gt;D then if A&lt;B then F=1; else F=0; else G=G+1;</code><br>按照条件和赋值的翻译过程将上面的语句翻译成中间代码（用三地址码或四元式都可以）。</p>
+<ul>
+<li>解答<br><strong>中间代码（三地址码）：</strong></li>
+</ul>
+<pre class="line-numbers language-none"><code class="language-none">1. t1 = A and B and C&gt;D
+2. if t1 goto 4
+3. G = G + 1
+4. t2 = A &lt; B
+5. if t2 goto 7
+6. F = 0
+7. F = 1<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p><strong>中间代码（四元式）：</strong></p>
+<pre class="line-numbers language-none"><code class="language-none">1. (and, A, B, t1)
+2. (&gt;, C, D, t2)
+3. (and, t1, t2, t3)
+4. (if_true, t3, _, 7)
+5. (add, G, 1, G)
+6. (goto, _, _, 8)
+7. (if_false, t3, _, 9)
+8. (assign, 0, _, F)
+9. (assign, 1, _, F)<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">JDBC_index1</span> <span class="token punctuation">{</span>
-    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token class-name">String</span><span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span> <span class="token keyword">throws</span> <span class="token class-name">Exception</span> <span class="token punctuation">{</span>
-        <span class="token comment">//注册驱动</span>
-        <span class="token class-name">Class</span><span class="token punctuation">.</span><span class="token function">forName</span><span class="token punctuation">(</span><span class="token string">"com.mysql.cj.jdbc.Driver"</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment">//MySQL5以后可直接省略</span>
-        <span class="token comment">//获取数据库连接</span>
-        <span class="token class-name">Connection</span> con<span class="token operator">=</span> <span class="token class-name">DriverManager</span><span class="token punctuation">.</span><span class="token function">getConnection</span><span class="token punctuation">(</span><span class="token string">"jdbc:mysql://localhost:3306/cadastre"</span><span class="token punctuation">,</span><span class="token string">"root"</span><span class="token punctuation">,</span><span class="token string">"XXXXXX"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-        <span class="token comment">//获取执行者对象</span>
-        <span class="token class-name">Statement</span> stat<span class="token operator">=</span>con<span class="token punctuation">.</span><span class="token function">createStatement</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-        <span class="token comment">//执行sql语句并返回结果</span>
-        <span class="token class-name">String</span> sql<span class="token operator">=</span><span class="token string">"select * from 网易云热评"</span><span class="token punctuation">;</span>
-        <span class="token class-name">ResultSet</span> re<span class="token operator">=</span>stat<span class="token punctuation">.</span><span class="token function">executeQuery</span><span class="token punctuation">(</span>sql<span class="token punctuation">)</span><span class="token punctuation">;</span>
-        <span class="token comment">//处理结果</span>
-        <span class="token keyword">while</span> <span class="token punctuation">(</span>re<span class="token punctuation">.</span><span class="token function">next</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
-      <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>re<span class="token punctuation">.</span><span class="token function">getString</span><span class="token punctuation">(</span><span class="token string">"userId"</span><span class="token punctuation">)</span><span class="token operator">+</span><span class="token string">"\t"</span><span class="token operator">+</span>re<span class="token punctuation">.</span><span class="token function">getString</span><span class="token punctuation">(</span><span class="token string">"nickname"</span><span class="token punctuation">)</span><span class="token operator">+</span><span class="token string">"\t"</span><span class="token operator">+</span>re<span class="token punctuation">.</span><span class="token function">getString</span><span class="token punctuation">(</span><span class="token string">"content"</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-        <span class="token punctuation">}</span>
-        <span class="token comment">//释放资源</span>
-        con<span class="token punctuation">.</span><span class="token function">close</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token punctuation">}</span>
-<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<h2 id="JDBC功能详解"><a href="#JDBC功能详解" class="headerlink" title="JDBC功能详解"></a>JDBC功能详解</h2><h3 id="1、DriverManager驱动管理对象"><a href="#1、DriverManager驱动管理对象" class="headerlink" title="1、DriverManager驱动管理对象"></a>1、DriverManager驱动管理对象</h3><h4 id="1-注册驱动-（mysql5以后可直接省略驱动）"><a href="#1-注册驱动-（mysql5以后可直接省略驱动）" class="headerlink" title="(1)注册驱动:（mysql5以后可直接省略驱动）"></a>(1)注册驱动:（mysql5以后可直接省略驱动）</h4><ol>
-<li>注册给定的驱动程序: <code>staticvoid registerDriver(Driver driver);</code></li>
-<li>写代码使用:<code>Class.forName(“com.mysql.jdbc.Driver”);</code></li>
-<li>在<code>com.mysql.jdbc.Driver</code>类中存在静态代码块</li>
-</ol>
-<h4 id="2-获取数据库连接"><a href="#2-获取数据库连接" class="headerlink" title="(2)获取数据库连接:"></a>(2)获取数据库连接:</h4><ol>
-<li>获取数据库连接对象: <code>static ConnectiongetConnection(Stringurl, String user,String password);</code></li>
-<li>返回值:Connection数据库连接对象</li>
-<li>参数<br>url:指定连接的路径。语法: jdbc:mysql://ip地址(域名):端口号/数据库名称<br>​ user:用户名<br>​ password:密码</li>
-</ol>
-<h3 id="2、Connection数据库连接对象"><a href="#2、Connection数据库连接对象" class="headerlink" title="2、Connection数据库连接对象"></a>2、Connection数据库连接对象</h3><ol>
-<li>获取执行者对象:<br>获取普通执行者对象: <code>Statement createStatement0;</code><br>获取预编译执行者对象:<code>PreparedStatement prepareStatement(String sql);</code></li>
-<li>管理事务<br>开启事务 : <code>setAutoCommit(boolean autoCommit);</code>参数为false，则开启事务<br>​ 提交事务:<code>commit();</code><br>​ 回滚事务: <code>rollback();</code></li>
-<li>释放资源<br>立即将数据库连接对象释放:<code>void close();</code></li>
-</ol>
-<h3 id="3、Statement执行sql语句的对象"><a href="#3、Statement执行sql语句的对象" class="headerlink" title="3、Statement执行sql语句的对象"></a>3、Statement执行sql语句的对象</h3><ol>
-<li>执行DML语句: <code>int executeUpdate(String sql);</code><br>返回值int :返回影响的行数。<br>参数sql:可以执行insert、update、delete语句。</li>
-<li>执行DQL语句:<code>ResultSet executeQuery(String sql);</code><br>返回值ResultSet:封装查询的结果。<br>参数sql:可以执行select语句。</li>
-<li>释放资源<br>立即将数据库连接对象释放:<code>void close();</code></li>
-</ol>
-<h3 id="4、ResultSet结果集对象"><a href="#4、ResultSet结果集对象" class="headerlink" title="4、ResultSet结果集对象"></a>4、ResultSet结果集对象</h3><ol>
-<li>判断结果集中是否还有数据: <code>boolean next();</code><br>有数据返回true，并将索引向下移动一行。没有数据返回false。</li>
-<li>获取结果集中的数据:XXX getXxx(“列名”);XXX代表数据类型(要获取某列数据，这一列的数据类型)。<br>例如: <code>String getString(“name”);int getInt(" age");</code></li>
-<li>释放资源<br>立即将结果集对象释放:<code>void close();</code></li>
-</ol>
 <hr>
-<p>待更…</p>
+<h2 id="例题2"><a href="#例题2" class="headerlink" title="例题2"></a>例题2</h2><p>语句：<code>while a&gt;b do if c==5 then while x&lt;y do x=x+1; else x=y;</code><br>按照条件和赋值的翻译过程将上面的语句翻译成中间代码（用三地址码或四元式都可以）。</p>
+<p><strong>中间代码（三地址码）：</strong></p>
+<pre class="line-numbers language-none"><code class="language-none">1. label1: if a &gt; b goto 2
+2. t1 = c == 5
+3. if t1 goto 5
+4. goto 9
+5. label2: if x &lt; y goto 6
+7. goto 4
+6. x = x + 1;
+8. goto 5
+9. t2 = x if y
+10. x = t2 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p><strong>中间代码（四元式）：</strong></p>
+<pre class="line-numbers language-none"><code class="language-none">1. (label, _, _, label1)
+2. (&gt;, a, b, t1)
+3. (if_true, t1, _, 4)
+4. (goto, _, _, label2)
+5. (==, c, 5, t2)
+6. (if_true, t2, _, 8)
+7. (goto, _, _, 3)
+8. (label, _, _, label2)
+9. (&lt;, x, y, t3)
+10. (if_true, t3, _, 11)
+11. (goto, _, _, 7)
+12. (add, x, 1, t4)
+13. (assign, t4, _, x)
+14. (goto, _, _, 9)<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<hr>
+<h2 id="例题3"><a href="#例题3" class="headerlink" title="例题3"></a>例题3</h2><p>针对如下三地址码</p>
+<pre class="line-numbers language-none"><code class="language-none">    j=0
+L1：i=0
+    if i&lt;8 goto L3
+L2：a=b+c
+    b=d*c
+L3：if b==0 goto L4
+    b=a+b
+    goto L5
+L4：i=i+1
+    if i&lt;8 goto L2
+L5：j=j+1
+    if j&lt;=3 goto L1
+    b=8<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>（1）划分出基本块<br>（2）绘制程序的流程图（流图）<br>（3）求出流图中各结点的必经结点集（支配节点集）<br>（4）找出流图中的回边，给出回边对应的循环结点（自然循环）</p>
+<p><strong>(1) 基本块划分：</strong></p>
+<pre class="line-numbers language-none"><code class="language-none">基本块1：j=0
+基本块2：
+L1：i=0
+   if i&lt;8 goto L3
+基本块3：
+L2：a=b+c
+   b=d*c
+基本块4：
+L3：if b==0 goto L4
+   b=a+b
+   goto L5
+基本块5：
+L4：i=i+1
+   if i&lt;8 goto L2
+基本块6：
+L5：j=j+1
+   if j&lt;=3 goto L1
+   b=8<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p><strong>(2) 程序的流程图：</strong><br>结合（1）大概是这样</p>
+<pre class="line-numbers language-none"><code class="language-none">+-----+     +-----+
+|  1  |----&gt;|  2  |
++-----+     +-----+
+   ^           |
+   |           v
++-----+     +-----+
+|  3  |----&gt;|  4  |
++-----+     +-----+
+   ^           |
+   |           v
++-----+     +-----+
+|  5  |     |  6  |
++-----+     +-----+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p><strong>(3) 流图中各结点的必经结点集：</strong></p>
+<blockquote>
+<p>B1: {B1}<br>B2: {B1, B2}<br>B3: {B1, B2, B3}<br>B4: {B1, B2, B3, B4}<br>B5: {B1, B2, B3, B5}<br>B6: {B1, B2, B3, B6}</p>
+</blockquote>
+<p><strong>(4) 回边对应的循环结点：</strong></p>
+<blockquote>
+<p>回边：B5 -&gt; B2<br>循环结点：{B2, B3, B4, B5} （自然循环）</p>
+</blockquote>
 
                 
             </div>
@@ -487,7 +545,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://lhlsnowing.github.io/2023/05/25/jdbc/">https://lhlsnowing.github.io/2023/05/25/jdbc/</a>
+                    <a href="https://lhlsnowing.github.io/2023/05/25/bian-yi-yuan-li-xi-ti-zhong-jian-dai-ma-sheng-cheng/">https://lhlsnowing.github.io/2023/05/25/bian-yi-yuan-li-xi-ti-zhong-jian-dai-ma-sheng-cheng/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -525,8 +583,8 @@
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/JDBC/">
-                                    <span class="chip bg-color">JDBC</span>
+                                <a href="/tags/%E4%B8%AD%E9%97%B4%E4%BB%A3%E7%A0%81%E7%94%9F%E6%88%90/">
+                                    <span class="chip bg-color">中间代码生成</span>
                                 </a>
                             
                         </div>
@@ -816,9 +874,10 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;Previous</div>
+                <i class="far fa-dot-circle"></i>&nbsp;Current
+            </div>
             <div class="card">
                 <a href="/2023/05/25/bian-yi-yuan-li-xi-ti-zhong-jian-dai-ma-sheng-cheng/">
                     <div class="card-image">
@@ -836,9 +895,9 @@
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2023-05-25
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2023-05-25
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
@@ -855,6 +914,7 @@
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
@@ -873,13 +933,13 @@
                 Next&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2023/05/24/javascript-bi-ji/">
+                <a href="/2023/05/25/jdbc/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/17.jpg" class="responsive-img" alt="Javascript笔记">
+                        <img src="/medias/featureimages/11.jpg" class="responsive-img" alt="JDBC">
                         
-                        <span class="card-title">Javascript笔记</span>
+                        <span class="card-title">JDBC</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -890,14 +950,14 @@
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2023-05-24
+                                <i class="far fa-clock fa-fw icon-date"></i>2023-05-25
                             </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/javascript/" class="post-category">
-                                    javascript
+                            <a href="/categories/Java/" class="post-category">
+                                    Java
                                 </a>
                             
                             
@@ -907,8 +967,8 @@
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/javascript/">
-                        <span class="chip bg-color">javascript</span>
+                    <a href="/tags/JDBC/">
+                        <span class="chip bg-color">JDBC</span>
                     </a>
                     
                 </div>
