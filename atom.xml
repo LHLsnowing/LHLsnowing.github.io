@@ -6,7 +6,7 @@
   <link href="https://lhlsnowing.github.io/atom.xml" rel="self"/>
   
   <link href="https://lhlsnowing.github.io/"/>
-  <updated>2023-05-25T10:16:05.098Z</updated>
+  <updated>2023-05-25T10:17:04.489Z</updated>
   <id>https://lhlsnowing.github.io/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="https://lhlsnowing.github.io/2023/05/25/jdbc/"/>
     <id>https://lhlsnowing.github.io/2023/05/25/jdbc/</id>
     <published>2023-05-25T10:05:50.000Z</published>
-    <updated>2023-05-25T10:16:05.098Z</updated>
+    <updated>2023-05-25T10:17:04.489Z</updated>
     
     
       
@@ -34,6 +34,10 @@
     
     
     
+    <category term="Java" scheme="https://lhlsnowing.github.io/categories/Java/"/>
+    
+    
+    <category term="JDBC" scheme="https://lhlsnowing.github.io/tags/JDBC/"/>
     
   </entry>
   
