@@ -6,7 +6,7 @@
   <link href="https://lhlsnowing.github.io/atom.xml" rel="self"/>
   
   <link href="https://lhlsnowing.github.io/"/>
-  <updated>2023-05-25T16:06:03.583Z</updated>
+  <updated>2023-05-30T14:55:00.177Z</updated>
   <id>https://lhlsnowing.github.io/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>重新学Java</title>
+    <link href="https://lhlsnowing.github.io/2023/05/30/chong-xin-xue-java/"/>
+    <id>https://lhlsnowing.github.io/2023/05/30/chong-xin-xue-java/</id>
+    <published>2023-05-30T08:16:46.000Z</published>
+    <updated>2023-05-30T14:55:00.177Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;Java基础&quot;&gt;&lt;a href=&quot;#Java基础&quot; class=&quot;headerlink&quot; title=&quot;Java基础&quot;&gt;&lt;/a&gt;Java基础&lt;/h1&gt;&lt;h2 id=&quot;java重要特点&quot;&gt;&lt;a href=&quot;#java重要特点&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="Java" scheme="https://lhlsnowing.github.io/categories/Java/"/>
+    
+    
+    <category term="Java" scheme="https://lhlsnowing.github.io/tags/Java/"/>
+    
+  </entry>
   
   <entry>
     <title>编译原理习题—中间代码生成</title>
