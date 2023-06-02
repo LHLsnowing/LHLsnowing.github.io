@@ -134,7 +134,7 @@
     <link href="https://lhlsnowing.github.io/2023/05/24/javascript-bi-ji/"/>
     <id>https://lhlsnowing.github.io/2023/05/24/javascript-bi-ji/</id>
     <published>2023-05-24T15:18:11.000Z</published>
-    <updated>2023-05-24T16:21:43.809Z</updated>
+    <updated>2023-06-02T08:05:18.091Z</updated>
     
     
       
@@ -150,8 +150,14 @@
     
     <category term="javascript" scheme="https://lhlsnowing.github.io/categories/javascript/"/>
     
+    <category term="异步" scheme="https://lhlsnowing.github.io/categories/javascript/%E5%BC%82%E6%AD%A5/"/>
+    
     
     <category term="javascript" scheme="https://lhlsnowing.github.io/tags/javascript/"/>
+    
+    <category term="async" scheme="https://lhlsnowing.github.io/tags/async/"/>
+    
+    <category term="await" scheme="https://lhlsnowing.github.io/tags/await/"/>
     
   </entry>
   

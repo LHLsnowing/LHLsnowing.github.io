@@ -127,12 +127,18 @@
           
           <category> javascript </category>
           
+          <category> 异步 </category>
+          
       </categories>
       
       
         <tags>
             
             <tag> javascript </tag>
+            
+            <tag> async </tag>
+            
+            <tag> await </tag>
             
         </tags>
       
