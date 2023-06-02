@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="重新学Java, 落雪L">
+    <meta name="keywords" content="重新学Java, 落雪的小屋">
     <meta name="description" content="Java基础java重要特点
 oop
 Java语言健壮性，强类型机制、异常处理、垃圾的自动回收
@@ -24,7 +24,7 @@ JDK = JR">
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>重新学Java | 落雪L</title>
+    <title>重新学Java | 落雪的小屋</title>
     <link rel="icon" type="image/png" href="/snow.png">
     
     <style>
@@ -70,7 +70,7 @@ JDK = JR">
 
 <meta name="generator" content="Hexo 6.3.0">
 <style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
-<link rel="alternate" href="/atom.xml" title="落雪L" type="application/atom+xml">
+<link rel="alternate" href="/atom.xml" title="落雪的小屋" type="application/atom+xml">
 </head>
 
 
@@ -83,7 +83,7 @@ JDK = JR">
                     
                     <img src="/medias/logo.png" class="logo-img" alt="LOGO">
                     
-                    <span class="logo-span">落雪L</span>
+                    <span class="logo-span">落雪的小屋</span>
                 </a>
             </div>
             
@@ -146,17 +146,6 @@ JDK = JR">
     
   </li>
   
-  <li class="hide-on-med-and-down nav-item">
-    
-    <a href="/contact" class="waves-effect waves-light">
-      
-      <i class="fas fa-comments" style="zoom: 0.6;"></i>
-      
-      <span>留言板</span>
-    </a>
-    
-  </li>
-  
   <li>
     <a href="#searchModal" class="modal-trigger waves-effect waves-light">
       <i id="searchIcon" class="fas fa-search" title="Search" style="zoom: 0.85;"></i>
@@ -176,7 +165,7 @@ JDK = JR">
         
         <img src="/medias/logo.png" class="logo-img circle responsive-img">
         
-        <div class="logo-name">落雪L</div>
+        <div class="logo-name">落雪的小屋</div>
         <div class="logo-desc">
             
             没有理所当然的成功，也没有毫无道理的平庸
@@ -237,17 +226,6 @@ JDK = JR">
 			    <i class="fa-fw fas fa-user-circle"></i>
 			
 			关于
-		</a>
-          
-        </li>
-        
-        <li class="m-nav-item">
-	  
-		<a href="/contact" class="waves-effect waves-light">
-			
-			    <i class="fa-fw fas fa-comments"></i>
-			
-			留言板
 		</a>
           
         </li>
@@ -384,6 +362,10 @@ JDK = JR">
                                 Java
                             </a>
                         
+                            <a href="/categories/Java/java%E7%AC%AC%E4%B8%80%E7%AF%87/" class="post-category">
+                                java第一篇
+                            </a>
+                        
                     </div>
                     
                 </div>
@@ -402,10 +384,15 @@ JDK = JR">
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>Word Count:&nbsp;&nbsp;
-                    1.2k
+                    1.8k
                 </div>
                 
 
+                
+                <div class="info-break-policy">
+                    <i class="far fa-clock fa-fw"></i>Read Times:&nbsp;&nbsp;
+                    7 Min
+                </div>
                 
 
                 
@@ -610,6 +597,55 @@ com<span class="token punctuation">.</span>lhledu<span class="token punctuation"
 java<span class="token punctuation">.</span>util<span class="token punctuation">.</span>* <span class="token comment">//util系统提供的工具包，工具类 scanner</span>
 java<span class="token punctuation">.</span>net<span class="token punctuation">.</span>* <span class="token comment">//网络包，网络开发</span>
 java<span class="token punctuation">.</span>awt<span class="token punctuation">.</span>* <span class="token comment">//做java的开发界面，GUI</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h2 id="super关键字"><a href="#super关键字" class="headerlink" title="super关键字"></a>super关键字</h2><p>主要访问父类的东西,不能访问private修饰的<br>super.熟悉  super.方法<br>访问父类构造器 super（参数列表），<strong>只能放在第一句</strong></p>
+<h2 id="方法重写"><a href="#方法重写" class="headerlink" title="方法重写"></a>方法重写</h2><ul>
+<li>方法覆盖（重写）就是子类有一个方法，和父类某个方法的名称、返回类型、参数一样<br>且访问权限子类不能小于父类</li>
+</ul>
+<h2 id="多态"><a href="#多态" class="headerlink" title="多态"></a>多态</h2><ul>
+<li>重写和重载都是多态的一种体现</li>
+<li>方法多态 （没啥好说的了 简单例子sum（1，2），sum(1,2,3)</li>
+<li>对象多态：<blockquote>
+<p>1）一个对象的编译类型和运行类型可以不一致<br>2）编译类型在定义对象时，就可以确定了，不能改变<br>3）运行类型是可以变化的<br>4）编译类型看定义时 =号 的左边， 运行类型看 =号 右边</p>
+</blockquote>
+<pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token comment">// 例如 Animal 是 Dog 和 Cat的父类</span>
+<span class="token class-name">Animal</span> animal <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Dog</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">//animal编译类型 是Animal，运行类型是Dog</span>
+animal<span class="token punctuation">.</span><span class="token function">cry</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// 小狗汪汪叫</span>
+animal <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Cat</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+animal<span class="token punctuation">.</span><span class="token function">cry</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// 小猫喵喵喵</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre></li>
+</ul>
+<h3 id="向上转型和向下转型"><a href="#向上转型和向下转型" class="headerlink" title="向上转型和向下转型"></a>向上转型和向下转型</h3><p>向下：</p>
+<ul>
+<li>子类类型  引用名 = （子类类型） <strong>父类引用</strong></li>
+<li>只能强转父类的引用，不能强转父类对象</li>
+<li>要求父类的引用必须指向的是当前目标类型的对象</li>
+<li>向下转型后，可以调用子类对象中所有的成员<pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token class-name">Cat</span> cat <span class="token operator">=</span><span class="token punctuation">(</span><span class="token class-name">Cat</span><span class="token punctuation">)</span> animal<span class="token punctuation">;</span> <span class="token comment">//编译类型是Cat 运行类型 Cat</span>
+cat<span class="token punctuation">.</span><span class="token function">catchMouse</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment">// 如果再写 Dog dog = (Dog) animal; 报错，可以按照以下理解</span>
+<span class="token comment">// 有两个 cat 和 animal 都指向一个内存  如果再将animal转换成dog 会出现猫是狗的错误</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre></li>
+</ul>
+<h2 id="属性重写问题"><a href="#属性重写问题" class="headerlink" title="属性重写问题"></a>属性重写问题</h2><p>属性没有重写的说法，属性的值看编译类型</p>
+<pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">Main</span> <span class="token punctuation">{</span>
+    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token class-name">String</span><span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token class-name">Base</span> base<span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Sub</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>base<span class="token punctuation">.</span>count<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+<span class="token keyword">class</span> <span class="token class-name">Base</span> <span class="token punctuation">{</span>
+    <span class="token keyword">int</span> count <span class="token operator">=</span> <span class="token number">10</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token keyword">class</span> <span class="token class-name">Sub</span> <span class="token keyword">extends</span>  <span class="token class-name">Base</span><span class="token punctuation">{</span>
+    <span class="token keyword">int</span> count <span class="token operator">=</span> <span class="token number">20</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h2 id="instanceof"><a href="#instanceof" class="headerlink" title="instanceof"></a>instanceof</h2><p>instanceof是Java中的二元运算符，左边是对象，右边是类；当对象是右边类或子类所创建对象时，返回true；否则，返回false。</p>
+<ul>
+<li>左边的对象实例不能是基础数据类型</li>
+<li>左边的对象实例和右边的类不在同一个继承树上</li>
+<li>null用instanceof跟任何类型比较时都是false<br>eg： <code>aa instanceof AA</code></li>
+</ul>
+<h2 id="属性看编译时类型，方法看运行时类型"><a href="#属性看编译时类型，方法看运行时类型" class="headerlink" title="属性看编译时类型，方法看运行时类型"></a>属性看编译时类型，方法看运行时类型</h2><p>多态挺有意思的  看=左右侧具体判断吧</p>
+
                 
             </div>
             <hr/>
@@ -750,217 +786,6 @@ java<span class="token punctuation">.</span>awt<span class="token punctuation">.
 
     
 
-    
-        <style>
-    .waline-card {
-        margin: 1.5rem auto;
-    }
-    .waline-card .card-content {
-        padding: 20px 20px 5px 20px;
-    }
-
-    #waline p {
-        margin: 2px 2px 10px;
-        font-size: 1.05rem;
-        line-height: 1.78rem;
-    }
-    #waline blockquote p {
-        text-indent: 0.2rem;
-    }
-    #waline a {
-        padding: 0 2px;
-        color: #4cbf30;
-        font-weight: 500;
-        text-decoration: none;
-    }
-    #waline img {
-        max-width: 100%;
-        cursor: pointer;
-    }
-    #waline ol li {
-        list-style-type: decimal;
-    }
-    #waline ol,
-    ul {
-        display: block;
-        padding-left: 2em;
-        word-spacing: 0.05rem;
-    }
-    #waline ul li,
-    ol li {
-        display: list-item;
-        line-height: 1.8rem;
-        font-size: 1rem;
-    }
-    #waline ul li {
-        list-style-type: disc;
-    }
-    #waline ul ul li {
-        list-style-type: circle;
-    }
-    #waline table, th, td {
-        padding: 12px 13px;
-        border: 1px solid #dfe2e5;
-    }
-    #waline table, th, td {
-        border: 0;
-    }
-    table tr:nth-child(2n), thead {
-        background-color: #fafafa;
-    }
-    #waline table th {
-        background-color: #f2f2f2;
-        min-width: 80px;
-    }
-    #waline table td {
-        min-width: 80px;
-    }
-    #waline h1 {
-        font-size: 1.85rem;
-        font-weight: bold;
-        line-height: 2.2rem;
-    }
-    #waline h2 {
-        font-size: 1.65rem;
-        font-weight: bold;
-        line-height: 1.9rem;
-    }
-    #waline h3 {
-        font-size: 1.45rem;
-        font-weight: bold;
-        line-height: 1.7rem;
-    }
-    #waline h4 {
-        font-size: 1.25rem;
-        font-weight: bold;
-        line-height: 1.5rem;
-    }
-    #waline h5 {
-        font-size: 1.1rem;
-        font-weight: bold;
-        line-height: 1.4rem;
-    }
-    #waline h6 {
-        font-size: 1rem;
-        line-height: 1.3rem;
-    }
-    #waline p {
-        font-size: 1rem;
-        line-height: 1.5rem;
-    }
-    #waline hr {
-        margin: 12px 0;
-        border: 0;
-        border-top: 1px solid #ccc;
-    }
-    #waline blockquote {
-        margin: 15px 0;
-        border-left: 5px solid #42b983;
-        padding: 1rem 0.8rem 0.3rem 0.8rem;
-        color: #666;
-        background-color: rgba(66, 185, 131, .1);
-    }
-    #waline pre {
-        font-family: monospace, monospace;
-        padding: 1.2em;
-        margin: .5em 0;
-        background: #272822;
-        overflow: auto;
-        border-radius: 0.3em;
-        tab-size: 4;
-    }
-    #waline code {
-        font-family: monospace, monospace;
-        padding: 1px 3px;
-        font-size: 0.92rem;
-        color: #e96900;
-        background-color: #f8f8f8;
-        border-radius: 2px;
-    }
-    #waline pre code {
-        font-family: monospace, monospace;
-        padding: 0;
-        color: #e8eaf6;
-        background-color: #272822;
-    }
-    #waline pre[class*="language-"] {
-        padding: 1.2em;
-        margin: .5em 0;
-    }
-    #waline code[class*="language-"],
-    pre[class*="language-"] {
-        color: #e8eaf6;
-    }
-    #waline [type="checkbox"]:not(:checked), [type="checkbox"]:checked {
-        position: inherit;
-        margin-left: -1.3rem;
-        margin-right: 0.4rem;
-        margin-top: -1px;
-        vertical-align: middle;
-        left: unset;
-        visibility: visible;
-    }
-    #waline b,
-    strong {
-        font-weight: bold;
-    }
-    #waline dfn {
-        font-style: italic;
-    }
-    #waline small {
-        font-size: 85%;
-    }
-    #waline cite {
-        font-style: normal;
-    }
-    #waline mark {
-        background-color: #fcf8e3;
-        padding: .2em;
-    }
-    #waline table, th, td {
-        padding: 12px 13px;
-        border: 1px solid #dfe2e5;
-    }
-    table tr:nth-child(2n), thead {
-        background-color: #fafafa;
-    }
-    #waline table th {
-        background-color: #f2f2f2;
-        min-width: 80px;
-    }
-    #waline table td {
-        min-width: 80px;
-    }
-    #waline [type="checkbox"]:not(:checked), [type="checkbox"]:checked {
-        position: inherit;
-        margin-left: -1.3rem;
-        margin-right: 0.4rem;
-        margin-top: -1px;
-        vertical-align: middle;
-        left: unset;
-        visibility: visible;
-    }
-  </style>
-  
-  <div class="card waline-card" data-aos="fade-up">
-    <div class="comment_headling" style="font-size: 20px; font-weight: 700; position: relative; padding-left: 20px; top: 15px; padding-bottom: 5px;">
-        <i class="fas fa-comments fa-fw" aria-hidden="true"></i>
-        <span>评论</span>
-    </div>
-    <div id="waline" class="card-content" style="display: grid">
-    </div>
-  </div>
-  
-
-  <!-- <script src="//cdn.jsdelivr.net/npm/@waline/client"></script> -->
-  <script src="/libs/waline/Waline.min.js"></script>
-  <script>
-    new Waline({
-        el: '#waline',
-        serverURL: 'https://waline.your-domain.com',
-        avatar: 'mm'    
-    });
-  </script> 
     
 
     
@@ -1117,7 +942,7 @@ java<span class="token punctuation">.</span>awt<span class="token punctuation">.
 
         var url = document.location.href;
         newdiv.innerHTML += '<br />'
-            + 'From: 落雪L<br />'
+            + 'From: 落雪的小屋<br />'
             + 'Author: 落雪L<br />'
             + 'Link: <a href="' + url + '">' + url + '</a><br />'
             + '本文章著作权归作者所有，任何形式的转载都请注明出处。';
@@ -1309,6 +1134,9 @@ java<span class="token punctuation">.</span>awt<span class="token punctuation">.
             |&nbsp;Theme&nbsp;<a href="https://github.com/blinkfox/hexo-theme-matery" target="_blank">Matery</a>
             
             <br>
+            
+                &nbsp;<i class="fas fa-chart-area"></i>&nbsp;Total Words:&nbsp;<span
+                        class="white-color">19.7k</span>
             
             
             
@@ -1522,10 +1350,6 @@ $(function () {
     <!-- 鼠标星星特效 -->
     
 
-     
-        <script src="https://ssl.captcha.qq.com/TCaptcha.js"></script>
-        <script src="/libs/others/TencentCaptcha.js"></script>
-        <button id="TencentCaptcha" data-appid="xxxxxxxxxx" data-cbfn="callback" type="button" hidden></button>
     
 
     <!-- Baidu Analytics -->

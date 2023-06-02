@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <title>落雪L</title>
+  <title>落雪的小屋</title>
   
-  <subtitle>不勤于始，将悔于终</subtitle>
+  <subtitle>不勤于始  将悔于终</subtitle>
   <link href="https://lhlsnowing.github.io/atom.xml" rel="self"/>
   
   <link href="https://lhlsnowing.github.io/"/>
@@ -53,7 +53,7 @@
     <link href="https://lhlsnowing.github.io/2023/05/30/chong-xin-xue-java/"/>
     <id>https://lhlsnowing.github.io/2023/05/30/chong-xin-xue-java/</id>
     <published>2023-05-30T08:16:46.000Z</published>
-    <updated>2023-06-01T13:57:53.793Z</updated>
+    <updated>2023-06-02T15:25:45.658Z</updated>
     
     
       
@@ -67,6 +67,8 @@
     
     
     <category term="Java" scheme="https://lhlsnowing.github.io/categories/Java/"/>
+    
+    <category term="java第一篇" scheme="https://lhlsnowing.github.io/categories/Java/java%E7%AC%AC%E4%B8%80%E7%AF%87/"/>
     
     
     <category term="Java" scheme="https://lhlsnowing.github.io/tags/Java/"/>
