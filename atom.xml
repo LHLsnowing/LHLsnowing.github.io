@@ -6,7 +6,7 @@
   <link href="https://lhlsnowing.github.io/atom.xml" rel="self"/>
   
   <link href="https://lhlsnowing.github.io/"/>
-  <updated>2023-06-02T08:01:53.050Z</updated>
+  <updated>2023-06-02T16:06:39.958Z</updated>
   <id>https://lhlsnowing.github.io/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>AI集合篇</title>
+    <link href="https://lhlsnowing.github.io/2023/06/02/ai-ji-he-pian/"/>
+    <id>https://lhlsnowing.github.io/2023/06/02/ai-ji-he-pian/</id>
+    <published>2023-06-02T15:53:52.000Z</published>
+    <updated>2023-06-02T16:06:39.958Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;AI&quot;&gt;&lt;a href=&quot;#AI&quot; class=&quot;headerlink&quot; title=&quot;AI&quot;&gt;&lt;/a&gt;AI&lt;/h1&gt;&lt;p&gt;&lt;img</summary>
+        
+      
+    
+    
+    
+    <category term="AI" scheme="https://lhlsnowing.github.io/categories/AI/"/>
+    
+    
+    <category term="chatgpt" scheme="https://lhlsnowing.github.io/tags/chatgpt/"/>
+    
+    <category term="ai工具" scheme="https://lhlsnowing.github.io/tags/ai%E5%B7%A5%E5%85%B7/"/>
+    
+  </entry>
   
   <entry>
     <title>webpack</title>

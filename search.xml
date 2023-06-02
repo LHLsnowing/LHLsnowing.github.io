@@ -4,6 +4,33 @@
   
     
     <entry>
+      <title>AI集合篇</title>
+      <link href="/2023/06/02/ai-ji-he-pian/"/>
+      <url>/2023/06/02/ai-ji-he-pian/</url>
+      
+        <content type="html"><![CDATA[<h1 id="AI"><a href="#AI" class="headerlink" title="AI"></a>AI</h1><p><img src="/2023/06/02/ai-ji-he-pian/ad.jpg"><br>把我知道的一些国内镜像站做个集合,自己想搭GitHub也有开源,会用ai会有不少便利和乐趣</p><ol><li><a href="https://www.npmmirror.com/package/freegpt">npm 镜像——freegpt</a></li><li><a href="https://ai-bot.cn/">AI工具集合，这个工具很多</a></li><li><a href="https://chat.forefront.ai/">需要梯子，有gpt4和3.5</a></li><li><a href="https://poe.com/GPT-4">花钱，gpt4，可试用</a></li><li><a href="https://ai.usesless.com/">还可以，积分制</a></li><li><a href="https://codeium.com/playground">coplit平体</a></li></ol><p>注：付费与本人无关，财产需谨慎!</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> AI </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> chatgpt </tag>
+            
+            <tag> ai工具 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>webpack</title>
       <link href="/2023/06/02/webpack/"/>
       <url>/2023/06/02/webpack/</url>
