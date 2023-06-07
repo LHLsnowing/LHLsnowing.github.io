@@ -6,7 +6,7 @@
   <link href="https://lhlsnowing.github.io/atom.xml" rel="self"/>
   
   <link href="https://lhlsnowing.github.io/"/>
-  <updated>2023-06-03T13:08:52.043Z</updated>
+  <updated>2023-06-06T08:52:08.857Z</updated>
   <id>https://lhlsnowing.github.io/</id>
   
   <author>
@@ -17,11 +17,36 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>java小记</title>
+    <link href="https://lhlsnowing.github.io/2023/06/06/java-xiao-ji/"/>
+    <id>https://lhlsnowing.github.io/2023/06/06/java-xiao-ji/</id>
+    <published>2023-06-06T07:52:22.000Z</published>
+    <updated>2023-06-06T08:52:08.857Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;java中s-length-和-s-length区别&quot;&gt;&lt;a href=&quot;#java中s-length-和-s-length区别&quot; class=&quot;headerlink&quot; title=&quot;java中s.length() 和</summary>
+        
+      
+    
+    
+    
+    <category term="Java" scheme="https://lhlsnowing.github.io/categories/Java/"/>
+    
+    
+    <category term="java小记" scheme="https://lhlsnowing.github.io/tags/java%E5%B0%8F%E8%AE%B0/"/>
+    
+  </entry>
+  
+  <entry>
     <title>算法篇</title>
     <link href="https://lhlsnowing.github.io/2023/06/03/suan-fa-pian/"/>
     <id>https://lhlsnowing.github.io/2023/06/03/suan-fa-pian/</id>
     <published>2023-06-03T12:49:21.000Z</published>
-    <updated>2023-06-03T13:08:52.043Z</updated>
+    <updated>2023-06-06T08:52:05.946Z</updated>
     
     
       
@@ -107,7 +132,7 @@
     <link href="https://lhlsnowing.github.io/2023/05/30/chong-xin-xue-java/"/>
     <id>https://lhlsnowing.github.io/2023/05/30/chong-xin-xue-java/</id>
     <published>2023-05-30T08:16:46.000Z</published>
-    <updated>2023-06-03T12:32:30.998Z</updated>
+    <updated>2023-06-06T07:53:02.821Z</updated>
     
     
       
@@ -190,7 +215,7 @@
     <link href="https://lhlsnowing.github.io/2023/05/24/javascript-bi-ji/"/>
     <id>https://lhlsnowing.github.io/2023/05/24/javascript-bi-ji/</id>
     <published>2023-05-24T15:18:11.000Z</published>
-    <updated>2023-06-02T08:05:18.091Z</updated>
+    <updated>2023-06-07T01:40:15.001Z</updated>
     
     
       
