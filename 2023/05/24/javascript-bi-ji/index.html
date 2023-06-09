@@ -6,11 +6,9 @@
     <meta charset="utf-8">
     <meta name="keywords" content="Javascript笔记, 落雪的小屋">
     <meta name="description" content="
-Javascript篇一次笔试题，五个人五排看手机电量够玩多久
-function demo(arr){
-    let a=0;
-    for(let i=0;i&amp;lt;arr.length;i++){
-        for(let ">
+Javascript篇leetcode14天js编程挑战
+闭包
+函数对象可以通过作用域链相互关联起来，函数体内部的变量都可以保存在函数作用域内，这种特性在计算机科学文献中称为“闭包”。——出自《JavaScript权威指南(第六版)》闭包">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -382,14 +380,14 @@ function demo(arr){
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>Word Count:&nbsp;&nbsp;
-                    137
+                    842
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>Read Times:&nbsp;&nbsp;
-                    1 Min
+                    3 Min
                 </div>
                 
 
@@ -408,8 +406,53 @@ function demo(arr){
         <div class="card-content article-card-content">
             <div id="articleContent">
                 <p><img src="/2023/05/24/javascript-bi-ji/bg.jpg"></p>
-<h1 id="Javascript篇"><a href="#Javascript篇" class="headerlink" title="Javascript篇"></a>Javascript篇</h1><p>一次笔试题，五个人五排看手机电量够玩多久</p>
-<pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token keyword">function</span> <span class="token function">demo</span><span class="token punctuation">(</span><span class="token parameter">arr</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+<h1 id="Javascript篇"><a href="#Javascript篇" class="headerlink" title="Javascript篇"></a>Javascript篇</h1><p><a target="_blank" rel="noopener" href="https://leetcode.cn/circle/discuss/jE87x7/">leetcode14天js编程挑战</a></p>
+<h2 id="闭包"><a href="#闭包" class="headerlink" title="闭包"></a>闭包</h2><blockquote>
+<p>函数对象可以通过作用域链相互关联起来，函数体内部的变量都可以保存在函数作用域内，这种特性在计算机科学文献中称为“闭包”。<br>——出自《JavaScript权威指南(第六版)》<br>闭包（closure）是一个函数以及其捆绑的周边环境状态（lexical environment，词法环境）的引用的组合。换而言之，闭包让开发者可以从内部函数访问外部函数的作用域。在 JavaScript 中，闭包会随着函数的创建而被同时创建。</p>
+<blockquote>
+<p>三个作用<br>（1）外部可以读取函数内部的变量。<br>（2）封闭数据，实现数据私有，防止变量被污染。<br>（3）让这些变量的值始终保持在内存中</p>
+</blockquote>
+</blockquote>
+<pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token keyword">function</span> <span class="token function">init</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">var</span> name <span class="token operator">=</span> <span class="token string">"Mozilla"</span><span class="token punctuation">;</span> <span class="token comment">// name 是一个被 init 创建的局部变量</span>
+  <span class="token keyword">function</span> <span class="token function">displayName</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span> <span class="token comment">// displayName() 是内部函数，一个闭包</span>
+      <span class="token function">alert</span><span class="token punctuation">(</span>name<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// 使用了父函数中声明的变量</span>
+  <span class="token punctuation">}</span>
+  <span class="token function">displayName</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token function">init</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<ul>
+<li>闭包主要是用返回值，但使用一定要合理</li>
+<li>如果不是某些特定任务需要使用闭包，在其他函数中创建函数是不明智的，因为闭包在处理速度和内存消耗方面对脚本性能具有负面影响。</li>
+<li>会产生内存泄漏问题，如果需要回收这些变量，我们可以手动把这些变量设为 <code>null</code>。</li>
+</ul>
+<p>例题：</p>
+<blockquote>
+<p>请你写一个函数&nbsp;createCounter. 这个函数接收一个初始的整数值 init&nbsp;&nbsp;并返回一个包含三个函数的对象。<br>这三个函数是：<br>increment()&nbsp;将当前值加 1 并返回。<br>decrement()&nbsp;将当前值减 1 并返回。<br>reset()&nbsp;将当前值设置为 init 并返回。</p>
+</blockquote>
+<pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token keyword">var</span> <span class="token function-variable function">createCounter</span> <span class="token operator">=</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token parameter">init</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">let</span> n<span class="token operator">=</span>init<span class="token punctuation">;</span>
+    <span class="token keyword">let</span> <span class="token function-variable function">increment</span><span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">=&gt;</span><span class="token operator">++</span>n<span class="token punctuation">;</span>
+     <span class="token keyword">let</span> <span class="token function-variable function">decrement</span><span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">=&gt;</span><span class="token operator">--</span>n<span class="token punctuation">;</span>
+    <span class="token keyword">let</span> <span class="token function-variable function">reset</span><span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">=&gt;</span> n <span class="token operator">=</span> init<span class="token punctuation">;</span>
+    <span class="token keyword">return</span> <span class="token punctuation">{</span> increment<span class="token punctuation">,</span>decrement<span class="token punctuation">,</span>reset<span class="token punctuation">}</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+<span class="token comment">/**
+ * const counter = createCounter(5)
+ * counter.increment(); // 6
+ * counter.reset(); // 5
+ * counter.decrement(); // 4
+ */</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h2 id="内存泄漏"><a href="#内存泄漏" class="headerlink" title="内存泄漏"></a>内存泄漏</h2><ul>
+<li><p><strong>不再用到的内存，没有及时释放，就叫做内存泄漏（memory leak）</strong>。 内存泄漏是指程序执行时，一些变量没有及时释放，一直占用着内存 而这种占用内存的行为就叫做内存泄漏。</p>
+</li>
+<li><p>作为一般的用户，根本感觉不到内存泄漏的存在。真正有危害的是内存泄漏的堆积，这会最终消耗尽系统所有的内存。从这个角度来说，一次性内存泄漏并没有什么危害，因为它不会堆积。</p>
+</li>
+<li><p>内存泄漏如果一直堆积，最终会导致<strong>内存溢出问题</strong>。</p>
+</li>
+</ul>
+<h2 id="js实现继承的方式"><a href="#js实现继承的方式" class="headerlink" title="js实现继承的方式"></a>js实现继承的方式</h2><p>1、原型链继承 …<br>2、借用构造函数继承（也称伪造对象或经典继承） …<br>3、组合继承（也称伪经典继承） …<br>4、原型式继承 …<br>5、寄生式继承 …<br><a target="_blank" rel="noopener" href="https://www.cnblogs.com/Leophen/p/11401734.html#:~:text=%E4%BA%8C%E3%80%81JavaScript%E5%AE%9E%E7%8E%B0%E7%BB%A7%E6%89%BF%E7%9A%84%E6%96%B9%E5%BC%8F%201%201%E3%80%81%E5%8E%9F%E5%9E%8B%E9%93%BE%E7%BB%A7%E6%89%BF%20...%202%202%E3%80%81%E5%80%9F%E7%94%A8%E6%9E%84%E9%80%A0%E5%87%BD%E6%95%B0%E7%BB%A7%E6%89%BF%EF%BC%88%E4%B9%9F%E7%A7%B0%E4%BC%AA%E9%80%A0%E5%AF%B9%E8%B1%A1%E6%88%96%E7%BB%8F%E5%85%B8%E7%BB%A7%E6%89%BF%EF%BC%89%20...%203,4%E3%80%81%E5%8E%9F%E5%9E%8B%E5%BC%8F%E7%BB%A7%E6%89%BF%20...%205%205%E3%80%81%E5%AF%84%E7%94%9F%E5%BC%8F%E7%BB%A7%E6%89%BF%20...%206%206%E3%80%81%E5%AF%84%E7%94%9F%E7%BB%84%E5%90%88%E5%BC%8F%E7%BB%A7%E6%89%BF%20">“继承方式”</a></p>
+<h2 id="一次笔试题，五个人五排看手机电量够玩多久"><a href="#一次笔试题，五个人五排看手机电量够玩多久" class="headerlink" title="一次笔试题，五个人五排看手机电量够玩多久"></a>一次笔试题，五个人五排看手机电量够玩多久</h2><pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token keyword">function</span> <span class="token function">demo</span><span class="token punctuation">(</span><span class="token parameter">arr</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
     <span class="token keyword">let</span> a<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">;</span>
     <span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">let</span> i<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">;</span>i<span class="token operator">&lt;</span>arr<span class="token punctuation">.</span>length<span class="token punctuation">;</span>i<span class="token operator">++</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
         <span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">let</span> j<span class="token operator">=</span>i<span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">;</span>j<span class="token operator">&lt;</span>arr<span class="token punctuation">.</span>length<span class="token punctuation">;</span>j<span class="token operator">++</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
@@ -915,7 +958,7 @@ function demo(arr){
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;Total Words:&nbsp;<span
-                        class="white-color">22k</span>
+                        class="white-color">22.7k</span>
             
             
             
