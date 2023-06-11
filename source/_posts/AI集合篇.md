@@ -1,7 +1,7 @@
 ---
 title: AI集合篇
 date: 2023-06-02 23:53:52
-tags: [chatgpt,ai工具]
+tags: [chatgpt,ai工具,插件]
 categories: AI
 ---
 
@@ -14,5 +14,8 @@ categories: AI
 4. [花钱，gpt4，可试用](https://poe.com/GPT-4)
 5. [还可以，积分制](https://ai.usesless.com/)
 6. [coplit平体](https://codeium.com/playground)
+
+## 好用的vs插件
+1. Error Lens ， 在后面事实显示错误
 
 注：付费与本人无关，财产需谨慎!
