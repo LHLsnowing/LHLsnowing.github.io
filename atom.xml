@@ -6,7 +6,7 @@
   <link href="https://lhlsnowing.github.io/atom.xml" rel="self"/>
   
   <link href="https://lhlsnowing.github.io/"/>
-  <updated>2023-06-06T08:52:08.857Z</updated>
+  <updated>2023-06-11T02:47:01.395Z</updated>
   <id>https://lhlsnowing.github.io/</id>
   
   <author>
@@ -17,11 +17,37 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>TypeScript</title>
+    <link href="https://lhlsnowing.github.io/2023/06/11/typescript/"/>
+    <id>https://lhlsnowing.github.io/2023/06/11/typescript/</id>
+    <published>2023-06-11T02:17:23.000Z</published>
+    <updated>2023-06-11T02:47:01.395Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;文档非官方的&quot;&gt;&lt;a href=&quot;#文档非官方的&quot; class=&quot;headerlink&quot; title=&quot;文档非官方的&quot;&gt;&lt;/a&gt;文档非官方的&lt;/h1&gt;&lt;p&gt;&lt;a href=&quot;http://ts.xcatliu.com/&quot;&gt;TS入门&lt;/a&gt;&lt;/p&gt;
+&lt;h2</summary>
+        
+      
+    
+    
+    
+    <category term="TypeScript" scheme="https://lhlsnowing.github.io/categories/TypeScript/"/>
+    
+    
+    <category term="TypeScript" scheme="https://lhlsnowing.github.io/tags/TypeScript/"/>
+    
+  </entry>
+  
+  <entry>
     <title>java小记</title>
     <link href="https://lhlsnowing.github.io/2023/06/06/java-xiao-ji/"/>
     <id>https://lhlsnowing.github.io/2023/06/06/java-xiao-ji/</id>
     <published>2023-06-06T07:52:22.000Z</published>
-    <updated>2023-06-06T08:52:08.857Z</updated>
+    <updated>2023-06-10T12:35:42.631Z</updated>
     
     
       
@@ -36,6 +62,8 @@
     
     <category term="Java" scheme="https://lhlsnowing.github.io/categories/Java/"/>
     
+    <category term="Java第二篇" scheme="https://lhlsnowing.github.io/categories/Java/Java%E7%AC%AC%E4%BA%8C%E7%AF%87/"/>
+    
     
     <category term="java小记" scheme="https://lhlsnowing.github.io/tags/java%E5%B0%8F%E8%AE%B0/"/>
     
@@ -46,7 +74,7 @@
     <link href="https://lhlsnowing.github.io/2023/06/03/suan-fa-pian/"/>
     <id>https://lhlsnowing.github.io/2023/06/03/suan-fa-pian/</id>
     <published>2023-06-03T12:49:21.000Z</published>
-    <updated>2023-06-06T08:52:05.946Z</updated>
+    <updated>2023-06-09T11:36:10.160Z</updated>
     
     
       
@@ -73,7 +101,7 @@
     <link href="https://lhlsnowing.github.io/2023/06/02/ai-ji-he-pian/"/>
     <id>https://lhlsnowing.github.io/2023/06/02/ai-ji-he-pian/</id>
     <published>2023-06-02T15:53:52.000Z</published>
-    <updated>2023-06-02T16:06:39.958Z</updated>
+    <updated>2023-06-11T02:50:18.245Z</updated>
     
     
       
@@ -92,6 +120,8 @@
     <category term="chatgpt" scheme="https://lhlsnowing.github.io/tags/chatgpt/"/>
     
     <category term="ai工具" scheme="https://lhlsnowing.github.io/tags/ai%E5%B7%A5%E5%85%B7/"/>
+    
+    <category term="插件" scheme="https://lhlsnowing.github.io/tags/%E6%8F%92%E4%BB%B6/"/>
     
   </entry>
   
@@ -132,7 +162,7 @@
     <link href="https://lhlsnowing.github.io/2023/05/30/chong-xin-xue-java/"/>
     <id>https://lhlsnowing.github.io/2023/05/30/chong-xin-xue-java/</id>
     <published>2023-05-30T08:16:46.000Z</published>
-    <updated>2023-06-06T07:53:02.821Z</updated>
+    <updated>2023-06-10T11:57:10.025Z</updated>
     
     
       

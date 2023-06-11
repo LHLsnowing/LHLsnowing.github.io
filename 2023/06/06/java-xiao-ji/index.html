@@ -9,7 +9,7 @@
 s.length是针对java中数组的，length是数组的一个属性，用来表示数组的长度
 s.length()则是字符串的一个方法，用来返回字符串的长度的
 
-">
+类的五大成员[属性、方法">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -351,6 +351,10 @@ s.length()则是字符串的一个方法，用来返回字符串的长度的
                                 Java
                             </a>
                         
+                            <a href="/categories/Java/Java%E7%AC%AC%E4%BA%8C%E7%AF%87/" class="post-category">
+                                Java第二篇
+                            </a>
+                        
                     </div>
                     
                 </div>
@@ -369,7 +373,7 @@ s.length()则是字符串的一个方法，用来返回字符串的长度的
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>Word Count:&nbsp;&nbsp;
-                    58
+                    234
                 </div>
                 
 
@@ -397,6 +401,17 @@ s.length()则是字符串的一个方法，用来返回字符串的长度的
                 <h2 id="java中s-length-和-s-length区别"><a href="#java中s-length-和-s-length区别" class="headerlink" title="java中s.length() 和 s.length区别"></a>java中s.length() 和 s.length区别</h2><ul>
 <li>s.length是针对java中数组的，length是数组的一个属性，用来表示数组的长度</li>
 <li>s.length()则是字符串的一个方法，用来返回字符串的长度的</li>
+</ul>
+<h2 id="类的五大成员"><a href="#类的五大成员" class="headerlink" title="类的五大成员"></a>类的五大成员</h2><p>[属性、方法、构造器、代码块、内部类]<br>内部类还分为局部内部类（通常在方法中）、匿名内部类（无类名）</p>
+<ul>
+<li>局部内部类：作用域在方法或者代码块中、不能添加访问修饰符、但是可以使用final<br>外部其他类不能访问局部内部类，如果外部类和局部内部类的成员重名时候，遵循就近原则，<br>如果想访问外部类成员可以用（外部类名.this.成员）</li>
+<li>（Anonymous匿名的）匿名内部类：同时还是一个对象，系统jdk会分配个名字<pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token class-name">IA</span> tiger <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">IA</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+    <span class="token annotation punctuation">@Override</span>
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">cry</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+        <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"老虎叫---"</span><span class="token punctuation">)</span>；
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+tiger<span class="token punctuation">.</span><span class="token function">cry</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre></li>
 </ul>
 
                 
@@ -542,18 +557,17 @@ s.length()则是字符串的一个方法，用来返回字符串的长度的
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="far fa-dot-circle"></i>&nbsp;Current
-            </div>
+                <i class="fas fa-chevron-left"></i>&nbsp;Previous</div>
             <div class="card">
-                <a href="/2023/06/06/java-xiao-ji/">
+                <a href="/2023/06/11/typescript/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/13.jpg" class="responsive-img" alt="java小记">
+                        <img src="/medias/featureimages/5.jpg" class="responsive-img" alt="TypeScript">
                         
-                        <span class="card-title">java小记</span>
+                        <span class="card-title">TypeScript</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -563,27 +577,26 @@ s.length()则是字符串的一个方法，用来返回字符串的长度的
                         
                     </div>
                     <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2023-06-06
-                            </span>
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2023-06-11
+                        </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/Java/" class="post-category">
-                                    Java
+                            <a href="/categories/TypeScript/" class="post-category">
+                                    TypeScript
                                 </a>
                             
                             
                         </span>
                     </div>
                 </div>
-
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/java%E5%B0%8F%E8%AE%B0/">
-                        <span class="chip bg-color">java小记</span>
+                    <a href="/tags/TypeScript/">
+                        <span class="chip bg-color">TypeScript</span>
                     </a>
                     
                 </div>
@@ -871,7 +884,7 @@ s.length()则是字符串的一个方法，用来返回字符串的长度的
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;Total Words:&nbsp;<span
-                        class="white-color">22.1k</span>
+                        class="white-color">22.8k</span>
             
             
             
