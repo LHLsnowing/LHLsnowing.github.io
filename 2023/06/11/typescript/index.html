@@ -373,14 +373,14 @@ ts-node **.ts
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>Word Count:&nbsp;&nbsp;
-                    374
+                    452
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>Read Times:&nbsp;&nbsp;
-                    1 Min
+                    2 Min
                 </div>
                 
 
@@ -472,6 +472,31 @@ console<span class="token punctuation">.</span><span class="token function">log<
     a<span class="token operator">:</span><span class="token number">1</span><span class="token punctuation">,</span>
     b<span class="token operator">:</span><span class="token number">2</span>
 <span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h2 id="八、TS中promise写法"><a href="#八、TS中promise写法" class="headerlink" title="八、TS中promise写法"></a>八、TS中promise写法</h2><pre class="line-numbers language-typescript" data-language="typescript"><code class="language-typescript"><span class="token keyword">interface</span> <span class="token class-name">DataItf</span><span class="token punctuation">{</span>
+    a<span class="token operator">:</span><span class="token builtin">number</span><span class="token punctuation">;</span>
+    b<span class="token operator">:</span><span class="token builtin">number</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">interface</span> <span class="token class-name">ResItf</span><span class="token punctuation">{</span>
+    code<span class="token operator">:</span><span class="token builtin">number</span><span class="token punctuation">;</span>
+    data<span class="token operator">:</span> DataItf<span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">;</span>   <span class="token comment">//也可以这样写{a:number,b:number}[];</span>
+    message<span class="token operator">:</span><span class="token builtin">string</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">//promise对象 p:Promise &lt;res的类型&gt;</span>
+<span class="token keyword">let</span> p<span class="token operator">:</span><span class="token builtin">Promise</span><span class="token operator">&lt;</span>ResItf<span class="token operator">&gt;</span> <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name"><span class="token builtin">Promise</span></span><span class="token punctuation">(</span><span class="token punctuation">(</span>resolve<span class="token punctuation">,</span>reject<span class="token punctuation">)</span><span class="token operator">=&gt;</span><span class="token punctuation">{</span>
+    <span class="token function">resolve</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+        code<span class="token operator">:</span><span class="token number">0</span><span class="token punctuation">,</span>
+        data<span class="token operator">:</span><span class="token punctuation">[</span><span class="token punctuation">{</span>a<span class="token operator">:</span><span class="token number">1</span><span class="token punctuation">,</span>b<span class="token operator">:</span><span class="token number">2</span><span class="token punctuation">}</span><span class="token punctuation">,</span><span class="token punctuation">{</span>a<span class="token operator">:</span><span class="token number">11</span><span class="token punctuation">,</span>b<span class="token operator">:</span><span class="token number">22</span><span class="token punctuation">}</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+        message<span class="token operator">:</span><span class="token string">""</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+p<span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span>res<span class="token operator">=&gt;</span><span class="token punctuation">{</span>
+    <span class="token keyword">if</span><span class="token punctuation">(</span>res<span class="token punctuation">.</span>code<span class="token operator">==</span><span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+        res<span class="token punctuation">.</span>data<span class="token punctuation">.</span><span class="token function">map</span><span class="token punctuation">(</span>item<span class="token operator">=&gt;</span>item<span class="token punctuation">.</span>a<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
                 
             </div>
             <hr/>
@@ -615,18 +640,17 @@ console<span class="token punctuation">.</span><span class="token function">log<
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="far fa-dot-circle"></i>&nbsp;Current
-            </div>
+                <i class="fas fa-chevron-left"></i>&nbsp;Previous</div>
             <div class="card">
-                <a href="/2023/06/11/typescript/">
+                <a href="/2023/06/11/vue3-xiang-dui-yu-vue2-de-bian-hua/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/5.jpg" class="responsive-img" alt="TypeScript">
+                        <img src="/medias/featureimages/22.jpg" class="responsive-img" alt="Vue3相对于Vue2的变化">
                         
-                        <span class="card-title">TypeScript</span>
+                        <span class="card-title">Vue3相对于Vue2的变化</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -636,27 +660,30 @@ console<span class="token punctuation">.</span><span class="token function">log<
                         
                     </div>
                     <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2023-06-11
-                            </span>
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2023-06-11
+                        </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/TypeScript/" class="post-category">
-                                    TypeScript
+                            <a href="/categories/Vue/" class="post-category">
+                                    Vue
+                                </a>
+                            
+                            <a href="/categories/Vue/Vue3%E5%8F%98%E5%8C%96/" class="post-category">
+                                    Vue3变化
                                 </a>
                             
                             
                         </span>
                     </div>
                 </div>
-
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/TypeScript/">
-                        <span class="chip bg-color">TypeScript</span>
+                    <a href="/tags/Vue3%E7%9B%B8%E5%AF%B9Vue2%E5%8F%98%E5%8C%96/">
+                        <span class="chip bg-color">Vue3相对Vue2变化</span>
                     </a>
                     
                 </div>
@@ -944,7 +971,7 @@ console<span class="token punctuation">.</span><span class="token function">log<
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;Total Words:&nbsp;<span
-                        class="white-color">22.8k</span>
+                        class="white-color">23.3k</span>
             
             
             

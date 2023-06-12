@@ -6,7 +6,7 @@
   <link href="https://lhlsnowing.github.io/atom.xml" rel="self"/>
   
   <link href="https://lhlsnowing.github.io/"/>
-  <updated>2023-06-11T02:47:01.395Z</updated>
+  <updated>2023-06-11T09:23:52.102Z</updated>
   <id>https://lhlsnowing.github.io/</id>
   
   <author>
@@ -17,11 +17,38 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>Vue3相对于Vue2的变化</title>
+    <link href="https://lhlsnowing.github.io/2023/06/11/vue3-xiang-dui-yu-vue2-de-bian-hua/"/>
+    <id>https://lhlsnowing.github.io/2023/06/11/vue3-xiang-dui-yu-vue2-de-bian-hua/</id>
+    <published>2023-06-11T08:47:17.000Z</published>
+    <updated>2023-06-11T09:23:52.102Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;Vue3变化&quot;&gt;&lt;a href=&quot;#Vue3变化&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="Vue" scheme="https://lhlsnowing.github.io/categories/Vue/"/>
+    
+    <category term="Vue3变化" scheme="https://lhlsnowing.github.io/categories/Vue/Vue3%E5%8F%98%E5%8C%96/"/>
+    
+    
+    <category term="Vue3相对Vue2变化" scheme="https://lhlsnowing.github.io/tags/Vue3%E7%9B%B8%E5%AF%B9Vue2%E5%8F%98%E5%8C%96/"/>
+    
+  </entry>
+  
+  <entry>
     <title>TypeScript</title>
     <link href="https://lhlsnowing.github.io/2023/06/11/typescript/"/>
     <id>https://lhlsnowing.github.io/2023/06/11/typescript/</id>
     <published>2023-06-11T02:17:23.000Z</published>
-    <updated>2023-06-11T02:47:01.395Z</updated>
+    <updated>2023-06-11T06:34:54.183Z</updated>
     
     
       
