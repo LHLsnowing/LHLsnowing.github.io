@@ -1,6 +1,7 @@
 ---
 title: 重新学Java
 date: 2023-05-30 16:16:46
+summary: java第一篇
 tags: [Java,迷宫问题,IDEA快捷键]
 categories: [Java,java第一篇]
 ---
@@ -500,5 +501,4 @@ class Cat{
 - 一个类可以实现多个接口
 - 一个接口可以继承多个接口
 
-## 类的五大成员
-[属性、方法、构造器、代码块、内部类]
+

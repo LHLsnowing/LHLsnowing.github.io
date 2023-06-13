@@ -1,6 +1,7 @@
 ---
 title: TypeScript
 date: 2023-06-11 10:17:23
+summary: TS的一些类型，运行方式、promise写法
 tags:   TypeScript
 categories: TypeScript
 ---
@@ -105,4 +106,32 @@ let Reobj:Recordobj={
     a:1,
     b:2
 }
+```
+
+## 八、TS中promise写法
+```ts
+interface DataItf{
+    a:number;
+    b:number;
+}
+
+interface ResItf{
+    code:number;
+    data: DataItf[];   //也可以这样写{a:number,b:number}[];
+    message:string;
+}
+
+//promise对象 p:Promise <res的类型>
+let p:Promise<ResItf> = new Promise((resolve,reject)=>{
+    resolve({
+        code:0,
+        data:[{a:1,b:2},{a:11,b:22}],
+        message:""
+    })
+})
+p.then(res=>{
+    if(res.code==0){
+        res.data.map(item=>item.a);
+    }
+})
 ```

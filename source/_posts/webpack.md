@@ -1,6 +1,7 @@
 ---
 title: webpack
 date: 2023-06-02 08:59:41
+summary: Webpack五大核心概念、基础、处理各种资源，开发模式、生产模式等
 tags: [webpack5,webpack.config.js,webpack生产/开发模式]
 categories: [webpack,webpack基础]
 ---
