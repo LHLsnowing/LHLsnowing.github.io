@@ -61,9 +61,9 @@
 
     <script src="/libs/jquery/jquery-3.6.0.min.js"></script>
 
-<meta name="generator" content="Hexo 6.3.0">
+<meta name="generator" content="Hexo 6.3.0"><link rel="alternate" href="/atom.xml" title="落雪的小屋" type="application/atom+xml">
+
 <style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
-<link rel="alternate" href="/atom.xml" title="落雪的小屋" type="application/atom+xml">
 </head>
 
 
@@ -369,14 +369,14 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>Word Count:&nbsp;&nbsp;
-                    1.4k
+                    2k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>Read Times:&nbsp;&nbsp;
-                    5 Min
+                    7 Min
                 </div>
                 
 
@@ -538,10 +538,103 @@ tiger<span class="token punctuation">.</span><span class="token function">cry</s
 </ol>
 <h3 id="三个基本注解"><a href="#三个基本注解" class="headerlink" title="三个基本注解"></a>三个基本注解</h3><ol>
 <li>@Override ：限定某个方法，是重写父类方法，该注解只能用于方法<br>如果写了@Override 编译器会检查该方法是否真的重写了，没重写会报错！</li>
-<li>@Deprecated: 用于表示某个程序元素（类，方法）已经过时</li>
-<li>@SuppressWarnings: 抑制编译器警告 （suppress-抑制）</li>
+<li>@Deprecated: 用于表示某个程序元素（类，方法）已经过时<br>并不是不能用</li>
+<li>@SuppressWarnings: 抑制编译器警告 （suppress-抑制）<br>@SuppressWarnings({“”})  -all所有，null 等等</li>
 </ol>
 <p>@interface 不是interface 是个注解类</p>
+<h3 id="元注解"><a href="#元注解" class="headerlink" title="元注解"></a>元注解</h3><p>修饰注解的注解</p>
+<ol>
+<li>Retention 指注解的作用范围</li>
+<li>Target 指定注解可以在哪些地方使用</li>
+<li>Documented 指定该注解是否会在Javadoc体现</li>
+<li>Inherited 子类会继承父类注解</li>
+</ol>
+<h2 id="java常用类"><a href="#java常用类" class="headerlink" title="java常用类"></a>java常用类</h2><ol>
+<li>包装类</li>
+<li>String</li>
+<li>StringBuffer</li>
+<li>StringBuildr</li>
+<li>Math</li>
+<li>Date、Calendar、LocalDate。。</li>
+<li>System</li>
+<li>Arrays</li>
+<li>BigInteger BigDecimal</li>
+</ol>
+<h3 id="八大wrapper类"><a href="#八大wrapper类" class="headerlink" title="八大wrapper类"></a>八大wrapper类</h3><p>boolean Boolean<br>char    Character<br>byte    Byte<br>short   Short<br>int     Integer<br>long    Long<br>float   Float<br>double  Double</p>
+<h3 id="拆箱装箱"><a href="#拆箱装箱" class="headerlink" title="拆箱装箱"></a>拆箱装箱</h3><p>其他包装类与此类似</p>
+<pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">Wrapper</span> <span class="token punctuation">{</span>
+    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token class-name">String</span><span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">int</span> n<span class="token operator">=</span><span class="token number">1</span><span class="token punctuation">;</span>
+        <span class="token comment">//手动装箱 int -&gt; integer</span>
+        <span class="token class-name">Integer</span> integer <span class="token operator">=</span> <span class="token class-name">Integer</span><span class="token punctuation">.</span><span class="token function">valueOf</span><span class="token punctuation">(</span>n<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token class-name">Integer</span> integer1 <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Integer</span><span class="token punctuation">(</span>n<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>integer<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token comment">//手动拆箱 integer -&gt; int</span>
+        <span class="token keyword">int</span> i <span class="token operator">=</span> integer<span class="token punctuation">.</span><span class="token function">intValue</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+        <span class="token comment">//jdk5以后可以自动装箱和拆箱</span>
+        <span class="token comment">//自动装箱 int -&gt; integer</span>
+        <span class="token class-name">Integer</span> integer2 <span class="token operator">=</span> n<span class="token punctuation">;</span> <span class="token comment">//底层用的Integer.valueOf()</span>
+        <span class="token comment">//自动拆箱</span>
+        <span class="token keyword">int</span> n2 <span class="token operator">=</span> integer2<span class="token punctuation">;</span><span class="token comment">//底层用的 integer.intValue()</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h3 id="面试题"><a href="#面试题" class="headerlink" title="面试题"></a>面试题</h3><p><img src="/2023/06/06/java-xiao-ji/integer.png"></p>
+<h2 id="String-和-StringBuffer-和-StringBuilder"><a href="#String-和-StringBuffer-和-StringBuilder" class="headerlink" title="String 和 StringBuffer 和 StringBuilder"></a>String 和 StringBuffer 和 StringBuilder</h2><ol>
+<li>String 保存的是字符串常量，每次更改会改变地址</li>
+<li>StringBuffer 保存的是字符串变量，每次更改到空间不够的时候会新增空间，之后改变地址<br>字符串缓冲区，初始为16个字符<br>StringBuffer里边有char[] value,不是每次都创建新对象</li>
+</ol>
+<h3 id="StringBuffer常用方法"><a href="#StringBuffer常用方法" class="headerlink" title="StringBuffer常用方法"></a>StringBuffer常用方法</h3><ol>
+<li>增 append</li>
+<li>删 delete（start，end）</li>
+<li>改 replace（start，end，string）</li>
+<li>查 indexOf 找到第一次的索引，找不到的话返回-1</li>
+<li>插 insert</li>
+<li>获取长度 length</li>
+<li>stringbuffer转string  toString()方法</li>
+</ol>
+<h3 id="price转换案例"><a href="#price转换案例" class="headerlink" title="price转换案例"></a>price转换案例</h3><pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">StringBufferP</span> <span class="token punctuation">{</span>
+    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token class-name">String</span><span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token class-name">String</span> price<span class="token operator">=</span><span class="token string">"2123124773.50"</span><span class="token punctuation">;</span>
+        <span class="token class-name">StringBuffer</span> strBuff <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">StringBuffer</span><span class="token punctuation">(</span>price<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">int</span> len <span class="token operator">=</span> strBuff<span class="token punctuation">.</span><span class="token function">lastIndexOf</span><span class="token punctuation">(</span><span class="token string">"."</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">int</span> i<span class="token operator">=</span>len<span class="token operator">-</span><span class="token number">3</span><span class="token punctuation">;</span>i<span class="token operator">&gt;</span><span class="token number">0</span><span class="token punctuation">;</span>i<span class="token operator">=</span>i<span class="token operator">-</span><span class="token number">3</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+            strBuff<span class="token punctuation">.</span><span class="token function">insert</span><span class="token punctuation">(</span>i<span class="token punctuation">,</span><span class="token string">","</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+        <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>strBuff<span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment">//2,123,124,773.50</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h3 id="StringBuilder"><a href="#StringBuilder" class="headerlink" title="StringBuilder"></a>StringBuilder</h3><ol>
+<li>StringBuilder继承了AbstractStringBuilder</li>
+<li>实现了 <code>Serializable</code>，说明StringBuilder对象可串行化</li>
+<li>StringBuilder 是<code>final</code>类 不能被继承</li>
+<li>StringBuilder 对象字符序列仍然存放在其父类的 AbstractStringBulider的 <code>char[] value</code>中</li>
+<li>StringBuilder 的方法没有synchronized，无互斥处理</li>
+</ol>
+<h3 id="三者区别"><a href="#三者区别" class="headerlink" title="三者区别"></a>三者区别</h3><p><img src="/2023/06/06/java-xiao-ji/String.jpg"></p>
+<h2 id="Arrays"><a href="#Arrays" class="headerlink" title="Arrays"></a>Arrays</h2><p>里面包含一些静态方法，用于管理或操作数组</p>
+<ol>
+<li>toString 返回数组字符串形式</li>
+<li>sort 排序</li>
+<li>binarySearch 二分法查找（必须要求排好序）<br>eg：<code>int index = Arrays.binarySearch(arr,3);</code></li>
+<li>copyOf 数组元素的复制<br><code>Integer[] newArr = Arrays.copyOf(arr,arr.length);</code></li>
+<li>fill 数组填充</li>
+<li>equals 比较两个数组元素内容是否完全一致</li>
+<li>asList 将一组值转化为list</li>
+</ol>
+<h2 id="System类"><a href="#System类" class="headerlink" title="System类"></a>System类</h2><ol>
+<li>exit 退出当前程序</li>
+<li>arraycopy 复制数据元素</li>
+<li>currentTimeMillens 返回当前时间距离1970-1-1的毫秒数</li>
+<li>gc 运行垃圾回收机制 System.gc();</li>
+</ol>
+<h2 id="BigInteger和BigDecimal类"><a href="#BigInteger和BigDecimal类" class="headerlink" title="BigInteger和BigDecimal类"></a>BigInteger和BigDecimal类</h2><ol>
+<li>BigInteger 适合保存比较大的整型</li>
+<li>BigDecimal 适合保存浮点数</li>
+</ol>
+<h2 id="Date类-Calendar类"><a href="#Date类-Calendar类" class="headerlink" title="Date类 Calendar类"></a>Date类 Calendar类</h2><h2 id="Collection接口"><a href="#Collection接口" class="headerlink" title="Collection接口"></a>Collection接口</h2><p>collection继承了Iterable接口<br><img src="/2023/06/06/java-xiao-ji/collection.png"></p>
 
                 
             </div>
@@ -1013,7 +1106,7 @@ tiger<span class="token punctuation">.</span><span class="token function">cry</s
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;Total Words:&nbsp;<span
-                        class="white-color">24.4k</span>
+                        class="white-color">25.1k</span>
             
             
             
