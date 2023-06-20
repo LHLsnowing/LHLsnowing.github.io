@@ -18,4 +18,7 @@ categories: AI
 ## 好用的vs插件
 1. Error Lens ， 在后面事实显示错误
 
+## 浏览器内搜索
+ctrl+f
+
 注：付费与本人无关，财产需谨慎!

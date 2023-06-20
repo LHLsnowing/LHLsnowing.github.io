@@ -24,3 +24,6 @@ categories: [Vue,Vue3变化]
 13. Vue3用TS写的，所以对TS的支持度更好
 14. Vue3不兼容IE11
 15. $on $off $once 实例方法已被移除
+
+---
+setup（）最先执行

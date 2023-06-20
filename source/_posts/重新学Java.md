@@ -8,34 +8,34 @@ categories: [Java,java第一篇]
 
 # Java基础
 
-## java重要特点
+## 一、java重要特点
 1. oop
 2. Java语言健壮性，强类型机制、异常处理、垃圾的自动回收
 3. 跨平台
 4. 解释性的   还有JavaScript，php  （编译性语言c、c++编译后直接执行）
 
-## JDK JRE JVM关系
+## 二、JDK JRE JVM关系
 1. JDK = JRE + 开发工具集
 2. JRE = JVM + Java SE标准类库
 3. JDK = JVM + Java SE标准类库 + 开发工具集
 
-## java文档
+## 三、java文档
 ![](./%E9%87%8D%E6%96%B0%E5%AD%A6Java/first.png)
 [java在线api](https://www.matools.com/api/java8)
 
-## java字符类型本质
+## 四、java字符类型本质
 字符型 
 存储: 'a'==>码值97==>二进制（110 0001）==> 存储
 读取: 二进制==>码值==>'a'
 
-## 基本数据类型转换
+## 五、基本数据类型转换
 1. 有多种类型的数据混合运算时，系统自动转成容量最大的数据类型再计算
 2. 把精度大的数据赋值给精度小的数据类型时，会报错，反之自动转换类型
 3. （byte，short）和char之间不会自动转换，他们三者可以计算，计算时候转成int类型
 4. Boolean 不参与转换
 6. 自动提升，表达式结果类型自动提升为操作数中最大的类型
 
-## java递归迷宫问题
+## 六、java递归迷宫问题
 
 ```java
 package new_java;
@@ -118,7 +118,7 @@ class T {
 }
 ```
 
-## 方法重载（OverLoad）
+## 七、方法重载（OverLoad）
 **同一个类中，多个同名方法，参数不同**
 ```java
 class MyCalculator {
@@ -136,7 +136,7 @@ class MyCalculator {
 }
 ```
 
-## 可变参数
+## 八、可变参数
 **可变参数使用**
 有点类似传个数组，实参可以是0个活任意多个，也可以是数组
 如果里边有普通参数和可变参数，可变参数必须放在最后 eg:`(int i, int... nums)`
@@ -160,7 +160,7 @@ class MyCalculator {
 }
 ```
 
-## 对象创建流程分析
+## 九、对象创建流程分析  ※
 ```java
 class Person{
     int age=90;
@@ -180,7 +180,7 @@ Person p = new Person('小明',20);
 3.2 显示初始化 age=90,name=null
 3.3 构造器初始化 age=20,name=90
 
-## IDEA的使用
+## 十、IDEA的使用
 
 ### IDEA快捷键
 每个人使用习惯不一样，可自己更改设置，以下也非默认
@@ -201,7 +201,7 @@ Person p = new Person('小明',20);
 ### IDEA模板代码
 setting -> Live Templates 自行设置更改
 
-## 包命名
+## 十一、包命名
 命名规则：**只能包含数字、字母、下划线、小圆点，**不能是数字开头，不能是关键字或者保留字
 ```java
 demo.class.exec1 //不行class关键字
@@ -221,16 +221,16 @@ java.net.* //网络包，网络开发
 java.awt.* //做java的开发界面，GUI
 ```
 
-## super关键字
+## 十二、super关键字
 主要访问父类的东西,不能访问private修饰的
 super.熟悉  super.方法
 访问父类构造器 super（参数列表），**只能放在第一句**
 
-## 方法重写
+## 十三、方法重写
 - 方法覆盖（重写）就是子类有一个方法，和父类某个方法的名称、返回类型、参数一样
 且访问权限子类不能小于父类
 
-## 多态
+## 十四、多态
 - 重写和重载都是多态的一种体现
 - 方法多态 （没啥好说的了 简单例子sum（1，2），sum(1,2,3)
 - 对象多态：
@@ -259,7 +259,7 @@ cat.catchMouse();
 // 有两个 cat 和 animal 都指向一个内存  如果再将animal转换成dog 会出现猫是狗的错误
 ```
 
-## 属性重写问题
+## 十五、属性重写问题
 属性没有重写的说法，属性的值看编译类型
 ```java
 public class Main {
@@ -276,14 +276,14 @@ class Sub extends  Base{
 }
 ```	
 
-## instanceof 可以判断运行类型
+## 十六、instanceof 可以判断运行类型
 instanceof是Java中的二元运算符，左边是对象，右边是类；当对象是右边类或子类所创建对象时，返回true；否则，返回false。
 - 左边的对象实例不能是基础数据类型
 - 左边的对象实例和右边的类不在同一个继承树上
 - null用instanceof跟任何类型比较时都是false
 eg： `aa instanceof AA`
 
-## 多态数组  ——  instanceof 配合向下转型
+## 十七、多态数组  ——  instanceof 配合向下转型
 ```java
 //Person父类， Student，Teacher子类 下面是巧妙运用
 Person persons[] = new Person[3];
@@ -305,22 +305,22 @@ for(int i=0;i<person.length;i++){
 }
 ```
 
-## 属性看编译时类型，方法看运行时类型
+## 十八、属性看编译时类型，方法看运行时类型
 多态挺有意思的  看=左右侧具体判断吧
 
-## 动态绑定机制_重要
+## 十九、动态绑定机制_重要
 ![](./%E9%87%8D%E6%96%B0%E5%AD%A6Java/duotai.jpg)
 主要看运行类型
 找不到方法时候向父级找
 js原型链能搞懂这个也能
 
-## hashCode
+## 二十、hashCode
 1. 提高哈希结构容器效率
 2. 两个引用，如果指向同一个对象，hash值一样
 3. 两个引用，如果指向的是不同对象，hash值不一样
 4. hash值主要根据地址号来的，不能完全等价于地址
 
-## finalize 垃圾回收机制
+## 二十一、finalize 垃圾回收机制
 1. 当对象被回收时，系统自动调用该对象的finalize方法，子类可以重写该方法，做释放资源的操作
 2. 什么时候被回收，当某个对象没有任何引用时，则JVM认为这个对象是一个垃圾对象，就会使用垃圾回收机制来销毁该对象，在销毁对象前，先调用finalize方法
 3. 垃圾回收机制的调用，由系统来决定，也可以通过System.gc()主动触发回收机制
@@ -329,7 +329,7 @@ Car bmw = new Car("宝马");
 bmw = null; // 这时 car对象是一个垃圾
 ``` 
 
-## 断点调试
+## 二十二、断点调试 必备技能
 - 断点调试过程中，是运行状态，是以对象的 运行类型 执行的
 
 介绍：
@@ -339,7 +339,7 @@ bmw = null; // 这时 car对象是一个垃圾
 
 - F7（跳入） shift+F8（跳过，下一步） F9（resume，执行下一个断点）
 
-## 类变量
+## 二十三、类变量
 static修饰的变量 在静态方法区域（具体在哪和版本有关系） 所有类共享，一个改变另一个也变
 ```java
 public class Child {
@@ -362,7 +362,7 @@ class Lt{
 静态方法不能访问普通变量，只能访问修改static修饰的
 普通的不带static修饰的全能
 
-## 深入理解main方法
+## 二十四、深入理解main方法
 main方法形式`public static void main(String[] args){}`
 1. main 方法是虚拟机调用
 2. java虚拟机需要调用类的main（）方法，所以该方法访问权限必须是public
@@ -381,124 +381,6 @@ public static void main(String[] args) {
 
 - mian特别说明，不可以访问本类的非静态成员，要访问必须要先创建一个对象，new Main（）；之后用创建的对象再调用这个非静态成员。
 
-## 代码块
-代码块的顺序优先于构造器，多个类构造器相同代码可提入代码块
-```java
-[修饰符]{
 
-}// 如果加了static只会执行一次
-```
-细节
->1. static代码块——静态代码块，随着类加载只会执行一次
-2. 类什么时候被加载【重要】
-1）创建对象实例时候（new）
-2）创建子类对象实例，父类也会被加载
-3）使用类的静态成员时候（静态属性，静态方法）
-```JAVA
-public class CodeStatic {
-    public static void main(String[] args) {
-      //  BB bb = new BB();  (1)
-        System.out.println(AA.n1);// (2)
-    }
-}
-class AA{
-    public static int n1=9;
-    static{
-        System.out.println("AAAAAAAAA代码块");
-    }
-}
-class BB extends AA{
-    static {
-        System.out.println("BBBBBBB代码块");
-    }
-}
-
-//(1) 输出顺序
-//AAAAAAAAA代码块
-//BBBBBBB代码块
-//(2) 输出顺序
-//AAAAAAAAA代码块
-//9
-```
->4）创建一个对象时，在一个类调用顺序是：【重点，难点】
->>1、调用静态代码块和静态属性初始化
-2、调用普通代码块和普通属性的初始化
-3、调用构造方法
-
->5）构造器 的最前面其实因隐藏了super() 和调用普通代码块
-
-## 单例设计模式
-1. 采用一定的方法，在整个软件系统中，对某个类只能存在一个对象实例，并且该类只提供一个去的对象实例的方法
-2. 两种模式 1）饿汉式 2）懒汉式
-二者主要区别在于创建对象**时机不同**，懒汉式存在线程安全问题，饿汉式存在浪费资源的可能
-步骤如下：
->1）构造器私有化，防止直接new
-2）类的内部创建对象
-3）向外暴漏一个静态的公共方法
-4）代码实现
-```java
-//饿汉
-public class Single {
-    public static void main(String[] args) {
-        GirlFriend instance1 = GirlFriend.getInstance();
-        GirlFriend instance2 = GirlFriend.getInstance();
-        System.out.println(instance2 == instance1);//true
-    }
-}
-class GirlFriend{
-    private String name;
-    // 保障只创建一个 GirlFriend 对象
-    private static GirlFriend gf = new GirlFriend("小红");
-    private GirlFriend(String name){
-        this.name=name;
-    }
-    public static GirlFriend getInstance(){
-        return gf;
-    }
-}
-```
-```java
-//懒汉
-public class Single2 {
-    public static void main(String[] args) {
-        Cat cat = Cat.getInstance();
-    }
-}
-class Cat{
-    private String name;
-    private static Cat cat;
-    private Cat(String name){
-        this.name=name;
-    }
-    public static Cat getInstance(){
-        if(cat == null){
-            cat = new Cat("喵喵");
-        }
-        return cat;
-    }
-}
-```
-
-## final关键字
-使用情况：
-1. 不希望类被继承时
-2. 不希望父类的某个方法被子类覆盖/重写时候，但该方法可继承
-3. 不希望类中某个属性值被修改
-4. 不希望某个局部变量被修改
-- final修饰的属性一般叫常量 `final double a = 0;`定义时候必须初始化
-
-## 抽象类 Abstract
-当父类的某些方法需要声明，但又不能确定如何实现时候，可以将其声明为抽象方法，那么这个类就是抽象类
-1. 抽象类不能被实例化
-2. 抽象类不一定要含有abstract方法
-3. 一旦保安了abstract方法，这个类必须声明为abstract
-4. abstract只能修饰类和方法，不能修饰属性和其他的
-5. 抽象类可以拥有任意成员
-6. 抽象方法不能有主体 `abstract void aa{}`,即{}不应存在
-7. 如果一个类继承了抽象类，则必须实现抽象类的所有抽象方法
-
-## 接口 interface
-- 一个类可以实现多个接口
-- 一个接口可以继承多个接口
 
 
