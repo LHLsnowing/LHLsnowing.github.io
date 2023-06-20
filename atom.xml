@@ -6,7 +6,7 @@
   <link href="https://lhlsnowing.github.io/atom.xml" rel="self"/>
   
   <link href="https://lhlsnowing.github.io/"/>
-  <updated>2023-06-14T13:03:51.044Z</updated>
+  <updated>2023-06-20T06:20:41.483Z</updated>
   <id>https://lhlsnowing.github.io/</id>
   
   <author>
@@ -15,6 +15,65 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Servlet</title>
+    <link href="https://lhlsnowing.github.io/2023/06/20/servlet/"/>
+    <id>https://lhlsnowing.github.io/2023/06/20/servlet/</id>
+    <published>2023-06-20T06:16:40.000Z</published>
+    <updated>2023-06-20T06:20:41.483Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;Servlet学习&quot;&gt;&lt;a href=&quot;#Servlet学习&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="Java" scheme="https://lhlsnowing.github.io/categories/Java/"/>
+    
+    <category term="Servlet" scheme="https://lhlsnowing.github.io/categories/Java/Servlet/"/>
+    
+    
+    <category term="Java" scheme="https://lhlsnowing.github.io/tags/Java/"/>
+    
+    <category term="Servlet" scheme="https://lhlsnowing.github.io/tags/Servlet/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>java小记_2</title>
+    <link href="https://lhlsnowing.github.io/2023/06/20/java-xiao-ji-2/"/>
+    <id>https://lhlsnowing.github.io/2023/06/20/java-xiao-ji-2/</id>
+    <published>2023-06-20T01:07:04.000Z</published>
+    <updated>2023-06-20T06:12:08.304Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;java的第三篇啦&quot;&gt;&lt;a href=&quot;#java的第三篇啦&quot; class=&quot;headerlink&quot; title=&quot;java的第三篇啦&quot;&gt;&lt;/a&gt;java的第三篇啦&lt;/h1&gt;&lt;p&gt;有部分笔记不是很详细，记在心里即可&lt;/p&gt;
+&lt;h2</summary>
+        
+      
+    
+    
+    
+    <category term="Java" scheme="https://lhlsnowing.github.io/categories/Java/"/>
+    
+    <category term="java第三篇" scheme="https://lhlsnowing.github.io/categories/Java/java%E7%AC%AC%E4%B8%89%E7%AF%87/"/>
+    
+    
+    <category term="java" scheme="https://lhlsnowing.github.io/tags/java/"/>
+    
+    <category term="List" scheme="https://lhlsnowing.github.io/tags/List/"/>
+    
+  </entry>
   
   <entry>
     <title>Vue3变化</title>
@@ -74,14 +133,14 @@
     <link href="https://lhlsnowing.github.io/2023/06/06/java-xiao-ji/"/>
     <id>https://lhlsnowing.github.io/2023/06/06/java-xiao-ji/</id>
     <published>2023-06-06T07:52:22.000Z</published>
-    <updated>2023-06-19T09:31:31.632Z</updated>
+    <updated>2023-06-20T01:30:04.452Z</updated>
     
     
       
       
         
         
-    <summary type="html">&lt;h2 id=&quot;java中s-length-和-s-length区别&quot;&gt;&lt;a href=&quot;#java中s-length-和-s-length区别&quot; class=&quot;headerlink&quot; title=&quot;java中s.length() 和</summary>
+    <summary type="html">&lt;h2 id=&quot;一、java中s-length-和-s-length区别&quot;&gt;&lt;a href=&quot;#一、java中s-length-和-s-length区别&quot; class=&quot;headerlink&quot; title=&quot;一、java中s.length() 和</summary>
         
       
     
@@ -93,6 +152,18 @@
     
     
     <category term="java小记" scheme="https://lhlsnowing.github.io/tags/java%E5%B0%8F%E8%AE%B0/"/>
+    
+    <category term="增强for" scheme="https://lhlsnowing.github.io/tags/%E5%A2%9E%E5%BC%BAfor/"/>
+    
+    <category term="collection" scheme="https://lhlsnowing.github.io/tags/collection/"/>
+    
+    <category term="iterator遍历" scheme="https://lhlsnowing.github.io/tags/iterator%E9%81%8D%E5%8E%86/"/>
+    
+    <category term="单例设计模式" scheme="https://lhlsnowing.github.io/tags/%E5%8D%95%E4%BE%8B%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"/>
+    
+    <category term="抽象类" scheme="https://lhlsnowing.github.io/tags/%E6%8A%BD%E8%B1%A1%E7%B1%BB/"/>
+    
+    <category term="接口" scheme="https://lhlsnowing.github.io/tags/%E6%8E%A5%E5%8F%A3/"/>
     
   </entry>
   
@@ -128,7 +199,7 @@
     <link href="https://lhlsnowing.github.io/2023/06/02/ai-ji-he-pian/"/>
     <id>https://lhlsnowing.github.io/2023/06/02/ai-ji-he-pian/</id>
     <published>2023-06-02T15:53:52.000Z</published>
-    <updated>2023-06-11T02:50:18.245Z</updated>
+    <updated>2023-06-20T00:47:27.111Z</updated>
     
     
       
@@ -189,14 +260,14 @@
     <link href="https://lhlsnowing.github.io/2023/05/30/chong-xin-xue-java/"/>
     <id>https://lhlsnowing.github.io/2023/05/30/chong-xin-xue-java/</id>
     <published>2023-05-30T08:16:46.000Z</published>
-    <updated>2023-06-13T03:26:46.574Z</updated>
+    <updated>2023-06-20T01:28:23.310Z</updated>
     
     
       
       
         
         
-    <summary type="html">&lt;h1 id=&quot;Java基础&quot;&gt;&lt;a href=&quot;#Java基础&quot; class=&quot;headerlink&quot; title=&quot;Java基础&quot;&gt;&lt;/a&gt;Java基础&lt;/h1&gt;&lt;h2 id=&quot;java重要特点&quot;&gt;&lt;a href=&quot;#java重要特点&quot; class=&quot;headerlink&quot;</summary>
+    <summary type="html">&lt;h1 id=&quot;Java基础&quot;&gt;&lt;a href=&quot;#Java基础&quot; class=&quot;headerlink&quot; title=&quot;Java基础&quot;&gt;&lt;/a&gt;Java基础&lt;/h1&gt;&lt;h2 id=&quot;一、java重要特点&quot;&gt;&lt;a href=&quot;#一、java重要特点&quot;</summary>
         
       
     
