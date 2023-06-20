@@ -61,9 +61,9 @@
 
     <script src="/libs/jquery/jquery-3.6.0.min.js"></script>
 
-<meta name="generator" content="Hexo 6.3.0"><link rel="alternate" href="/atom.xml" title="落雪的小屋" type="application/atom+xml">
-
+<meta name="generator" content="Hexo 6.3.0">
 <style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
+<link rel="alternate" href="/atom.xml" title="落雪的小屋" type="application/atom+xml">
 </head>
 
 
@@ -373,7 +373,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>Word Count:&nbsp;&nbsp;
-                    3
+                    404
                 </div>
                 
 
@@ -398,7 +398,36 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="Servlet学习"><a href="#Servlet学习" class="headerlink" title="Servlet学习"></a>Servlet学习</h1>
+                <h1 id="Servlet学习"><a href="#Servlet学习" class="headerlink" title="Servlet学习"></a>Servlet学习</h1><p>与CGI（创建进程，占用资源多）相比，servlet（创建的是线程）有更好的性能、可移植性、稳健（JVM管理servlet）、安全</p>
+<p><a target="_blank" rel="noopener" href="https://www.runoob.com/servlet/servlet-first-example.html">servlet实例</a></p>
+<h2 id="Servlet-API"><a href="#Servlet-API" class="headerlink" title="Servlet API"></a>Servlet API</h2><ul>
+<li>javax.servlet</li>
+<li>javax.servlet.http:包含只负责http请求的接口和类</li>
+</ul>
+<h2 id="servlet-接口"><a href="#servlet-接口" class="headerlink" title="servlet 接口"></a>servlet 接口</h2><p>提供了三个必须实现方法 <code>init</code> <code>service</code> <code>destory</code></p>
+<h2 id="servletConfig-接口"><a href="#servletConfig-接口" class="headerlink" title="servletConfig 接口"></a>servletConfig 接口</h2><p>Web容器为每个Servlet创建一个<code>ServletConfig</code>对象，这个对象可以从<code>web.xml</code>种获取配置信息，<br>如果配置信息从web.xml中被修改，我们不需要改变servlet</p>
+<h2 id="RequestDispatcher-接口"><a href="#RequestDispatcher-接口" class="headerlink" title="RequestDispatcher 接口"></a>RequestDispatcher 接口</h2><p>RequestDispatcher接口提供了将请求分配给另一个资源的功能，它可能是html、servlet或jsp。这个接口也可以用来包括另一个资源的内容，他是Servlet协作的一种方式</p>
+<ul>
+<li>两个method</li>
+</ul>
+<ol>
+<li>forward：将一个请求从servlet转发到服务器上的另一个资源</li>
+<li>include：在响应中包括一个资源的内容</li>
+</ol>
+<h2 id="HttpServletResponse接口"><a href="#HttpServletResponse接口" class="headerlink" title="HttpServletResponse接口"></a>HttpServletResponse接口</h2><p>HttpServletResponse 接口的<code>sendRedirect()</code>方法可以用来重定向响应到另一个资源，它可以是servlet、jsp或html文件<br>它接收相对和绝对的URL。他在客户端工作，因为它使用浏览器的URL栏进行另一个请求，因此它可以在服务器内部或外部工作</p>
+<h2 id="Servlet-生命周期"><a href="#Servlet-生命周期" class="headerlink" title="Servlet 生命周期"></a>Servlet 生命周期</h2><blockquote>
+<p>servlet类被加载<br>创建servlet实例<br>init方法被调用<br>service方法被调用<br>调用destroy方法</p>
+</blockquote>
+<h2 id="Servlet-中会话跟踪"><a href="#Servlet-中会话跟踪" class="headerlink" title="Servlet 中会话跟踪"></a>Servlet 中会话跟踪</h2><p>几种技术</p>
+<ol>
+<li>Cookies</li>
+<li>隐藏表单域</li>
+<li>URL重写</li>
+<li>HttpSession</li>
+</ol>
+<h2 id="war文件"><a href="#war文件" class="headerlink" title="war文件"></a>war文件</h2><p>网络档案war文件包含网络应用所有内容<br>节省时间<br>创建，进入项目目录（WEB-INF之外），<code>jar -cvf projectname.war *</code></p>
+<h2 id="jsp"><a href="#jsp" class="headerlink" title="jsp"></a>jsp</h2><p>&lt;% java代码 %&gt;</p>
+
                 
             </div>
             <hr/>
@@ -887,7 +916,7 @@
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;Total Words:&nbsp;<span
-                        class="white-color">25.3k</span>
+                        class="white-color">25.9k</span>
             
             
             

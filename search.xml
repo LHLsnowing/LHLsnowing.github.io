@@ -8,7 +8,7 @@
       <link href="/2023/06/20/servlet/"/>
       <url>/2023/06/20/servlet/</url>
       
-        <content type="html"><![CDATA[<h1 id="Servlet学习"><a href="#Servlet学习" class="headerlink" title="Servlet学习"></a>Servlet学习</h1>]]></content>
+        <content type="html"><![CDATA[<h1 id="Servlet学习"><a href="#Servlet学习" class="headerlink" title="Servlet学习"></a>Servlet学习</h1><p>与CGI（创建进程，占用资源多）相比，servlet（创建的是线程）有更好的性能、可移植性、稳健（JVM管理servlet）、安全</p><p><a href="https://www.runoob.com/servlet/servlet-first-example.html">servlet实例</a></p><h2 id="Servlet-API"><a href="#Servlet-API" class="headerlink" title="Servlet API"></a>Servlet API</h2><ul><li>javax.servlet</li><li>javax.servlet.http:包含只负责http请求的接口和类</li></ul><h2 id="servlet-接口"><a href="#servlet-接口" class="headerlink" title="servlet 接口"></a>servlet 接口</h2><p>提供了三个必须实现方法 <code>init</code> <code>service</code> <code>destory</code></p><h2 id="servletConfig-接口"><a href="#servletConfig-接口" class="headerlink" title="servletConfig 接口"></a>servletConfig 接口</h2><p>Web容器为每个Servlet创建一个<code>ServletConfig</code>对象，这个对象可以从<code>web.xml</code>种获取配置信息，<br>如果配置信息从web.xml中被修改，我们不需要改变servlet</p><h2 id="RequestDispatcher-接口"><a href="#RequestDispatcher-接口" class="headerlink" title="RequestDispatcher 接口"></a>RequestDispatcher 接口</h2><p>RequestDispatcher接口提供了将请求分配给另一个资源的功能，它可能是html、servlet或jsp。这个接口也可以用来包括另一个资源的内容，他是Servlet协作的一种方式</p><ul><li>两个method</li></ul><ol><li>forward：将一个请求从servlet转发到服务器上的另一个资源</li><li>include：在响应中包括一个资源的内容</li></ol><h2 id="HttpServletResponse接口"><a href="#HttpServletResponse接口" class="headerlink" title="HttpServletResponse接口"></a>HttpServletResponse接口</h2><p>HttpServletResponse 接口的<code>sendRedirect()</code>方法可以用来重定向响应到另一个资源，它可以是servlet、jsp或html文件<br>它接收相对和绝对的URL。他在客户端工作，因为它使用浏览器的URL栏进行另一个请求，因此它可以在服务器内部或外部工作</p><h2 id="Servlet-生命周期"><a href="#Servlet-生命周期" class="headerlink" title="Servlet 生命周期"></a>Servlet 生命周期</h2><blockquote><p>servlet类被加载<br>创建servlet实例<br>init方法被调用<br>service方法被调用<br>调用destroy方法</p></blockquote><h2 id="Servlet-中会话跟踪"><a href="#Servlet-中会话跟踪" class="headerlink" title="Servlet 中会话跟踪"></a>Servlet 中会话跟踪</h2><p>几种技术</p><ol><li>Cookies</li><li>隐藏表单域</li><li>URL重写</li><li>HttpSession</li></ol><h2 id="war文件"><a href="#war文件" class="headerlink" title="war文件"></a>war文件</h2><p>网络档案war文件包含网络应用所有内容<br>节省时间<br>创建，进入项目目录（WEB-INF之外），<code>jar -cvf projectname.war *</code></p><h2 id="jsp"><a href="#jsp" class="headerlink" title="jsp"></a>jsp</h2><p>&lt;% java代码 %&gt;</p>]]></content>
       
       
       <categories>
@@ -184,7 +184,7 @@
       <link href="/2023/06/02/ai-ji-he-pian/"/>
       <url>/2023/06/02/ai-ji-he-pian/</url>
       
-        <content type="html"><![CDATA[<h1 id="AI"><a href="#AI" class="headerlink" title="AI"></a>AI</h1><p><img src="/2023/06/02/ai-ji-he-pian/ad.jpg"><br>把我知道的一些国内镜像站做个集合,自己想搭GitHub也有开源,会用ai会有不少便利和乐趣</p><ol><li><a href="https://www.npmmirror.com/package/freegpt">npm 镜像——freegpt</a></li><li><a href="https://ai-bot.cn/">AI工具集合，这个工具很多</a></li><li><a href="https://chat.forefront.ai/">需要梯子，有gpt4和3.5</a></li><li><a href="https://poe.com/GPT-4">花钱，gpt4，可试用</a></li><li><a href="https://ai.usesless.com/">还可以，积分制</a></li><li><a href="https://codeium.com/playground">coplit平体</a></li></ol><h2 id="好用的vs插件"><a href="#好用的vs插件" class="headerlink" title="好用的vs插件"></a>好用的vs插件</h2><ol><li>Error Lens ， 在后面事实显示错误</li></ol><h2 id="浏览器内搜索"><a href="#浏览器内搜索" class="headerlink" title="浏览器内搜索"></a>浏览器内搜索</h2><p>ctrl+f</p><p>注：付费与本人无关，财产需谨慎!</p>]]></content>
+        <content type="html"><![CDATA[<h1 id="AI"><a href="#AI" class="headerlink" title="AI"></a>AI</h1><p><img src="/2023/06/02/ai-ji-he-pian/ad.jpg"><br>把我知道的一些国内镜像站做个集合,自己想搭GitHub也有开源,会用ai会有不少便利和乐趣</p><ol><li><a href="https://www.npmmirror.com/package/freegpt">npm 镜像——freegpt</a></li><li><a href="https://ai-bot.cn/">AI工具集合，这个工具很多</a></li><li><a href="https://chat.forefront.ai/">需要梯子，有gpt4和3.5</a></li><li><a href="https://poe.com/GPT-4">花钱，gpt4，可试用</a></li><li><a href="https://ai.usesless.com/">还可以，积分制</a></li><li><a href="https://codeium.com/playground">coplit平体</a></li></ol><h2 id="好用的vs插件"><a href="#好用的vs插件" class="headerlink" title="好用的vs插件"></a>好用的vs插件</h2><ol><li>Error Lens ， 在后面事实显示错误</li></ol><h2 id="浏览器内搜索"><a href="#浏览器内搜索" class="headerlink" title="浏览器内搜索"></a>浏览器内搜索</h2><p>ctrl+f</p><h2 id="git-push失败原因"><a href="#git-push失败原因" class="headerlink" title="git push失败原因"></a>git push失败原因</h2><p>开启梯子（VPN）是为了解决网络访问被封锁或限制的问题，但是对于git push失败可能有以下几个常见原因：</p><ol><li>梯子连接不稳定：有些梯子连接质量并不稳定，导致在推送操作时出现意外中断或延迟。</li><li>仓库地址错误：如果使用了错误的仓库地址，那么即使使用梯子也无法推送成功。</li><li>SSH配置错误：如果使用SSH协议进行push操作，在梯子环境下需要将SSH协议的代理设置正确。可以通过在本地<code>.ssh/config</code>文件中增加如下内容进行设置：<pre class="line-numbers language-none"><code class="language-none">Host *   ProxyCommand /usr/local/bin/connect-proxy -H 127.0.0.1:1080 %h %p<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre></li><li>Git协议：默认情况下Git使用的是Git协议（git://），而这种协议默认使用端口9418，在一些网络环境下该端口被屏蔽，所以需要切换到HTTPS协议推送。</li></ol>]]></content>
       
       
       <categories>
@@ -201,6 +201,8 @@
             <tag> ai工具 </tag>
             
             <tag> 插件 </tag>
+            
+            <tag> git push失败原因及解决 </tag>
             
         </tags>
       

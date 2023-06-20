@@ -6,7 +6,7 @@
   <link href="https://lhlsnowing.github.io/atom.xml" rel="self"/>
   
   <link href="https://lhlsnowing.github.io/"/>
-  <updated>2023-06-20T06:20:41.483Z</updated>
+  <updated>2023-06-20T08:15:18.584Z</updated>
   <id>https://lhlsnowing.github.io/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="https://lhlsnowing.github.io/2023/06/20/servlet/"/>
     <id>https://lhlsnowing.github.io/2023/06/20/servlet/</id>
     <published>2023-06-20T06:16:40.000Z</published>
-    <updated>2023-06-20T06:20:41.483Z</updated>
+    <updated>2023-06-20T08:15:18.584Z</updated>
     
     
       
@@ -133,7 +133,7 @@
     <link href="https://lhlsnowing.github.io/2023/06/06/java-xiao-ji/"/>
     <id>https://lhlsnowing.github.io/2023/06/06/java-xiao-ji/</id>
     <published>2023-06-06T07:52:22.000Z</published>
-    <updated>2023-06-20T01:30:04.452Z</updated>
+    <updated>2023-06-20T07:03:14.174Z</updated>
     
     
       
@@ -199,7 +199,7 @@
     <link href="https://lhlsnowing.github.io/2023/06/02/ai-ji-he-pian/"/>
     <id>https://lhlsnowing.github.io/2023/06/02/ai-ji-he-pian/</id>
     <published>2023-06-02T15:53:52.000Z</published>
-    <updated>2023-06-20T00:47:27.111Z</updated>
+    <updated>2023-06-20T06:44:34.310Z</updated>
     
     
       
@@ -220,6 +220,8 @@
     <category term="ai工具" scheme="https://lhlsnowing.github.io/tags/ai%E5%B7%A5%E5%85%B7/"/>
     
     <category term="插件" scheme="https://lhlsnowing.github.io/tags/%E6%8F%92%E4%BB%B6/"/>
+    
+    <category term="git push失败原因及解决" scheme="https://lhlsnowing.github.io/tags/git-push%E5%A4%B1%E8%B4%A5%E5%8E%9F%E5%9B%A0%E5%8F%8A%E8%A7%A3%E5%86%B3/"/>
     
   </entry>
   
