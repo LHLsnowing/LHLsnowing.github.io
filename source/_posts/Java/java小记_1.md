@@ -1,5 +1,5 @@
 ---
-title: 重新学Java
+title: Java小记_1
 date: 2023-05-30 16:16:46
 summary: java第一篇
 tags: [Java,迷宫问题,IDEA快捷键]

@@ -1,5 +1,5 @@
 ---
-title: java小记
+title: java小记_2
 date: 2023-06-06 15:52:22
 summary: java第二篇
 tags: [java小记,增强for,collection,iterator遍历,单例设计模式,抽象类,接口]
