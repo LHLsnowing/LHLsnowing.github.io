@@ -335,6 +335,10 @@
                                 <span class="chip bg-color">Vue3变化</span>
                             </a>
                         
+                            <a href="/tags/axios%E5%85%A8%E5%B1%80%E9%85%8D%E7%BD%AE/">
+                                <span class="chip bg-color">axios全局配置</span>
+                            </a>
+                        
                     </div>
                     
                 </div>
@@ -349,6 +353,10 @@
                         
                             <a href="/categories/Vue/Vue3%E5%8F%98%E5%8C%96/" class="post-category">
                                 Vue3变化
+                            </a>
+                        
+                            <a href="/categories/Vue/Vue3%E5%8F%98%E5%8C%96/axios%E5%85%A8%E5%B1%80%E9%85%8D%E7%BD%AE/" class="post-category">
+                                axios全局配置
                             </a>
                         
                     </div>
@@ -369,14 +377,14 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>Word Count:&nbsp;&nbsp;
-                    470
+                    628
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>Read Times:&nbsp;&nbsp;
-                    1 Min
+                    2 Min
                 </div>
                 
 
@@ -394,7 +402,7 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="Vue3变化"><a href="#Vue3变化" class="headerlink" title="Vue3变化"></a>Vue3变化</h1><ol>
+                <h2 id="Vue3变化"><a href="#Vue3变化" class="headerlink" title="Vue3变化"></a>Vue3变化</h2><ol>
 <li>用一元素上使用的<code>v-if</code>和<code>v-for</code>优先级已经更改，但<strong>不推荐</strong>同时使用二者</li>
 <li>组件事件需要在<code>emits</code>选项中声明</li>
 <li><code>destoryed</code> 生命周期选项被命名为 <code>unmounted</code></li>
@@ -413,6 +421,22 @@
 </ol>
 <hr>
 <p>setup（）最先执行</p>
+<hr>
+<h2 id="vue-axios全局配置"><a href="#vue-axios全局配置" class="headerlink" title="vue axios全局配置"></a>vue axios全局配置</h2><ul>
+<li>在实际项目开发中，几乎每个组件中都会用到 axios 发起数据请求。此时会遇到如下两个问题：</li>
+</ul>
+<ol>
+<li>每个组件中都需要导入 axios</li>
+<li>每次发请求都需要填写完整的请求路径</li>
+</ol>
+<ul>
+<li>可以通过全局配置的方式解决上述问题：<pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token comment">//请求根路径</span>
+axios<span class="token punctuation">.</span>defaults<span class="token punctuation">.</span>baseURL <span class="token operator">=</span>  <span class="token string">'http://api.com'</span>
+<span class="token comment">// 将axios作为全局的自定义属性，每个组件内部可以直接访问 （vue3）</span>
+app<span class="token punctuation">.</span>config<span class="token punctuation">.</span>globalProperties<span class="token punctuation">.</span>$http <span class="token operator">=</span> axios
+<span class="token comment">// 将axios作为全局的自定义属性，每个组件内部可以直接访问 （vue2）</span>
+<span class="token class-name">Vue</span><span class="token punctuation">.</span>prototype<span class="token punctuation">.</span>$http <span class="token operator">=</span> axios<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre></li>
+</ul>
 
                 
             </div>
@@ -479,6 +503,10 @@
                             
                                 <a href="/tags/Vue3%E5%8F%98%E5%8C%96/">
                                     <span class="chip bg-color">Vue3变化</span>
+                                </a>
+                            
+                                <a href="/tags/axios%E5%85%A8%E5%B1%80%E9%85%8D%E7%BD%AE/">
+                                    <span class="chip bg-color">axios全局配置</span>
                                 </a>
                             
                         </div>
@@ -888,7 +916,7 @@
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;Total Words:&nbsp;<span
-                        class="white-color">27.5k</span>
+                        class="white-color">27.6k</span>
             
             
             
