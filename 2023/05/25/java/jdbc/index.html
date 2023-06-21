@@ -4,11 +4,8 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="MybatisPlus, 落雪的小屋">
-    <meta name="description" content="ORM 介绍
-ORM （Object Relational Mapping，对象关系映射），为了解决面向对象与关系数据库存在的互不匹配现象的一种技术
-ORM 通过使用描述对象和数据库之间映射的元数据将程序的对象自动持久化到关系数据库中
-OR">
+    <meta name="keywords" content="JDBC, 落雪的小屋">
+    <meta name="description" content="JDBCJDBC概念JDBC ( Java DataBaseConnectivity java数据库连接) 是一种用于执行SQL语句的Java API，可以为多种关系型数据库提供统一访问，它是由一组用Java语言编写的类和接口组成的。本质：">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -20,7 +17,7 @@ OR">
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>MybatisPlus | 落雪的小屋</title>
+    <title>JDBC | 落雪的小屋</title>
     <link rel="icon" type="image/png" href="/snow.png">
     
     <style>
@@ -305,12 +302,12 @@ OR">
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/21.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/11.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">MybatisPlus</h1>
+                    <h1 class="description center-align post-title">JDBC</h1>
                 </div>
             </div>
         </div>
@@ -334,8 +331,8 @@ OR">
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/MybatisPlus/">
-                                <span class="chip bg-color">MybatisPlus</span>
+                            <a href="/tags/JDBC/">
+                                <span class="chip bg-color">JDBC</span>
                             </a>
                         
                     </div>
@@ -346,8 +343,12 @@ OR">
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/MybatisPlus/" class="post-category">
-                                MybatisPlus
+                            <a href="/categories/Java/" class="post-category">
+                                Java
+                            </a>
+                        
+                            <a href="/categories/Java/JDBC/" class="post-category">
+                                JDBC
                             </a>
                         
                     </div>
@@ -359,7 +360,7 @@ OR">
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>Publish Date:&nbsp;&nbsp;
-                    2023-06-21
+                    2023-05-25
                 </div>
                 
 
@@ -368,14 +369,14 @@ OR">
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>Word Count:&nbsp;&nbsp;
-                    217
+                    648
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>Read Times:&nbsp;&nbsp;
-                    1 Min
+                    2 Min
                 </div>
                 
 
@@ -393,17 +394,60 @@ OR">
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h2 id="ORM-介绍"><a href="#ORM-介绍" class="headerlink" title="ORM 介绍"></a>ORM 介绍</h2><ul>
-<li>ORM （Object Relational Mapping，对象关系映射），为了解决面向对象与关系数据库存在的互不匹配现象的一种技术</li>
-<li>ORM 通过使用描述对象和数据库之间映射的元数据将程序的对象自动持久化到关系数据库中</li>
-<li>ORM 框架的本质是简化编程中操作数据库的编码<br><img src="/2023/06/21/mybatisplus/image.png" alt="ORM"></li>
-</ul>
-<h2 id="Mybatis-Plus介绍"><a href="#Mybatis-Plus介绍" class="headerlink" title="Mybatis-Plus介绍"></a>Mybatis-Plus介绍</h2><ul>
-<li>MyBatis是一款优秀的数据持久层ORM框架，被广泛地应用于系统</li>
-<li>MyBatis能够非常灵活地实现动态SQL，可以使用XML或注解来配置和映射原生信息，能够轻松地将Java的POJO（Plain Ordinary Java Object，普通java对象）与数据库中的表和字段进行映射关联</li>
-<li>MyBatis-Plus是一个MyBatis 的增强工具，在MyBatis的基础上做了增强，简化了开发</li>
-</ul>
-<p><a target="_blank" rel="noopener" href="https://thexb.notion.site/Mybatis-73730a62229347d08b1b4a021ae86eb4">文档</a></p>
+                <h1 id="JDBC"><a href="#JDBC" class="headerlink" title="JDBC"></a>JDBC</h1><h2 id="JDBC概念"><a href="#JDBC概念" class="headerlink" title="JDBC概念"></a>JDBC概念</h2><p><strong>JDBC ( Java DataBaseConnectivity java数据库连接)</strong> 是一种用于执行SQL语句的Java API，可以为多种关系型数据库提供统一访问，它是由一组用Java语言编写的类和接口组成的。<br><strong>本质</strong>：其实就是java官方提供的一套规范(接口)。用于帮助开发人员快速实现不同关系型数据库的连接!</p>
+<p>直接上代码！</p>
+<pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token keyword">import</span> <span class="token import"><span class="token namespace">java<span class="token punctuation">.</span>sql<span class="token punctuation">.</span></span><span class="token class-name">Connection</span></span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token import"><span class="token namespace">java<span class="token punctuation">.</span>sql<span class="token punctuation">.</span></span><span class="token class-name">DriverManager</span></span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token import"><span class="token namespace">java<span class="token punctuation">.</span>sql<span class="token punctuation">.</span></span><span class="token class-name">ResultSet</span></span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token import"><span class="token namespace">java<span class="token punctuation">.</span>sql<span class="token punctuation">.</span></span><span class="token class-name">Statement</span></span><span class="token punctuation">;</span>
+
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">JDBC_index1</span> <span class="token punctuation">{</span>
+    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token class-name">String</span><span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span> <span class="token keyword">throws</span> <span class="token class-name">Exception</span> <span class="token punctuation">{</span>
+        <span class="token comment">//注册驱动</span>
+        <span class="token class-name">Class</span><span class="token punctuation">.</span><span class="token function">forName</span><span class="token punctuation">(</span><span class="token string">"com.mysql.cj.jdbc.Driver"</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment">//MySQL5以后可直接省略</span>
+        <span class="token comment">//获取数据库连接</span>
+        <span class="token class-name">Connection</span> con<span class="token operator">=</span> <span class="token class-name">DriverManager</span><span class="token punctuation">.</span><span class="token function">getConnection</span><span class="token punctuation">(</span><span class="token string">"jdbc:mysql://localhost:3306/cadastre"</span><span class="token punctuation">,</span><span class="token string">"root"</span><span class="token punctuation">,</span><span class="token string">"XXXXXX"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token comment">//获取执行者对象</span>
+        <span class="token class-name">Statement</span> stat<span class="token operator">=</span>con<span class="token punctuation">.</span><span class="token function">createStatement</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token comment">//执行sql语句并返回结果</span>
+        <span class="token class-name">String</span> sql<span class="token operator">=</span><span class="token string">"select * from 网易云热评"</span><span class="token punctuation">;</span>
+        <span class="token class-name">ResultSet</span> re<span class="token operator">=</span>stat<span class="token punctuation">.</span><span class="token function">executeQuery</span><span class="token punctuation">(</span>sql<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token comment">//处理结果</span>
+        <span class="token keyword">while</span> <span class="token punctuation">(</span>re<span class="token punctuation">.</span><span class="token function">next</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+      <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>re<span class="token punctuation">.</span><span class="token function">getString</span><span class="token punctuation">(</span><span class="token string">"userId"</span><span class="token punctuation">)</span><span class="token operator">+</span><span class="token string">"\t"</span><span class="token operator">+</span>re<span class="token punctuation">.</span><span class="token function">getString</span><span class="token punctuation">(</span><span class="token string">"nickname"</span><span class="token punctuation">)</span><span class="token operator">+</span><span class="token string">"\t"</span><span class="token operator">+</span>re<span class="token punctuation">.</span><span class="token function">getString</span><span class="token punctuation">(</span><span class="token string">"content"</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+        <span class="token comment">//释放资源</span>
+        con<span class="token punctuation">.</span><span class="token function">close</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h2 id="JDBC功能详解"><a href="#JDBC功能详解" class="headerlink" title="JDBC功能详解"></a>JDBC功能详解</h2><h3 id="1、DriverManager驱动管理对象"><a href="#1、DriverManager驱动管理对象" class="headerlink" title="1、DriverManager驱动管理对象"></a>1、DriverManager驱动管理对象</h3><h4 id="1-注册驱动-（mysql5以后可直接省略驱动）"><a href="#1-注册驱动-（mysql5以后可直接省略驱动）" class="headerlink" title="(1)注册驱动:（mysql5以后可直接省略驱动）"></a>(1)注册驱动:（mysql5以后可直接省略驱动）</h4><ol>
+<li>注册给定的驱动程序: <code>staticvoid registerDriver(Driver driver);</code></li>
+<li>写代码使用:<code>Class.forName(“com.mysql.jdbc.Driver”);</code></li>
+<li>在<code>com.mysql.jdbc.Driver</code>类中存在静态代码块</li>
+</ol>
+<h4 id="2-获取数据库连接"><a href="#2-获取数据库连接" class="headerlink" title="(2)获取数据库连接:"></a>(2)获取数据库连接:</h4><ol>
+<li>获取数据库连接对象: <code>static ConnectiongetConnection(Stringurl, String user,String password);</code></li>
+<li>返回值:Connection数据库连接对象</li>
+<li>参数<br>url:指定连接的路径。语法: jdbc:mysql://ip地址(域名):端口号/数据库名称<br>​ user:用户名<br>​ password:密码</li>
+</ol>
+<h3 id="2、Connection数据库连接对象"><a href="#2、Connection数据库连接对象" class="headerlink" title="2、Connection数据库连接对象"></a>2、Connection数据库连接对象</h3><ol>
+<li>获取执行者对象:<br>获取普通执行者对象: <code>Statement createStatement0;</code><br>获取预编译执行者对象:<code>PreparedStatement prepareStatement(String sql);</code></li>
+<li>管理事务<br>开启事务 : <code>setAutoCommit(boolean autoCommit);</code>参数为false，则开启事务<br>​ 提交事务:<code>commit();</code><br>​ 回滚事务: <code>rollback();</code></li>
+<li>释放资源<br>立即将数据库连接对象释放:<code>void close();</code></li>
+</ol>
+<h3 id="3、Statement执行sql语句的对象"><a href="#3、Statement执行sql语句的对象" class="headerlink" title="3、Statement执行sql语句的对象"></a>3、Statement执行sql语句的对象</h3><ol>
+<li>执行DML语句: <code>int executeUpdate(String sql);</code><br>返回值int :返回影响的行数。<br>参数sql:可以执行insert、update、delete语句。</li>
+<li>执行DQL语句:<code>ResultSet executeQuery(String sql);</code><br>返回值ResultSet:封装查询的结果。<br>参数sql:可以执行select语句。</li>
+<li>释放资源<br>立即将数据库连接对象释放:<code>void close();</code></li>
+</ol>
+<h3 id="4、ResultSet结果集对象"><a href="#4、ResultSet结果集对象" class="headerlink" title="4、ResultSet结果集对象"></a>4、ResultSet结果集对象</h3><ol>
+<li>判断结果集中是否还有数据: <code>boolean next();</code><br>有数据返回true，并将索引向下移动一行。没有数据返回false。</li>
+<li>获取结果集中的数据:XXX getXxx(“列名”);XXX代表数据类型(要获取某列数据，这一列的数据类型)。<br>例如: <code>String getString(“name”);int getInt(" age");</code></li>
+<li>释放资源<br>立即将结果集对象释放:<code>void close();</code></li>
+</ol>
+<hr>
+<p>待更…</p>
 
                 
             </div>
@@ -430,7 +474,7 @@ OR">
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://lhlsnowing.github.io/2023/06/21/mybatisplus/">https://lhlsnowing.github.io/2023/06/21/mybatisplus/</a>
+                    <a href="https://lhlsnowing.github.io/2023/05/25/java/jdbc/">https://lhlsnowing.github.io/2023/05/25/java/jdbc/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -468,8 +512,8 @@ OR">
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/MybatisPlus/">
-                                    <span class="chip bg-color">MybatisPlus</span>
+                                <a href="/tags/JDBC/">
+                                    <span class="chip bg-color">JDBC</span>
                                 </a>
                             
                         </div>
@@ -548,80 +592,29 @@ OR">
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
-            <div class="article-badge left-badge text-color">
-                <i class="far fa-dot-circle"></i>&nbsp;Current
-            </div>
-            <div class="card">
-                <a href="/2023/06/21/mybatisplus/">
-                    <div class="card-image">
-                        
-                        
-                        <img src="/medias/featureimages/21.jpg" class="responsive-img" alt="MybatisPlus">
-                        
-                        <span class="card-title">MybatisPlus</span>
-                    </div>
-                </a>
-                <div class="card-content article-content">
-                    <div class="summary block-with-text">
-                        
-                            
-                        
-                    </div>
-                    <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2023-06-21
-                            </span>
-                        <span class="publish-author">
-                            
-                            <i class="fas fa-bookmark fa-fw icon-category"></i>
-                            
-                            <a href="/categories/MybatisPlus/" class="post-category">
-                                    MybatisPlus
-                                </a>
-                            
-                            
-                        </span>
-                    </div>
-                </div>
-
-                
-                <div class="card-action article-tags">
-                    
-                    <a href="/tags/MybatisPlus/">
-                        <span class="chip bg-color">MybatisPlus</span>
-                    </a>
-                    
-                </div>
-                
-            </div>
-        </div>
-        
-        
         <div class="article col s12 m6" data-aos="fade-up">
-            <div class="article-badge right-badge text-color">
-                Next&nbsp;<i class="fas fa-chevron-right"></i>
-            </div>
+            <div class="article-badge left-badge text-color">
+                <i class="fas fa-chevron-left"></i>&nbsp;Previous</div>
             <div class="card">
-                <a href="/2023/06/20/servlet/">
+                <a href="/2023/05/30/java/java-xiao-ji-1/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/3.jpg" class="responsive-img" alt="Servlet">
+                        <img src="/medias/featureimages/5.jpg" class="responsive-img" alt="重新学Java">
                         
-                        <span class="card-title">Servlet</span>
+                        <span class="card-title">重新学Java</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            Servlet是一种技术，用来创建一个web应用程序；是一个API，提供许多接口和类，包括文档；是一个接口，创建任何servlet都必须实现这个接口；是一个扩展了服务器功能的类，响应任何请求；是一个网络组件，创建一个动态网页
+                            java第一篇
                         
                     </div>
                     <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2023-06-20
-                            </span>
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2023-05-30
+                        </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
@@ -630,8 +623,8 @@ OR">
                                     Java
                                 </a>
                             
-                            <a href="/categories/Java/Servlet/" class="post-category">
-                                    Servlet
+                            <a href="/categories/Java/java%E7%AC%AC%E4%B8%80%E7%AF%87/" class="post-category">
+                                    java第一篇
                                 </a>
                             
                             
@@ -645,8 +638,73 @@ OR">
                         <span class="chip bg-color">Java</span>
                     </a>
                     
-                    <a href="/tags/Servlet/">
-                        <span class="chip bg-color">Servlet</span>
+                    <a href="/tags/%E8%BF%B7%E5%AE%AB%E9%97%AE%E9%A2%98/">
+                        <span class="chip bg-color">迷宫问题</span>
+                    </a>
+                    
+                    <a href="/tags/IDEA%E5%BF%AB%E6%8D%B7%E9%94%AE/">
+                        <span class="chip bg-color">IDEA快捷键</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                Next&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/2023/05/24/javascript-bi-ji/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/17.jpg" class="responsive-img" alt="Javascript笔记">
+                        
+                        <span class="card-title">Javascript笔记</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2023-05-24
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/javascript/" class="post-category">
+                                    javascript
+                                </a>
+                            
+                            <a href="/categories/javascript/%E5%BC%82%E6%AD%A5/" class="post-category">
+                                    异步
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/javascript/">
+                        <span class="chip bg-color">javascript</span>
+                    </a>
+                    
+                    <a href="/tags/async/">
+                        <span class="chip bg-color">async</span>
+                    </a>
+                    
+                    <a href="/tags/await/">
+                        <span class="chip bg-color">await</span>
                     </a>
                     
                 </div>
