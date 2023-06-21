@@ -23,6 +23,7 @@ categories: [Vue]
 ## 缺点
 1. 面包屑部分没封装， axios暴漏
 
+
 ---
 [这个用的Gitee，在这里！https://gitee.com/lhlsnowing/vue_shop_project](https://gitee.com/lhlsnowing/vue_shop_project)
 

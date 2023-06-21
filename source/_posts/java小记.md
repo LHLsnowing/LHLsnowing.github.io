@@ -337,8 +337,3 @@ public class CollectionFor {
     }
 }
 ```
-
-
-
-
-

@@ -3,11 +3,11 @@ title: Vue3变化
 top: true
 date: 2023-06-11 16:47:17
 summary: vue2->vue3的一些变化
-tags: Vue3变化
-categories: [Vue,Vue3变化]
+tags: [Vue3变化,axios全局配置]
+categories: [Vue,Vue3变化,axios全局配置]
 ---
 
-# Vue3变化
+## Vue3变化
 
 1. 用一元素上使用的`v-if`和`v-for`优先级已经更改，但**不推荐**同时使用二者
 2. 组件事件需要在`emits`选项中声明
@@ -27,3 +27,18 @@ categories: [Vue,Vue3变化]
 
 ---
 setup（）最先执行
+
+---
+## vue axios全局配置
+- 在实际项目开发中，几乎每个组件中都会用到 axios 发起数据请求。此时会遇到如下两个问题：
+1. 每个组件中都需要导入 axios
+2. 每次发请求都需要填写完整的请求路径
+- 可以通过全局配置的方式解决上述问题：
+```js
+//请求根路径
+axios.defaults.baseURL =  'http://api.com'
+// 将axios作为全局的自定义属性，每个组件内部可以直接访问 （vue3）
+app.config.globalProperties.$http = axios
+// 将axios作为全局的自定义属性，每个组件内部可以直接访问 （vue2）
+Vue.prototype.$http = axios
+```
