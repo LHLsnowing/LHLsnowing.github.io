@@ -1,5 +1,5 @@
 ---
-title: springboot
+title: SpringBoot
 date: 2023-05-24 20:05:19
 tags: [springboot,RESTful]
 categories: springboot

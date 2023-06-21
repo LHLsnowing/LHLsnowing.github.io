@@ -1,10 +1,10 @@
 ---
-title: java小记_2
+title: java小记_3
 top: false
 cover: false
 date: 2023-06-20 09:07:04
 summary: java第三篇
-tags: [java,List]
+tags: [java,List,Set,Map]
 categories: [Java,java第三篇]
 ---
 
