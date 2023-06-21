@@ -6,7 +6,7 @@
   <link href="https://lhlsnowing.github.io/atom.xml" rel="self"/>
   
   <link href="https://lhlsnowing.github.io/"/>
-  <updated>2023-06-20T08:15:18.584Z</updated>
+  <updated>2023-06-21T06:20:33.504Z</updated>
   <id>https://lhlsnowing.github.io/</id>
   
   <author>
@@ -15,6 +15,32 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>MybatisPlus</title>
+    <link href="https://lhlsnowing.github.io/2023/06/21/mybatisplus/"/>
+    <id>https://lhlsnowing.github.io/2023/06/21/mybatisplus/</id>
+    <published>2023-06-21T03:14:06.000Z</published>
+    <updated>2023-06-21T06:20:33.504Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;ORM-介绍&quot;&gt;&lt;a href=&quot;#ORM-介绍&quot; class=&quot;headerlink&quot; title=&quot;ORM 介绍&quot;&gt;&lt;/a&gt;ORM 介绍&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;ORM （Object Relational</summary>
+        
+      
+    
+    
+    
+    <category term="MybatisPlus" scheme="https://lhlsnowing.github.io/categories/MybatisPlus/"/>
+    
+    
+    <category term="MybatisPlus" scheme="https://lhlsnowing.github.io/tags/MybatisPlus/"/>
+    
+  </entry>
   
   <entry>
     <title>Servlet</title>
@@ -346,18 +372,18 @@
   </entry>
   
   <entry>
-    <title>springboot学习</title>
-    <link href="https://lhlsnowing.github.io/2023/05/24/springboot-xue-xi/"/>
-    <id>https://lhlsnowing.github.io/2023/05/24/springboot-xue-xi/</id>
+    <title>springboot</title>
+    <link href="https://lhlsnowing.github.io/2023/05/24/springboot/"/>
+    <id>https://lhlsnowing.github.io/2023/05/24/springboot/</id>
     <published>2023-05-24T12:05:19.000Z</published>
-    <updated>2023-05-25T04:04:13.852Z</updated>
+    <updated>2023-06-21T03:08:12.054Z</updated>
     
     
       
       
         
         
-    <summary type="html">&lt;h3 id=&quot;springboot项目启动不自动启动内嵌tomcat问题&quot;&gt;&lt;a href=&quot;#springboot项目启动不自动启动内嵌tomcat问题&quot; class=&quot;headerlink&quot;</summary>
+    <summary type="html">&lt;h3 id=&quot;一、springboot项目启动不自动启动内嵌tomcat问题&quot;&gt;&lt;a href=&quot;#一、springboot项目启动不自动启动内嵌tomcat问题&quot; class=&quot;headerlink&quot;</summary>
         
       
     
@@ -367,6 +393,8 @@
     
     
     <category term="springboot" scheme="https://lhlsnowing.github.io/tags/springboot/"/>
+    
+    <category term="RESTful" scheme="https://lhlsnowing.github.io/tags/RESTful/"/>
     
   </entry>
   
