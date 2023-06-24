@@ -1,8 +1,8 @@
 ---
 title: Vue后台管理系统项目总结
 date: 2023-05-24 13:19:58
-tags:  [Vue,项目]
-categories: [Vue]
+tags:  [前端,Vue,项目]
+categories: [前端,Vue,项目]
 ---
 
 2023-5-20

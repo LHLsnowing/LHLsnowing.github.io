@@ -3,8 +3,8 @@ title: Vue3变化
 top: true
 date: 2023-06-11 16:47:17
 summary: vue2->vue3的一些变化,axios全局配置等等
-tags: [Vue3变化,axios全局配置]
-categories: [Vue,Vue3变化,axios全局配置]
+tags: [前端,Vue3变化,axios全局配置]
+categories: [前端,Vue]
 ---
 
 ## Vue3变化

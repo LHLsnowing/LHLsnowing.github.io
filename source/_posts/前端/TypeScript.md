@@ -2,8 +2,8 @@
 title: TypeScript
 date: 2023-06-11 10:17:23
 summary: TS的一些类型，运行方式、promise写法
-tags:   TypeScript
-categories: TypeScript
+tags:   [前端,TypeScript,泛型,枚举]
+categories: [前端,TypeScript]
 ---
 
 # 文档非官方的
