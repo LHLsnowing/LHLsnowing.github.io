@@ -1,7 +1,7 @@
 ---
 title: JDBC
 date: 2023-05-25 18:05:50
-tags: JDBC
+tags: [JDBC,Java]
 categories: [Java,JDBC]
 ---
 

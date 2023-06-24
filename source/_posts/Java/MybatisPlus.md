@@ -6,8 +6,8 @@ toc: true
 mathjax: true
 date: 2023-06-21 11:14:06
 summary:
-tags: MybatisPlus
-categories: MybatisPlus
+tags: [Java,MybatisPlus]
+categories: [Java,MybatisPlus]
 ---
 
 ## ORM 介绍

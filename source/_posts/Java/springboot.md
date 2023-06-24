@@ -1,8 +1,8 @@
 ---
 title: SpringBoot
 date: 2023-05-24 20:05:19
-tags: [springboot,RESTful]
-categories: springboot
+tags: [Springboot,RESTful]
+categories: [Java,Springboot]
 ---
 
 ### 一、springboot项目启动不自动启动内嵌tomcat问题
