@@ -137,11 +137,9 @@
       
       <categories>
           
+          <category> 前端 </category>
+          
           <category> Vue </category>
-          
-          <category> Vue3变化 </category>
-          
-          <category> axios全局配置 </category>
           
       </categories>
       
@@ -151,6 +149,8 @@
             <tag> Vue3变化 </tag>
             
             <tag> axios全局配置 </tag>
+            
+            <tag> 前端 </tag>
             
         </tags>
       
@@ -168,6 +168,8 @@
       
       <categories>
           
+          <category> 前端 </category>
+          
           <category> TypeScript </category>
           
       </categories>
@@ -176,6 +178,12 @@
         <tags>
             
             <tag> TypeScript </tag>
+            
+            <tag> 前端 </tag>
+            
+            <tag> 泛型 </tag>
+            
+            <tag> 枚举 </tag>
             
         </tags>
       
@@ -287,7 +295,7 @@
     
     
     <entry>
-      <title>webpack</title>
+      <title>Webpack</title>
       <link href="/2023/06/02/qian-duan/webpack/"/>
       <url>/2023/06/02/qian-duan/webpack/</url>
       
@@ -296,20 +304,22 @@
       
       <categories>
           
-          <category> webpack </category>
+          <category> 前端 </category>
           
-          <category> webpack基础 </category>
+          <category> Webpack </category>
           
       </categories>
       
       
         <tags>
             
-            <tag> webpack5 </tag>
-            
             <tag> webpack.config.js </tag>
             
             <tag> webpack生产/开发模式 </tag>
+            
+            <tag> 前端 </tag>
+            
+            <tag> Webpack5 </tag>
             
         </tags>
       
@@ -387,6 +397,8 @@
       
       <categories>
           
+          <category> 前端 </category>
+          
           <category> javascript </category>
           
           <category> 异步 </category>
@@ -401,6 +413,10 @@
             <tag> async </tag>
             
             <tag> await </tag>
+            
+            <tag> 前端 </tag>
+            
+            <tag> 闭包 </tag>
             
         </tags>
       
@@ -447,7 +463,11 @@
       
       <categories>
           
+          <category> 前端 </category>
+          
           <category> Vue </category>
+          
+          <category> 项目 </category>
           
       </categories>
       
@@ -457,6 +477,8 @@
             <tag> Vue </tag>
             
             <tag> 项目 </tag>
+            
+            <tag> 前端 </tag>
             
         </tags>
       
