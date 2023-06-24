@@ -4,11 +4,8 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="Javascript笔记, 落雪的小屋">
-    <meta name="description" content="
-Javascript篇leetcode14天js编程挑战
-闭包
-函数对象可以通过作用域链相互关联起来，函数体内部的变量都可以保存在函数作用域内，这种特性在计算机科学文献中称为“闭包”。——出自《JavaScript权威指南(第六版)》闭包">
+    <meta name="keywords" content="Vue3变化, 落雪的小屋">
+    <meta name="description" content="vue2-&gt;vue3的一些变化,axios全局配置等等">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -20,7 +17,7 @@ Javascript篇leetcode14天js编程挑战
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>Javascript笔记 | 落雪的小屋</title>
+    <title>Vue3变化 | 落雪的小屋</title>
     <link rel="icon" type="image/png" href="/snow.png">
     
 
@@ -296,12 +293,12 @@ Javascript篇leetcode14天js编程挑战
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/17.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/13.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">Javascript笔记</h1>
+                    <h1 class="description center-align post-title">Vue3变化</h1>
                 </div>
             </div>
         </div>
@@ -325,16 +322,12 @@ Javascript篇leetcode14天js编程挑战
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/javascript/">
-                                <span class="chip bg-color">javascript</span>
+                            <a href="/tags/Vue3%E5%8F%98%E5%8C%96/">
+                                <span class="chip bg-color">Vue3变化</span>
                             </a>
                         
-                            <a href="/tags/async/">
-                                <span class="chip bg-color">async</span>
-                            </a>
-                        
-                            <a href="/tags/await/">
-                                <span class="chip bg-color">await</span>
+                            <a href="/tags/axios%E5%85%A8%E5%B1%80%E9%85%8D%E7%BD%AE/">
+                                <span class="chip bg-color">axios全局配置</span>
                             </a>
                         
                     </div>
@@ -345,12 +338,16 @@ Javascript篇leetcode14天js编程挑战
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/javascript/" class="post-category">
-                                javascript
+                            <a href="/categories/Vue/" class="post-category">
+                                Vue
                             </a>
                         
-                            <a href="/categories/javascript/%E5%BC%82%E6%AD%A5/" class="post-category">
-                                异步
+                            <a href="/categories/Vue/Vue3%E5%8F%98%E5%8C%96/" class="post-category">
+                                Vue3变化
+                            </a>
+                        
+                            <a href="/categories/Vue/Vue3%E5%8F%98%E5%8C%96/axios%E5%85%A8%E5%B1%80%E9%85%8D%E7%BD%AE/" class="post-category">
+                                axios全局配置
                             </a>
                         
                     </div>
@@ -362,7 +359,7 @@ Javascript篇leetcode14天js编程挑战
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>Publish Date:&nbsp;&nbsp;
-                    2023-05-24
+                    2023-06-11
                 </div>
                 
 
@@ -371,14 +368,14 @@ Javascript篇leetcode14天js编程挑战
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>Word Count:&nbsp;&nbsp;
-                    842
+                    628
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>Read Times:&nbsp;&nbsp;
-                    3 Min
+                    2 Min
                 </div>
                 
 
@@ -396,85 +393,42 @@ Javascript篇leetcode14天js编程挑战
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p><img src="/2023/05/24/javascript-bi-ji/bg.jpg"></p>
-<h1 id="Javascript篇"><a href="#Javascript篇" class="headerlink" title="Javascript篇"></a>Javascript篇</h1><p><a target="_blank" rel="noopener" href="https://leetcode.cn/circle/discuss/jE87x7/">leetcode14天js编程挑战</a></p>
-<h2 id="闭包"><a href="#闭包" class="headerlink" title="闭包"></a>闭包</h2><blockquote>
-<p>函数对象可以通过作用域链相互关联起来，函数体内部的变量都可以保存在函数作用域内，这种特性在计算机科学文献中称为“闭包”。<br>——出自《JavaScript权威指南(第六版)》<br>闭包（closure）是一个函数以及其捆绑的周边环境状态（lexical environment，词法环境）的引用的组合。换而言之，闭包让开发者可以从内部函数访问外部函数的作用域。在 JavaScript 中，闭包会随着函数的创建而被同时创建。</p>
-<blockquote>
-<p>三个作用<br>（1）外部可以读取函数内部的变量。<br>（2）封闭数据，实现数据私有，防止变量被污染。<br>（3）让这些变量的值始终保持在内存中</p>
-</blockquote>
-</blockquote>
-<pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token keyword">function</span> <span class="token function">init</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-  <span class="token keyword">var</span> name <span class="token operator">=</span> <span class="token string">"Mozilla"</span><span class="token punctuation">;</span> <span class="token comment">// name 是一个被 init 创建的局部变量</span>
-  <span class="token keyword">function</span> <span class="token function">displayName</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span> <span class="token comment">// displayName() 是内部函数，一个闭包</span>
-      <span class="token function">alert</span><span class="token punctuation">(</span>name<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// 使用了父函数中声明的变量</span>
-  <span class="token punctuation">}</span>
-  <span class="token function">displayName</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token punctuation">}</span>
-<span class="token function">init</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+                <h2 id="Vue3变化"><a href="#Vue3变化" class="headerlink" title="Vue3变化"></a>Vue3变化</h2><ol>
+<li>用一元素上使用的<code>v-if</code>和<code>v-for</code>优先级已经更改，但<strong>不推荐</strong>同时使用二者</li>
+<li>组件事件需要在<code>emits</code>选项中声明</li>
+<li><code>destoryed</code> 生命周期选项被命名为 <code>unmounted</code></li>
+<li><code>beforeDestory</code> 生命周期选项被命名为 <code>beforeUnmount</code></li>
+<li>自定义指令API已更改为与组件生命周期一致</li>
+<li>新增三个组件：<code>Fragment</code> 支持多个根节点、<code>Suspense</code>可以在组件渲染之前的等待时间显示指定内容、<code>Teleport</code>可以让子组件能够在视觉上跳出父组件（如父组件overflow：hidden）</li>
+<li>新增指令<code>v-memo</code>，可以缓存html模板，比如<code>v-for</code>遍历的列表不会变化就会缓存，（内存换时间）</li>
+<li>用<code>proxy</code>代替<code>Object.defineProperty</code>重构响应式系统，可以监听到数组下标变化，及对象新增属性，因为监听的不是对象属性，而是对象本身，还可以拦截<code>apply</code>，<code>has</code>等13种方法</li>
+<li>重构了虚拟DOM，在编译时会将事件缓存、将<code>slot</code>编译为<code>lazy</code>函数、保存静态节点直接复用（静态提升）、以及添加静态标记、<code>Diff</code>算法使用 最长递增子序列，优化了对比流程，使得虚拟DOM生成速度提升200%</li>
+<li>支持在<style></style>里使用v-bind，给css绑定js变量（color：v-bind（str））</li>
+<li>新增<code>Composition API</code> 可以更好的逻辑复用和代码组织，同一功能代码聚集在一起，尽管Vue2种使用了<code>mixin</code>实现代码复用，也会存在一些问题，如方法或者属性名冲突，代码来源也不清楚</li>
+<li>全局函数<code>set</code>和<code>delete</code>以及实例方法<code>$set</code>和<code>$delete</code>移除，基于代理的变化检测已经不再需要他们了</li>
+<li>Vue3用TS写的，所以对TS的支持度更好</li>
+<li>Vue3不兼容IE11</li>
+<li>$on $off $once 实例方法已被移除</li>
+</ol>
+<hr>
+<p>setup（）最先执行</p>
+<hr>
+<h2 id="vue-axios全局配置"><a href="#vue-axios全局配置" class="headerlink" title="vue axios全局配置"></a>vue axios全局配置</h2><ul>
+<li>在实际项目开发中，几乎每个组件中都会用到 axios 发起数据请求。此时会遇到如下两个问题：</li>
+</ul>
+<ol>
+<li>每个组件中都需要导入 axios</li>
+<li>每次发请求都需要填写完整的请求路径</li>
+</ol>
 <ul>
-<li>闭包主要是用返回值，但使用一定要合理</li>
-<li>如果不是某些特定任务需要使用闭包，在其他函数中创建函数是不明智的，因为闭包在处理速度和内存消耗方面对脚本性能具有负面影响。</li>
-<li>会产生内存泄漏问题，如果需要回收这些变量，我们可以手动把这些变量设为 <code>null</code>。</li>
+<li>可以通过全局配置的方式解决上述问题：<pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token comment">//请求根路径</span>
+axios<span class="token punctuation">.</span>defaults<span class="token punctuation">.</span>baseURL <span class="token operator">=</span>  <span class="token string">'http://api.com'</span>
+<span class="token comment">// 将axios作为全局的自定义属性，每个组件内部可以直接访问 （vue3）</span>
+app<span class="token punctuation">.</span>config<span class="token punctuation">.</span>globalProperties<span class="token punctuation">.</span>$http <span class="token operator">=</span> axios
+<span class="token comment">// 将axios作为全局的自定义属性，每个组件内部可以直接访问 （vue2）</span>
+<span class="token class-name">Vue</span><span class="token punctuation">.</span>prototype<span class="token punctuation">.</span>$http <span class="token operator">=</span> axios<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre></li>
 </ul>
-<p>例题：</p>
-<blockquote>
-<p>请你写一个函数&nbsp;createCounter. 这个函数接收一个初始的整数值 init&nbsp;&nbsp;并返回一个包含三个函数的对象。<br>这三个函数是：<br>increment()&nbsp;将当前值加 1 并返回。<br>decrement()&nbsp;将当前值减 1 并返回。<br>reset()&nbsp;将当前值设置为 init 并返回。</p>
-</blockquote>
-<pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token keyword">var</span> <span class="token function-variable function">createCounter</span> <span class="token operator">=</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token parameter">init</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-    <span class="token keyword">let</span> n<span class="token operator">=</span>init<span class="token punctuation">;</span>
-    <span class="token keyword">let</span> <span class="token function-variable function">increment</span><span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">=&gt;</span><span class="token operator">++</span>n<span class="token punctuation">;</span>
-     <span class="token keyword">let</span> <span class="token function-variable function">decrement</span><span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">=&gt;</span><span class="token operator">--</span>n<span class="token punctuation">;</span>
-    <span class="token keyword">let</span> <span class="token function-variable function">reset</span><span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">=&gt;</span> n <span class="token operator">=</span> init<span class="token punctuation">;</span>
-    <span class="token keyword">return</span> <span class="token punctuation">{</span> increment<span class="token punctuation">,</span>decrement<span class="token punctuation">,</span>reset<span class="token punctuation">}</span><span class="token punctuation">;</span>
-<span class="token punctuation">}</span><span class="token punctuation">;</span>
-<span class="token comment">/**
- * const counter = createCounter(5)
- * counter.increment(); // 6
- * counter.reset(); // 5
- * counter.decrement(); // 4
- */</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<h2 id="内存泄漏"><a href="#内存泄漏" class="headerlink" title="内存泄漏"></a>内存泄漏</h2><ul>
-<li><p><strong>不再用到的内存，没有及时释放，就叫做内存泄漏（memory leak）</strong>。 内存泄漏是指程序执行时，一些变量没有及时释放，一直占用着内存 而这种占用内存的行为就叫做内存泄漏。</p>
-</li>
-<li><p>作为一般的用户，根本感觉不到内存泄漏的存在。真正有危害的是内存泄漏的堆积，这会最终消耗尽系统所有的内存。从这个角度来说，一次性内存泄漏并没有什么危害，因为它不会堆积。</p>
-</li>
-<li><p>内存泄漏如果一直堆积，最终会导致<strong>内存溢出问题</strong>。</p>
-</li>
-</ul>
-<h2 id="js实现继承的方式"><a href="#js实现继承的方式" class="headerlink" title="js实现继承的方式"></a>js实现继承的方式</h2><p>1、原型链继承 …<br>2、借用构造函数继承（也称伪造对象或经典继承） …<br>3、组合继承（也称伪经典继承） …<br>4、原型式继承 …<br>5、寄生式继承 …<br><a target="_blank" rel="noopener" href="https://www.cnblogs.com/Leophen/p/11401734.html#:~:text=%E4%BA%8C%E3%80%81JavaScript%E5%AE%9E%E7%8E%B0%E7%BB%A7%E6%89%BF%E7%9A%84%E6%96%B9%E5%BC%8F%201%201%E3%80%81%E5%8E%9F%E5%9E%8B%E9%93%BE%E7%BB%A7%E6%89%BF%20...%202%202%E3%80%81%E5%80%9F%E7%94%A8%E6%9E%84%E9%80%A0%E5%87%BD%E6%95%B0%E7%BB%A7%E6%89%BF%EF%BC%88%E4%B9%9F%E7%A7%B0%E4%BC%AA%E9%80%A0%E5%AF%B9%E8%B1%A1%E6%88%96%E7%BB%8F%E5%85%B8%E7%BB%A7%E6%89%BF%EF%BC%89%20...%203,4%E3%80%81%E5%8E%9F%E5%9E%8B%E5%BC%8F%E7%BB%A7%E6%89%BF%20...%205%205%E3%80%81%E5%AF%84%E7%94%9F%E5%BC%8F%E7%BB%A7%E6%89%BF%20...%206%206%E3%80%81%E5%AF%84%E7%94%9F%E7%BB%84%E5%90%88%E5%BC%8F%E7%BB%A7%E6%89%BF%20">“继承方式”</a></p>
-<h2 id="一次笔试题，五个人五排看手机电量够玩多久"><a href="#一次笔试题，五个人五排看手机电量够玩多久" class="headerlink" title="一次笔试题，五个人五排看手机电量够玩多久"></a>一次笔试题，五个人五排看手机电量够玩多久</h2><pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token keyword">function</span> <span class="token function">demo</span><span class="token punctuation">(</span><span class="token parameter">arr</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
-    <span class="token keyword">let</span> a<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">;</span>
-    <span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">let</span> i<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">;</span>i<span class="token operator">&lt;</span>arr<span class="token punctuation">.</span>length<span class="token punctuation">;</span>i<span class="token operator">++</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
-        <span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">let</span> j<span class="token operator">=</span>i<span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">;</span>j<span class="token operator">&lt;</span>arr<span class="token punctuation">.</span>length<span class="token punctuation">;</span>j<span class="token operator">++</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
-            <span class="token keyword">if</span><span class="token punctuation">(</span>arr<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token operator">&lt;</span>arr<span class="token punctuation">[</span>j<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
-                <span class="token keyword">let</span> temp<span class="token operator">=</span>arr<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">;</span>
-                arr<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token operator">=</span>arr<span class="token punctuation">[</span>j<span class="token punctuation">]</span><span class="token punctuation">;</span>
-                arr<span class="token punctuation">[</span>j<span class="token punctuation">]</span><span class="token operator">=</span>temp<span class="token punctuation">;</span>
-            <span class="token punctuation">}</span>
-        <span class="token punctuation">}</span>
-    <span class="token punctuation">}</span>
-    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>arr<span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token keyword">while</span><span class="token punctuation">(</span>arr<span class="token punctuation">[</span><span class="token number">4</span><span class="token punctuation">]</span><span class="token operator">!=</span><span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
-        a<span class="token operator">+=</span>arr<span class="token punctuation">[</span><span class="token number">4</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
-        console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>arr<span class="token punctuation">)</span><span class="token punctuation">;</span>
-        <span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">let</span> i<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">;</span>i<span class="token operator">&lt;</span><span class="token number">5</span><span class="token punctuation">;</span>i<span class="token operator">++</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
-            arr<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token operator">=</span>arr<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token operator">-</span>arr<span class="token punctuation">[</span><span class="token number">4</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
-        <span class="token punctuation">}</span>        
-        <span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">let</span> i<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">;</span>i<span class="token operator">&lt;</span>arr<span class="token punctuation">.</span>length<span class="token punctuation">;</span>i<span class="token operator">++</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
-            <span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">let</span> j<span class="token operator">=</span>i<span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">;</span>j<span class="token operator">&lt;</span>arr<span class="token punctuation">.</span>length<span class="token punctuation">;</span>j<span class="token operator">++</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
-                <span class="token keyword">if</span><span class="token punctuation">(</span>arr<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token operator">&lt;</span>arr<span class="token punctuation">[</span>j<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
-                    <span class="token keyword">let</span> temp<span class="token operator">=</span>arr<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">;</span>
-                    arr<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token operator">=</span>arr<span class="token punctuation">[</span>j<span class="token punctuation">]</span><span class="token punctuation">;</span>
-                    arr<span class="token punctuation">[</span>j<span class="token punctuation">]</span><span class="token operator">=</span>temp<span class="token punctuation">;</span>
-                <span class="token punctuation">}</span>
-            <span class="token punctuation">}</span>
-        <span class="token punctuation">}</span>
-    <span class="token punctuation">}</span>
-    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>a<span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token punctuation">}</span>
 
-<span class="token function">demo</span><span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token number">100</span><span class="token punctuation">,</span><span class="token number">10</span><span class="token punctuation">,</span><span class="token number">5</span><span class="token punctuation">,</span><span class="token number">50</span><span class="token punctuation">,</span><span class="token number">10</span><span class="token punctuation">,</span><span class="token number">100</span><span class="token punctuation">,</span><span class="token number">100</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
                 
             </div>
             <hr/>
@@ -500,7 +454,7 @@ Javascript篇leetcode14天js编程挑战
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://lhlsnowing.github.io/2023/05/24/javascript-bi-ji/">https://lhlsnowing.github.io/2023/05/24/javascript-bi-ji/</a>
+                    <a href="https://lhlsnowing.github.io/2023/06/11/qian-duan/vue3-bian-hua/">https://lhlsnowing.github.io/2023/06/11/qian-duan/vue3-bian-hua/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -538,16 +492,12 @@ Javascript篇leetcode14天js编程挑战
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/javascript/">
-                                    <span class="chip bg-color">javascript</span>
+                                <a href="/tags/Vue3%E5%8F%98%E5%8C%96/">
+                                    <span class="chip bg-color">Vue3变化</span>
                                 </a>
                             
-                                <a href="/tags/async/">
-                                    <span class="chip bg-color">async</span>
-                                </a>
-                            
-                                <a href="/tags/await/">
-                                    <span class="chip bg-color">await</span>
+                                <a href="/tags/axios%E5%85%A8%E5%B1%80%E9%85%8D%E7%BD%AE/">
+                                    <span class="chip bg-color">axios全局配置</span>
                                 </a>
                             
                         </div>
@@ -630,24 +580,24 @@ Javascript篇leetcode14天js编程挑战
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;Previous</div>
             <div class="card">
-                <a href="/2023/05/25/java/jdbc/">
+                <a href="/2023/06/20/java/java-xiao-ji-3/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/11.jpg" class="responsive-img" alt="JDBC">
+                        <img src="/medias/featureimages/7.jpg" class="responsive-img" alt="java小记_3">
                         
-                        <span class="card-title">JDBC</span>
+                        <span class="card-title">java小记_3</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            
+                            java第三篇
                         
                     </div>
                     <div class="publish-info">
                         <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2023-05-25
+                            <i class="far fa-clock fa-fw icon-date"></i>2023-06-20
                         </span>
                         <span class="publish-author">
                             
@@ -657,8 +607,8 @@ Javascript篇leetcode14天js编程挑战
                                     Java
                                 </a>
                             
-                            <a href="/categories/Java/JDBC/" class="post-category">
-                                    JDBC
+                            <a href="/categories/Java/java%E7%AC%AC%E4%B8%89%E7%AF%87/" class="post-category">
+                                    java第三篇
                                 </a>
                             
                             
@@ -668,8 +618,20 @@ Javascript篇leetcode14天js编程挑战
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/JDBC/">
-                        <span class="chip bg-color">JDBC</span>
+                    <a href="/tags/Java/">
+                        <span class="chip bg-color">Java</span>
+                    </a>
+                    
+                    <a href="/tags/List/">
+                        <span class="chip bg-color">List</span>
+                    </a>
+                    
+                    <a href="/tags/Set/">
+                        <span class="chip bg-color">Set</span>
+                    </a>
+                    
+                    <a href="/tags/Map/">
+                        <span class="chip bg-color">Map</span>
                     </a>
                     
                 </div>
@@ -683,31 +645,31 @@ Javascript篇leetcode14天js编程挑战
                 Next&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2023/05/24/java/springboot/">
+                <a href="/2023/06/11/qian-duan/typescript/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/17.jpg" class="responsive-img" alt="SpringBoot">
+                        <img src="/medias/featureimages/5.jpg" class="responsive-img" alt="TypeScript">
                         
-                        <span class="card-title">SpringBoot</span>
+                        <span class="card-title">TypeScript</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            
+                            TS的一些类型，运行方式、promise写法
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2023-05-24
+                                <i class="far fa-clock fa-fw icon-date"></i>2023-06-11
                             </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/springboot/" class="post-category">
-                                    springboot
+                            <a href="/categories/TypeScript/" class="post-category">
+                                    TypeScript
                                 </a>
                             
                             
@@ -717,12 +679,8 @@ Javascript篇leetcode14天js编程挑战
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/springboot/">
-                        <span class="chip bg-color">springboot</span>
-                    </a>
-                    
-                    <a href="/tags/RESTful/">
-                        <span class="chip bg-color">RESTful</span>
+                    <a href="/tags/TypeScript/">
+                        <span class="chip bg-color">TypeScript</span>
                     </a>
                     
                 </div>
@@ -957,7 +915,7 @@ Javascript篇leetcode14天js编程挑战
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;Total Words:&nbsp;<span
-                        class="white-color">27.6k</span>
+                        class="white-color">28.1k</span>
             
             
             
