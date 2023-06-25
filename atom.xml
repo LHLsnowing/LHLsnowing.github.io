@@ -6,7 +6,7 @@
   <link href="https://lhlsnowing.github.io/atom.xml" rel="self"/>
   
   <link href="https://lhlsnowing.github.io/"/>
-  <updated>2023-06-25T08:52:15.172Z</updated>
+  <updated>2023-06-25T14:17:17.361Z</updated>
   <id>https://lhlsnowing.github.io/</id>
   
   <author>
@@ -21,16 +21,14 @@
     <link href="https://lhlsnowing.github.io/2023/06/25/maven/"/>
     <id>https://lhlsnowing.github.io/2023/06/25/maven/</id>
     <published>2023-06-25T06:33:41.000Z</published>
-    <updated>2023-06-25T08:52:15.172Z</updated>
+    <updated>2023-06-25T14:17:17.361Z</updated>
     
     
       
       
         
         
-    <summary type="html">&lt;h2 id=&quot;简介&quot;&gt;&lt;a href=&quot;#简介&quot; class=&quot;headerlink&quot; title=&quot;简介&quot;&gt;&lt;/a&gt;简介&lt;/h2&gt;&lt;ul&gt;
-&lt;li&gt;Maven的本质是一个项目管理工具，将项目开发和管理过程抽象成一个项目对象模型（POM）&lt;/li&gt;
-&lt;li&gt;POM</summary>
+    <summary type="html">&lt;h1 id=&quot;Maven大一统&quot;&gt;&lt;a href=&quot;#Maven大一统&quot; class=&quot;headerlink&quot; title=&quot;Maven大一统&quot;&gt;&lt;/a&gt;Maven大一统&lt;/h1&gt;&lt;h2 id=&quot;一、简介&quot;&gt;&lt;a href=&quot;#一、简介&quot; class=&quot;headerlink&quot;</summary>
         
       
     
@@ -278,14 +276,14 @@
     <link href="https://lhlsnowing.github.io/2023/06/03/suan-fa-pian/"/>
     <id>https://lhlsnowing.github.io/2023/06/03/suan-fa-pian/</id>
     <published>2023-06-03T12:49:21.000Z</published>
-    <updated>2023-06-09T11:36:10.160Z</updated>
+    <updated>2023-06-25T13:51:33.851Z</updated>
     
     
       
       
         
         
-    <summary type="html">&lt;h1 id=&quot;算法篇&quot;&gt;&lt;a href=&quot;#算法篇&quot; class=&quot;headerlink&quot; title=&quot;算法篇&quot;&gt;&lt;/a&gt;算法篇&lt;/h1&gt;&lt;h2 id=&quot;快速排序&quot;&gt;&lt;a href=&quot;#快速排序&quot; class=&quot;headerlink&quot;</summary>
+    <summary type="html">&lt;h1 id=&quot;算法篇&quot;&gt;&lt;a href=&quot;#算法篇&quot; class=&quot;headerlink&quot; title=&quot;算法篇&quot;&gt;&lt;/a&gt;算法篇&lt;/h1&gt;&lt;h2 id=&quot;一、快速排序&quot;&gt;&lt;a href=&quot;#一、快速排序&quot; class=&quot;headerlink&quot;</summary>
         
       
     
@@ -305,7 +303,7 @@
     <link href="https://lhlsnowing.github.io/2023/06/02/ai-ji-he-pian/"/>
     <id>https://lhlsnowing.github.io/2023/06/02/ai-ji-he-pian/</id>
     <published>2023-06-02T15:53:52.000Z</published>
-    <updated>2023-06-24T12:43:05.078Z</updated>
+    <updated>2023-06-25T13:49:50.571Z</updated>
     
     
       
