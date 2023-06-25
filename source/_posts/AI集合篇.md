@@ -15,6 +15,7 @@ categories: 资源整合
 4. [花钱，gpt4，可试用](https://poe.com/GPT-4)
 5. [还可以，积分制](https://ai.usesless.com/)
 6. [coplit平体](https://codeium.com/playground)
+7. [3.5and4,好用](https://ai.kunshanyuxin.com/)
 ### 便宜的梯子订阅
 [存个网址先，https://feiniaoyun.top/#/dashboard](https://feiniaoyun.top/#/dashboard)
 
