@@ -6,7 +6,7 @@
   <link href="https://lhlsnowing.github.io/atom.xml" rel="self"/>
   
   <link href="https://lhlsnowing.github.io/"/>
-  <updated>2023-06-24T05:58:06.539Z</updated>
+  <updated>2023-06-25T08:52:15.172Z</updated>
   <id>https://lhlsnowing.github.io/</id>
   
   <author>
@@ -17,18 +17,45 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>Maven</title>
+    <link href="https://lhlsnowing.github.io/2023/06/25/maven/"/>
+    <id>https://lhlsnowing.github.io/2023/06/25/maven/</id>
+    <published>2023-06-25T06:33:41.000Z</published>
+    <updated>2023-06-25T08:52:15.172Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;简介&quot;&gt;&lt;a href=&quot;#简介&quot; class=&quot;headerlink&quot; title=&quot;简介&quot;&gt;&lt;/a&gt;简介&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;Maven的本质是一个项目管理工具，将项目开发和管理过程抽象成一个项目对象模型（POM）&lt;/li&gt;
+&lt;li&gt;POM</summary>
+        
+      
+    
+    
+    
+    <category term="Maven" scheme="https://lhlsnowing.github.io/categories/Maven/"/>
+    
+    
+    <category term="Maven" scheme="https://lhlsnowing.github.io/tags/Maven/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Spring</title>
     <link href="https://lhlsnowing.github.io/2023/06/24/java/spring/"/>
     <id>https://lhlsnowing.github.io/2023/06/24/java/spring/</id>
     <published>2023-06-24T04:53:30.000Z</published>
-    <updated>2023-06-24T05:58:06.539Z</updated>
+    <updated>2023-06-25T06:33:19.209Z</updated>
     
     
       
       
         
         
-    <summary type="html">&lt;h1 id=&quot;&quot;&gt;&lt;a href=&quot;#&quot; class=&quot;headerlink&quot;</summary>
+    <summary type="html">&lt;h1 id=&quot;Spring&quot;&gt;&lt;a href=&quot;#Spring&quot; class=&quot;headerlink&quot; title=&quot;Spring&quot;&gt;&lt;/a&gt;Spring&lt;/h1&gt;&lt;h2 id=&quot;广义的-Spring&quot;&gt;&lt;a href=&quot;#广义的-Spring&quot;</summary>
         
       
     
@@ -278,7 +305,7 @@
     <link href="https://lhlsnowing.github.io/2023/06/02/ai-ji-he-pian/"/>
     <id>https://lhlsnowing.github.io/2023/06/02/ai-ji-he-pian/</id>
     <published>2023-06-02T15:53:52.000Z</published>
-    <updated>2023-06-24T05:54:39.709Z</updated>
+    <updated>2023-06-24T12:43:05.078Z</updated>
     
     
       
@@ -398,9 +425,9 @@
     <category term="JDBC" scheme="https://lhlsnowing.github.io/categories/Java/JDBC/"/>
     
     
-    <category term="Java" scheme="https://lhlsnowing.github.io/tags/Java/"/>
-    
     <category term="JDBC" scheme="https://lhlsnowing.github.io/tags/JDBC/"/>
+    
+    <category term="Java" scheme="https://lhlsnowing.github.io/tags/Java/"/>
     
   </entry>
   
@@ -618,31 +645,6 @@
     
     
     <category term="语法分析" scheme="https://lhlsnowing.github.io/tags/%E8%AF%AD%E6%B3%95%E5%88%86%E6%9E%90/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>MarkDown使用</title>
-    <link href="https://lhlsnowing.github.io/2023/05/23/markdown-shi-yong/"/>
-    <id>https://lhlsnowing.github.io/2023/05/23/markdown-shi-yong/</id>
-    <published>2023-05-23T08:12:54.000Z</published>
-    <updated>2023-05-23T14:51:13.700Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;MarkDown的基本语法&quot;&gt;&lt;a href=&quot;#MarkDown的基本语法&quot; class=&quot;headerlink&quot; title=&quot;MarkDown的基本语法&quot;&gt;&lt;/a&gt;MarkDown的基本语法&lt;/h1&gt;&lt;h2 id=&quot;1、三种方式&quot;&gt;&lt;a</summary>
-        
-      
-    
-    
-    
-    <category term="MarkDown" scheme="https://lhlsnowing.github.io/categories/MarkDown/"/>
-    
-    
-    <category term="MarkDown使用" scheme="https://lhlsnowing.github.io/tags/MarkDown%E4%BD%BF%E7%94%A8/"/>
     
   </entry>
   
