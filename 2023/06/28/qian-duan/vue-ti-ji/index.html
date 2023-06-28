@@ -444,14 +444,14 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>Word Count:&nbsp;&nbsp;
-                    278
+                    476
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>Read Times:&nbsp;&nbsp;
-                    1 Min
+                    2 Min
                 </div>
                 
 
@@ -492,39 +492,39 @@ p {
 }
 &lt;/style&gt;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<h2 id="二、全局css-：global"><a href="#二、全局css-：global" class="headerlink" title="二、全局css ：global()"></a>二、全局css ：global()</h2><pre class="line-numbers language-vue" data-language="vue"><code class="language-vue">&lt;template&gt;
+<h2 id="二、全局css-：global"><a href="#二、全局css-：global" class="headerlink" title="二、全局css ：global()"></a>二、全局css ：global()</h2><pre class="line-numbers language-css" data-language="css"><code class="language-css"><span class="token selector">&lt;template&gt;
   &lt;p&gt;Hello Vue.js&lt;/p&gt;
 &lt;/template&gt;
 
 &lt;style scoped&gt;
 
-p {
-  font-size:20px;
-  color:red;
-  text-align: center;
-  line-height: 50px;
-}
+p</span> <span class="token punctuation">{</span>
+  <span class="token property">font-size</span><span class="token punctuation">:</span>20px<span class="token punctuation">;</span>
+  <span class="token property">color</span><span class="token punctuation">:</span>red<span class="token punctuation">;</span>
+  <span class="token property">text-align</span><span class="token punctuation">:</span> center<span class="token punctuation">;</span>
+  <span class="token property">line-height</span><span class="token punctuation">:</span> 50px<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
 
-/* Make it work */
-:global(body) {
-  width: 100vw;
-  height: 100vh;
-  background-color: burlywood;
-}
+<span class="token comment">/* Make it work */</span>
+<span class="token selector">:global(body)</span> <span class="token punctuation">{</span>
+  <span class="token property">width</span><span class="token punctuation">:</span> 100vw<span class="token punctuation">;</span>
+  <span class="token property">height</span><span class="token punctuation">:</span> 100vh<span class="token punctuation">;</span>
+  <span class="token property">background-color</span><span class="token punctuation">:</span> burlywood<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
 &lt;/style&gt;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<h2 id="三、Teleport-将插槽内容渲染到另一个DOM"><a href="#三、Teleport-将插槽内容渲染到另一个DOM" class="headerlink" title="三、Teleport 将插槽内容渲染到另一个DOM"></a>三、Teleport 将插槽内容渲染到另一个DOM</h2><pre class="line-numbers language-vue" data-language="vue"><code class="language-vue">&lt;script setup&gt;
+<h2 id="三、Teleport-将插槽内容渲染到另一个DOM"><a href="#三、Teleport-将插槽内容渲染到另一个DOM" class="headerlink" title="三、Teleport 将插槽内容渲染到另一个DOM"></a>三、Teleport 将插槽内容渲染到另一个DOM</h2><pre class="line-numbers language-typescript" data-language="typescript"><code class="language-typescript"><span class="token operator">&lt;</span>script setup<span class="token operator">&gt;</span>
 
-const msg = "Hello World"
+<span class="token keyword">const</span> msg <span class="token operator">=</span> <span class="token string">"Hello World"</span>
 
-&lt;/script&gt;
+<span class="token operator">&lt;</span><span class="token operator">/</span>script<span class="token operator">&gt;</span>
 
-&lt;template&gt;
-  &lt;!-- Renders it to a child element of the `body` --&gt;
-  &lt;Teleport to="body"&gt;
-    &lt;span &gt;{{ msg }}&lt;/span&gt;
-  &lt;/Teleport&gt;
-&lt;/template&gt;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<span class="token operator">&lt;</span>template<span class="token operator">&gt;</span>
+  <span class="token operator">&lt;</span><span class="token operator">!</span><span class="token operator">--</span> Renders it to a child element <span class="token keyword">of</span> the <span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">body</span><span class="token template-punctuation string">`</span></span> <span class="token operator">--</span><span class="token operator">&gt;</span>
+  <span class="token operator">&lt;</span>Teleport to<span class="token operator">=</span><span class="token string">"body"</span><span class="token operator">&gt;</span>
+    <span class="token operator">&lt;</span>span <span class="token operator">&gt;</span><span class="token punctuation">{</span><span class="token punctuation">{</span> msg <span class="token punctuation">}</span><span class="token punctuation">}</span><span class="token operator">&lt;</span><span class="token operator">/</span>span<span class="token operator">&gt;</span>
+  <span class="token operator">&lt;</span><span class="token operator">/</span>Teleport<span class="token operator">&gt;</span>
+<span class="token operator">&lt;</span><span class="token operator">/</span>template<span class="token operator">&gt;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <h2 id="四、render-h-的使用"><a href="#四、render-h-的使用" class="headerlink" title="四、render  h 的使用"></a>四、render  h 的使用</h2><p>mybutton.ts</p>
 <pre class="line-numbers language-typescript" data-language="typescript"><code class="language-typescript"><span class="token keyword">import</span> <span class="token punctuation">{</span> defineComponent<span class="token punctuation">,</span> h <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'vue'</span><span class="token punctuation">;</span>
@@ -569,7 +569,76 @@ const onClick = () =&gt; {
   &lt;!-- &lt;h2&gt;sdaio&lt;/h2&gt; --&gt;
 &lt;/template&gt;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<h2 id="五、"><a href="#五、" class="headerlink" title="五、"></a>五、</h2>
+<h2 id="五、树组件"><a href="#五、树组件" class="headerlink" title="五、树组件"></a>五、树组件</h2><p>TreeComponent.vue</p>
+<pre class="line-numbers language-typescript" data-language="typescript"><code class="language-typescript"><span class="token operator">&lt;</span>script setup lang<span class="token operator">=</span><span class="token string">"ts"</span><span class="token operator">&gt;</span>
+<span class="token keyword">interface</span> <span class="token class-name">TreeData</span> <span class="token punctuation">{</span>
+  key<span class="token operator">:</span> <span class="token builtin">string</span><span class="token punctuation">;</span>
+  title<span class="token operator">:</span> <span class="token builtin">string</span><span class="token punctuation">;</span>
+  children<span class="token operator">:</span> TreeData<span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token generic-function"><span class="token function">defineProps</span><span class="token generic class-name"><span class="token operator">&lt;</span><span class="token punctuation">{</span> data<span class="token operator">:</span> TreeData<span class="token punctuation">[</span><span class="token punctuation">]</span> <span class="token punctuation">}</span><span class="token operator">&gt;</span></span></span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token operator">&lt;</span><span class="token operator">/</span>script<span class="token operator">&gt;</span>
+
+<span class="token operator">&lt;</span>template<span class="token operator">&gt;</span>
+  <span class="token operator">&lt;</span><span class="token operator">!</span><span class="token operator">--</span> <span class="token keyword">do</span> something<span class="token operator">...</span><span class="token punctuation">.</span> <span class="token operator">--</span><span class="token operator">&gt;</span>
+  <span class="token operator">&lt;</span>ul<span class="token operator">&gt;</span>
+    <span class="token operator">&lt;</span>li v<span class="token operator">-</span><span class="token keyword">for</span><span class="token operator">=</span><span class="token string">"(item, i) in data"</span> <span class="token operator">:</span>key<span class="token operator">=</span><span class="token string">"i"</span><span class="token operator">&gt;</span>
+      <span class="token operator">&lt;</span><span class="token operator">!</span><span class="token operator">--</span> <span class="token operator">&lt;</span>span<span class="token operator">&gt;</span><span class="token punctuation">{</span><span class="token punctuation">{</span>item<span class="token punctuation">.</span>key<span class="token punctuation">}</span><span class="token punctuation">}</span><span class="token operator">&lt;</span><span class="token operator">/</span>span<span class="token operator">&gt;</span> <span class="token operator">--</span><span class="token operator">&gt;</span>
+      <span class="token operator">&lt;</span>br<span class="token operator">&gt;</span>
+      <span class="token operator">&lt;</span>span<span class="token operator">&gt;</span><span class="token punctuation">{</span><span class="token punctuation">{</span> item<span class="token punctuation">.</span>title <span class="token punctuation">}</span><span class="token punctuation">}</span><span class="token operator">&lt;</span><span class="token operator">/</span>span<span class="token operator">&gt;</span> 
+      <span class="token operator">&lt;</span>tree<span class="token operator">-</span>component
+        v<span class="token operator">-</span><span class="token keyword">if</span><span class="token operator">=</span><span class="token string">"item.children &amp;&amp; item.children.length"</span>
+        <span class="token operator">:</span>data<span class="token operator">=</span><span class="token string">"item.children"</span>
+      <span class="token operator">&gt;</span><span class="token operator">&lt;</span><span class="token operator">/</span>tree<span class="token operator">-</span>component<span class="token operator">&gt;</span>
+    <span class="token operator">&lt;</span><span class="token operator">/</span>li<span class="token operator">&gt;</span>
+  <span class="token operator">&lt;</span><span class="token operator">/</span>ul<span class="token operator">&gt;</span>
+<span class="token operator">&lt;</span><span class="token operator">/</span>template<span class="token operator">&gt;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>App.vue</p>
+<pre class="line-numbers language-typescript" data-language="typescript"><code class="language-typescript"><span class="token operator">&lt;</span>script setup lang<span class="token operator">=</span><span class="token string">"ts"</span><span class="token operator">&gt;</span>
+<span class="token keyword">import</span> <span class="token punctuation">{</span> ref <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">"vue"</span>
+<span class="token keyword">import</span> TreeComponent <span class="token keyword">from</span> <span class="token string">"./TreeComponent.vue"</span>
+<span class="token keyword">const</span> treeData <span class="token operator">=</span> <span class="token function">ref</span><span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token punctuation">{</span>
+  key<span class="token operator">:</span> <span class="token string">'1'</span><span class="token punctuation">,</span>
+  title<span class="token operator">:</span> <span class="token string">'Parent 1'</span><span class="token punctuation">,</span>
+  children<span class="token operator">:</span> <span class="token punctuation">[</span><span class="token punctuation">{</span>
+    key<span class="token operator">:</span> <span class="token string">'1-1'</span><span class="token punctuation">,</span>
+    title<span class="token operator">:</span> <span class="token string">'child 1'</span><span class="token punctuation">,</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token punctuation">{</span>
+    key<span class="token operator">:</span> <span class="token string">'1-2'</span><span class="token punctuation">,</span>
+    title<span class="token operator">:</span> <span class="token string">'child 2'</span><span class="token punctuation">,</span>
+    children<span class="token operator">:</span> <span class="token punctuation">[</span><span class="token punctuation">{</span>
+      key<span class="token operator">:</span> <span class="token string">'1-2-1'</span><span class="token punctuation">,</span>
+      title<span class="token operator">:</span> <span class="token string">'grandchild 1'</span><span class="token punctuation">,</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token punctuation">{</span>
+      key<span class="token operator">:</span> <span class="token string">'1-2-2'</span><span class="token punctuation">,</span>
+      title<span class="token operator">:</span> <span class="token string">'grandchild 2'</span><span class="token punctuation">,</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span><span class="token punctuation">]</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span><span class="token punctuation">]</span>
+<span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token punctuation">{</span>
+  key<span class="token operator">:</span> <span class="token string">'2'</span><span class="token punctuation">,</span>
+  title<span class="token operator">:</span> <span class="token string">'Parent 2'</span><span class="token punctuation">,</span>
+  children<span class="token operator">:</span> <span class="token punctuation">[</span><span class="token punctuation">{</span>
+    key<span class="token operator">:</span> <span class="token string">'2-1'</span><span class="token punctuation">,</span>
+    title<span class="token operator">:</span> <span class="token string">'child 1'</span><span class="token punctuation">,</span>
+    children<span class="token operator">:</span> <span class="token punctuation">[</span><span class="token punctuation">{</span>
+      key<span class="token operator">:</span> <span class="token string">'2-1-1'</span><span class="token punctuation">,</span>
+      title<span class="token operator">:</span> <span class="token string">'grandchild 1'</span><span class="token punctuation">,</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token punctuation">{</span>
+      key<span class="token operator">:</span> <span class="token string">'2-1-2'</span><span class="token punctuation">,</span>
+      title<span class="token operator">:</span> <span class="token string">'grandchild 2'</span><span class="token punctuation">,</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span><span class="token punctuation">]</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token punctuation">{</span>
+    key<span class="token operator">:</span> <span class="token string">'2-2'</span><span class="token punctuation">,</span>
+    title<span class="token operator">:</span> <span class="token string">'child 2'</span><span class="token punctuation">,</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span><span class="token punctuation">]</span>
+<span class="token punctuation">}</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+<span class="token operator">&lt;</span><span class="token operator">/</span>script<span class="token operator">&gt;</span>
+
+<span class="token operator">&lt;</span>template<span class="token operator">&gt;</span>
+  <span class="token operator">&lt;</span>TreeComponent <span class="token operator">:</span>data<span class="token operator">=</span><span class="token string">"treeData"</span> <span class="token operator">/</span><span class="token operator">&gt;</span>
+<span class="token operator">&lt;</span><span class="token operator">/</span>template<span class="token operator">&gt;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p><img src="/2023/06/28/qian-duan/vue-ti-ji/jieguo.png" alt="结果"></p>
+
                 
             </div>
             <hr/>
@@ -725,30 +794,29 @@ const onClick = () =&gt; {
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="far fa-dot-circle"></i>&nbsp;Current
-            </div>
+                <i class="fas fa-chevron-left"></i>&nbsp;Previous</div>
             <div class="card">
-                <a href="/2023/06/28/qian-duan/vue-ti-ji/">
+                <a href="/2023/06/28/qian-duan/css/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/14.jpg" class="responsive-img" alt="Vue题记">
+                        <img src="/medias/featureimages/11.jpg" class="responsive-img" alt="CSS">
                         
-                        <span class="card-title">Vue题记</span>
+                        <span class="card-title">CSS</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            Vue一些题记
+                            
                         
                     </div>
                     <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2023-06-28
-                            </span>
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2023-06-28
+                        </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
@@ -757,32 +825,23 @@ const onClick = () =&gt; {
                                     前端
                                 </a>
                             
-                            <a href="/categories/%E5%89%8D%E7%AB%AF/Vue/" class="post-category">
-                                    Vue
+                            <a href="/categories/%E5%89%8D%E7%AB%AF/CSS/" class="post-category">
+                                    CSS
                                 </a>
                             
                             
                         </span>
                     </div>
                 </div>
-
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/%E5%89%8D%E7%AB%AF/">
-                        <span class="chip bg-color">前端</span>
+                    <a href="/tags/CSS/">
+                        <span class="chip bg-color">CSS</span>
                     </a>
                     
-                    <a href="/tags/Vue/">
-                        <span class="chip bg-color">Vue</span>
-                    </a>
-                    
-                    <a href="/tags/render/">
-                        <span class="chip bg-color">render</span>
-                    </a>
-                    
-                    <a href="/tags/v-bind%E5%9C%A8css%E4%B8%AD%E4%BD%BF%E7%94%A8/">
-                        <span class="chip bg-color">v-bind在css中使用</span>
+                    <a href="/tags/%E5%9E%82%E7%9B%B4%E5%B1%85%E4%B8%AD/">
+                        <span class="chip bg-color">垂直居中</span>
                     </a>
                     
                 </div>
@@ -1012,7 +1071,7 @@ const onClick = () =&gt; {
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;Total Words:&nbsp;<span
-                        class="white-color">31.9k</span>
+                        class="white-color">32.6k</span>
             
             
             
