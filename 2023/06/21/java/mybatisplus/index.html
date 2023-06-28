@@ -5,10 +5,10 @@
 <head>
     <meta charset="utf-8">
     <meta name="keywords" content="MybatisPlus, 落雪的小屋">
-    <meta name="description" content="ORM 介绍
+    <meta name="description" content="一、ORM 介绍
 ORM （Object Relational Mapping，对象关系映射），为了解决面向对象与关系数据库存在的互不匹配现象的一种技术
 ORM 通过使用描述对象和数据库之间映射的元数据将程序的对象自动持久化到关系数据库中
-OR">
+">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -142,6 +142,67 @@ OR">
     
   </li>
   
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="" class="waves-effect waves-light">
+
+      
+      <i class="fas fa-bars" style="zoom: 0.6;"></i>
+      
+      <span>导航</span>
+      <i class="fas fa-chevron-down" aria-hidden="true" style="zoom: 0.6;"></i>
+    </a>
+    <ul class="sub-nav menus_item_child ">
+      
+      <li>
+        <a href="/2023/06/02/ai-ji-he-pian/">
+          
+          <i class="fas fa-book" style="margin-top: -20px; zoom: 0.6;"></i>
+          
+          <span>资源整合</span>
+        </a>
+      </li>
+      
+      <li>
+        <a href="/categories/%E5%89%8D%E7%AB%AF/">
+          
+          <i class="fas fa-city" style="margin-top: -20px; zoom: 0.6;"></i>
+          
+          <span>前端笔记</span>
+        </a>
+      </li>
+      
+      <li>
+        <a href="/categories/Java/">
+          
+          <i class="fa-brands fa-java" style="margin-top: -20px; zoom: 0.6;"></i>
+          
+          <span>Java笔记</span>
+        </a>
+      </li>
+      
+      <li>
+        <a href="/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/">
+          
+          <i class="fas fa-database" style="margin-top: -20px; zoom: 0.6;"></i>
+          
+          <span>数据库</span>
+        </a>
+      </li>
+      
+      <li>
+        <a href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/">
+          
+          <i class="fas fa-network-wired" style="margin-top: -20px; zoom: 0.6;"></i>
+          
+          <span>计网笔记</span>
+        </a>
+      </li>
+      
+    </ul>
+    
+  </li>
+  
   <li>
     <a href="#searchModal" class="modal-trigger waves-effect waves-light">
       <i id="searchIcon" class="fas fa-search" title="Search" style="zoom: 0.85;"></i>
@@ -226,13 +287,71 @@ OR">
           
         </li>
         
-        
-        <li><div class="divider"></div></li>
-        <li>
-            <a href="https://github.com/LHLsnowing" class="waves-effect waves-light" target="_blank">
-                <i class="fab fa-github-square fa-fw"></i>Fork Me
-            </a>
+        <li class="m-nav-item">
+	  
+		<a href="javascript:;">
+			
+				<i class="fa-fw fas fa-bars"></i>
+			
+			导航
+			<span class="m-icon"><i class="fas fa-chevron-right"></i></span>
+		</a>
+            <ul  style="background:  ;" >
+              
+                <li>
+
+                  <a href="/2023/06/02/ai-ji-he-pian/ " style="margin-left:75px">
+				  
+				   <i class="fa fas fa-book" style="position: absolute;left:50px" ></i>
+			      
+		          <span>资源整合</span>
+                  </a>
+                </li>
+              
+                <li>
+
+                  <a href="/categories/%E5%89%8D%E7%AB%AF/ " style="margin-left:75px">
+				  
+				   <i class="fa fas fa-city" style="position: absolute;left:50px" ></i>
+			      
+		          <span>前端笔记</span>
+                  </a>
+                </li>
+              
+                <li>
+
+                  <a href="/categories/Java/ " style="margin-left:75px">
+				  
+				   <i class="fa fa-brands fa-java" style="position: absolute;left:50px" ></i>
+			      
+		          <span>Java笔记</span>
+                  </a>
+                </li>
+              
+                <li>
+
+                  <a href="/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/ " style="margin-left:75px">
+				  
+				   <i class="fa fas fa-database" style="position: absolute;left:50px" ></i>
+			      
+		          <span>数据库</span>
+                  </a>
+                </li>
+              
+                <li>
+
+                  <a href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/ " style="margin-left:75px">
+				  
+				   <i class="fa fas fa-network-wired" style="position: absolute;left:50px" ></i>
+			      
+		          <span>计网笔记</span>
+                  </a>
+                </li>
+              
+            </ul>
+          
         </li>
+        
         
     </ul>
 </div>
@@ -240,62 +359,6 @@ OR">
 
         </div>
 
-        
-            <style>
-    .nav-transparent .github-corner {
-        display: none !important;
-    }
-
-    .github-corner {
-        position: absolute;
-        z-index: 10;
-        top: 0;
-        right: 0;
-        border: 0;
-        transform: scale(1.1);
-    }
-
-    .github-corner svg {
-        color: #0f9d58;
-        fill: #fff;
-        height: 64px;
-        width: 64px;
-    }
-
-    .github-corner:hover .octo-arm {
-        animation: a 0.56s ease-in-out;
-    }
-
-    .github-corner .octo-arm {
-        animation: none;
-    }
-
-    @keyframes a {
-        0%,
-        to {
-            transform: rotate(0);
-        }
-        20%,
-        60% {
-            transform: rotate(-25deg);
-        }
-        40%,
-        80% {
-            transform: rotate(10deg);
-        }
-    }
-</style>
-
-<a href="https://github.com/LHLsnowing" class="github-corner tooltipped hide-on-med-and-down" target="_blank"
-   data-tooltip="Fork Me" data-position="left" data-delay="50">
-    <svg viewBox="0 0 250 250" aria-hidden="true">
-        <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path>
-        <path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2"
-              fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path>
-        <path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z"
-              fill="currentColor" class="octo-body"></path>
-    </svg>
-</a>
         
     </nav>
 
@@ -376,14 +439,14 @@ OR">
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>Word Count:&nbsp;&nbsp;
-                    217
+                    622
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>Read Times:&nbsp;&nbsp;
-                    1 Min
+                    2 Min
                 </div>
                 
 
@@ -401,12 +464,32 @@ OR">
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h2 id="ORM-介绍"><a href="#ORM-介绍" class="headerlink" title="ORM 介绍"></a>ORM 介绍</h2><ul>
+                <h2 id="一、ORM-介绍"><a href="#一、ORM-介绍" class="headerlink" title="一、ORM 介绍"></a>一、ORM 介绍</h2><ul>
 <li>ORM （Object Relational Mapping，对象关系映射），为了解决面向对象与关系数据库存在的互不匹配现象的一种技术</li>
 <li>ORM 通过使用描述对象和数据库之间映射的元数据将程序的对象自动持久化到关系数据库中</li>
 <li>ORM 框架的本质是简化编程中操作数据库的编码<br><img src="/2023/06/21/java/mybatisplus/image.png" alt="ORM"></li>
 </ul>
-<h2 id="Mybatis-Plus介绍"><a href="#Mybatis-Plus介绍" class="headerlink" title="Mybatis-Plus介绍"></a>Mybatis-Plus介绍</h2><ul>
+<h2 id="二、Mybatis"><a href="#二、Mybatis" class="headerlink" title="二、Mybatis"></a>二、Mybatis</h2><p>MyBatis 是一种基于 Java 的 ORM (Object Relational Mapping) 框架，可以将 SQL 映射到 Java 对象上，使用 XML 或注释的方式配置 SQL 语句，使得开发人员可以通过简单的配置完成对数据库的操作。MyBatis 具有轻量、易学易用、可插拔等优点，在 Java Web 开发中得到广泛使用。</p>
+<ul>
+<li>以下是 MyBatis 的一些基础知识：</li>
+</ul>
+<ol>
+<li><p>MyBatis 核心组件：<code>SqlSession、Configuration、Executor、StatementHandler、ParameterHandler、ResultSetHandler、MappedStatement、SqlSource、BoundSql</code></p>
+</li>
+<li><p>MyBatis 中的映射文件有两种：<strong>Mapper 映射文件和全局配置文件</strong>。其中 Mapper 映射文件用来描述 SQL 语句和映射规则，全局配置文件用来配置一些全局性的配置。</p>
+</li>
+<li><p>在 Mapper 映射文件中，可以使用 <strong>XML 或注解</strong>的方式来配置 SQL 语句。使用 XML 中的 ${} 占位符引用参数，使用 #{} 占位符代替常规的 Java 传参方式，防止 SQL 注入。</p>
+</li>
+<li><p>MyBatis 中<strong>支持插件机制</strong>，用户可以自己编写插件，在 SQL 执行前后进行一些操作，比如记录执行时间、拦截 SQL 执行等。</p>
+</li>
+<li><p>MyBatis 除了支持原生的 JDBC 操作外，还支持集成一些开源的数据库连接池，比如 C3P0、 Druid 等。</p>
+</li>
+<li><p>MyBatis 中的缓存主要分为一级缓存和二级缓存，<strong>一级缓存是 SqlSession 级别的缓存，二级缓存是 SqlSessionFactory 级别的缓存</strong>，可以在多个 SqlSession 之间共享。</p>
+</li>
+<li><p>MyBatis 提供了多种方式来生成主键，比如使用数据库自动生成、使用 MyBatis 内置的序列机制、手工编写主键生成策略等。</p>
+</li>
+</ol>
+<h2 id="三、Mybatis-Plus介绍"><a href="#三、Mybatis-Plus介绍" class="headerlink" title="三、Mybatis-Plus介绍"></a>三、Mybatis-Plus介绍</h2><ul>
 <li>MyBatis是一款优秀的数据持久层ORM框架，被广泛地应用于系统</li>
 <li>MyBatis能够非常灵活地实现动态SQL，可以使用XML或注解来配置和映射原生信息，能够轻松地将Java的POJO（Plain Ordinary Java Object，普通java对象）与数据库中的表和字段进行映射关联</li>
 <li>MyBatis-Plus是一个MyBatis 的增强工具，在MyBatis的基础上做了增强，简化了开发</li>
@@ -838,60 +921,6 @@ OR">
 
     <footer class="page-footer bg-color">
     
-        <link rel="stylesheet" href="/libs/aplayer/APlayer.min.css">
-<style>
-    .aplayer .aplayer-lrc p {
-        
-        display: none;
-        
-        font-size: 12px;
-        font-weight: 700;
-        line-height: 16px !important;
-    }
-
-    .aplayer .aplayer-lrc p.aplayer-lrc-current {
-        
-        display: none;
-        
-        font-size: 15px;
-        color: #42b983;
-    }
-
-    
-    .aplayer.aplayer-fixed.aplayer-narrow .aplayer-body {
-        left: -66px !important;
-    }
-
-    .aplayer.aplayer-fixed.aplayer-narrow .aplayer-body:hover {
-        left: 0px !important;
-    }
-
-    
-</style>
-<div class="">
-    
-    <div class="row">
-        <meting-js class="col l8 offset-l2 m10 offset-m1 s12"
-                   server="netease"
-                   type="playlist"
-                   id="503838841"
-                   fixed='true'
-                   autoplay='false'
-                   theme='#42b983'
-                   loop='all'
-                   order='random'
-                   preload='auto'
-                   volume='0.7'
-                   list-folded='true'
-        >
-        </meting-js>
-    </div>
-</div>
-
-<script src="/libs/aplayer/APlayer.min.js"></script>
-<script src="/libs/aplayer/Meting.min.js"></script>
-
-    
 
     <div class="container row center-align"
          style="margin-bottom: 0px !important;">
@@ -907,7 +936,7 @@ OR">
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;Total Words:&nbsp;<span
-                        class="white-color">30.4k</span>
+                        class="white-color">31.9k</span>
             
             
             

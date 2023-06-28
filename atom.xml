@@ -6,7 +6,7 @@
   <link href="https://lhlsnowing.github.io/atom.xml" rel="self"/>
   
   <link href="https://lhlsnowing.github.io/"/>
-  <updated>2023-06-26T01:08:08.216Z</updated>
+  <updated>2023-06-28T02:18:01.337Z</updated>
   <id>https://lhlsnowing.github.io/</id>
   
   <author>
@@ -15,6 +15,35 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Vue</title>
+    <link href="https://lhlsnowing.github.io/2023/06/28/qian-duan/vue/"/>
+    <id>https://lhlsnowing.github.io/2023/06/28/qian-duan/vue/</id>
+    <published>2023-06-28T01:29:02.000Z</published>
+    <updated>2023-06-28T02:18:01.337Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;一、动态颜色-v-bind-在css中使用&quot;&gt;&lt;a href=&quot;#一、动态颜色-v-bind-在css中使用&quot; class=&quot;headerlink&quot; title=&quot;一、动态颜色 v-bind 在css中使用&quot;&gt;&lt;/a&gt;一、动态颜色 v-bind</summary>
+        
+      
+    
+    
+    
+    <category term="Vue" scheme="https://lhlsnowing.github.io/categories/Vue/"/>
+    
+    <category term="Vue用法题记" scheme="https://lhlsnowing.github.io/categories/Vue/Vue%E7%94%A8%E6%B3%95%E9%A2%98%E8%AE%B0/"/>
+    
+    
+    <category term="Vue" scheme="https://lhlsnowing.github.io/tags/Vue/"/>
+    
+    <category term="Vue用法题记" scheme="https://lhlsnowing.github.io/tags/Vue%E7%94%A8%E6%B3%95%E9%A2%98%E8%AE%B0/"/>
+    
+  </entry>
   
   <entry>
     <title>Maven</title>
@@ -46,14 +75,14 @@
     <link href="https://lhlsnowing.github.io/2023/06/24/java/spring/"/>
     <id>https://lhlsnowing.github.io/2023/06/24/java/spring/</id>
     <published>2023-06-24T04:53:30.000Z</published>
-    <updated>2023-06-25T06:33:19.209Z</updated>
+    <updated>2023-06-28T00:41:02.665Z</updated>
     
     
       
       
         
         
-    <summary type="html">&lt;h1 id=&quot;Spring&quot;&gt;&lt;a href=&quot;#Spring&quot; class=&quot;headerlink&quot; title=&quot;Spring&quot;&gt;&lt;/a&gt;Spring&lt;/h1&gt;&lt;h2 id=&quot;广义的-Spring&quot;&gt;&lt;a href=&quot;#广义的-Spring&quot;</summary>
+    <summary type="html">&lt;h1 id=&quot;Spring&quot;&gt;&lt;a href=&quot;#Spring&quot; class=&quot;headerlink&quot; title=&quot;Spring&quot;&gt;&lt;/a&gt;Spring&lt;/h1&gt;&lt;p&gt;&lt;img src=&quot;/2023/06/24/java/spring/jiagou.png&quot;</summary>
         
       
     
@@ -79,14 +108,14 @@
     <link href="https://lhlsnowing.github.io/2023/06/21/java/mybatisplus/"/>
     <id>https://lhlsnowing.github.io/2023/06/21/java/mybatisplus/</id>
     <published>2023-06-21T03:14:06.000Z</published>
-    <updated>2023-06-24T05:57:53.588Z</updated>
+    <updated>2023-06-26T07:51:14.896Z</updated>
     
     
       
       
         
         
-    <summary type="html">&lt;h2 id=&quot;ORM-介绍&quot;&gt;&lt;a href=&quot;#ORM-介绍&quot; class=&quot;headerlink&quot; title=&quot;ORM 介绍&quot;&gt;&lt;/a&gt;ORM 介绍&lt;/h2&gt;&lt;ul&gt;
+    <summary type="html">&lt;h2 id=&quot;一、ORM-介绍&quot;&gt;&lt;a href=&quot;#一、ORM-介绍&quot; class=&quot;headerlink&quot; title=&quot;一、ORM 介绍&quot;&gt;&lt;/a&gt;一、ORM 介绍&lt;/h2&gt;&lt;ul&gt;
 &lt;li&gt;ORM （Object Relational</summary>
         
       
@@ -303,14 +332,15 @@
     <link href="https://lhlsnowing.github.io/2023/06/02/ai-ji-he-pian/"/>
     <id>https://lhlsnowing.github.io/2023/06/02/ai-ji-he-pian/</id>
     <published>2023-06-02T15:53:52.000Z</published>
-    <updated>2023-06-25T13:49:50.571Z</updated>
+    <updated>2023-06-27T08:29:22.108Z</updated>
     
     
       
       
         
         
-    <summary type="html">&lt;h1 id=&quot;一些资源链接，报错记录，文档等等&quot;&gt;&lt;a href=&quot;#一些资源链接，报错记录，文档等等&quot; class=&quot;headerlink&quot; title=&quot;一些资源链接，报错记录，文档等等&quot;&gt;&lt;/a&gt;一些资源链接，报错记录，文档等等&lt;/h1&gt;&lt;p&gt;&lt;img</summary>
+    <summary type="html">&lt;p&gt;services.msc 打开计算机的服务&lt;/p&gt;
+&lt;h1 id=&quot;一些资源链接，报错记录，文档等等&quot;&gt;&lt;a href=&quot;#一些资源链接，报错记录，文档等等&quot; class=&quot;headerlink&quot;</summary>
         
       
     
@@ -405,7 +435,7 @@
     <link href="https://lhlsnowing.github.io/2023/05/25/java/jdbc/"/>
     <id>https://lhlsnowing.github.io/2023/05/25/java/jdbc/</id>
     <published>2023-05-25T10:05:50.000Z</published>
-    <updated>2023-06-26T01:40:29.317Z</updated>
+    <updated>2023-06-26T08:55:39.599Z</updated>
     
     
       
@@ -472,14 +502,15 @@
     <link href="https://lhlsnowing.github.io/2023/05/24/java/springboot/"/>
     <id>https://lhlsnowing.github.io/2023/05/24/java/springboot/</id>
     <published>2023-05-24T12:05:19.000Z</published>
-    <updated>2023-06-24T05:56:35.619Z</updated>
+    <updated>2023-06-27T05:50:36.506Z</updated>
     
     
       
       
         
         
-    <summary type="html">&lt;h3 id=&quot;一、springboot项目启动不自动启动内嵌tomcat问题&quot;&gt;&lt;a href=&quot;#一、springboot项目启动不自动启动内嵌tomcat问题&quot; class=&quot;headerlink&quot;</summary>
+    <summary type="html">&lt;p&gt;Ctrl+shift+o 刷新maven&lt;/p&gt;
+&lt;h3 id=&quot;一、springboot项目启动不自动启动内嵌tomcat问题&quot;&gt;&lt;a href=&quot;#一、springboot项目启动不自动启动内嵌tomcat问题&quot; class=&quot;headerlink&quot;</summary>
         
       
     
@@ -618,31 +649,6 @@
     <category term="网络传输层" scheme="https://lhlsnowing.github.io/tags/%E7%BD%91%E7%BB%9C%E4%BC%A0%E8%BE%93%E5%B1%82/"/>
     
     <category term="Websocket" scheme="https://lhlsnowing.github.io/tags/Websocket/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>语法分析</title>
-    <link href="https://lhlsnowing.github.io/2023/05/23/yu-fa-fen-xi/"/>
-    <id>https://lhlsnowing.github.io/2023/05/23/yu-fa-fen-xi/</id>
-    <published>2023-05-23T09:28:01.000Z</published>
-    <updated>2023-05-23T14:51:16.973Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h2 id=&quot;一个简单的语法分析-–nefu编译原理-实验2&quot;&gt;&lt;a href=&quot;#一个简单的语法分析-–nefu编译原理-实验2&quot; class=&quot;headerlink&quot; title=&quot;一个简单的语法分析 –nefu编译原理-实验2&quot;&gt;&lt;/a&gt;一个简单的语法分析</summary>
-        
-      
-    
-    
-    
-    <category term="编译原理" scheme="https://lhlsnowing.github.io/categories/%E7%BC%96%E8%AF%91%E5%8E%9F%E7%90%86/"/>
-    
-    
-    <category term="语法分析" scheme="https://lhlsnowing.github.io/tags/%E8%AF%AD%E6%B3%95%E5%88%86%E6%9E%90/"/>
     
   </entry>
   
