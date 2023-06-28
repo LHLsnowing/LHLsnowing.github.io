@@ -1,13 +1,13 @@
 ---
-title: Vue
+title: Vue题记
 top: false
 cover: false
 toc: true
 mathjax: true
-date: 2023-06-28 09:29:02
-summary: Vue题记
-tags:   [Vue,Vue用法题记]
-categories: [Vue,Vue用法题记]
+date: 2023-06-28 10:27:44
+summary: Vue一些题记
+tags: [前端,Vue,render,v-bind在css中使用]
+categories: [前端,Vue]
 ---
 
 ## 一、动态颜色 v-bind 在css中使用
@@ -35,6 +35,7 @@ p {
 }
 </style>
 ```
+
 ## 二、全局css ：global()
 ```vue
 <template>
@@ -58,6 +59,7 @@ p {
 }
 </style>
 ```
+
 ## 三、Teleport 将插槽内容渲染到另一个DOM
 ```vue
 <script setup>
@@ -73,6 +75,7 @@ const msg = "Hello World"
   </Teleport>
 </template>
 ```
+
 ## 四、render  h 的使用
 mybutton.ts
 ```ts
@@ -101,8 +104,9 @@ export default defineComponent({
   },
 });
 ```
+
 App.vue
-```vue
+```Vue
 <script setup lang="ts">
 import MyButton from "./MyButton"
 
@@ -119,3 +123,5 @@ const onClick = () => {
   <!-- <h2>sdaio</h2> -->
 </template>
 ```
+
+## 五、
