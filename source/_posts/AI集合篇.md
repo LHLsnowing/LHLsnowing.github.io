@@ -6,9 +6,10 @@ tags: [chatgpt,ai工具,插件,git push失败原因及解决,cs自学,证件照,
 categories: 资源整合
 ---
 
+services.msc 打开计算机的服务
 # 一些资源链接，报错记录，文档等等
 ![](./AI%E9%9B%86%E5%90%88%E7%AF%87/ad.jpg)
-## 国内 ai镜像，梯子，插件等
+## 一、国内 ai镜像，梯子，插件等
 1. [npm 镜像——freegpt](https://www.npmmirror.com/package/freegpt)
 2. [AI工具集合，这个工具很多](https://ai-bot.cn/)
 3. [需要梯子，有gpt4和3.5](https://chat.forefront.ai/)
@@ -24,7 +25,7 @@ categories: 资源整合
 2. [Codeium,ai代码插件，类似copilot](https://codeium.com/playground)
 
 ---
-##  git push失败原因
+##  二、git push失败原因
 开启梯子（VPN）是为了解决网络访问被封锁或限制的问题，但是对于git push失败可能有以下几个常见原因：
 
 1. 梯子连接不稳定：有些梯子连接质量并不稳定，导致在推送操作时出现意外中断或延迟。
@@ -36,11 +37,11 @@ Host *
 ```
 4. Git协议：默认情况下Git使用的是Git协议（git://），而这种协议默认使用端口9418，在一些网络环境下该端口被屏蔽，所以需要切换到HTTPS协议推送。
 
-## blog文章太多 分类创建命令
+## 三、blog文章太多 分类创建命令
 `hexo new post -p /后端/test.md`
 
 ---
-## 免费壁纸下载推荐
+## 四、免费壁纸下载推荐
 1. Unsplash（https://unsplash.com/）- 提供高质量的免费照片和壁纸，每日更新。
 2. Pexels（https://www.pexels.com/）- 提供高质量的免费照片和壁纸，覆盖各种主题和风格。
 3. Pixabay（https://pixabay.com/）- 提供免费的高清图片和壁纸，包括照片、插图和矢量图。
@@ -49,25 +50,25 @@ Host *
 6. https://hdqwalls.com/wallpaper/3840x2160/hogwarts-legacy-8k
 ---
 
-## CS自学指南
+## 五、CS自学指南
 [https://csdiy.wiki/](https://csdiy.wiki/)
 
-## 一些转换工具，简历模板，证件照制作等等
+## 六、一些转换工具，简历模板，证件照制作等等
 
-### 浏览器内搜索，pdf等各种转换
+### 1.浏览器内搜索，pdf等各种转换
 ctrl+f
 ![浏览器插件，搜图中名字就ok](./AI%E9%9B%86%E5%90%88%E7%AF%87/image.png)
-### 简历模板 ，制作证件照,换底色
+### 2.简历模板 ，制作证件照,换底色
 [简历模板，可直接导出:https://www.resumeis.com/edit?id=62bdbfbf9d1c7150ff3ae5f2](https://www.resumeis.com/edit?id=62bdbfbf9d1c7150ff3ae5f2)
 [制作证件照,换底色：https://id-photo.cn/](https://id-photo.cn/)
-### 娱乐游戏 单机等网址
+### 3.娱乐游戏 单机等网址
 [游侠网：https://www.ali213.net/](https://www.ali213.net/)
 [3DM:https://www.3dmgame.com/](https://www.3dmgame.com/)
-### 程序员开发工具
+### 4.程序员开发工具
 [格式转换](https://tooltt.com/)
 
 ---
-## 前端相关文档
+## 七、前端相关文档
 1. [Vue官方文档](https://cn.vuejs.org/guide/introduction)
 2. [TS书籍文档，非官方](http://ts.xcatliu.com/)
 3. [MDN_js](https://developer.mozilla.org/zh-CN/)
@@ -87,26 +88,26 @@ ctrl+f
 [https://photokit.com/colors/eyedropper/?lang=zh](https://photokit.com/colors/eyedropper/?lang=zh)
 
 ---
-## Linux
+## 八、Linux
 1. [鸟哥的私房菜——书](https://wizardforcel.gitbooks.io/vbird-linux-basic-4e/content/index.html)
 2. [The Linux Kernel Archives](https://www.kernel.org/)
 ---
-## HarmonyOS Developer
+## 九、HarmonyOS Developer
 [https://developer.harmonyos.com/](https://developer.harmonyos.com/)
 
 ---
-## 申请证书 ssl tls
+## 十、申请证书 ssl tls
 https://letsencrypt.org/zh-cn/
 [freessl:https://freessl.org/](https://freessl.org/)
-
+[cloudflare:https://www.cloudflare.com/zh-cn/](https://www.cloudflare.com/zh-cn/)
 ---
-## zpxx_nefu
+## 十一、zpxx_nefu
 https://ipb8bic1pz.feishu.cn/docx/UE3QdRaVEozJ9cxTFjFcA5Jcnvd
-## 实习老师的笔记
+## 十二、实习老师的笔记
 [内容挺全的：https://jshand.gitee.io/#/README](https://jshand.gitee.io/#/README)
 
 ---
-## 后端JAVA
+## 十三、后端JAVA
 https://www.bilibili.com/read/cv5216534
 ![java学习路线](./AI%E9%9B%86%E5%90%88%E7%AF%87/Java_learn.png)
 

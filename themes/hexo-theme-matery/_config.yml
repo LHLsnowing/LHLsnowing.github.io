@@ -16,6 +16,27 @@ menu:
   关于:
     url: /about
     icon: fas fa-user-circle
+  导航:
+    icon: fas fa-bars
+    children: 
+      - name: 资源整合
+        url: /2023/06/02/ai-ji-he-pian/
+        icon: fas fa-book
+      - name: 前端笔记
+        url: /categories/前端/
+        icon: fas fa-city
+      - name: Java笔记
+        url: /categories/Java/
+        icon: fa-brands fa-java
+      - name: 数据库
+        url: /categories/数据库/
+        icon: fas fa-database
+      - name: 计网笔记
+        url: /categories/计算机网络/
+        icon: fas fa-network-wired
+      # - name: Movies
+      #   url: /movies
+      #   icon: fas fa-film
   # 留言板:
   #   url: /contact
   #   icon: fas fa-comments
@@ -79,7 +100,7 @@ dream:
 # Whether to display the musics.
 # 是否在首页显示音乐.
 music:
-  enable: true
+  enable: false
   title: #非吸底模式有效
     enable: true
     show: 听听音乐
@@ -100,7 +121,7 @@ music:
 # Whether to display the musics.
 # 单独的音乐页面.
 musics:
-  enable: false
+  enable: true
   title:          #非吸底模式有效
     enable: true
     show: 听听音乐
@@ -407,7 +428,7 @@ changyan:
 # Whether to display fork me on github icon and link, default true, You can change it to your repo address
 # 配置是否在 header 中显示 fork me on github 的图标，默认为true，你可以修改为你的仓库地址.
 githubLink:
-  enable: true
+  enable: false
   url: https://github.com/LHLsnowing
   title: Fork Me
 

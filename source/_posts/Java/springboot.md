@@ -5,6 +5,7 @@ tags: [Springboot,RESTful]
 categories: [Java,Springboot]
 ---
 
+Ctrl+shift+o 刷新maven
 ### 一、springboot项目启动不自动启动内嵌tomcat问题
 
 pom.xml需要按照以下顺序配置

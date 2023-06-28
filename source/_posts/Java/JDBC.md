@@ -42,11 +42,13 @@ public class JDBC_index1 {
 ## JDBC功能详解
 ### 1、DriverManager驱动管理对象
 #### (1)注册驱动:（mysql5以后可直接省略驱动）
-1. 注册给定的驱动程序: `staticvoid registerDriver(Driver driver);`
+1. 注册给定的驱动程序: `static void register Driver(Driver driver);`
 2. 写代码使用:`Class.forName(“com.mysql.jdbc.Driver”);`
 3. 在`com.mysql.jdbc.Driver`类中存在静态代码块
+4. 还有一个跟版本有关的  jdbc:mysql://localhost:3306/cadastre?useSSL=false
+报错加一个useSSL=false,安全性问题
 #### (2)获取数据库连接:
-1. 获取数据库连接对象: `static ConnectiongetConnection(Stringurl, String user,String password);`
+1. 获取数据库连接对象: `static Connection getConnection(String url, String user,String password);`
 2. 返回值:Connection数据库连接对象
 3. 参数
 url:指定连接的路径。语法: jdbc:mysql://ip地址(域名):端口号/数据库名称
@@ -80,5 +82,15 @@ url:指定连接的路径。语法: jdbc:mysql://ip地址(域名):端口号/数�
 立即将结果集对象释放:`void close();`
 
 ---
+### 5、pom.xml
+```xml
+    <dependencies>
+        <dependency>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+            <version>5.1.49</version>
+        </dependency>
+    </dependencies>
+```
 
 待更...
