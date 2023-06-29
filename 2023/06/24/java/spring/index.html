@@ -444,14 +444,14 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>Word Count:&nbsp;&nbsp;
-                    2.4k
+                    3.2k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>Read Times:&nbsp;&nbsp;
-                    10 Min
+                    13 Min
                 </div>
                 
 
@@ -573,12 +573,35 @@
         <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>Root</span><span class="token punctuation">&gt;</span></span>
     <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>Loggers</span><span class="token punctuation">&gt;</span></span>
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>Configuration</span><span class="token punctuation">&gt;</span></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<h2 id="六、容器-IoC"><a href="#六、容器-IoC" class="headerlink" title="六、容器:IoC"></a>六、容器:IoC</h2><ul>
+<h2 id="六、容器-IoC-及xml开发"><a href="#六、容器-IoC-及xml开发" class="headerlink" title="六、容器:IoC _及xml开发"></a>六、容器:IoC _及xml开发</h2><ul>
 <li><p>由IoC容器管理的Java对象称为 <strong>Spring Bean</strong>，与使用关键字new创建的Java对象<strong>没有任何区别</strong></p>
 </li>
 <li><p>把对象创建 和 对象与对象之间的关系 都交给了IoC</p>
 </li>
 <li><p>由主动new产生的对象由<strong>外部</strong>提供对象，此过程中对象创建控制权由程序转移到外部，此思想为<strong>控制反转</strong></p>
+</li>
+</ul>
+<h3 id="补充-pom-xml中添加Spring相关的依赖项"><a href="#补充-pom-xml中添加Spring相关的依赖项" class="headerlink" title="补充_ pom.xml中添加Spring相关的依赖项"></a>补充_ pom.xml中添加Spring相关的依赖项</h3><pre class="line-numbers language-markup" data-language="markup"><code class="language-markup"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>dependencies</span><span class="token punctuation">&gt;</span></span>
+    <span class="token comment">&lt;!-- Spring Core --&gt;</span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>dependency</span><span class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>groupId</span><span class="token punctuation">&gt;</span></span>org.springframework<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>groupId</span><span class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>artifactId</span><span class="token punctuation">&gt;</span></span>spring-core<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>artifactId</span><span class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>version</span><span class="token punctuation">&gt;</span></span>5.3.9<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>version</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>dependency</span><span class="token punctuation">&gt;</span></span>
+    
+    <span class="token comment">&lt;!-- Spring Context --&gt;</span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>dependency</span><span class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>groupId</span><span class="token punctuation">&gt;</span></span>org.springframework<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>groupId</span><span class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>artifactId</span><span class="token punctuation">&gt;</span></span>spring-context<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>artifactId</span><span class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>version</span><span class="token punctuation">&gt;</span></span>5.3.9<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>version</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>dependency</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>dependencies</span><span class="token punctuation">&gt;</span></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<ul>
+<li><p>这些依赖项将为你提供创建和管理Spring应用程序上下文的功能，其中包括从XML文件中读取和解析配置信息。你可以在创建Spring的ApplicationContext时，通过读取XML文件来配置和初始化Bean。这样，你就可以在XML文件中定义和配置你的应用程序组件。</p>
+</li>
+<li><p>请注意，实际上，Spring更加倾向于使用基于Java配置而不是XML配置。现代的Spring项目通常使用注解和Java类来配置应用程序。但是，如果你确实需要使用XML进行配置，Spring仍然支持并提供了相应的功能</p>
+</li>
+<li><p>导入此依赖后 右键创建xml文件即可出现 spring config字眼</p>
 </li>
 </ul>
 <h3 id="1-IoC容器在Spring的实现"><a href="#1-IoC容器在Spring的实现" class="headerlink" title="1.IoC容器在Spring的实现"></a>1.IoC容器在Spring的实现</h3><h4 id="BeanFactory"><a href="#BeanFactory" class="headerlink" title="BeanFactory"></a>BeanFactory</h4><p>IoC基本实现，是spring内部使用的接口，面向spring本身，不提供给开发人员</p>
@@ -709,8 +732,73 @@ order dao save...<span aria-hidden="true" class="line-numbers-rows"><span></span
 <blockquote>
 <p>除了上述命名空间，还有一些其他的命名空间可以用于配置Spring相关的功能，如缓存、安全等。使用Spring命名空间，可以通过更简单的方式配置和管理Spring应用的各个组件，提高开发效率并降低配置复杂性。</p>
 </blockquote>
-<h2 id="八、容器总结"><a href="#八、容器总结" class="headerlink" title="八、容器总结"></a>八、容器总结</h2><p><img src="/2023/06/24/java/spring/zongjie2.png" alt="获取容器"><br><img src="/2023/06/24/java/spring/zongjie1.png" alt="获取bean"></p>
+<h2 id="八、容器总结-以上总结"><a href="#八、容器总结-以上总结" class="headerlink" title="八、容器总结_以上总结"></a>八、容器总结_以上总结</h2><h3 id="1-获取容器"><a href="#1-获取容器" class="headerlink" title="1.获取容器"></a>1.获取容器</h3><p><img src="/2023/06/24/java/spring/zongjie2.png" alt="获取容器"></p>
+<h3 id="2-获取bean"><a href="#2-获取bean" class="headerlink" title="2.获取bean"></a>2.获取bean</h3><p><img src="/2023/06/24/java/spring/zongjie1.png" alt="获取bean"></p>
+<h3 id="3-bean相关"><a href="#3-bean相关" class="headerlink" title="3.bean相关"></a>3.bean相关</h3><p><img src="/2023/06/24/java/spring/beanabout.png" alt="bean相关"></p>
+<h3 id="4-依赖注入相关"><a href="#4-依赖注入相关" class="headerlink" title="4.依赖注入相关"></a>4.依赖注入相关</h3><p><img src="/2023/06/24/java/spring/yilaizhuru.png" alt="依赖注入相关"></p>
+<h2 id="九、注解开发"><a href="#九、注解开发" class="headerlink" title="九、注解开发"></a>九、注解开发</h2><p><img src="/2023/06/24/java/spring/9-0.png" alt="下面样例大概结构"></p>
+<h3 id="1-注解开发定义"><a href="#1-注解开发定义" class="headerlink" title="1.注解开发定义"></a>1.注解开发定义</h3><p><img src="/2023/06/24/java/spring/9-1.png" alt="注解开发定义"></p>
+<h3 id="2-三个衍生注解"><a href="#2-三个衍生注解" class="headerlink" title="2.三个衍生注解"></a>2.三个衍生注解</h3><p><img src="/2023/06/24/java/spring/9-2.png" alt="衍生注解"></p>
+<h3 id="3-纯注解开发"><a href="#3-纯注解开发" class="headerlink" title="3.纯注解开发"></a>3.纯注解开发</h3><ul>
+<li>spring3.0可纯注解开发<br><img src="/2023/06/24/java/spring/9-3.png" alt="纯注解开发"></li>
+</ul>
+<p><img src="/2023/06/24/java/spring/9-3-2.png" alt="xml和注解 两种方式对比"></p>
+<h3 id="4-注解开发bean作用范围，生命周期"><a href="#4-注解开发bean作用范围，生命周期" class="headerlink" title="4.注解开发bean作用范围，生命周期"></a>4.注解开发bean作用范围，生命周期</h3><p><img src="/2023/06/24/java/spring/9-4.png" alt="bean管理及生命周期"></p>
+<h3 id="5-注解开发依赖注入"><a href="#5-注解开发依赖注入" class="headerlink" title="5.注解开发依赖注入"></a>5.注解开发依赖注入</h3><h4 id="自动装配"><a href="#自动装配" class="headerlink" title="- 自动装配"></a>- 自动装配</h4><h5 id="1）-Autowire-暴力反射-自动装入引用类型"><a href="#1）-Autowire-暴力反射-自动装入引用类型" class="headerlink" title="1）@Autowire 暴力反射 自动装入引用类型"></a>1）@Autowire 暴力反射 自动装入引用类型</h5><p><img src="/2023/06/24/java/spring/9-5.png" alt="@Autowired"></p>
+<h5 id="2）-Qualifier指定bean名字"><a href="#2）-Qualifier指定bean名字" class="headerlink" title="2）@Qualifier指定bean名字"></a>2）@Qualifier指定bean名字</h5><p><img src="/2023/06/24/java/spring/9-5-1.png" alt="指定bean"></p>
+<h5 id="3）-value简单类型注入"><a href="#3）-value简单类型注入" class="headerlink" title="3）@value简单类型注入"></a>3）@value简单类型注入</h5><h4 id="读取properties文件-PropertySource"><a href="#读取properties文件-PropertySource" class="headerlink" title="- 读取properties文件 @PropertySource"></a>- 读取properties文件 @PropertySource</h4><p><img src="/2023/06/24/java/spring/9-5-3.png" alt="读取properties文件"></p>
+<h3 id="6-第三方bean管理"><a href="#6-第三方bean管理" class="headerlink" title="6.第三方bean管理"></a>6.第三方bean管理</h3><ul>
+<li>独立配置,逻辑拆开<pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token annotation punctuation">@Configuration</span>
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">JdbcConfig</span> <span class="token punctuation">{</span>
+    <span class="token annotation punctuation">@Bean</span> <span class="token comment">//表示返回是一个bean</span>
+    <span class="token keyword">public</span> <span class="token class-name">DataSource</span> <span class="token function">dataSource</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token class-name">DruidDataSource</span> ds <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">DruidDataSource</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        ds<span class="token punctuation">.</span><span class="token function">setDriverClassName</span><span class="token punctuation">(</span><span class="token string">"com.mysql.jdbc.Driver"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        ds<span class="token punctuation">.</span><span class="token function">setUrl</span><span class="token punctuation">(</span><span class="token string">"jdbc:mysql://localhost:3306/spring_db"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        ds<span class="token punctuation">.</span><span class="token function">setUsername</span><span class="token punctuation">(</span><span class="token string">"root"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        ds<span class="token punctuation">.</span><span class="token function">setPassword</span><span class="token punctuation">(</span><span class="token string">"123456"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">return</span> ds<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token annotation punctuation">@Configuration</span>
+<span class="token comment">//第一种扫描式</span>
+<span class="token annotation punctuation">@ComponentScan</span><span class="token punctuation">(</span><span class="token string">"org.example.config"</span><span class="token punctuation">)</span>
 
+<span class="token comment">// 第二种导入式</span>
+<span class="token annotation punctuation">@Import</span><span class="token punctuation">(</span><span class="token punctuation">{</span><span class="token class-name">JdbcConfig</span><span class="token punctuation">.</span><span class="token keyword">class</span><span class="token punctuation">}</span><span class="token punctuation">)</span>
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">SpringConfig</span> <span class="token punctuation">{</span>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre></li>
+</ul>
+<h2 id="十、注解开发总结"><a href="#十、注解开发总结" class="headerlink" title="十、注解开发总结"></a>十、注解开发总结</h2><h3 id="1-XML配置-对比-注解配置"><a href="#1-XML配置-对比-注解配置" class="headerlink" title="1.XML配置 对比 注解配置"></a>1.XML配置 对比 注解配置</h3><p><img src="/2023/06/24/java/spring/10-1.png" alt="xml配置对比注解配置"></p>
+<h2 id="十一、Spring整合Mybatis"><a href="#十一、Spring整合Mybatis" class="headerlink" title="十一、Spring整合Mybatis"></a>十一、Spring整合Mybatis</h2><h3 id="1-Mybatis程序核心对象分析"><a href="#1-Mybatis程序核心对象分析" class="headerlink" title="1.Mybatis程序核心对象分析"></a>1.Mybatis程序核心对象分析</h3><ul>
+<li>核心 SqlSessionFactory<br><img src="/2023/06/24/java/spring/11-1.png" alt="Mybatis程序核心对象分析"></li>
+</ul>
+<h3 id="2-整合Mybatis"><a href="#2-整合Mybatis" class="headerlink" title="2.整合Mybatis"></a>2.整合Mybatis</h3><ul>
+<li>SqlSessionFactoryBean</li>
+<li>MapperScannerConfigurer<br>1:<br><img src="/2023/06/24/java/spring/11-2.png" alt="整合Mybatis_1"><br>2:<br><img src="/2023/06/24/java/spring/11-3.png" alt="整合Mybatis_2_1"><br><img src="/2023/06/24/java/spring/11-4.png" alt="整合Mybatis_2_2"></li>
+</ul>
+<h3 id="3-整合JUnit"><a href="#3-整合JUnit" class="headerlink" title="3.整合JUnit"></a>3.整合JUnit</h3><ul>
+<li><code>@RunWith</code> 注解是JUnit框架提供的一个注解，用于指定测试运行器（Runner）。测试运行器负责调用测试用例的执行，并提供附加的功能和扩展。</li>
+</ul>
+<blockquote>
+<p>在JUnit 4中，常见的测试运行器有：</p>
+<blockquote>
+<p><code>BlockJUnit4ClassRunner：</code>默认的测试运行器，用于执行JUnit 4风格的测试用例。<br><code>Parameterized：</code>用于执行参数化测试，允许对测试用例使用不同的输入参数进行多次运行。<br><code>SpringJUnit4ClassRunner：</code>与Spring框架集成的测试运行器，用于运行基于Spring的测试用例。<br>在JUnit 5中，<code>@RunWith</code> 注解已经被 <code>@ExtendWith</code> 注解取代。JUnit 5使用扩展模型（Extension Model）来提供测试运行器的功能。可以通过 <code>@ExtendWith </code>注解来指定扩展，来实现类似的功能。</p>
+</blockquote>
+</blockquote>
+<ul>
+<li>请注意，使用 <code>@RunWith</code> 注解或 <code>@ExtendWith </code>注解取决于你所使用的JUnit版本。<br><img src="/2023/06/24/java/spring/11-5.png" alt="整合JUnit样例"></li>
+</ul>
+<h2 id="十二、AOP-面向切面编程"><a href="#十二、AOP-面向切面编程" class="headerlink" title="十二、AOP 面向切面编程"></a>十二、AOP 面向切面编程</h2><h3 id="1-简介"><a href="#1-简介" class="headerlink" title="1. 简介"></a>1. 简介</h3><ul>
+<li><strong>AOP（Aspect Oriented Programming）面向切面编程</strong>:一种编程范式、指导开发者<strong>如何组织程序结构</strong></li>
+<li><strong>作用：****在不惊动原始设计的基础上为其进行功能增强</strong></li>
+<li>Spring理念：无入侵/侵入式</li>
+</ul>
+<h3 id="2-AOP-核心概念"><a href="#2-AOP-核心概念" class="headerlink" title="2.AOP 核心概念"></a>2.AOP 核心概念</h3><ul>
+<li><img src="/2023/06/24/java/spring/12-2-1.png"></li>
+<li><img src="/2023/06/24/java/spring/12-2-2.png"></li>
+</ul>
+<h3 id="3-案例"><a href="#3-案例" class="headerlink" title="3.案例"></a>3.案例</h3>
                 
             </div>
             <hr/>
@@ -1143,7 +1231,7 @@ order dao save...<span aria-hidden="true" class="line-numbers-rows"><span></span
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;Total Words:&nbsp;<span
-                        class="white-color">33.2k</span>
+                        class="white-color">34k</span>
             
             
             
