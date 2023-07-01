@@ -41,13 +41,15 @@ Host *
 `hexo new post -p /后端/test.md`
 
 ---
-## 四、免费壁纸下载推荐
+## 四、免费壁纸下载推荐 及 免费软件
 1. Unsplash（https://unsplash.com/）- 提供高质量的免费照片和壁纸，每日更新。
 2. Pexels（https://www.pexels.com/）- 提供高质量的免费照片和壁纸，覆盖各种主题和风格。
 3. Pixabay（https://pixabay.com/）- 提供免费的高清图片和壁纸，包括照片、插图和矢量图。
 4. Wallpaper Abyss（https://wall.alphacoders.com/）- 提供大量高清壁纸，包括电影、游戏、动漫等各种分类。
 5. WallpaperCave（https://wallpapercave.com/）- 提供各种类型的高清壁纸，包括自然风景、艺术、抽象等。
 6. https://hdqwalls.com/wallpaper/3840x2160/hogwarts-legacy-8k
+
+- https://www.fuzhugou.com/  免费软件——大神推荐的
 ---
 
 ## 五、CS自学指南
@@ -112,3 +114,8 @@ https://www.bilibili.com/read/cv5216534
 ![java学习路线](./AI%E9%9B%86%E5%90%88%E7%AF%87/Java_learn.png)
 
 [java全栈知识体系：https://pdai.tech/md/resource/tools.html](https://pdai.tech/md/resource/tools.html)
+
+
+---
+- 涤尘 https://zhutix.com/
+- FireWin  https://github.com/FWGritTop/node_frontback_2307/tree/main/%E7%AC%94%E8%AE%B02

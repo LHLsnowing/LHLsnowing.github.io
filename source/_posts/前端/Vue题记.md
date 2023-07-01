@@ -37,7 +37,7 @@ p {
 ```
 
 ## 二、全局css ：global()
-```vue
+```css
 <template>
   <p>Hello Vue.js</p>
 </template>
@@ -61,7 +61,7 @@ p {
 ```
 
 ## 三、Teleport 将插槽内容渲染到另一个DOM
-```vue
+```ts
 <script setup>
 
 const msg = "Hello World"
@@ -124,4 +124,77 @@ const onClick = () => {
 </template>
 ```
 
-## 五、
+## 五、树组件
+TreeComponent.vue
+```ts
+<script setup lang="ts">
+interface TreeData {
+  key: string;
+  title: string;
+  children: TreeData[];
+}
+defineProps<{ data: TreeData[] }>();
+</script>
+
+<template>
+  <!-- do something.... -->
+  <ul>
+    <li v-for="(item, i) in data" :key="i">
+      <!-- <span>{{item.key}}</span> -->
+      <br>
+      <span>{{ item.title }}</span> 
+      <tree-component
+        v-if="item.children && item.children.length"
+        :data="item.children"
+      ></tree-component>
+    </li>
+  </ul>
+</template>
+```
+App.vue
+```ts
+<script setup lang="ts">
+import { ref } from "vue"
+import TreeComponent from "./TreeComponent.vue"
+const treeData = ref([{
+  key: '1',
+  title: 'Parent 1',
+  children: [{
+    key: '1-1',
+    title: 'child 1',
+  }, {
+    key: '1-2',
+    title: 'child 2',
+    children: [{
+      key: '1-2-1',
+      title: 'grandchild 1',
+    }, {
+      key: '1-2-2',
+      title: 'grandchild 2',
+    },]
+  },]
+}, {
+  key: '2',
+  title: 'Parent 2',
+  children: [{
+    key: '2-1',
+    title: 'child 1',
+    children: [{
+      key: '2-1-1',
+      title: 'grandchild 1',
+    }, {
+      key: '2-1-2',
+      title: 'grandchild 2',
+    },]
+  }, {
+    key: '2-2',
+    title: 'child 2',
+  },]
+}])
+</script>
+
+<template>
+  <TreeComponent :data="treeData" />
+</template>
+```
+![结果](./Vue%E9%A2%98%E8%AE%B0/jieguo.png)
