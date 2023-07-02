@@ -62,4 +62,36 @@ categories: [Java,Spring]
 - @RequestBody和@RequestParam的区别
 ![@RequestBody和@RequestParam的区别](./Spring_2/2-4-1.png)
 
-### 5.拦截器
+## 三、jetty服务器_切换web服务器
+![Jetty换tomcat配置](./Spring_2/3-1.png)
+
+## 四、三种配置文件格式
+### 1.优先级及格式配置
+ - 优先级：`application.yml`  < `application.yaml` < `application.properties`
+![提示功能消失解决方案](./Spring_2/4-1.png)
+![几种格式](./Spring_2/4-2.png)
+
+### 2.yaml语法
+ >yaml主流-数据序列化格式，下面为语法格式
+ >>1.大小写敏感
+2.属性层级关系使用多行描述，每行结尾使用冒号（：）结束
+3.使用缩进表示层级关系，同层级左侧对齐，只允许空格（不允许用tab）
+4.属性值前面添加空格（属性名和属性值之间用 冒号+空格 分隔
+5.# 表示注释
+
+### 3.读取方式
+>数据读取 ： `@Value(${..})`   ,
+ 自定义封装的指定数据  `@ConfigurationProperties(prefix="enterprise")` ,
+ Environment
+
+## 五、 多环境开发配置
+### 1.基础配置，多环境启动
+- 带划线的为过时的
+![](./Spring_2/5-1.png)
+
+### 2.propertie多环境启动_承接上面
+![](./Spring_2/5-2.png)
+
+### 3.配置文件分类
+- config文件夹下的配置文件优先级更高
+![](./Spring_2/5-3.png)
