@@ -440,14 +440,14 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>Word Count:&nbsp;&nbsp;
-                    455
+                    682
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>Read Times:&nbsp;&nbsp;
-                    1 Min
+                    2 Min
                 </div>
                 
 
@@ -500,7 +500,27 @@
 <h3 id="4-json数据传递参数"><a href="#4-json数据传递参数" class="headerlink" title="4.json数据传递参数"></a>4.json数据传递参数</h3><ul>
 <li>@RequestBody和@RequestParam的区别<br><img src="/2023/06/30/java/spring-2/2-4-1.png" alt="@RequestBody和@RequestParam的区别"></li>
 </ul>
-<h3 id="5-拦截器"><a href="#5-拦截器" class="headerlink" title="5.拦截器"></a>5.拦截器</h3>
+<h2 id="三、jetty服务器-切换web服务器"><a href="#三、jetty服务器-切换web服务器" class="headerlink" title="三、jetty服务器_切换web服务器"></a>三、jetty服务器_切换web服务器</h2><p><img src="/2023/06/30/java/spring-2/3-1.png" alt="Jetty换tomcat配置"></p>
+<h2 id="四、三种配置文件格式"><a href="#四、三种配置文件格式" class="headerlink" title="四、三种配置文件格式"></a>四、三种配置文件格式</h2><h3 id="1-优先级及格式配置"><a href="#1-优先级及格式配置" class="headerlink" title="1.优先级及格式配置"></a>1.优先级及格式配置</h3><ul>
+<li>优先级：<code>application.yml</code>  &lt; <code>application.yaml</code> &lt; <code>application.properties</code><br><img src="/2023/06/30/java/spring-2/4-1.png" alt="提示功能消失解决方案"><br><img src="/2023/06/30/java/spring-2/4-2.png" alt="几种格式"></li>
+</ul>
+<h3 id="2-yaml语法"><a href="#2-yaml语法" class="headerlink" title="2.yaml语法"></a>2.yaml语法</h3><blockquote>
+<p>yaml主流-数据序列化格式，下面为语法格式</p>
+<blockquote>
+<p>1.大小写敏感<br>2.属性层级关系使用多行描述，每行结尾使用冒号（：）结束<br>3.使用缩进表示层级关系，同层级左侧对齐，只允许空格（不允许用tab）<br>4.属性值前面添加空格（属性名和属性值之间用 冒号+空格 分隔<br>5.# 表示注释</p>
+</blockquote>
+</blockquote>
+<h3 id="3-读取方式"><a href="#3-读取方式" class="headerlink" title="3.读取方式"></a>3.读取方式</h3><blockquote>
+<p>数据读取 ： <code>@Value(${..})</code>   ,<br> 自定义封装的指定数据  <code>@ConfigurationProperties(prefix="enterprise")</code> ,<br> Environment</p>
+</blockquote>
+<h2 id="五、-多环境开发配置"><a href="#五、-多环境开发配置" class="headerlink" title="五、 多环境开发配置"></a>五、 多环境开发配置</h2><h3 id="1-基础配置，多环境启动"><a href="#1-基础配置，多环境启动" class="headerlink" title="1.基础配置，多环境启动"></a>1.基础配置，多环境启动</h3><ul>
+<li>带划线的为过时的<br><img src="/2023/06/30/java/spring-2/5-1.png"></li>
+</ul>
+<h3 id="2-propertie多环境启动-承接上面"><a href="#2-propertie多环境启动-承接上面" class="headerlink" title="2.propertie多环境启动_承接上面"></a>2.propertie多环境启动_承接上面</h3><p><img src="/2023/06/30/java/spring-2/5-2.png"></p>
+<h3 id="3-配置文件分类"><a href="#3-配置文件分类" class="headerlink" title="3.配置文件分类"></a>3.配置文件分类</h3><ul>
+<li>config文件夹下的配置文件优先级更高<br><img src="/2023/06/30/java/spring-2/5-3.png"></li>
+</ul>
+
                 
             </div>
             <hr/>
@@ -652,60 +672,58 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="far fa-dot-circle"></i>&nbsp;Current
-            </div>
+                <i class="fas fa-chevron-left"></i>&nbsp;Previous</div>
             <div class="card">
-                <a href="/2023/06/30/java/spring-2/">
+                <a href="/2023/07/02/gong-ju-ji-he-ji-bao-cuo/dan-ci-ji-yi/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/0.jpg" class="responsive-img" alt="Spring_2">
+                        <img src="/medias/featureimages/22.jpg" class="responsive-img" alt="English Word">
                         
-                        <span class="card-title">Spring_2</span>
+                        <span class="card-title">English Word</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            SpringMVC、事务
+                            一些单词记录，English还是蛮重要的
                         
                     </div>
                     <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2023-06-30
-                            </span>
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2023-07-02
+                        </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/Java/" class="post-category">
-                                    Java
+                            <a href="/categories/%E8%B5%84%E6%BA%90%E6%95%B4%E5%90%88/" class="post-category">
+                                    资源整合
                                 </a>
                             
-                            <a href="/categories/Java/Spring/" class="post-category">
-                                    Spring
+                            <a href="/categories/%E8%B5%84%E6%BA%90%E6%95%B4%E5%90%88/%E5%B7%A5%E5%85%B7%E9%9B%86%E5%90%88%E5%8F%8A%E6%8A%A5%E9%94%99/" class="post-category">
+                                    工具集合及报错
+                                </a>
+                            
+                            <a href="/categories/%E8%B5%84%E6%BA%90%E6%95%B4%E5%90%88/%E5%B7%A5%E5%85%B7%E9%9B%86%E5%90%88%E5%8F%8A%E6%8A%A5%E9%94%99/English/" class="post-category">
+                                    English
                                 </a>
                             
                             
                         </span>
                     </div>
                 </div>
-
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/Java/">
-                        <span class="chip bg-color">Java</span>
+                    <a href="/tags/%E5%B7%A5%E5%85%B7%E9%9B%86%E5%90%88%E5%8F%8A%E6%8A%A5%E9%94%99/">
+                        <span class="chip bg-color">工具集合及报错</span>
                     </a>
                     
-                    <a href="/tags/Spring/">
-                        <span class="chip bg-color">Spring</span>
-                    </a>
-                    
-                    <a href="/tags/SpringMVC/">
-                        <span class="chip bg-color">SpringMVC</span>
+                    <a href="/tags/English/">
+                        <span class="chip bg-color">English</span>
                     </a>
                     
                 </div>
@@ -943,7 +961,7 @@
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;Total Words:&nbsp;<span
-                        class="white-color">35.1k</span>
+                        class="white-color">35.3k</span>
             
             
             
