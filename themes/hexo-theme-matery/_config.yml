@@ -20,7 +20,7 @@ menu:
     icon: fas fa-bars
     children: 
       - name: 资源整合
-        url: /2023/06/02/ai-ji-he-pian/
+        url: /categories/资源整合/
         icon: fas fa-book
       - name: 前端笔记
         url: /categories/前端/
