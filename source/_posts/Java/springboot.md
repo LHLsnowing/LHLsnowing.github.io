@@ -44,8 +44,8 @@ SPring Boot 提供  `spring-boot-devtools` 组件，使得无需手动重启Spri
 
 ---
 ### 四、控制器
-- Spring Boot提供了@Controller和@RestController两种注解来标识此类负责接收和处理HTTP请求。
-- 如果请求的是页面和数据，使用@Controller注解即可；如果只是请求数据，则可以使用@RestController注解。
+- Spring Boot提供了`@Controller`和`@RestController`两种注解来标识此类负责接收和处理HTTP请求。
+- 如果请求的是页面和数据，使用`@Controller`注解即可；如果只是请求数据，则可以使用`@RestController`注解。
 
 ---
 ### 五、RESTful API
@@ -156,16 +156,62 @@ public class SwaggerConfig {
 
 ---
 ### 八、application.properties 配置文件
-application.properties 是一种配置文件，通常用于存储和管理应用程序的配置信息。它是在许多Java和Spring框架中使用的标准属性文件。
+`application.properties` 是一种配置文件，通常用于存储和管理应用程序的配置信息。它是在许多Java和Spring框架中使用的标准属性文件。
 
-以下是关于 application.properties 的一些常见用途和注意事项：
-- 配置应用程序属性：你可以在 application.properties 文件中指定应用程序的各种属性，如数据库连接信息、日志级别、端口号等。这些属性可以根据应用程序的需要进行自定义配置。
-- 多环境配置：application.properties 支持按照不同的环境（如开发、测试、生产）进行配置。你可以为每个环境创建不同的配置文件，例如 application-dev.properties 用于开发环境，application-prod.properties 用于生产环境。然后在启动应用程序时通过指定不同的环境变量来加载相应的配置文件。
-- 使用占位符：application.properties 支持使用 ${} 形式的占位符。你可以在配置文件中定义一些通用的属性值，并在其他地方引用这些属性。例如，可以定义一个 server.port=8080 的属性，在其他配置项中使用 ${server.port} 引用该值。
-- 注释和空行：你可以在 application.properties 中添加注释以及空行，用于提高可读性和明确属性的作用。
-- 高级功能：除了上述基本用法，application.properties 还支持一些高级功能，如属性的引入、覆盖、条件配置等。这些功能可以根据具体需求进一步扩展配置文件的灵活性和复用性。
+以下是关于 `application.properties` 的一些常见用途和注意事项：
+- **配置应用程序属性：**你可以在 application.properties 文件中指定应用程序的各种属性，如**数据库连接信息、日志级别、端口号**等。这些属性可以根据应用程序的需要进行自定义配置。
+- **多环境配置：**application.properties 支持按照不同的环境（如开发、测试、生产）进行配置。你可以为每个环境创建不同的配置文件，例如 `application-dev.properties` 用于开发环境，`application-prod.properties` 用于生产环境。然后在启动应用程序时通过指定不同的环境变量来加载相应的配置文件。
+- **使用占位符：**application.properties 支持使用 `${}` 形式的占位符。你可以在配置文件中定义一些通用的属性值，并在其他地方引用这些属性。例如，可以定义一个` server.port=8080 `的属性，在其他配置项中使用 `${server.port}` 引用该值。
+- **注释和空行：**你可以在 application.properties 中添加注释以及空行，用于提高可读性和明确属性的作用。
+- **高级功能：**除了上述基本用法，application.properties 还支持一些高级功能，如属性的引入、覆盖、条件配置等。这些功能可以根据具体需求进一步扩展配置文件的灵活性和复用性。
 
-需要注意的是，具体的属性和设置方式可能因你使用的框架或应用程序类型而有所差异。确保查阅相关文档以了解适用于你的情况的正确配置方式。此外，还有一些框架在最新版本中可能已经从 application.properties 切换到了 application.yml 或其他格式的配置文件。
+>需要注意的是，具体的属性和设置方式可能因你使用的框架或应用程序类型而有所差异。确保查阅相关文档以了解适用于你的情况的正确配置方式。此外，还有一些框架在最新版本中可能已经从 application.properties 切换到了 application.yml 或其他格式的配置文件。
+spring_2文章也有相关知识及优先级
+
+---
+
+### 九、Spring Boot项目的结构
+
+Spring Boot项目的结构可以根据实际需求进行灵活的组织和调整，但一般遵循以下常见结构：
+
+- **主应用程序类（Main Application Class）**：
+通常位于项目的根目录下，用于启动Spring Boot应用程序。
+在该类上使用`@SpringBootApplication`注解，它包含了`@Configuration`、`@EnableAutoConfiguration`和`@ComponentScan`注解的组合。
+
+- **控制器（Controllers）**：
+一般位于src/main/java目录下的一个子包中，用于处理HTTP请求和响应。
+控制器类上使用`@RestController`或`@Controller`注解进行标识。
+可以使用`@RequestMapping`、`@GetMapping`、`@PostMapping`等注解定义路由和请求处理方法。
+
+- **服务层（Services）**：
+用于处理业务逻辑，协调领域对象和数据访问对象（DAO）之间的交互。
+一般位于src/main/java目录下的一个子包中。
+可以使用`@Service`注解标识服务类。
+
+- **数据访问层（Data Access Layer）**：
+用于访问数据库或其他外部数据源。
+一般位于src/main/java目录下的一个子包中。
+可以使用**Spring Data JPA、MyBatis**等持久化框架来简化数据访问操作。
+
+- **领域层（Domain）**：
+包含应用程序的核心业务逻辑。  domain
+一般位于src/main/java目录下的一个子包中。
+包括领域对象、值对象、聚合根和领域服务等。
+
+- **配置文件（Configuration Files）**：
+Spring Boot支持多种配置文件格式，如`application.properties`或`application.yml`。
+配置文件通常位于src/main/resources目录下。
+可以在配置文件中配置数据库连接、日志级别、应用程序端口等信息。
+
+- **静态资源（Static Resources）**：
+用于存放静态文件，如HTML、CSS、JavaScript等。
+通常位于src/main/resources/static目录下。
+
+- **模板文件（Template Files）**：
+用于生成动态内容的模板文件，如**Thymeleaf、Freemarker**等。
+通常位于src/main/resources/templates目录下。
+
+以上只是一个常见的Spring Boot项目结构，实际项目中还可以根据需要引入其他模块、分层或功能组件。
 
 ---
 [链接学习地址](https://thexb.notion.site/SpringBoot-Vue-7c90c8fd30c244d88604a240e608fcce)
