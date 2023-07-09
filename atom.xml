@@ -6,7 +6,7 @@
   <link href="https://lhlsnowing.github.io/atom.xml" rel="self"/>
   
   <link href="https://lhlsnowing.github.io/"/>
-  <updated>2023-07-02T12:32:57.780Z</updated>
+  <updated>2023-07-09T13:35:27.015Z</updated>
   <id>https://lhlsnowing.github.io/</id>
   
   <author>
@@ -15,6 +15,35 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Redis</title>
+    <link href="https://lhlsnowing.github.io/2023/07/04/java/redis/"/>
+    <id>https://lhlsnowing.github.io/2023/07/04/java/redis/</id>
+    <published>2023-07-04T05:55:48.000Z</published>
+    <updated>2023-07-09T13:35:27.015Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;一、NoSQL&quot;&gt;&lt;a href=&quot;#一、NoSQL&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="Java" scheme="https://lhlsnowing.github.io/categories/Java/"/>
+    
+    <category term="Redis" scheme="https://lhlsnowing.github.io/categories/Java/Redis/"/>
+    
+    
+    <category term="Java" scheme="https://lhlsnowing.github.io/tags/Java/"/>
+    
+    <category term="Redis" scheme="https://lhlsnowing.github.io/tags/Redis/"/>
+    
+  </entry>
   
   <entry>
     <title>报错记录</title>
@@ -40,7 +69,7 @@
     <link href="https://lhlsnowing.github.io/2023/07/02/gong-ju-ji-he-ji-bao-cuo/dan-ci-ji-yi/"/>
     <id>https://lhlsnowing.github.io/2023/07/02/gong-ju-ji-he-ji-bao-cuo/dan-ci-ji-yi/</id>
     <published>2023-07-02T12:26:05.000Z</published>
-    <updated>2023-07-02T12:46:10.809Z</updated>
+    <updated>2023-07-02T12:53:01.878Z</updated>
     
     
       
@@ -55,9 +84,7 @@
     
     <category term="资源整合" scheme="https://lhlsnowing.github.io/categories/%E8%B5%84%E6%BA%90%E6%95%B4%E5%90%88/"/>
     
-    <category term="工具集合及报错" scheme="https://lhlsnowing.github.io/categories/%E8%B5%84%E6%BA%90%E6%95%B4%E5%90%88/%E5%B7%A5%E5%85%B7%E9%9B%86%E5%90%88%E5%8F%8A%E6%8A%A5%E9%94%99/"/>
-    
-    <category term="English" scheme="https://lhlsnowing.github.io/categories/%E8%B5%84%E6%BA%90%E6%95%B4%E5%90%88/%E5%B7%A5%E5%85%B7%E9%9B%86%E5%90%88%E5%8F%8A%E6%8A%A5%E9%94%99/English/"/>
+    <category term="English" scheme="https://lhlsnowing.github.io/categories/%E8%B5%84%E6%BA%90%E6%95%B4%E5%90%88/English/"/>
     
     
     <category term="工具集合及报错" scheme="https://lhlsnowing.github.io/tags/%E5%B7%A5%E5%85%B7%E9%9B%86%E5%90%88%E5%8F%8A%E6%8A%A5%E9%94%99/"/>
@@ -611,36 +638,6 @@
     <category term="async" scheme="https://lhlsnowing.github.io/tags/async/"/>
     
     <category term="await" scheme="https://lhlsnowing.github.io/tags/await/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>SpringBoot</title>
-    <link href="https://lhlsnowing.github.io/2023/05/24/java/springboot/"/>
-    <id>https://lhlsnowing.github.io/2023/05/24/java/springboot/</id>
-    <published>2023-05-24T12:05:19.000Z</published>
-    <updated>2023-06-27T05:50:36.506Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;Ctrl+shift+o 刷新maven&lt;/p&gt;
-&lt;h3 id=&quot;一、springboot项目启动不自动启动内嵌tomcat问题&quot;&gt;&lt;a href=&quot;#一、springboot项目启动不自动启动内嵌tomcat问题&quot; class=&quot;headerlink&quot;</summary>
-        
-      
-    
-    
-    
-    <category term="Java" scheme="https://lhlsnowing.github.io/categories/Java/"/>
-    
-    <category term="Springboot" scheme="https://lhlsnowing.github.io/categories/Java/Springboot/"/>
-    
-    
-    <category term="Springboot" scheme="https://lhlsnowing.github.io/tags/Springboot/"/>
-    
-    <category term="RESTful" scheme="https://lhlsnowing.github.io/tags/RESTful/"/>
     
   </entry>
   
