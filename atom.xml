@@ -6,7 +6,7 @@
   <link href="https://lhlsnowing.github.io/atom.xml" rel="self"/>
   
   <link href="https://lhlsnowing.github.io/"/>
-  <updated>2023-07-09T13:35:27.015Z</updated>
+  <updated>2023-07-12T13:24:29.926Z</updated>
   <id>https://lhlsnowing.github.io/</id>
   
   <author>
@@ -15,6 +15,36 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>日语学习</title>
+    <link href="https://lhlsnowing.github.io/2023/07/12/gong-ju-ji-he-ji-bao-cuo/ri-yu/"/>
+    <id>https://lhlsnowing.github.io/2023/07/12/gong-ju-ji-he-ji-bao-cuo/ri-yu/</id>
+    <published>2023-07-12T12:03:10.000Z</published>
+    <updated>2023-07-12T13:24:29.926Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;&lt;a href=&quot;https://www.bilibili.com/video/BV1Bp4y1D747?p=2&amp;amp;vd_source=27965c9221f395745c5958a4e2b71636&quot;&gt;资料来源B站&lt;/a&gt;&lt;/p&gt;
+&lt;h2</summary>
+        
+      
+    
+    
+    
+    <category term="资源整合" scheme="https://lhlsnowing.github.io/categories/%E8%B5%84%E6%BA%90%E6%95%B4%E5%90%88/"/>
+    
+    <category term="日语" scheme="https://lhlsnowing.github.io/categories/%E8%B5%84%E6%BA%90%E6%95%B4%E5%90%88/%E6%97%A5%E8%AF%AD/"/>
+    
+    
+    <category term="资源整合" scheme="https://lhlsnowing.github.io/tags/%E8%B5%84%E6%BA%90%E6%95%B4%E5%90%88/"/>
+    
+    <category term="日语" scheme="https://lhlsnowing.github.io/tags/%E6%97%A5%E8%AF%AD/"/>
+    
+  </entry>
   
   <entry>
     <title>Redis</title>
@@ -600,44 +630,6 @@
     <category term="JDBC" scheme="https://lhlsnowing.github.io/tags/JDBC/"/>
     
     <category term="Java" scheme="https://lhlsnowing.github.io/tags/Java/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Javascript笔记</title>
-    <link href="https://lhlsnowing.github.io/2023/05/24/qian-duan/javascript-bi-ji/"/>
-    <id>https://lhlsnowing.github.io/2023/05/24/qian-duan/javascript-bi-ji/</id>
-    <published>2023-05-24T15:18:11.000Z</published>
-    <updated>2023-06-24T06:04:38.013Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;&lt;img src=&quot;/2023/05/24/qian-duan/javascript-bi-ji/bg.jpg&quot;&gt;&lt;/p&gt;
-&lt;h1 id=&quot;Javascript篇&quot;&gt;&lt;a href=&quot;#Javascript篇&quot; class=&quot;headerlink&quot;</summary>
-        
-      
-    
-    
-    
-    <category term="前端" scheme="https://lhlsnowing.github.io/categories/%E5%89%8D%E7%AB%AF/"/>
-    
-    <category term="javascript" scheme="https://lhlsnowing.github.io/categories/%E5%89%8D%E7%AB%AF/javascript/"/>
-    
-    <category term="异步" scheme="https://lhlsnowing.github.io/categories/%E5%89%8D%E7%AB%AF/javascript/%E5%BC%82%E6%AD%A5/"/>
-    
-    
-    <category term="前端" scheme="https://lhlsnowing.github.io/tags/%E5%89%8D%E7%AB%AF/"/>
-    
-    <category term="javascript" scheme="https://lhlsnowing.github.io/tags/javascript/"/>
-    
-    <category term="闭包" scheme="https://lhlsnowing.github.io/tags/%E9%97%AD%E5%8C%85/"/>
-    
-    <category term="async" scheme="https://lhlsnowing.github.io/tags/async/"/>
-    
-    <category term="await" scheme="https://lhlsnowing.github.io/tags/await/"/>
     
   </entry>
   
