@@ -6,7 +6,7 @@
   <link href="https://lhlsnowing.github.io/atom.xml" rel="self"/>
   
   <link href="https://lhlsnowing.github.io/"/>
-  <updated>2023-07-12T13:24:29.926Z</updated>
+  <updated>2023-07-13T14:04:39.896Z</updated>
   <id>https://lhlsnowing.github.io/</id>
   
   <author>
@@ -17,11 +17,41 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>JPA</title>
+    <link href="https://lhlsnowing.github.io/2023/07/13/java/jpa/"/>
+    <id>https://lhlsnowing.github.io/2023/07/13/java/jpa/</id>
+    <published>2023-07-13T13:24:21.000Z</published>
+    <updated>2023-07-13T14:04:39.896Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;&lt;img src=&quot;/2023/07/13/java/jpa/0-0.png&quot;&gt;&lt;/p&gt;
+&lt;h2 id=&quot;一、SpringData&quot;&gt;&lt;a href=&quot;#一、SpringData&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="Java" scheme="https://lhlsnowing.github.io/categories/Java/"/>
+    
+    <category term="JPA" scheme="https://lhlsnowing.github.io/categories/Java/JPA/"/>
+    
+    
+    <category term="Java" scheme="https://lhlsnowing.github.io/tags/Java/"/>
+    
+    <category term="JPA" scheme="https://lhlsnowing.github.io/tags/JPA/"/>
+    
+  </entry>
+  
+  <entry>
     <title>日语学习</title>
     <link href="https://lhlsnowing.github.io/2023/07/12/gong-ju-ji-he-ji-bao-cuo/ri-yu/"/>
     <id>https://lhlsnowing.github.io/2023/07/12/gong-ju-ji-he-ji-bao-cuo/ri-yu/</id>
     <published>2023-07-12T12:03:10.000Z</published>
-    <updated>2023-07-12T13:24:29.926Z</updated>
+    <updated>2023-07-13T13:27:26.118Z</updated>
     
     
       
@@ -601,35 +631,6 @@
     <category term="迷宫问题" scheme="https://lhlsnowing.github.io/tags/%E8%BF%B7%E5%AE%AB%E9%97%AE%E9%A2%98/"/>
     
     <category term="IDEA快捷键" scheme="https://lhlsnowing.github.io/tags/IDEA%E5%BF%AB%E6%8D%B7%E9%94%AE/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>JDBC</title>
-    <link href="https://lhlsnowing.github.io/2023/05/25/java/jdbc/"/>
-    <id>https://lhlsnowing.github.io/2023/05/25/java/jdbc/</id>
-    <published>2023-05-25T10:05:50.000Z</published>
-    <updated>2023-06-26T08:55:39.599Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;JDBC&quot;&gt;&lt;a href=&quot;#JDBC&quot; class=&quot;headerlink&quot; title=&quot;JDBC&quot;&gt;&lt;/a&gt;JDBC&lt;/h1&gt;&lt;h2 id=&quot;JDBC概念&quot;&gt;&lt;a href=&quot;#JDBC概念&quot; class=&quot;headerlink&quot;</summary>
-        
-      
-    
-    
-    
-    <category term="Java" scheme="https://lhlsnowing.github.io/categories/Java/"/>
-    
-    <category term="JDBC" scheme="https://lhlsnowing.github.io/categories/Java/JDBC/"/>
-    
-    
-    <category term="JDBC" scheme="https://lhlsnowing.github.io/tags/JDBC/"/>
-    
-    <category term="Java" scheme="https://lhlsnowing.github.io/tags/Java/"/>
     
   </entry>
   
