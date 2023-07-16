@@ -6,7 +6,7 @@
   <link href="https://lhlsnowing.github.io/atom.xml" rel="self"/>
   
   <link href="https://lhlsnowing.github.io/"/>
-  <updated>2023-07-13T14:04:39.896Z</updated>
+  <updated>2023-07-16T06:02:18.251Z</updated>
   <id>https://lhlsnowing.github.io/</id>
   
   <author>
@@ -15,6 +15,35 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Java面试题</title>
+    <link href="https://lhlsnowing.github.io/2023/07/16/java/java-mian-shi-ti/"/>
+    <id>https://lhlsnowing.github.io/2023/07/16/java/java-mian-shi-ti/</id>
+    <published>2023-07-16T05:20:50.000Z</published>
+    <updated>2023-07-16T06:02:18.251Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;一、&quot;&gt;&lt;a href=&quot;#一、&quot; class=&quot;headerlink&quot; title=&quot;一、&quot;&gt;&lt;/a&gt;一、&lt;/h2&gt;&lt;h3 id=&quot;1-Java-语言的特点&quot;&gt;&lt;a href=&quot;#1-Java-语言的特点&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="Java" scheme="https://lhlsnowing.github.io/categories/Java/"/>
+    
+    <category term="Java面试题" scheme="https://lhlsnowing.github.io/categories/Java/Java%E9%9D%A2%E8%AF%95%E9%A2%98/"/>
+    
+    
+    <category term="Java" scheme="https://lhlsnowing.github.io/tags/Java/"/>
+    
+    <category term="Java面试题" scheme="https://lhlsnowing.github.io/tags/Java%E9%9D%A2%E8%AF%95%E9%A2%98/"/>
+    
+  </entry>
   
   <entry>
     <title>JPA</title>
@@ -51,7 +80,7 @@
     <link href="https://lhlsnowing.github.io/2023/07/12/gong-ju-ji-he-ji-bao-cuo/ri-yu/"/>
     <id>https://lhlsnowing.github.io/2023/07/12/gong-ju-ji-he-ji-bao-cuo/ri-yu/</id>
     <published>2023-07-12T12:03:10.000Z</published>
-    <updated>2023-07-13T13:27:26.118Z</updated>
+    <updated>2023-07-16T10:27:45.434Z</updated>
     
     
       
@@ -600,37 +629,6 @@
     <category term="webpack.config.js" scheme="https://lhlsnowing.github.io/tags/webpack-config-js/"/>
     
     <category term="webpack生产/开发模式" scheme="https://lhlsnowing.github.io/tags/webpack%E7%94%9F%E4%BA%A7-%E5%BC%80%E5%8F%91%E6%A8%A1%E5%BC%8F/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Java小记_1</title>
-    <link href="https://lhlsnowing.github.io/2023/05/30/java/java-xiao-ji-1/"/>
-    <id>https://lhlsnowing.github.io/2023/05/30/java/java-xiao-ji-1/</id>
-    <published>2023-05-30T08:16:46.000Z</published>
-    <updated>2023-06-24T05:57:13.482Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;Java基础&quot;&gt;&lt;a href=&quot;#Java基础&quot; class=&quot;headerlink&quot; title=&quot;Java基础&quot;&gt;&lt;/a&gt;Java基础&lt;/h1&gt;&lt;h2 id=&quot;一、java重要特点&quot;&gt;&lt;a href=&quot;#一、java重要特点&quot;</summary>
-        
-      
-    
-    
-    
-    <category term="Java" scheme="https://lhlsnowing.github.io/categories/Java/"/>
-    
-    <category term="java第一篇" scheme="https://lhlsnowing.github.io/categories/Java/java%E7%AC%AC%E4%B8%80%E7%AF%87/"/>
-    
-    
-    <category term="Java" scheme="https://lhlsnowing.github.io/tags/Java/"/>
-    
-    <category term="迷宫问题" scheme="https://lhlsnowing.github.io/tags/%E8%BF%B7%E5%AE%AB%E9%97%AE%E9%A2%98/"/>
-    
-    <category term="IDEA快捷键" scheme="https://lhlsnowing.github.io/tags/IDEA%E5%BF%AB%E6%8D%B7%E9%94%AE/"/>
     
   </entry>
   
