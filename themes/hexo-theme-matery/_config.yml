@@ -34,6 +34,9 @@ menu:
       - name: 计网笔记
         url: /categories/计算机网络/
         icon: fas fa-network-wired
+      - name: 数据结构
+        url: /categories/数据结构/
+        icon: fas fa-laptop
       # - name: Movies
       #   url: /movies
       #   icon: fas fa-film

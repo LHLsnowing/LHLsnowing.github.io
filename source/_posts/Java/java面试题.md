@@ -1,6 +1,6 @@
 ---
 title: Java面试题
-top: false
+top: true
 cover: false
 toc: true
 mathjax: true
@@ -10,7 +10,7 @@ tags: [Java,Java面试题]
 categories: [Java,Java面试题]
 ---
 
-## 一、
+## 一、基础部分
 ### 1.Java 语言的特点
 **Java 语言具有以下特点：**
 - **简单易学**：Java 的语法相对简洁清晰，与C++相比去掉了一些复杂的特性（如指针），使得初学者更容易上手。
@@ -103,4 +103,325 @@ hashCode() 和 equals() 方法在 Java 中经常一起使用，用于实现对�
 
 **重载是静态的**，编译时决定调用哪个方法；**重写是动态的**，运行时根据对象的实际类型决定调用哪个方法。
 
-### 10.
+### 10.面向对象和面向过程的区别
+面向对象编程（Object-Oriented Programming，OOP）和面向过程编程（Procedural Programming）是两种不同的编程范式。它们有以下区别：
+
+1. 思维方式：面向对象编程强调将问题划分为相互独立的对象，每个对象具有自己的属性和方法，通过对象之间的交互来解决问题。面向过程编程则以线性的方式依次处理问题，将程序看作一系列的步骤或函数。
+2. 数据抽象：面向对象编程使用类和对象来实现数据抽象，将数据和操作封装在一起，隐藏内部实现细节，只暴露必要的接口。而面向过程编程更关注数据的处理，将数据和操作分开处理。
+3. 代码复用：面向对象编程提供继承和多态等特性，可以通过继承来重用已有的代码，并通过多态来实现动态行为。面向过程编程通常需要手动复制和粘贴代码来实现代码重用。
+4. 可维护性：面向对象编程中，对象的封装性使得代码更易于理解和维护，修改一个对象的行为不会对其他对象造成影响。而面向过程编程中，由于数据和操作分离，当需求变化时可能需要修改多处代码。
+5. 拓展性：面向对象编程可以通过继承和多态来实现代码的扩展，而不需要修改原有代码。面向过程编程通常需要修改已有的代码来支持新的需求。
+6. 团队协作：面向对象编程使得多个开发人员可以并行工作，每个人负责不同的对象或类，通过接口定义彼此之间的交互。面向过程编程则更适合小规模、单人开发的项目。
+
+### 11.成员变量与局部变量的区别
+作用域：
+- 成员变量的作用域是整个类，在类的任何方法中都可以直接访问。它们存储在对象中，每个对象都有自己的一份成员变量副本。
+- 局部变量的作用域只限定在声明它的代码块内，通常是在方法、循环或条件语句中定义的变量。
+
+声明位置：
+- 成员变量在类的内部声明，通常位于类的字段部分。它们可以被多个方法访问和修改。
+- 局部变量在方法中声明，也可以在代码块中声明。它们只能在声明的代码块内使用。
+
+默认值：
+- 成员变量会自动初始化为默认值，如整数为0，浮点数为0.0，布尔值为false，引用类型为null。可以手动赋予其他默认值。
+- 局部变量不会自动初始化，需要在使用前进行显式初始化。
+
+生命周期：
+- 成员变量的生命周期与对象相同，当创建一个新对象时，成员变量就会被分配内存空间，并且在对象销毁时释放。
+- 局部变量的生命周期仅存在于声明所在的代码块执行期间，当代码块执行完毕，局部变量的内存会被释放。
+
+可访问性：
+- 成员变量可以有不同的访问修饰符（如public、private、protected），控制对其的访问权限。
+- 局部变量只能在声明它的代码块中访问，其他方法无法直接访问局部变量。
+
+### 12.面向对象三大特性是什么。并解释这三大特性
+面向对象编程有三大特性，分别是封装（Encapsulation）、继承（Inheritance）和多态（Polymorphism）：
+
+- **封装（Encapsulation）**：封装是指将数据和对数据的操作封装在一个单元中，即类。通过封装，可以隐藏内部实现细节，只暴露必要的接口给外部使用。这样可以提高代码的可维护性和安全性。其他对象无法直接访问对象的内部数据，只能通过公共方法（getter和setter）来间接访问和修改数据。
+
+- **继承（Inheritance）**：继承是指一个类（子类）从另一个类（父类）获取属性和方法。子类可以继承父类的所有非私有成员，包括字段、方法和属性。通过继承，子类可以重用父类的代码，并且可以在此基础上添加新的功能或修改已有的行为。继承还可以建立类之间的层次关系，更好地组织和管理代码。
+
+- **多态（Polymorphism）**：多态是指同一种操作或方法可以在不同的对象上调用，**产生不同的行为**。多态通过继承和方法重写实现。对于一个方法调用，如果被调用对象是子类的实例，那么将执行子类中的方法；如果被调用对象是父类的实例，那么将执行父类中的方法。多态提高了代码的灵活性和可扩展性，可以通过统一的接口处理不同类型的对象。
+
+### 13.String、StringBuffer 和 StringBuilder 的区别
+String、StringBuffer和StringBuilder都是Java中用于处理字符串的类，它们之间有以下区别：
+
+- 可变性： String是不可变的类，一旦创建后就不能修改。每次对String进行操作（如拼接、替换），都会生成一个新的String对象。而`StringBuffer`和`StringBuilder`是**可变的类**，可以直接修改其内部内容。
+
+- 线程安全性： `String`是线程安全的，因为它的不可变性可以保证多个线程同时访问时数据不会被修改。`StringBuffer`是线程安全的，它的方法都使用了`synchronized`关键字进行同步，可以在多线程环境下安全地使用。而`StringBuilder`是非线程安全的，多个线程同时访问时可能导致数据不一致的问题。
+
+- 性能效率： 由于String的不可变性，每次对String进行操作都会产生一个新的String对象，这种频繁的对象创建和销毁会消耗大量的内存和CPU资源。而`StringBuffer`和`StringBuilder`的可变性使得它们在**拼接大量字符串时更高效**，因为它们直接修改原始对象，避免了频繁的对象创建。
+
+- 应用场景： 如果需要频繁对字符串进行拼接、插入或删除等操作，并在多线程环境下使用，应选择StringBuffer。如果在单线程环境下进行字符串操作，并且追求更高的性能，可以选择StringBuilder。如果字符串是固定不变的，不需要频繁修改，可以使用String。
+
+综上所述，String适用于不需要频繁修改的场景；StringBuffer适用于多线程环境下频繁修改字符串的场景；StringBuilder适用于单线程下频繁修改字符串且对性能要求较高的场景。根据具体需求和场景选择合适的类会提高代码的效率和可维护性。
+
+应用
+下面是StringBuffer和StringBuilder的两个实例应用：
+
+字符串拼接：
+```java
+String name = "John";
+int age = 30;
+StringBuffer stringBuffer = new StringBuffer();
+stringBuffer.append("My name is ").append(name).append(" and I am ").append(age).append(" years old.");
+String message = stringBuffer.toString();
+System.out.println(message);
+```
+这个例子展示了使用`StringBuffer`来动态拼接字符串。通过调用append()方法将多个字符串进行连接，最后使用`toString()`方法将StringBuffer对象转换为String类型。
+
+循环字符串拼接：
+```java
+StringBuilder stringBuilder = new StringBuilder();
+for (int i = 1; i <= 10; i++) {
+    stringBuilder.append(i).append(", ");
+}
+String numbers = stringBuilder.substring(0, stringBuilder.length() - 2); // 去除最后的逗号和空格
+System.out.println(numbers);
+```
+这个例子展示了使用`StringBuilder`在循环中动态拼接数字字符串。每次迭代时，使用append()方法将当前数字添加到StringBuilder中，最后使用`substring()`方法去除最后的逗号和空格。
+
+### 14.ArrayList和LinkedList
+ArrayList和LinkedList是Java集合框架中List接口的两个实现类，它们之间有以下区别：
+
+- **底层数据结构**： ArrayList使用数组作为底层数据结构，而LinkedList使用双向链表作为底层数据结构。这导致了它们在插入、删除和访问元素时的性能特点不同。
+- **随机访问性能**： `ArrayList`可以通过索引直接访问元素，因为它底层使用数组存储元素，所以随机访问的时间复杂度为O(1)。而`LinkedList`则需要**从头或尾部开始遍历链表**才能找到指定位置的元素，所以随机访问的时间复杂度为O(n)。
+- **插入和删除性能**： 在ArrayList中，插入和删除元素需要移动元素位置，如果在列表中间进行操作，会涉及到大量元素的移动，时间复杂度为O(n)。而LinkedList由于使用链表结构，在任意位置插入和删除元素的时间复杂度为O(1)，只需要调整相邻节点的指针即可。
+- **空间占用**： ArrayList在内存上连续存储元素，每个元素需要固定大小的空间（对象引用），因此**它的空间占用比LinkedList更高**。而LinkedList的节点可以在内存中分散存储，每个节点除了元素本身外还需要额外的空间用于存储前后节点的引用。
+- **迭代性能**： 在进行迭代操作（如遍历所有元素）时，ArrayList由于底层使用数组，可以通过索引直接访问元素，所以迭代速度较快。而LinkedList需要从头或尾部开始遍历链表，每次都需要获取下一个元素的引用，迭代速度较慢。
+
+### 15.HashMap、HashTable、以及 ConcurrentHashMap 的区别   
+_可以展开去讲在 Java7 和 Java8 中 HashMap 分别采用什么数据结构，为什么 Java8 把之前的头插法改成了尾插法，怎样实现扩容，为什么负载因子是 0.75，为什么要用红黑树等等一系列的东西_
+
+HashMap、HashTable和ConcurrentHashMap都是Java集合框架中用于存储键值对的类，它们之间有以下区别：
+
+1. **线程安全性**： `HashMap`是**非线程安全的**，不支持并发访问。而`HashTable`是线程安全的，它的方法是同步的（synchronized），可以在多线程环境下使用。`ConcurrentHashMap`也是线程安全的，但采用了更加精细的锁机制，可以支持高并发环境下的读写操作。
+
+2. **空值（null）**： HashMap和ConcurrentHashMap允许使用null作为键或值，而`HashTable`不允许使用null，会抛出`NullPointerException`。
+
+3. **性能**： 在单线程环境下，HashMap的性能通常比HashTable要好，因为HashTable的方法是同步的，会引入额外的开销。而ConcurrentHashMap通过使用分段锁（Segment）来实现高并发访问，并行处理不同的片段，因此在高并发环境下性能更好。
+
+4. **迭代器**： HashMap和ConcurrentHashMap的迭代器都是快速失败的（fail-fast iterator），当在迭代过程中进行结构性修改时会抛出ConcurrentModificationException异常。而**HashTable的迭代器是安全**的（fail-safe iterator），不会抛出异常，但可能会返回旧数据或跳过某些元素。
+
+5. **扩容机制**： HashMap和ConcurrentHashMap都支持自动扩容，当元素数量达到阈值时会进行扩容。HashMap和ConcurrentHashMap的默认初始容量和负载因子都不同，ConcurrentHashMap还允许指定并发级别。
+
+综上所述，如果在多线程环境中需要线程安全的键值对存储，可以选择HashTable或ConcurrentHashMap。如果在单线程环境下，或者需要更好的并发性能，可以选择HashMap或ConcurrentHashMap。并根据具体需求考虑空值的使用和迭代器的行为。
+- ConcurrentHashMapExample:
+```java
+import java.util.concurrent.ConcurrentHashMap;
+
+public class ConcurrentHashMapExample {
+    public static void main(String[] args) {
+        // 创建ConcurrentHashMap实例
+        ConcurrentHashMap<String, Integer> scores = new ConcurrentHashMap<>();
+
+        // 添加键值对
+        scores.put("Alice", 85);
+        scores.put("Bob", 90);
+        scores.put("Charlie", 95);
+
+        // 获取键对应的值
+        int aliceScore = scores.get("Alice");
+        System.out.println("Alice的分数：" + aliceScore);
+
+        // 替换指定键的值
+        scores.replace("Bob", 92);
+
+        // 删除指定键值对
+        scores.remove("Charlie");
+
+        // 遍历键值对
+        for (String name : scores.keySet()) {
+            int score = scores.get(name);
+            System.out.println(name + "的分数：" + score);
+        }
+    }
+}
+```
+
+---
+## 二、进程线程部分
+
+### 1.进程和线程的区别
+_要答清楚什么是线程什么是进程，线程和进程各自的运行状态、线程的通信方式和进程的通信方式。_
+
+>进程和线程的区别：
+
+**进程（Process）**是计算机中运行的程序的实例。每个进程都有自己的内存空间、文件描述符、环境变量等资源，它们相互独立并且在操作系统中以进程为单位进行调度和管理。
+
+**线程（Thread）**是在进程内部执行的一条执行路径。一个进程可以包含多个线程，它们共享进程的内存空间和其他资源。线程之间可以更快地切换执行，因此多线程的程序具有更高的并发性和响应性。
+
+**主要区别如下**：
+
+1. 资源占用： 进程拥有独立的内存空间和系统资源，而线程共享所属进程的内存空间和资源。
+2. 创建销毁开销： 创建或销毁进程比创建或销毁线程更昂贵，并且进程之间的切换成本较高。
+3. 通信代价： 进程间通信的代价较高，需要使用特定的IPC（进程间通信）机制，如管道、消息队列等。而线程之间可以通过共享内存等直接通信方式进行交互，通信代价较低。
+4. 并发性： 多个线程可以在同一个进程中并发执行，共享进程的资源，而进程之间的并发性相对较低。
+5. 容错性： 进程之间互不影响，一个进程崩溃不会影响其他进程；而线程之间共享进程资源，一个线程的错误可能导致整个进程崩溃。
+
+通信方式：
+
+- **进程通信**：进程间通信有多种方式，包括**管道、命名管道、消息队列、共享内存、信号量、套接字**等。这些通信方式可以在不同进程之间实现数据和控制信息的传递。
+
+- **线程通信**：由于线程之间共享同一进程的内存空间，因此线程之间的通信更为简单直接。常见的线程通信方式包括**共享内存、锁机制（如互斥锁、读写锁）、条件变量、信号量**等。
+
+运行状态：
+
+- 进程运行状态主要有以下几种：创建、就绪、运行、阻塞和终止。
+
+- 线程运行状态主要有以下几种：New（新建）、Runnable（可运行/就绪）、Running（运行）、Blocked（阻塞）、Waiting（等待）、Timed Waiting（计时等待）和Terminated（终止）。
+
+### 2.线程详细运行状态
+线程的运行状态主要包括以下几种：
+
+1. New（新建）： 当创建一个Thread对象时，线程处于新建状态。此时线程还未启动，尚未分配系统资源。
+
+2. Runnable（可运行/就绪）： 在调用线程的`start()`方法后，线程进入就绪状态。此时线程已经分配到了系统资源，但并不一定立即执行，需要等待CPU的调度。
+
+3. Running（运行）： 当线程获得CPU的执行权时，进入运行状态。线程会执行相应的任务代码，执行期间可以进行计算、IO操作等。
+
+4. Blocked（阻塞）： 在某些情况下，线程可能会暂时停止执行，进入阻塞状态。常见的阻塞情况包括等待锁、等待输入输出、等待其他线程的通知等。当满足阻塞条件解除时，线程会重新进入就绪状态，等待再次获得CPU的执行权。
+
+5. Waiting（等待）： 线程进入等待状态是因为它在某个条件下主动释放了所占用的资源，并等待唤醒通知。等待状态的线程需要其他线程调用`notify()`或`notifyAll()`方法来唤醒它们。
+
+6. Timed Waiting（计时等待）： 类似于等待状态，但有一个预期的等待时间。线程可以通过调用带有超时参数的`sleep()`、`join()`或者**等待I/O操作完成等方法**进入计时等待状态。
+
+7. Terminated（终止）： 线程执行完任务后或者出现异常导致线程终止，进入终止状态。一旦线程处于终止状态，它将不再运行，并且不能被重启。
+
+### 3.创建线程的四种方式
+在Java中，创建线程有以下几种方式：
+
+**继承Thread类**： 创建一个新的类并继承`Thread类`，重写`run()`方法来定义线程的任务代码。然后可以创建该类的实例，并调用`start()`方法启动线程。
+```java
+class MyThread extends Thread {
+    public void run() {
+        // 线程的任务代码
+    }
+}
+
+// 创建线程并启动
+MyThread thread = new MyThread();
+thread.start();
+```
+**实现Runnable接口**： 创建一个新的类实现`Runnable接口`，并实现其`run()`方法来定义线程的任务代码。然后创建Thread对象，将Runnable实例作为参数传递给Thread构造函数，最后调用`start()`方法启动线程。
+```java
+class MyRunnable implements Runnable {
+    public void run() {
+        // 线程的任务代码
+    }
+}
+
+// 创建线程并启动
+MyRunnable runnable = new MyRunnable();
+Thread thread = new Thread(runnable);
+thread.start();
+```
+**使用匿名内部类**： 可以使用匿名内部类来创建线程，省去了单独定义一个类的步骤。通过直接在Thread构造函数中传入Runnable接口的实现或重写Thread类的子类的run()方法来定义线程的任务代码。
+```java
+// 使用匿名内部类创建线程并启动
+Thread thread = new Thread(new Runnable() {
+    public void run() {
+        // 线程的任务代码
+    }
+});
+thread.start();
+```
+**使用Lambda表达式**： Java 8及以上版本支持使用Lambda表达式来创建线程。与匿名内部类类似，可以直接在Thread构造函数中传入Runnable接口的实现或重写Thread类的子类的`run()`方法来定义线程的任务代码。
+```java
+// 使用Lambda表达式创建线程并启动
+Thread thread = new Thread(() -> {
+    // 线程的任务代码
+});
+thread.start();
+```
+
+### 4.什么是死锁，死锁如何产生，死锁如何避免
+~梦回操作系统~
+
+死锁是指多个线程或进程由于互相竞争资源而无法继续执行的状态，每个线程都在等待其他线程释放所需的资源，导致所有线程都被阻塞，无法继续执行下去。这种情况下，系统无法进行任何进一步的处理，需要通过干预来解除死锁。
+
+**死锁产生的必要条件**包括以下四个条件**同时满足**：
+
+- 互斥条件（Mutual Exclusion）： 至少有一个资源只能被一个线程或进程占用，其他线程或进程不能同时访问。
+- 请求与保持条件（Hold and Wait）： 线程或进程至少持有一个资源，并且还在等待获取其他线程或进程占有的资源。
+- 不可剥夺条件（No Preemption）： 已经分配给线程或进程的资源不能被强制剥夺，只能由持有者主动释放。
+- 环路等待条件（Circular Wait）： 多个线程或进程之间形成一种循环等待资源的关系，即存在一个线程或进程的资源请求链条，使得最后一个线程或进程等待第一个线程或进程释放资源。
+
+为了**避免死锁的发生**，可以采取以下几种方法：
+
+- 破坏互斥条件： 如果资源允许被多个线程或进程同时访问，那么就不存在互斥条件，死锁也就不会发生。然而，并非所有情况下都能破坏互斥条件，因为有些资源确实只能被一个线程或进程占用。
+- 破坏请求与保持条件： 一种方法是要求线程在请求资源时立即获得所有需要的资源，而不是在运行过程中逐个获取。另一种方法是当一个线程无法获得所需资源时，释放已经持有的资源，等待重新获取所有资源。
+- 破坏不可剥夺条件： 强制抢占资源，即将某个线程或进程目前持有的资源剥夺，并分配给其他等待该资源的线程或进程。这种方式可能引入新的问题，需要慎重考虑。
+- 破坏环路等待条件： 实现资源的有序分配，可以给每个资源分配一个全局唯一的编号，线程或进程按编号顺序申请资源，避免循环等待。
+
+### 5.synchronized 锁升级流程(锁是懒加载的，需要升级时候才触发相应操作)
+在Java中，`synchronized`关键字用于**实现线程同步和互斥访问共享资源**。当多个线程竞争同一个synchronized锁时，会发生锁的升级过程，即从`无锁状态到偏向锁、再到轻量级锁、最后到重量级锁`。
+
+下面是synchronized锁升级的一般流程：
+
+**无锁状态（Unlocked）**： 当线程首次进入synchronized代码块时，对象头的Mark Word字段标记为无锁状态。
+
+**偏向锁（Biased Locking）**： 当只有一个线程访问同步块时，JVM会偏向该线程，将对象头的Mark Word字段修改为指向该线程的Thread ID，并设置标志位表示为偏向锁。之后，该线程可以直接进入临界区，无需进行额外的同步操作。
+
+**轻量级锁（Lightweight Locking）**： 如果有多个线程竞争同步块，JVM会将锁升级为轻量级锁。此时，JVM会尝试使用CAS（比较并交换）操作，将对象头的Mark Word替换为指向锁记录的指针。如果CAS操作成功，线程获得锁，继续执行同步块。如果CAS操作失败，表示其他线程已经获取了锁，当前线程会尝试自旋（不释放CPU资源，反复尝试获取锁），以减少线程上下文切换带来的开销。
+
+**重量级锁（Heavyweight Locking）**： 如果自旋等待仍然无法获得锁，JVM会将锁升级为重量级锁。在这个阶段，等待线程会被挂起，不再占用CPU资源，直到拥有锁的线程释放锁后，等待线程才会被唤醒重新竞争锁。
+
+---
+下面是一个简单的示例，展示synchronized锁的升级过程：
+
+```java
+public class LockUpgradeExample {
+   private static int counter = 0;
+
+   public static synchronized void increment() {
+       counter++;
+   }
+
+   public static void main(String[] args) throws InterruptedException {
+       Thread thread1 = new Thread(() -> {
+           for (int i = 0; i < 100000; i++) {
+               increment();
+           }
+       });
+
+       Thread thread2 = new Thread(() -> {
+           for (int i = 0; i < 100000; i++) {
+               increment();
+           }
+       });
+
+       thread1.start();
+       thread2.start();
+
+       thread1.join();
+       thread2.join();
+
+       System.out.println("Counter value: " + counter);
+   }
+}
+```
+在这个示例中，我们有一个静态的`counter`变量和两个线程，每个线程都会调用`increment()`方法对`counter`进行递增操作。`increment()`方法使用`synchronized`关键字来保证线程安全。
+
+当运行该示例时，JVM会根据竞争情况自动触发锁的升级过程
+
+### 6.volatile 关键字
+volatile关键字和synchronized关键字有以下几点区别：
+
+1. 可见性： `volatile`关键字用于保证变量的可见性，即当一个线程修改了被`volatile`修饰的变量的值时，其他线程能够立即看到最新的值。而`synchronized`关键字除了保证互斥访问，还可以确保可见性。通过获取锁和释放锁的操作，`synchronized`关键字在保护临界区代码的同时，也会将变量从线程的本地缓存写回主内存，使得其他线程能够读取到最新的值。
+
+2. 原子性： `volatile`关键字不能保证对变量的复合操作具有原子性，而`synchronized`关键字可以通过获取锁来保证一段同步代码块的原子性执行。如果需要保证复合操作的原子性，应该使用`synchronized`关键字或者`java.util.concurrent.atomic`包提供的原子类。
+
+3. 排他性： `volatile`关键字不提供排他性，多个线程可以同时读取和写入`volatile`变量的值。而`synchronized`关键字则提供了互斥访问的功能，同一时间只允许一个线程进入同步块执行，其他线程必须等待锁的释放。
+
+4. 内存语义： 使用`volatile`关键字修饰的变量会禁止指令重排序，保证了读写操作的有序性。而`synchronized`关键字通过获取锁和释放锁来建立内存屏障，确保同步代码块的执行顺序符合预期。
+
+总之，`volatile`关键字适用于对变量的可见性进行保证，而`synchronized`关键字适用于实现互斥访问和复合操作的原子性。根据具体的需求，选择合适的关键字来保证线程安全和数据一致性。
+
+### 7.乐观锁和悲观锁的区别
+
+### 8.ThreadLocal
+
+### 9.线程池
+
+### 10.ReentrantLock 和 AQS
