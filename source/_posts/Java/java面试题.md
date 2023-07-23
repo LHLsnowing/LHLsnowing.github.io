@@ -420,8 +420,211 @@ volatile关键字和synchronized关键字有以下几点区别：
 
 ### 7.乐观锁和悲观锁的区别
 
+乐观锁（Optimistic Locking）和悲观锁（Pessimistic Locking）是并发控制的两种不同策略，用于解决多线程环境下的数据一致性问题。它们的主要区别在于对于**并发访问冲突的处理方式**。
+
+- 乐观锁： 乐观锁的策略是假设并发访问**不会引发冲突**，因此在读取数据时，并不加锁。在更新数据之前，会先检查数据是否被其他线程修改过。常见的实现方式是使用版本号或时间戳来标记数据的版本，每次更新时比较版本信息。如果版本匹配，则进行更新操作；若版本不匹配，则表示数据已经被其他线程修改过，需要进行相应的冲突处理，如重试操作或放弃更新。
+
+乐观锁适用于读操作频繁、冲突较少的场景。由于不需要加锁，能够提供较高的并发性能。然而，当冲突较多时，频繁的版本检查和重试可能会增加额外的开销。
+
+- 悲观锁： 悲观锁的策略是假设并发访问**会引发冲突**，因此在读取数据时会进行加锁操作，确保只有一个线程能够访问数据。悲观锁常见的实现方式是使用数据库的锁机制（如行级锁或表级锁）或使用 synchronized 关键字进行加锁。
+
+悲观锁适用于写操作频繁、冲突较多的场景，能够保证数据的一致性。然而，由于加锁会导致其他线程阻塞等待，可能会降低并发性能。
+
 ### 8.ThreadLocal
 
+`ThreadLocal` 是 Java 中的一个类，用于**在多线程环境中为每个线程保留一份独立的变量副本**,以解决**多个线程访问同一个变量时可能引发的线程安全问题**。每个线程都可以独立地访问和修改自己的副本，互不影响其他线程的副本。这样可以解决多个线程访问同一个变量时可能引发的线程安全问题。
+
+`ThreadLocal` 类提供了以下主要方法：
+
+`get()`：获取当前线程对应的变量副本。
+`set(T value)`：设置当前线程对应的变量副本。
+`remove()`：移除当前线程对应的变量副本。
+`initialValue()（protected 方法）`：返回初始化的变量副本，默认实现返回 null，可以通过继承 ThreadLocal 并重写该方法来设置自定义的初始值。
+>使用 ThreadLocal 的基本步骤如下：
+1.创建一个 `ThreadLocal` 对象，指定泛型类型为要存储的变量类型。
+2.通过 `set(value)` 方法为当前线程设置变量的值。
+3.在任意需要访问该变量的地方，使用 `get() `方法获取当前线程的变量副本。
+
+>`ThreadLocal` 的典型应用场景包括但不限于：
+线程上下文信息传递：将当前线程相关的上下文信息存储在 ThreadLocal 变量中，在不同组件/方法间传递上下文信息，避免显式传参。
+数据库连接管理：通过 ThreadLocal 存储与数据库连接相关的信息，确保每个线程使用独立的数据库连接，提高性能和资源利用。
+全局变量的线程安全访问：将共享变量通过 ThreadLocal 使其成为线程私有的，从而避免了多线程竞争的问题。
+
+需要注意的是，使用 ThreadLocal 时应**注意资源管理和内存泄漏问题**。由于 ThreadLocal 的特性，如果不及时清理 ThreadLocal 对象，可能导致长时间运行的线程持有过多的副本，造成内存占用过高。另外，使用线程池时，需要在任务执行完毕后手动调用 remove() 方法清理 ThreadLocal 值，以防止线程复用时出现数据混乱的情况。
+
 ### 9.线程池
+- 线程池是一种**管理和复用线程的机制**，它可以**提高多线程程序的性能和效率**。
+
+通常情况下，创建和销毁线程会带来较大的开销。而线程池通过**预先创建一定数量的线程**,并维护一个可用线程队列，来避免不断地创建和销毁线程，从而减少开销。
+
+- 线程池主要包括以下几个组成部分：
+**线程池管理器（ThreadPoolManager）**：负责维护线程池的状态和管理线程的生命周期。
+**工作线程（WorkerThread）**：线程池中的线程，可用于执行具体的任务。
+**任务队列（TaskQueue**）：用于存储待处理的任务，线程池从任务队列中获取任务并分配给空闲的工作线程进行处理。
+
+- 使用线程池的**好处**包括：
+提高性能和效率：通过重用线程，避免了线程的频繁创建和销毁，减少了系统开销。
+控制并发数量：可以限制并发线程的数量，防止线程过多导致系统资源耗尽。
+提供任务排队和调度：线程池可以管理任务队列，根据需要调度任务的执行顺序。
+提供线程管理和监控：线程池可以统一管理线程的生命周期，并提供监控和统计信息，方便调试和优化。
+总之，线程池是一种有效管理和利用线程资源的机制，可以提高多线程程序的性能和可靠性。在开发中，适当地使用线程池可以更好地控制并发，提高系统的吞吐量。
+
+Java线程池是Java提供的一个用于管理和调度线程的工具。它位于`java.util.concurrent`包下，通过提供了一组操作线程池的类和接口，方便开发者使用多线程进行并发编程。
+
+---
+>Java线程池的主要类和接口如下：
+`Executor` 接口：是线程池的顶层接口，定义了执行任务的方法。
+`ExecutorService` 接口：继承自`Executor`接口，增加了对任务提交、线程池状态管理等方法的支持。
+`ThreadPoolExecutor` 类：是`ExecutorService`接口的实现类，实现了一个灵活可配置的线程池，可以按需创建线程，并提供了各种线程池参数的设置。
+`Executors` 类：提供了一些静态工厂方法，用于创建常见类型的线程池，如`newFixedThreadPool()`、`newCachedThreadPool()`、`newSingleThreadExecutor()`等。
+`Future `和 `FutureTask`：用于异步获取线程执行结果的机制。
+
+>使用Java线程池的步骤如下：
+1.创建线程池对象：可以使用`Executors`类提供的静态工厂方法来创建线程池，或者直接使用`ThreadPoolExecutor`类的构造方法自定义线程池参数。
+2.提交任务：通过调用`execute()`或`submit()`方法向线程池提交需要执行的任务。`execute()`方法用于提交**不需要返回结果**的任务，而`submit()`方法可提交**需要返回结果**的任务，并通过`Future`**对象获取任务的执行结果**。
+3.线程池执行任务：线程池会根据配置的参数和任务队列的状态来选择合适的线程执行任务。
+4.关闭线程池：在不需要使用线程池时，应调用线程池的`shutdown()`方法来优雅地关闭线程池，等待正在执行的任务完成并释放资源。
+通过使用Java线程池，可以方便地管理线程、控制并发数量、调度任务执行顺序，提高程序的性能和可维护性。同时，线程池还提供了丰富的监控和调试工具，便于定位和解决多线程编程中的问题。
+
+- 线程池例子 
+```java
+package com.example;
+
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
+
+public class Main {
+
+    public static void main(String[] args) {
+        // 创建固定大小为 5 的线程池
+        ExecutorService executor = Executors.newFixedThreadPool(5);
+
+        // 提交任务到线程池
+        for (int i = 0; i < 10; i++) {
+            final int taskId = i;
+            executor.execute(new Runnable() {
+                @Override
+                public void run() {
+                    System.out.println("Task " + taskId + " is being executed by " + Thread.currentThread().getName());
+                    try {
+                        Thread.sleep(1000);
+                    } catch (InterruptedException e) {
+                        e.printStackTrace();
+                    }
+                    System.out.println("Task " + taskId + " is completed.");
+                }
+            });
+        }
+        // 关闭线程池
+        executor.shutdown();
+    }
+}
+```
+该示例创建了一个固定大小为 5 的线程池，通过`execute()`方法提交了10个任务给线程池执行。每个任务都会打印自己的ID和所在线程的名称，并模拟耗时操作（这里使用`Thread.sleep()`方法模拟），然后标记任务完成。
+```
+Task 1 is being executed by pool-1-thread-2
+Task 0 is being executed by pool-1-thread-1
+Task 2 is being executed by pool-1-thread-3
+Task 3 is being executed by pool-1-thread-4
+Task 4 is being executed by pool-1-thread-5
+Task 4 is completed.
+Task 3 is completed.
+Task 1 is completed.
+Task 2 is completed.
+Task 0 is completed.
+Task 7 is being executed by pool-1-thread-2
+Task 6 is being executed by pool-1-thread-4
+Task 5 is being executed by pool-1-thread-5
+Task 9 is being executed by pool-1-thread-1
+Task 8 is being executed by pool-1-thread-3
+Task 5 is completed.
+Task 6 is completed.
+Task 7 is completed.
+Task 9 is completed.
+Task 8 is completed.
+```
+接下来细说：
+#### Java线程池提供了几种常见的线程池类型：
+
+`newFixedThreadPool(int nThreads)`：创建一个**固定大小的线程池**，其中线程数量固定为指定的数量。优点是可以保证线程数量不会超过设定的值，适用于长期执行的任务，但如果任务数量过多，可能会导致任务等待时间增加。
+`newCachedThreadPool()`：创建一个根据需要自动调整大小的线程池，适用于执行大量短期异步任务的场景。优点是能够根据任务负载动态调整线程池大小，缺点是当任务量过大时，可能导致系统资源耗尽。
+`newSingleThreadExecutor()`：创建一个单线程的线程池，保证所有任务按照顺序执行。适用于需要保证任务串行执行的场景，例如顺序访问文件、数据库等资源。
+`newScheduledThreadPool(int corePoolSize)`：创建一个支持定时任务和周期性任务的线程池。可以执行延迟任务或者周期性任务，通过`schedule()`和`scheduleAtFixedRate()`方法提交任务。
+各种线程池的优缺点如下：
+
+>`FixedThreadPool` 
+优点：
+控制并发线程数，不会过多消耗系统资源。
+较好地实现任务执行的稳定性。
+简化任务调度，按顺序执行任务。 
+缺点：
+可能会导致任务等待时间增加，如果任务数量过多。
+> `CachedThreadPool`
+优点：
+根据实际任务负载**自动调整线程池大小**。
+提供了较高的并发性能。 
+缺点：
+可能会占用大量系统资源，当任务量过大时，可能导致系统资源耗尽。
+
+>`SingleThreadExecutor` 
+优点：
+保证任务按顺序执行，确保不会有线程安全问题。
+简化编程模型，任务按顺序执行。 
+缺点：
+性能上可能不如其他线程池，因为只有一个线程在执行。
+
+>`ScheduledThreadPool` 
+优点：
+可以执行延迟任务和周期性任务。
+提供了灵活的任务调度功能。 
+缺点：
+线程数固定，不能根据需求自动调整。
+
+#### 线程池的重要参数有以下几个：
+
+**核心线程数（corePoolSize）**：线程池中保留的核心线程数量，即使线程处于空闲状态也不会被回收。
+**最大线程数（maximumPoolSize）**：线程池允许创建的最大线程数。当任务数量超过核心线程数且任务队列已满时，线程池会创建新的线程来处理任务，直到达到最大线程数。
+**任务队列（workQueue）**：用于存放等待执行的任务的阻塞队列，可以选择不同类型的队列，如LinkedBlockingQueue、ArrayBlockingQueue等。
+**线程存活时间（keepAliveTime）**：当线程池中线程数量超过核心线程数时，多余的空闲线程在等待新任务到来的时间超过该值时会被回收。
+**饱和策略（rejectedExecutionHandler）**：当任务提交给线程池被拒绝时的处理策略，默认有四种饱和策略可选。
+
+#### 线程池的执行流程如下：
+
+1. 当线程池接收到新的任务时，首先会判断核心线程是否已满。如果未满，则创建新的核心线程来执行任务。
+2. 如果核心线程数已满，则将任务放入任务队列中等待执行。
+3. 如果任务队列也已满，则根据**线程池的饱和策略**来处理任务。可能的饱和策略有直接抛出异常、丢弃任务、丢弃队列中最旧的任务等。
+4. 如果线程池中的线程数量超过核心线程数，空闲的线程会等待一段时间，如果在该时间内没有新任务到达，且线程池中的线程数量大于核心线程数，则这些空闲线程会被回收。
+5. 线程池的饱和策略决定了当任务提交给线程池被拒绝时的处理方式，
+
+#### Java线程池提供了以下四种饱和策略：
+
+`AbortPolicy`：默认的饱和策略，直接抛出`RejectedExecutionException`异常。
+`CallerRunsPolicy`：调用线程自己执行被拒绝的任务。
+`DiscardPolicy`：直接丢弃被拒绝的任务，不抛出异常。
+`DiscardOldestPolicy`：丢弃队列中最旧的任务，并尝试重新提交被拒绝的任务。
+设置线程池的大小可以通过指定核心线程数（corePoolSize）和最大线程数（maximumPoolSize）来实现。合理设置线程池的大小可以根据任务数量、任务执行时间和系统资源等因素考虑。一般来说，可以按照以下原则进行设置：
+
+- 如果任务量一直很高，并且系统负载允许，可以适当增大线程池的最大线程数，以提高并行度和吞吐量。
+- 如果任务量较小，或者需要限制并发线程数，可以设置较小的核心线程数和最大线程数，并结合合适的任务队列和饱和策略。
+
+需要注意的是，过大或过小的线程池都可能带来一些问题，如过大的线程池会消耗过多的系统资源，而过小的线程池可能无法满足任务需求。因此，根据具体情况进行评估和调整，以获得最佳的性能和资源利用率。
 
 ### 10.ReentrantLock 和 AQS
+**ReentrantLock 是 Java 中提供的一种可重入锁（Reentrant Lock）**，**而 AQS（AbstractQueuedSynchronizer）是在并发编程中提供同步机制的框架**。
+
+- `ReentrantLock`： ReentrantLock 是一个**基于独占模式的锁**，提供了与 `synchronized` 关键字类似的功能，并且更加灵活和扩展。它支持可重入性，即同一个线程可以多次获取该锁，避免死锁等问题。ReentrantLock 还提供了公平性和非公平性两种获取锁的策略。
+
+使用 ReentrantLock 需要明确调用  `lock()`方法来获取锁，并在合适的地方使用` unlock() `方法释放锁。通常使用 try-finally 块来确保锁一定会被释放，以防止异常情况下的资源泄漏。
+
+- `AQS`： **AQS 是一个抽象类**，提供了实现同步器（Synchronizer）的基础框架，用于构建各种同步组件（如锁、信号量等）。AQS 内部通过一个状态变量来表示同步状态，提供了对该状态的原子更新和线程的阻塞/唤醒操作。
+
+AQS 的核心是通过一个阻塞队列（CLH Queue）来管理等待获取锁的线程，并且采用了 CAS（Compare and Swap）操作保证并发安全性。具体的同步逻辑由子类实现，如 ReentrantLock 就是 AQS 的子类。
+
+通过继承 AQS，并重写特定的方法（如 tryAcquire()、tryRelease()）可以实现自定义的同步器。
+
+- 总结：
+1. ReentrantLock 是一个可重入锁，提供了与 synchronized 关键字类似的功能，但更加灵活和扩展。
+2. AQS 是一个抽象类，提供了实现同步器的基础框架，用于构建各种同步组件。
+3. **ReentrantLock 是 AQS 的一个具体实现**，利用 AQS 的框架提供了可重入锁的功能。
+4. AQS 通过阻塞队列和 CAS 操作实现并发安全性，用户可以通过继承 AQS 并重写特定方法来实现自定义的同步器。
+

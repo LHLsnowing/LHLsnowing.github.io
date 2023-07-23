@@ -85,7 +85,7 @@ ctrl+f
 12. [Vue.js在线挑战通关](https://cn-vuejs-challenges.netlify.app/)
 13. [uni-app](https://uniapp.dcloud.net.cn/)
 14. [react基础-router-Mobx-redux-zustand 文档博客](https://www.yuque.com/fechaichai/qeamqf/xbai87)
-
+15. [HTML特殊符号表](https://www.kuangstudy.com/tools/special)
 ### 在线颜色习惯，获取16进制
 [https://photokit.com/colors/eyedropper/?lang=zh](https://photokit.com/colors/eyedropper/?lang=zh)
 
@@ -115,6 +115,29 @@ https://www.bilibili.com/read/cv5216534
 
 [java全栈知识体系：https://pdai.tech/md/resource/tools.html](https://pdai.tech/md/resource/tools.html)
 
+
+---
+## 十四、Go
+
+[go教程](https://www.topgoer.com/)
+
+---
+## 十五、工具聚集
+### 大佬聚合
+https://www.kuangstudy.com/app
+### 小工具
+车牌号归属地
+https://www.kuangstudy.com/tools/card#beijing
+年龄计算
+https://www.kuangstudy.com/tools/age
+邮编区号查询
+https://www.kuangstudy.com/tools/email
+
+### 电影集合
+无极电影BT
+https://www.btwuji.com/index.html
+BT世界——电影
+https://www.btsj6.com/
 
 ---
 - 涤尘 https://zhutix.com/

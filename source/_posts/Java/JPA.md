@@ -5,7 +5,7 @@ cover: false
 toc: true
 mathjax: true
 date: 2023-07-13 21:24:21
-summary: 
+summary: JPA和JDK动态代理杂谈及CGLib
 tags: [Java,JPA,JDK动态代理,CGLib]
 categories: [Java,JPA]
 ---
