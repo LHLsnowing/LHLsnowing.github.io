@@ -6,7 +6,7 @@
   <link href="https://lhlsnowing.github.io/atom.xml" rel="self"/>
   
   <link href="https://lhlsnowing.github.io/"/>
-  <updated>2023-07-20T14:04:21.084Z</updated>
+  <updated>2023-07-23T09:43:03.186Z</updated>
   <id>https://lhlsnowing.github.io/</id>
   
   <author>
@@ -15,6 +15,61 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Nginx</title>
+    <link href="https://lhlsnowing.github.io/2023/07/23/java/nginx/"/>
+    <id>https://lhlsnowing.github.io/2023/07/23/java/nginx/</id>
+    <published>2023-07-23T08:30:52.000Z</published>
+    <updated>2023-07-23T09:43:03.186Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;一、啥是Nginx？&quot;&gt;&lt;a href=&quot;#一、啥是Nginx？&quot; class=&quot;headerlink&quot; title=&quot;一、啥是Nginx？&quot;&gt;&lt;/a&gt;一、啥是Nginx？&lt;/h2&gt;&lt;p&gt;Nginx (engine x)</summary>
+        
+      
+    
+    
+    
+    <category term="Java" scheme="https://lhlsnowing.github.io/categories/Java/"/>
+    
+    <category term="中间件" scheme="https://lhlsnowing.github.io/categories/Java/%E4%B8%AD%E9%97%B4%E4%BB%B6/"/>
+    
+    <category term="Nginx" scheme="https://lhlsnowing.github.io/categories/Java/%E4%B8%AD%E9%97%B4%E4%BB%B6/Nginx/"/>
+    
+    
+    <category term="Java" scheme="https://lhlsnowing.github.io/tags/Java/"/>
+    
+    <category term="中间件" scheme="https://lhlsnowing.github.io/tags/%E4%B8%AD%E9%97%B4%E4%BB%B6/"/>
+    
+    <category term="Nginx" scheme="https://lhlsnowing.github.io/tags/Nginx/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>外卖项目</title>
+    <link href="https://lhlsnowing.github.io/2023/07/20/java/wai-mai-xiang-mu/"/>
+    <id>https://lhlsnowing.github.io/2023/07/20/java/wai-mai-xiang-mu/</id>
+    <published>2023-07-20T14:17:53.000Z</published>
+    <updated>2023-07-20T14:37:20.691Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;&lt;img src=&quot;/2023/07/20/java/wai-mai-xiang-mu/0-0%E6%B5%81%E7%A8%8B.png&quot; alt=&quot;项目开发流程&quot;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
   
   <entry>
     <title>数据结构</title>
@@ -46,7 +101,7 @@
     <link href="https://lhlsnowing.github.io/2023/07/16/java/java-mian-shi-ti/"/>
     <id>https://lhlsnowing.github.io/2023/07/16/java/java-mian-shi-ti/</id>
     <published>2023-07-16T05:20:50.000Z</published>
-    <updated>2023-07-16T14:41:50.487Z</updated>
+    <updated>2023-07-23T08:29:00.005Z</updated>
     
     
       
@@ -75,7 +130,7 @@
     <link href="https://lhlsnowing.github.io/2023/07/13/java/jpa/"/>
     <id>https://lhlsnowing.github.io/2023/07/13/java/jpa/</id>
     <published>2023-07-13T13:24:21.000Z</published>
-    <updated>2023-07-20T11:12:22.957Z</updated>
+    <updated>2023-07-23T04:02:42.636Z</updated>
     
     
       
@@ -557,73 +612,6 @@
     <category term="抽象类" scheme="https://lhlsnowing.github.io/tags/%E6%8A%BD%E8%B1%A1%E7%B1%BB/"/>
     
     <category term="接口" scheme="https://lhlsnowing.github.io/tags/%E6%8E%A5%E5%8F%A3/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>算法篇</title>
-    <link href="https://lhlsnowing.github.io/2023/06/03/suan-fa-pian/"/>
-    <id>https://lhlsnowing.github.io/2023/06/03/suan-fa-pian/</id>
-    <published>2023-06-03T12:49:21.000Z</published>
-    <updated>2023-07-20T13:52:45.134Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;算法篇&quot;&gt;&lt;a href=&quot;#算法篇&quot; class=&quot;headerlink&quot; title=&quot;算法篇&quot;&gt;&lt;/a&gt;算法篇&lt;/h1&gt;&lt;h2 id=&quot;一、快速排序&quot;&gt;&lt;a href=&quot;#一、快速排序&quot; class=&quot;headerlink&quot;</summary>
-        
-      
-    
-    
-    
-    <category term="Algorithm" scheme="https://lhlsnowing.github.io/categories/Algorithm/"/>
-    
-    
-    <category term="Algorithm" scheme="https://lhlsnowing.github.io/tags/Algorithm/"/>
-    
-    <category term="快排" scheme="https://lhlsnowing.github.io/tags/%E5%BF%AB%E6%8E%92/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>各种小资源，网站备份，报错等笔记</title>
-    <link href="https://lhlsnowing.github.io/2023/06/02/gong-ju-ji-he-ji-bao-cuo/ai-ji-he-pian/"/>
-    <id>https://lhlsnowing.github.io/2023/06/02/gong-ju-ji-he-ji-bao-cuo/ai-ji-he-pian/</id>
-    <published>2023-06-02T15:53:52.000Z</published>
-    <updated>2023-07-02T12:29:27.563Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;services.msc 打开计算机的服务&lt;/p&gt;
-&lt;h1 id=&quot;一些资源链接，报错记录，文档等等&quot;&gt;&lt;a href=&quot;#一些资源链接，报错记录，文档等等&quot; class=&quot;headerlink&quot;</summary>
-        
-      
-    
-    
-    
-    <category term="资源整合" scheme="https://lhlsnowing.github.io/categories/%E8%B5%84%E6%BA%90%E6%95%B4%E5%90%88/"/>
-    
-    
-    <category term="资源整合" scheme="https://lhlsnowing.github.io/tags/%E8%B5%84%E6%BA%90%E6%95%B4%E5%90%88/"/>
-    
-    <category term="chatgpt" scheme="https://lhlsnowing.github.io/tags/chatgpt/"/>
-    
-    <category term="ai工具" scheme="https://lhlsnowing.github.io/tags/ai%E5%B7%A5%E5%85%B7/"/>
-    
-    <category term="插件" scheme="https://lhlsnowing.github.io/tags/%E6%8F%92%E4%BB%B6/"/>
-    
-    <category term="git push失败原因及解决" scheme="https://lhlsnowing.github.io/tags/git-push%E5%A4%B1%E8%B4%A5%E5%8E%9F%E5%9B%A0%E5%8F%8A%E8%A7%A3%E5%86%B3/"/>
-    
-    <category term="cs自学" scheme="https://lhlsnowing.github.io/tags/cs%E8%87%AA%E5%AD%A6/"/>
-    
-    <category term="证件照" scheme="https://lhlsnowing.github.io/tags/%E8%AF%81%E4%BB%B6%E7%85%A7/"/>
-    
-    <category term="文档" scheme="https://lhlsnowing.github.io/tags/%E6%96%87%E6%A1%A3/"/>
     
   </entry>
   
