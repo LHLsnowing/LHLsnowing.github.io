@@ -161,7 +161,7 @@ class MyPanel extends JPanel{
     }
 }
 ```
-## 线程 Thread
+## 七、线程 Thread
 外记快捷键 打开structure ： alt+7
 - Thread 实现了 Runnable接口
 >两种方法使用：
@@ -193,5 +193,20 @@ class Cat extends Thread{
     }
 }
 ```
-## Synchronized
+## 八、Synchronized
 加入synchronized同步 上锁
+
+## 九、LinkedHashMap和HashMap区别
+>开会时候这一块对于业务用不用讨论了，复习一下
+
+`LinkedHashMap` 和 `HashMap` 是 Java 中两个常见的哈希表实现。它们的主要区别在于对元素的迭代顺序和内部数据结构的不同。
+
+### 迭代顺序:
+- `HashMap` **不保证元素的迭代顺序**，不受插入顺序或键的顺序影响。迭代结果可能是随机的。
+- `LinkedHashMap` **保留了元素的插入顺序或最近访问顺序**（可通过构造函数参数指定）。迭代顺序与元素插入的顺序或最近访问的顺序相同。
+### 内部数据结构:
+- `HashMap` 内部使用数组和链表或红黑树实现，当链表长度过长时，链表会被转换为红黑树，以提高检索效率。
+- `LinkedHashMap` 继承自 `HashMap`，在 `HashMap` 的基础上通过双向链表维护了元素的顺序。
+由于 LinkedHashMap 需要维护额外的链表结构，因此在**插入和删除操作上相对于 HashMap 稍微更慢一些**。但在迭代访问时，LinkedHashMap 可以按照插入顺序或最近访问顺序提供更好的性能。
+
+因此，如果需要保留元素的插入顺序或访问顺序，并且迭代顺序对你的应用程序很重要，那么选择 LinkedHashMap 是一个更好的选择。如果仅需要高效的键值对存储和检索，并且不关心迭代顺序，那么 HashMap 可能更适合。

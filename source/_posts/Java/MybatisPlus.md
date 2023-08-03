@@ -39,3 +39,8 @@ MyBatis 是一种基于 Java 的 ORM (Object Relational Mapping) 框架，可以
 - MyBatis-Plus是一个MyBatis 的增强工具，在MyBatis的基础上做了增强，简化了开发
 
 [文档](https://thexb.notion.site/Mybatis-73730a62229347d08b1b4a021ae86eb4)
+
+--- 
+
+## 四、mybatis-plus中wrapper的用法
+[csdn详解](https://blog.csdn.net/qq_39715000/article/details/120090033#%E9%A1%B9%E7%9B%AE%E4%B8%AD%E5%AE%9E%E9%99%85%E5%BA%94%E7%94%A8%E4%BB%A3%E7%A0%81%E5%AE%9E%E4%BE%8B)

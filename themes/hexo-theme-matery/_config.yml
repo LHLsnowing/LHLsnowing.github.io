@@ -37,6 +37,9 @@ menu:
       - name: 数据结构
         url: /categories/数据结构/
         icon: fas fa-laptop
+      - name: 大神资源
+        url: https://pdai.tech/md/interview/x-interview.html
+        icon: fas fa-address-book
       # - name: Movies
       #   url: /movies
       #   icon: fas fa-film

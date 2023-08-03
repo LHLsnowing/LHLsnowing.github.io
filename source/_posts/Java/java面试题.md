@@ -628,3 +628,144 @@ AQS 的核心是通过一个阻塞队列（CLH Queue）来管理等待获取锁�
 3. **ReentrantLock 是 AQS 的一个具体实现**，利用 AQS 的框架提供了可重入锁的功能。
 4. AQS 通过阻塞队列和 CAS 操作实现并发安全性，用户可以通过继承 AQS 并重写特定方法来实现自定义的同步器。
 
+
+## 三、类加载
+
+> 类加载分为三个步骤：加载、连接、初始化。
+### 1.加载
+类加载指的是将class文件读入内存，并为之创建一个`java.lang.Class`对象，即程序中使用任何类时，系统都会为之建立一个`java.lang.Class`对象，系统中所有的类都是`java.lang.Class`的实例。
+**类的加载由类加载器完成，JVM提供的类加载器叫做系统类加载器，此外还可以通过继承ClassLoader基类来自定义类加载器。**
+**通常可以用如下几种方式加载类的二进制数据：**
+1. 从本地文件系统加载class文件。
+2. 从JAR包中加载class文件，如JAR包的数据库启驱动类。
+3. 通过网络加载class文件。
+4. 把一个Java源文件动态编译并执行加载。
+
+### 2.连接
+**连接阶段负责把类的二进制数据合并到JRE中，其又可分为如下三个阶段：**
+
+**验证**：确保加载的类信息符合JVM规范，无安全方面的问题。
+**准备**：为类的静态Field分配内存，并设置初始值。
+**解析**：将类的二进制数据中的符号引用替换成直接引用。
+
+### 3.初始化
+**该阶段主要是对静态Field进行初始化，在Java类中对静态Field指定初始值有两种方式：**
+声明时即指定初始值，如`static int a = 5`；
+使用静态代码块为静态Field指定初始值，如：`static{    b = 5;    }` 
+
+**JVM初始化一个类包含如下几个步骤**：
+1. 假如这个类还没有被加载和连接，则**程序先加载并连接该类**。
+2. 假如该类的直接父类还没有被初始化，则**先初始化其直接父类**。
+3. 假如类中有初始化语句，则**系统依次执行这些初始化语句**。
+所以JVM总是最先初始化`java.lang.Object`类。
+
+**类初始化的时机（对类进行主动引用时）**：
+1. 创建类的实例时（new、反射、反序列化）。
+2. 调用某个类的静态方法时。
+3. 使用某个类或接口的静态Field或对该Field赋值时。
+4. 使用反射来强制创建某个类或接口对应的java.lang.Class对象，如Class.forName("Person")
+5. 初始化某个类的子类时，此时该子类的所有父类都会被初始化。
+6. 直接使用java.exe运行某个主类时。
+
+## 四、反射
+- 什么是反射？**JAVA反射机制是在运行状态中，对于任意一个类，都能够知道这个类的所有属性和方法；对于任意一个对象，都能够调用它的任意一个方法和属性；这种动态获取的信息以及动态调用对象的方法的功能称为java语言的反射机制。**
+![](./java面试题/4-0.png)
+- 反射的使用？**在Java中，Class类与`java.lang.reflect`类库一起对反射技术进行了全力的支持。在反射包中，我们常用的类主要有 Constructor类表示的是Class 对象所表示的类的构造方法，利用它可以在运行时动态创建对象、 Field表示Class对象所表示的类的成员变量，通过它可以在运行时动态修改成员变量的属性值(包含private)、 Method表示Class对象所表示的类的成员方法，通过它可以动态调用对象的方法(包含private)Class类对象的获取**
+```java  
+ @Test
+    public void classTest() throws Exception {
+        // 获取Class对象的三种方式
+        logger.info("根据类名:  \t" + User.class);
+        logger.info("根据对象:  \t" + new User().getClass());
+        logger.info("根据全限定类名:\t" + Class.forName("com.test.User"));
+        // 常用的方法
+        logger.info("获取全限定类名:\t" + userClass.getName());
+        logger.info("获取类名:\t" + userClass.getSimpleName());
+        logger.info("实例化:\t" + userClass.newInstance());
+    }
+```
+Constructor类及其用法
+Field类及其用法
+Method类及其用法
+
+- getName、getCanonicalName与getSimpleName的区别?
+`getSimpleName`：只获取类名
+`getName`：类的全限定名，jvm中Class的表示，可以用于动态加载Class对象，例如`Class.forName`。
+`getCanonicalName`：返回更容易理解的表示，主要用于输出（toString）或log打印，大多数情况下和getName一样，但是在内部类、数组等类型的表示形式就不同了。
+
+
+## 五、什么是SPI机制？
+**SPI（Service Provider Interface），是JDK内置的一种 服务提供发现机制，可以用来启用框架扩展和替换组件，主要是被框架的开发人员使用，比如`java.sql.Driver`接口，其他不同厂商可以针对同一接口做出不同的实现，MySQL和PostgreSQL都有不同的实现提供给用户，而Java的SPI机制可以为某个接口寻找服务实现。Java中SPI机制主要思想是将装配的控制权移到程序之外，在模块化设计中这个机制尤其重要，其核心思想就是 解耦。**SPI整体机制图如下：
+
+![](./java面试题/5-0.png)
+
+## 六、a = a + b 与 a += b 的区别
++= 隐式的将加操作的结果类型强制转换为持有结果的类型。如果两个整型相加，如 byte、short 或者 int，首先会将它们提升到 `int` 类型，然后在执行加法操作。
+```java
+byte a = 127;
+byte b = 127;
+b = a + b; // error : cannot convert from int to byte
+b += a; // ok
+```
+(因为 a+b 操作会将 a、b 提升为 int 类型，所以将 int 类型赋值给 byte 就会编译出错)
+
+## 七、Java异常类层次结构
+`Throwable` 是 **Java 语言中所有错误与异常的超类**。 
+`Error` 类及其子类：程序中无法处理的错误，表示运行应用程序中出现了严重的错误。Exception 程序本身可以捕获并且可以处理的异常。
+`Exception` 这种异常又分为两类：运行时异常和编译时异常。
+
+![](./java面试题/7-0.png)
+
+## 八、Java 集合
+ 容器主要包括 Collection 和 Map 两种，Collection 存储着对象的集合，而 Map 存储着键值对(两个对象)的映射表。
+### 1.Collection
+#### 1）集合有哪些类？
+- `Set` `TreeSet` 基于红黑树实现，支持有序性操作，例如根据一个范围查找元素的操作。但是查找效率不如 HashSet，HashSet 查找的时间复杂度为 O(1)，TreeSet 则为 O(logN)。**HashSet 基于哈希表实现**，支持快速查找，但不支持有序性操作。并且失去了元素的插入顺序信息，也就是说使用 Iterator 遍历 HashSet 得到的结果是不确定的。**LinkedHashSet 具有 HashSet 的查找效率，且内部使用双向链表维护元素的插入顺序**。
+- `List` `ArrayList` 基于动态数组实现，支持随机访问。Vector 和 ArrayList 类似，但它是线程安全的。**LinkedList 基于双向链表实现，只能顺序访问，但是可以快速地在链表中间插入和删除元素。**不仅如此，LinkedList 还可以用作栈、队列和双向队列。
+- `Queue` `LinkedList` 可以用它来实现双向队列。PriorityQueue 基于堆结构实现，可以用它来实现优先队列。
+#### 2）ArrayList的底层？
+ArrayList实现了List接口，是顺序容器，即元素存放的数据与放进去的顺序相同，允许放入null元素，**底层通过数组实现**。除该类未实现同步外，其余跟Vector大致相同。每个ArrayList都有一个容量(capacity)，表示底层数组的实际大小，容器内存储元素的个数不能多于当前容量。当向容器中添加元素时，如果容量不足，容器会自动增大底层数组的大小。前面已经提过，Java泛型只是编译器提供的语法糖，所以这里的数组是一个Object数组，以便能够容纳任何类型的对象。
+
+#### 3）ArrayList自动扩容？
+每当向数组中添加元素时，都要去检查添加后元素的个数是否会超出当前数组的长度，如果超出，数组将会进行扩容，以满足添加数据的需求。数组扩容通过`ensureCapacity(int minCapacity)`方法来实现。在实际添加大量元素前，我也可以使用ensureCapacity来手动增加ArrayList实例的容量，以减少递增式再分配的数量。
+数组进行扩容时，会将老数组中的元素重新拷贝一份到新的数组中，每次数组容量的增长大约是其原容量的1.5倍。这种操作的代价是很高的，因此在实际使用时，我们应该尽量避免数组容量的扩张。当我们可预知要保存的元素的多少时，要在构造ArrayList实例时，就指定其容量，以避免数组扩容的发生。或者根据实际需求，通过调用ensureCapacity方法来手动增加ArrayList实例的容量。
+![](./java面试题/8-1-2.png)
+
+### 2.Map
+#### 1）Map有哪些类？
+- TreeMap 基于红黑树实现。
+- **HashMap 1.7基于哈希表实现，1.8基于数组+链表+红黑树**。
+- HashTable 和 HashMap 类似，但它是线程安全的，这意味着同一时刻多个线程可以同时写入 HashTable 并且不会导致数据不一致。它是遗留类，不应该去使用它。现在可以使用 `ConcurrentHashMap` 来支持线程安全，并且 ConcurrentHashMap 的效率会更高(1.7 ConcurrentHashMap 引入了分段锁, 1.8 引入了红黑树)。
+- LinkedHashMap 使用双向链表来维护元素的顺序，顺序为插入顺序或者最近最少使用(LRU)顺序。
+
+#### 2）JDK7 HashMap如何实现？
+哈希表有两种实现方式，一种开放地址方式(Open addressing)，另一种是冲突链表方式(Separate chaining with linked lists)。Java7 HashMap采用的是冲突链表方式。
+
+#### 3）JDK8 HashMap如何实现？
+根据 Java7 HashMap 的介绍，我们知道，查找的时候，根据 hash 值我们能够快速定位到数组的具体下标，但是之后的话，需要顺着链表一个个比较下去才能找到我们需要的，时间复杂度取决于链表的长度，为 O(n)。为了降低这部分的开销，在 Java8 中，当链表中的元素达到了 8 个时，会将链表转换为**红黑树**，在这些位置进行查找的时候可以**降低时间复杂度为 O(logN)**。
+
+![](./java面试题/8-2-3.png)
+
+#### 4）HashSet是如何实现的？
+HashSet是对HashMap的简单包装，对HashSet的函数调用都会转换成合适的HashMap方法//HashSet是对HashMap的简单包装
+```java
+public class HashSet<E>
+{
+	......
+	private transient HashMap<E,Object> map;//HashSet里面有一个HashMap
+    // Dummy value to associate with an Object in the backing Map
+    private static final Object PRESENT = new Object();
+    public HashSet() {
+        map = new HashMap<>();
+    }
+    ......
+    public boolean add(E e) {//简单的方法转换
+        return map.put(e, PRESENT)==null;
+    }
+    ......
+}
+```
+#### 5）什么是WeakHashMap?
+我们都知道**Java中内存是通过GC自动管理的**，GC会在程序运行过程中自动判断哪些对象是可以被回收的，并在合适的时机进行内存释放。GC判断某个对象是否可被回收的依据是，是否有有效的引用指向该对象。如果没有有效引用指向该对象(基本意味着不存在访问该对象的方式)，那么该对象就是可回收的。这里的有效引用 并不包括弱引用。也就是说，虽然弱引用可以用来访问对象，但进行垃圾回收时弱引用并不会被考虑在内，仅有弱引用指向的对象仍然会被GC回收。
+**WeakHashMap 内部是通过弱引用来管理entry的，弱引用的特性对应到 WeakHashMap 上意味着什么呢？**
+WeakHashMap 里的`entry`可能会被GC自动删除，即使程序员没有调用`remove()`或者`clear()`方法。WeakHashMap 的这个特点特别适用于需要缓存的场景。在缓存场景下，由于内存是有限的，不能缓存所有对象；对象缓存命中可以提高系统效率，但缓存MISS也不会造成错误，因为可以通过计算重新得到。

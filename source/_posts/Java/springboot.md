@@ -5,6 +5,8 @@ tags: [Springboot,RESTful]
 categories: [Java,Springboot]
 ---
 
+[SpringBoot自动配置原理](https://zhuanlan.zhihu.com/p/55637237)
+
 Ctrl+shift+o 刷新maven
 ### 一、springboot项目启动不自动启动内嵌tomcat问题
 
@@ -213,5 +215,7 @@ Spring Boot支持多种配置文件格式，如`application.properties`或`appli
 
 以上只是一个常见的Spring Boot项目结构，实际项目中还可以根据需要引入其他模块、分层或功能组件。
 
+---
+![总学习](./springboot/0-0-0.png)
 ---
 [链接学习地址](https://thexb.notion.site/SpringBoot-Vue-7c90c8fd30c244d88604a240e608fcce)
