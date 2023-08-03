@@ -474,14 +474,14 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>Word Count:&nbsp;&nbsp;
-                    14.5k
+                    16.3k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>Read Times:&nbsp;&nbsp;
-                    52 Min
+                    58 Min
                 </div>
                 
 
@@ -1028,6 +1028,48 @@ Task 8 is completed.<span aria-hidden="true" class="line-numbers-rows"><span></s
 </ul>
 <h2 id="五、什么是SPI机制？"><a href="#五、什么是SPI机制？" class="headerlink" title="五、什么是SPI机制？"></a>五、什么是SPI机制？</h2><p><strong>SPI（Service Provider Interface），是JDK内置的一种 服务提供发现机制，可以用来启用框架扩展和替换组件，主要是被框架的开发人员使用，比如<code>java.sql.Driver</code>接口，其他不同厂商可以针对同一接口做出不同的实现，MySQL和PostgreSQL都有不同的实现提供给用户，而Java的SPI机制可以为某个接口寻找服务实现。Java中SPI机制主要思想是将装配的控制权移到程序之外，在模块化设计中这个机制尤其重要，其核心思想就是 解耦。</strong>SPI整体机制图如下：</p>
 <p><img src="/2023/07/16/java/java-mian-shi-ti/5-0.png"></p>
+<h2 id="六、a-x3D-a-b-与-a-x3D-b-的区别"><a href="#六、a-x3D-a-b-与-a-x3D-b-的区别" class="headerlink" title="六、a = a + b 与 a += b 的区别"></a>六、a = a + b 与 a += b 的区别</h2><p>+= 隐式的将加操作的结果类型强制转换为持有结果的类型。如果两个整型相加，如 byte、short 或者 int，首先会将它们提升到 <code>int</code> 类型，然后在执行加法操作。</p>
+<pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token keyword">byte</span> a <span class="token operator">=</span> <span class="token number">127</span><span class="token punctuation">;</span>
+<span class="token keyword">byte</span> b <span class="token operator">=</span> <span class="token number">127</span><span class="token punctuation">;</span>
+b <span class="token operator">=</span> a <span class="token operator">+</span> b<span class="token punctuation">;</span> <span class="token comment">// error : cannot convert from int to byte</span>
+b <span class="token operator">+=</span> a<span class="token punctuation">;</span> <span class="token comment">// ok</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+<p>(因为 a+b 操作会将 a、b 提升为 int 类型，所以将 int 类型赋值给 byte 就会编译出错)</p>
+<h2 id="七、Java异常类层次结构"><a href="#七、Java异常类层次结构" class="headerlink" title="七、Java异常类层次结构"></a>七、Java异常类层次结构</h2><p><code>Throwable</code> 是 <strong>Java 语言中所有错误与异常的超类</strong>。<br><code>Error</code> 类及其子类：程序中无法处理的错误，表示运行应用程序中出现了严重的错误。Exception 程序本身可以捕获并且可以处理的异常。<br><code>Exception</code> 这种异常又分为两类：运行时异常和编译时异常。</p>
+<p><img src="/2023/07/16/java/java-mian-shi-ti/7-0.png"></p>
+<h2 id="八、Java-集合"><a href="#八、Java-集合" class="headerlink" title="八、Java 集合"></a>八、Java 集合</h2><p> 容器主要包括 Collection 和 Map 两种，Collection 存储着对象的集合，而 Map 存储着键值对(两个对象)的映射表。</p>
+<h3 id="1-Collection"><a href="#1-Collection" class="headerlink" title="1.Collection"></a>1.Collection</h3><h4 id="1）集合有哪些类？"><a href="#1）集合有哪些类？" class="headerlink" title="1）集合有哪些类？"></a>1）集合有哪些类？</h4><ul>
+<li><code>Set</code> <code>TreeSet</code> 基于红黑树实现，支持有序性操作，例如根据一个范围查找元素的操作。但是查找效率不如 HashSet，HashSet 查找的时间复杂度为 O(1)，TreeSet 则为 O(logN)。<strong>HashSet 基于哈希表实现</strong>，支持快速查找，但不支持有序性操作。并且失去了元素的插入顺序信息，也就是说使用 Iterator 遍历 HashSet 得到的结果是不确定的。<strong>LinkedHashSet 具有 HashSet 的查找效率，且内部使用双向链表维护元素的插入顺序</strong>。</li>
+<li><code>List</code> <code>ArrayList</code> 基于动态数组实现，支持随机访问。Vector 和 ArrayList 类似，但它是线程安全的。<strong>LinkedList 基于双向链表实现，只能顺序访问，但是可以快速地在链表中间插入和删除元素。</strong>不仅如此，LinkedList 还可以用作栈、队列和双向队列。</li>
+<li><code>Queue</code> <code>LinkedList</code> 可以用它来实现双向队列。PriorityQueue 基于堆结构实现，可以用它来实现优先队列。</li>
+</ul>
+<h4 id="2）ArrayList的底层？"><a href="#2）ArrayList的底层？" class="headerlink" title="2）ArrayList的底层？"></a>2）ArrayList的底层？</h4><p>ArrayList实现了List接口，是顺序容器，即元素存放的数据与放进去的顺序相同，允许放入null元素，<strong>底层通过数组实现</strong>。除该类未实现同步外，其余跟Vector大致相同。每个ArrayList都有一个容量(capacity)，表示底层数组的实际大小，容器内存储元素的个数不能多于当前容量。当向容器中添加元素时，如果容量不足，容器会自动增大底层数组的大小。前面已经提过，Java泛型只是编译器提供的语法糖，所以这里的数组是一个Object数组，以便能够容纳任何类型的对象。</p>
+<h4 id="3）ArrayList自动扩容？"><a href="#3）ArrayList自动扩容？" class="headerlink" title="3）ArrayList自动扩容？"></a>3）ArrayList自动扩容？</h4><p>每当向数组中添加元素时，都要去检查添加后元素的个数是否会超出当前数组的长度，如果超出，数组将会进行扩容，以满足添加数据的需求。数组扩容通过<code>ensureCapacity(int minCapacity)</code>方法来实现。在实际添加大量元素前，我也可以使用ensureCapacity来手动增加ArrayList实例的容量，以减少递增式再分配的数量。<br>数组进行扩容时，会将老数组中的元素重新拷贝一份到新的数组中，每次数组容量的增长大约是其原容量的1.5倍。这种操作的代价是很高的，因此在实际使用时，我们应该尽量避免数组容量的扩张。当我们可预知要保存的元素的多少时，要在构造ArrayList实例时，就指定其容量，以避免数组扩容的发生。或者根据实际需求，通过调用ensureCapacity方法来手动增加ArrayList实例的容量。<br><img src="/2023/07/16/java/java-mian-shi-ti/8-1-2.png"></p>
+<h3 id="2-Map"><a href="#2-Map" class="headerlink" title="2.Map"></a>2.Map</h3><h4 id="1）Map有哪些类？"><a href="#1）Map有哪些类？" class="headerlink" title="1）Map有哪些类？"></a>1）Map有哪些类？</h4><ul>
+<li>TreeMap 基于红黑树实现。</li>
+<li><strong>HashMap 1.7基于哈希表实现，1.8基于数组+链表+红黑树</strong>。</li>
+<li>HashTable 和 HashMap 类似，但它是线程安全的，这意味着同一时刻多个线程可以同时写入 HashTable 并且不会导致数据不一致。它是遗留类，不应该去使用它。现在可以使用 <code>ConcurrentHashMap</code> 来支持线程安全，并且 ConcurrentHashMap 的效率会更高(1.7 ConcurrentHashMap 引入了分段锁, 1.8 引入了红黑树)。</li>
+<li>LinkedHashMap 使用双向链表来维护元素的顺序，顺序为插入顺序或者最近最少使用(LRU)顺序。</li>
+</ul>
+<h4 id="2）JDK7-HashMap如何实现？"><a href="#2）JDK7-HashMap如何实现？" class="headerlink" title="2）JDK7 HashMap如何实现？"></a>2）JDK7 HashMap如何实现？</h4><p>哈希表有两种实现方式，一种开放地址方式(Open addressing)，另一种是冲突链表方式(Separate chaining with linked lists)。Java7 HashMap采用的是冲突链表方式。</p>
+<h4 id="3）JDK8-HashMap如何实现？"><a href="#3）JDK8-HashMap如何实现？" class="headerlink" title="3）JDK8 HashMap如何实现？"></a>3）JDK8 HashMap如何实现？</h4><p>根据 Java7 HashMap 的介绍，我们知道，查找的时候，根据 hash 值我们能够快速定位到数组的具体下标，但是之后的话，需要顺着链表一个个比较下去才能找到我们需要的，时间复杂度取决于链表的长度，为 O(n)。为了降低这部分的开销，在 Java8 中，当链表中的元素达到了 8 个时，会将链表转换为<strong>红黑树</strong>，在这些位置进行查找的时候可以**降低时间复杂度为 O(logN)**。</p>
+<p><img src="/2023/07/16/java/java-mian-shi-ti/8-2-3.png"></p>
+<h4 id="4）HashSet是如何实现的？"><a href="#4）HashSet是如何实现的？" class="headerlink" title="4）HashSet是如何实现的？"></a>4）HashSet是如何实现的？</h4><p>HashSet是对HashMap的简单包装，对HashSet的函数调用都会转换成合适的HashMap方法//HashSet是对HashMap的简单包装</p>
+<pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">HashSet</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">E</span><span class="token punctuation">&gt;</span></span>
+<span class="token punctuation">{</span>
+	<span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>
+	<span class="token keyword">private</span> <span class="token keyword">transient</span> <span class="token class-name">HashMap</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">E</span><span class="token punctuation">,</span><span class="token class-name">Object</span><span class="token punctuation">&gt;</span></span> map<span class="token punctuation">;</span><span class="token comment">//HashSet里面有一个HashMap</span>
+    <span class="token comment">// Dummy value to associate with an Object in the backing Map</span>
+    <span class="token keyword">private</span> <span class="token keyword">static</span> <span class="token keyword">final</span> <span class="token class-name">Object</span> <span class="token constant">PRESENT</span> <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Object</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">public</span> <span class="token class-name">HashSet</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        map <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">HashMap</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token punctuation">&gt;</span></span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>
+    <span class="token keyword">public</span> <span class="token keyword">boolean</span> <span class="token function">add</span><span class="token punctuation">(</span><span class="token class-name">E</span> e<span class="token punctuation">)</span> <span class="token punctuation">{</span><span class="token comment">//简单的方法转换</span>
+        <span class="token keyword">return</span> map<span class="token punctuation">.</span><span class="token function">put</span><span class="token punctuation">(</span>e<span class="token punctuation">,</span> <span class="token constant">PRESENT</span><span class="token punctuation">)</span><span class="token operator">==</span><span class="token keyword">null</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h4 id="5）什么是WeakHashMap"><a href="#5）什么是WeakHashMap" class="headerlink" title="5）什么是WeakHashMap?"></a>5）什么是WeakHashMap?</h4><p>我们都知道<strong>Java中内存是通过GC自动管理的</strong>，GC会在程序运行过程中自动判断哪些对象是可以被回收的，并在合适的时机进行内存释放。GC判断某个对象是否可被回收的依据是，是否有有效的引用指向该对象。如果没有有效引用指向该对象(基本意味着不存在访问该对象的方式)，那么该对象就是可回收的。这里的有效引用 并不包括弱引用。也就是说，虽然弱引用可以用来访问对象，但进行垃圾回收时弱引用并不会被考虑在内，仅有弱引用指向的对象仍然会被GC回收。<br><strong>WeakHashMap 内部是通过弱引用来管理entry的，弱引用的特性对应到 WeakHashMap 上意味着什么呢？</strong><br>WeakHashMap 里的<code>entry</code>可能会被GC自动删除，即使程序员没有调用<code>remove()</code>或者<code>clear()</code>方法。WeakHashMap 的这个特点特别适用于需要缓存的场景。在缓存场景下，由于内存是有限的，不能缓存所有对象；对象缓存命中可以提高系统效率，但缓存MISS也不会造成错误，因为可以通过计算重新得到。</p>
 
                 
             </div>
@@ -1461,7 +1503,7 @@ Task 8 is completed.<span aria-hidden="true" class="line-numbers-rows"><span></s
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;Total Words:&nbsp;<span
-                        class="white-color">59.7k</span>
+                        class="white-color">63.9k</span>
             
             
             

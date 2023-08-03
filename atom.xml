@@ -6,7 +6,7 @@
   <link href="https://lhlsnowing.github.io/atom.xml" rel="self"/>
   
   <link href="https://lhlsnowing.github.io/"/>
-  <updated>2023-07-24T11:10:04.949Z</updated>
+  <updated>2023-08-03T14:28:28.666Z</updated>
   <id>https://lhlsnowing.github.io/</id>
   
   <author>
@@ -15,6 +15,91 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>JVM</title>
+    <link href="https://lhlsnowing.github.io/2023/08/03/java/jvm/"/>
+    <id>https://lhlsnowing.github.io/2023/08/03/java/jvm/</id>
+    <published>2023-08-03T12:27:55.000Z</published>
+    <updated>2023-08-03T14:28:28.666Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;一、JVM跨平台&quot;&gt;&lt;a href=&quot;#一、JVM跨平台&quot; class=&quot;headerlink&quot; title=&quot;一、JVM跨平台&quot;&gt;&lt;/a&gt;一、JVM跨平台&lt;/h2&gt;&lt;h3 id=&quot;1-JVM原理&quot;&gt;&lt;a href=&quot;#1-JVM原理&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="Java" scheme="https://lhlsnowing.github.io/categories/Java/"/>
+    
+    <category term="JVM" scheme="https://lhlsnowing.github.io/categories/Java/JVM/"/>
+    
+    
+    <category term="Java" scheme="https://lhlsnowing.github.io/tags/Java/"/>
+    
+    <category term="JVM" scheme="https://lhlsnowing.github.io/tags/JVM/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Java面试题_2</title>
+    <link href="https://lhlsnowing.github.io/2023/07/30/java/java-mian-shi-ti-2/"/>
+    <id>https://lhlsnowing.github.io/2023/07/30/java/java-mian-shi-ti-2/</id>
+    <published>2023-07-30T03:35:02.000Z</published>
+    <updated>2023-07-30T07:16:07.793Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;一、&quot;&gt;&lt;a href=&quot;#一、&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="Java" scheme="https://lhlsnowing.github.io/categories/Java/"/>
+    
+    <category term="Java面试题" scheme="https://lhlsnowing.github.io/categories/Java/Java%E9%9D%A2%E8%AF%95%E9%A2%98/"/>
+    
+    
+    <category term="Java" scheme="https://lhlsnowing.github.io/tags/Java/"/>
+    
+    <category term="Java面试题" scheme="https://lhlsnowing.github.io/tags/Java%E9%9D%A2%E8%AF%95%E9%A2%98/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>工具资源备份——1</title>
+    <link href="https://lhlsnowing.github.io/2023/07/29/gong-ju-ji-he-ji-bao-cuo/gong-ju-ji-he-2/"/>
+    <id>https://lhlsnowing.github.io/2023/07/29/gong-ju-ji-he-ji-bao-cuo/gong-ju-ji-he-2/</id>
+    <published>2023-07-29T07:07:19.000Z</published>
+    <updated>2023-07-29T13:29:59.370Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;一、Aconvert&quot;&gt;&lt;a href=&quot;#一、Aconvert&quot; class=&quot;headerlink&quot; title=&quot;一、Aconvert&quot;&gt;&lt;/a&gt;一、Aconvert&lt;/h2&gt;&lt;p&gt;多功能文件转换格式&lt;br&gt;&lt;a</summary>
+        
+      
+    
+    
+    
+    <category term="资源整合" scheme="https://lhlsnowing.github.io/categories/%E8%B5%84%E6%BA%90%E6%95%B4%E5%90%88/"/>
+    
+    
+    <category term="资源整合" scheme="https://lhlsnowing.github.io/tags/%E8%B5%84%E6%BA%90%E6%95%B4%E5%90%88/"/>
+    
+    <category term="pdf格式等等转换" scheme="https://lhlsnowing.github.io/tags/pdf%E6%A0%BC%E5%BC%8F%E7%AD%89%E7%AD%89%E8%BD%AC%E6%8D%A2/"/>
+    
+  </entry>
   
   <entry>
     <title>docker</title>
@@ -143,7 +228,7 @@
     <link href="https://lhlsnowing.github.io/2023/07/16/java/java-mian-shi-ti/"/>
     <id>https://lhlsnowing.github.io/2023/07/16/java/java-mian-shi-ti/</id>
     <published>2023-07-16T05:20:50.000Z</published>
-    <updated>2023-07-26T14:49:01.611Z</updated>
+    <updated>2023-07-30T03:33:12.387Z</updated>
     
     
       
@@ -496,100 +581,6 @@
     <category term="Java" scheme="https://lhlsnowing.github.io/tags/Java/"/>
     
     <category term="MybatisPlus" scheme="https://lhlsnowing.github.io/tags/MybatisPlus/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Servlet</title>
-    <link href="https://lhlsnowing.github.io/2023/06/20/java/servlet/"/>
-    <id>https://lhlsnowing.github.io/2023/06/20/java/servlet/</id>
-    <published>2023-06-20T06:16:40.000Z</published>
-    <updated>2023-07-01T01:33:13.094Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;Servlet学习&quot;&gt;&lt;a href=&quot;#Servlet学习&quot; class=&quot;headerlink&quot;</summary>
-        
-      
-    
-    
-    
-    <category term="Java" scheme="https://lhlsnowing.github.io/categories/Java/"/>
-    
-    <category term="Servlet" scheme="https://lhlsnowing.github.io/categories/Java/Servlet/"/>
-    
-    
-    <category term="Java" scheme="https://lhlsnowing.github.io/tags/Java/"/>
-    
-    <category term="Servlet" scheme="https://lhlsnowing.github.io/tags/Servlet/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>java小记_3</title>
-    <link href="https://lhlsnowing.github.io/2023/06/20/java/java-xiao-ji-3/"/>
-    <id>https://lhlsnowing.github.io/2023/06/20/java/java-xiao-ji-3/</id>
-    <published>2023-06-20T01:07:04.000Z</published>
-    <updated>2023-06-24T05:57:28.901Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;java的第三篇啦&quot;&gt;&lt;a href=&quot;#java的第三篇啦&quot; class=&quot;headerlink&quot; title=&quot;java的第三篇啦&quot;&gt;&lt;/a&gt;java的第三篇啦&lt;/h1&gt;&lt;p&gt;有部分笔记不是很详细，记在心里即可&lt;/p&gt;
-&lt;h2</summary>
-        
-      
-    
-    
-    
-    <category term="Java" scheme="https://lhlsnowing.github.io/categories/Java/"/>
-    
-    <category term="java第三篇" scheme="https://lhlsnowing.github.io/categories/Java/java%E7%AC%AC%E4%B8%89%E7%AF%87/"/>
-    
-    
-    <category term="Java" scheme="https://lhlsnowing.github.io/tags/Java/"/>
-    
-    <category term="List" scheme="https://lhlsnowing.github.io/tags/List/"/>
-    
-    <category term="Set" scheme="https://lhlsnowing.github.io/tags/Set/"/>
-    
-    <category term="Map" scheme="https://lhlsnowing.github.io/tags/Map/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Vue3变化</title>
-    <link href="https://lhlsnowing.github.io/2023/06/11/qian-duan/vue3-bian-hua/"/>
-    <id>https://lhlsnowing.github.io/2023/06/11/qian-duan/vue3-bian-hua/</id>
-    <published>2023-06-11T08:47:17.000Z</published>
-    <updated>2023-06-24T06:06:05.833Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h2 id=&quot;Vue3变化&quot;&gt;&lt;a href=&quot;#Vue3变化&quot; class=&quot;headerlink&quot;</summary>
-        
-      
-    
-    
-    
-    <category term="前端" scheme="https://lhlsnowing.github.io/categories/%E5%89%8D%E7%AB%AF/"/>
-    
-    <category term="Vue" scheme="https://lhlsnowing.github.io/categories/%E5%89%8D%E7%AB%AF/Vue/"/>
-    
-    
-    <category term="前端" scheme="https://lhlsnowing.github.io/tags/%E5%89%8D%E7%AB%AF/"/>
-    
-    <category term="Vue3变化" scheme="https://lhlsnowing.github.io/tags/Vue3%E5%8F%98%E5%8C%96/"/>
-    
-    <category term="axios全局配置" scheme="https://lhlsnowing.github.io/tags/axios%E5%85%A8%E5%B1%80%E9%85%8D%E7%BD%AE/"/>
     
   </entry>
   

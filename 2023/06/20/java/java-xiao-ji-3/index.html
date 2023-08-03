@@ -482,14 +482,14 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>Word Count:&nbsp;&nbsp;
-                    871
+                    1.3k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>Read Times:&nbsp;&nbsp;
-                    3 Min
+                    5 Min
                 </div>
                 
 
@@ -639,7 +639,7 @@ set<span class="token punctuation">.</span><span class="token function">add</spa
     <span class="token punctuation">}</span>
 <span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre></li>
 </ol>
-<h2 id="线程-Thread"><a href="#线程-Thread" class="headerlink" title="线程 Thread"></a>线程 Thread</h2><p>外记快捷键 打开structure ： alt+7</p>
+<h2 id="七、线程-Thread"><a href="#七、线程-Thread" class="headerlink" title="七、线程 Thread"></a>七、线程 Thread</h2><p>外记快捷键 打开structure ： alt+7</p>
 <ul>
 <li>Thread 实现了 Runnable接口<blockquote>
 <p>两种方法使用：</p>
@@ -673,7 +673,20 @@ set<span class="token punctuation">.</span><span class="token function">add</spa
     <span class="token punctuation">}</span>
 <span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre></li>
 </ol>
-<h2 id="Synchronized"><a href="#Synchronized" class="headerlink" title="Synchronized"></a>Synchronized</h2><p>加入synchronized同步 上锁</p>
+<h2 id="八、Synchronized"><a href="#八、Synchronized" class="headerlink" title="八、Synchronized"></a>八、Synchronized</h2><p>加入synchronized同步 上锁</p>
+<h2 id="九、LinkedHashMap和HashMap区别"><a href="#九、LinkedHashMap和HashMap区别" class="headerlink" title="九、LinkedHashMap和HashMap区别"></a>九、LinkedHashMap和HashMap区别</h2><blockquote>
+<p>开会时候这一块对于业务用不用讨论了，复习一下</p>
+</blockquote>
+<p><code>LinkedHashMap</code> 和 <code>HashMap</code> 是 Java 中两个常见的哈希表实现。它们的主要区别在于对元素的迭代顺序和内部数据结构的不同。</p>
+<h3 id="迭代顺序"><a href="#迭代顺序" class="headerlink" title="迭代顺序:"></a>迭代顺序:</h3><ul>
+<li><code>HashMap</code> <strong>不保证元素的迭代顺序</strong>，不受插入顺序或键的顺序影响。迭代结果可能是随机的。</li>
+<li><code>LinkedHashMap</code> <strong>保留了元素的插入顺序或最近访问顺序</strong>（可通过构造函数参数指定）。迭代顺序与元素插入的顺序或最近访问的顺序相同。</li>
+</ul>
+<h3 id="内部数据结构"><a href="#内部数据结构" class="headerlink" title="内部数据结构:"></a>内部数据结构:</h3><ul>
+<li><code>HashMap</code> 内部使用数组和链表或红黑树实现，当链表长度过长时，链表会被转换为红黑树，以提高检索效率。</li>
+<li><code>LinkedHashMap</code> 继承自 <code>HashMap</code>，在 <code>HashMap</code> 的基础上通过双向链表维护了元素的顺序。<br>由于 LinkedHashMap 需要维护额外的链表结构，因此在<strong>插入和删除操作上相对于 HashMap 稍微更慢一些</strong>。但在迭代访问时，LinkedHashMap 可以按照插入顺序或最近访问顺序提供更好的性能。</li>
+</ul>
+<p>因此，如果需要保留元素的插入顺序或访问顺序，并且迭代顺序对你的应用程序很重要，那么选择 LinkedHashMap 是一个更好的选择。如果仅需要高效的键值对存储和检索，并且不关心迭代顺序，那么 HashMap 可能更适合。</p>
 
                 
             </div>
@@ -1119,7 +1132,7 @@ set<span class="token punctuation">.</span><span class="token function">add</spa
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;Total Words:&nbsp;<span
-                        class="white-color">59.7k</span>
+                        class="white-color">63.9k</span>
             
             
             
