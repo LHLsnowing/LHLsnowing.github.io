@@ -61,9 +61,9 @@
 
     <script src="/libs/jquery/jquery-3.6.0.min.js"></script>
 
-<meta name="generator" content="Hexo 6.3.0">
+<meta name="generator" content="Hexo 6.3.0"><link rel="alternate" href="/atom.xml" title="落雪的小屋" type="application/atom+xml">
+
 <style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
-<link rel="alternate" href="/atom.xml" title="落雪的小屋" type="application/atom+xml">
 </head>
 
 
@@ -474,14 +474,14 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>Word Count:&nbsp;&nbsp;
-                    2.1k
+                    3.7k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>Read Times:&nbsp;&nbsp;
-                    7 Min
+                    13 Min
                 </div>
                 
 
@@ -592,7 +592,48 @@
 <li>Old GC / Major GC：负责对老年代进行垃圾回收，目前只有CMS垃圾收集器会单独对老年代进行垃圾回收，其他垃圾回收是整堆回收顺带老年回收了</li>
 <li>Full GC：整堆回收，也会对堆方法区回收</li>
 </ul>
-<h4 id="4）为啥JVM整个垃圾回收？"><a href="#4）为啥JVM整个垃圾回收？" class="headerlink" title="4）为啥JVM整个垃圾回收？"></a>4）为啥JVM整个垃圾回收？</h4>
+<h4 id="4）为啥JVM整个垃圾回收？"><a href="#4）为啥JVM整个垃圾回收？" class="headerlink" title="4）为啥JVM整个垃圾回收？"></a>4）为啥JVM整个垃圾回收？</h4><h5 id="引用计数法"><a href="#引用计数法" class="headerlink" title="引用计数法"></a>引用计数法</h5><p>计数器为0就是垃圾对象，但是需要额外空间，无法解决循环引用</p>
+<h5 id="可达性分析法"><a href="#可达性分析法" class="headerlink" title="可达性分析法"></a>可达性分析法</h5><p>一堆GC Root为起始点，一层层找对象，被找到的对象就是存活对象，其他不可达的就是垃圾对象</p>
+<hr>
+<h5 id="标记-清除（Mark-Sweep）算法"><a href="#标记-清除（Mark-Sweep）算法" class="headerlink" title="标记-清除（Mark-Sweep）算法"></a>标记-清除（Mark-Sweep）算法</h5><p>效率不高，有内存碎片</p>
+<h5 id="复制（Copying）算法"><a href="#复制（Copying）算法" class="headerlink" title="复制（Copying）算法"></a>复制（Copying）算法</h5><p>将可达对象复制到没被使用的内存中，然后清除内存块中所有对象。<br>缺点呢：就是用内存多点</p>
+<h5 id="标记-整理（Mark-Compact）算法"><a href="#标记-整理（Mark-Compact）算法" class="headerlink" title="标记-整理（Mark-Compact）算法"></a>标记-整理（Mark-Compact）算法</h5><p>GC Roots找到并标记，将内存移动到一端，最后清理边界外所有的空间<br><img src="/2023/08/03/java/jvm/2-4-4-1.png" alt="以上三种方法总结"></p>
+<h3 id="5-常见的垃圾收集器"><a href="#5-常见的垃圾收集器" class="headerlink" title="5.常见的垃圾收集器"></a>5.常见的垃圾收集器</h3><p><img src="/2023/08/03/java/jvm/5-0.png"><br><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1he4y1e7nW/?p=27&amp;spm_id_from=pageDriver&amp;vd_source=27965c9221f395745c5958a4e2b71636">详细讲解</a></p>
+<h4 id="1）-STW"><a href="#1）-STW" class="headerlink" title="1）.STW"></a>1）.STW</h4><p>STW 是指在程序执行过程中，垃圾回收器（Garbage Collector）停止应用程序的执行，并<strong>暂停所有线程的运行</strong>。在这段时间内，<strong>应用程序中的所有线程都会被暂停</strong>，不再进行任何操作。</p>
+<p>STW 是为了进行安全且有效的垃圾回收而必要的操作。在垃圾回收过程中，需要检查和清理不再使用的对象，并释放相应的内存资源。为了确保垃圾回收的正确性，垃圾回收器需要停止应用程序的执行，以防止对象的引用关系发生变化。</p>
+<p>在 STW 的过程中，除了垃圾回收器以外，其他与应用程序相关的线程（包括主线程）都会被暂停。这意味着应用程序无法响应任何请求，包括用户输入、网络请求等，直到垃圾回收完成并恢复应用程序的执行。</p>
+<p>STW 通常会对应用程序的性能产生一定的影响，尤其是在执行时间较长且频繁的垃圾回收时。为了最小化 STW 对应用程序的影响，垃圾回收器的实现通常会采用一些优化策略，如分代回收、并发标记等。</p>
+<blockquote>
+<p><strong>STW 是发生在应用程序层面的暂停，而不是操作系统级别</strong>的。对于用户来说，这种中断可能会产生延迟或卡顿的感觉，但实际上是由垃圾回收器进行必要的清理工作以确保应用程序的稳定性和性能。</p>
+</blockquote>
+<h4 id="2）-CMS并发标记清除算法"><a href="#2）-CMS并发标记清除算法" class="headerlink" title="2）.CMS并发标记清除算法"></a>2）.CMS并发标记清除算法</h4><p><strong>CMS（Concurrent Mark Sweep）是一种并发标记清除算法</strong>，用于在Java虚拟机中进行垃圾回收。</p>
+<p>CMS算法的目标是减少垃圾回收引起的应用程序停顿时间。相比于传统的标记-清除（Mark-Sweep）算法，CMS使用了并发标记和并发清除的方式，在很大程度上减少了应用程序的停顿时间。</p>
+<p>CMS算法的执行过程分为以下几个阶段：</p>
+<ul>
+<li><strong>初始标记（Initial Mark）</strong>：在此阶段中，垃圾回收器会暂停应用程序的执行，并标记与根对象直接关联的对象。这个阶段是短暂的，对应用程序的停顿时间影响较小。</li>
+<li><strong>并发标记（Concurrent Mark）</strong>：在此阶段中，垃圾回收器会在应用程序正常运行的同时，对堆中的对象进行标记操作。这个阶段的执行是与应用程序并发进行的，不会导致应用程序停顿。</li>
+<li><strong>重新标记（Remark）</strong>：在并发标记阶段结束后，垃圾回收器会再次暂停应用程序的执行，并完成标记操作。这个阶段的停顿时间通常会比初始标记略长，但相对较短。</li>
+<li><strong>并发清除（Concurrent Sweep）</strong>：在完成重新标记后，垃圾回收器会在与应用程序并发的情况下，将标记为垃圾的对象进行清除。这个阶段不会产生明显的停顿。</li>
+</ul>
+<p>CMS算法的优点是<strong>可以减少应用程序的停顿时间，对于具有较大堆内存且注重低延迟的应用程序非常有用</strong>。然而，CMS算法也有一些缺点，如可能会因为并发导致CPU资源争夺、清理过程可能导致碎片问题等。</p>
+<blockquote>
+<p>随着Java虚拟机的不断发展和引入新的垃圾回收器，如G1（Garbage-First）垃圾回收器，CMS算法已经逐渐被取代或改进。不同的垃圾回收器适用于不同的场景，根据具体的应用需求和性能特点选择合适的垃圾回收器是很重要的。</p>
+</blockquote>
+<h4 id="3）-G1垃圾回收器"><a href="#3）-G1垃圾回收器" class="headerlink" title="3）.G1垃圾回收器"></a>3）.G1垃圾回收器</h4><p><strong>G1（Garbage-First）是一种垃圾回收器，是在Java虚拟机中使用的一种现代、并发的垃圾回收算法。</strong></p>
+<p>G1垃圾回收器的设计目标是<strong>减少长时间停顿（Stop-The-World）的时间，同时保持高吞吐量</strong>。它主要针对大堆内存环境下的应用程序进行优化，适用于具有大量数据和较低延迟要求的应用。</p>
+<p>G1垃圾回收器的特点包括：</p>
+<ul>
+<li><strong>分代回收</strong>：G1将堆内存划分为多个区域（Region），其中包括年轻代和老年代。这样可以更加灵活地选择需要进行垃圾回收的区域，提高效率。</li>
+<li><strong>并发标记</strong>：G1在标记阶段采用并发标记的方式，与应用程序并发执行，减少停顿时间。它使用了一种叫做”并发标记线程”的机制，负责在后台标记垃圾对象。</li>
+<li><strong>垃圾优先（Garbage-First）</strong>：G1垃圾回收器采用了一种基于“回收效益”的策略，即优先回收垃圾最多的区域。这样可以最大限度地减少整体堆空间中的垃圾。</li>
+<li><strong>碎片整理</strong>：G1垃圾回收器会对堆内存进行可达性分析，并执行一些后台线程来进行碎片整理操作，以减少堆内存的碎片化问题。</li>
+</ul>
+<p>G1垃圾回收器的使用可以通过JVM参数进行配置，例如设置”<code>-XX:+UseG1GC</code>“来使用G1垃圾回收器。</p>
+<blockquote>
+<p>G1垃圾回收器虽然在大多数情况下表现出色，但并不适用于所有的应用场景。在某些特殊的情况下，可能需要根据具体的应用需求选择其他类型的垃圾回收器。因此，在选择和配置垃圾回收器时，需要考虑应用程序的内存使用情况、延迟要求、吞吐量需求等因素。</p>
+</blockquote>
+<p>这里边有每一个方块是一个region，堆内存会分为2048个region</p>
+
                 
             </div>
             <hr/>
@@ -740,30 +781,29 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="far fa-dot-circle"></i>&nbsp;Current
-            </div>
+                <i class="fas fa-chevron-left"></i>&nbsp;Previous</div>
             <div class="card">
-                <a href="/2023/08/03/java/jvm/">
+                <a href="/2023/08/04/java/xiao-xi-dui-lie/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/9.jpg" class="responsive-img" alt="JVM">
+                        <img src="/medias/featureimages/13.jpg" class="responsive-img" alt="MQ 消息队列">
                         
-                        <span class="card-title">JVM</span>
+                        <span class="card-title">MQ 消息队列</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            简述JVM
+                            消息队列
                         
                     </div>
                     <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2023-08-03
-                            </span>
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2023-08-04
+                        </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
@@ -772,15 +812,14 @@
                                     Java
                                 </a>
                             
-                            <a href="/categories/Java/JVM/" class="post-category">
-                                    JVM
+                            <a href="/categories/Java/%E6%B6%88%E6%81%AF%E9%98%9F%E5%88%97/" class="post-category">
+                                    消息队列
                                 </a>
                             
                             
                         </span>
                     </div>
                 </div>
-
                 
                 <div class="card-action article-tags">
                     
@@ -788,8 +827,8 @@
                         <span class="chip bg-color">Java</span>
                     </a>
                     
-                    <a href="/tags/JVM/">
-                        <span class="chip bg-color">JVM</span>
+                    <a href="/tags/%E6%B6%88%E6%81%AF%E9%98%9F%E5%88%97/">
+                        <span class="chip bg-color">消息队列</span>
                     </a>
                     
                 </div>
@@ -1027,7 +1066,7 @@
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;Total Words:&nbsp;<span
-                        class="white-color">63.9k</span>
+                        class="white-color">69.3k</span>
             
             
             

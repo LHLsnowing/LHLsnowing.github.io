@@ -61,9 +61,9 @@
 
     <script src="/libs/jquery/jquery-3.6.0.min.js"></script>
 
-<meta name="generator" content="Hexo 6.3.0">
+<meta name="generator" content="Hexo 6.3.0"><link rel="alternate" href="/atom.xml" title="落雪的小屋" type="application/atom+xml">
+
 <style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
-<link rel="alternate" href="/atom.xml" title="落雪的小屋" type="application/atom+xml">
 </head>
 
 
@@ -474,14 +474,14 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>Word Count:&nbsp;&nbsp;
-                    1
+                    2k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>Read Times:&nbsp;&nbsp;
-                    1 Min
+                    6 Min
                 </div>
                 
 
@@ -499,7 +499,62 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h2 id="一、"><a href="#一、" class="headerlink" title="一、"></a>一、</h2>
+                <h2 id="一、Spring设计模式"><a href="#一、Spring设计模式" class="headerlink" title="一、Spring设计模式"></a>一、Spring设计模式</h2><ul>
+<li><strong>依赖注入（Dependency Injection）</strong>：依赖注入是Spring框架的核心概念和设计模式。它通过在对象之间注入依赖关系，而不是在类内部创建这些依赖关系的实例，实现了松耦合和可扩展性。Spring使用依赖注入来管理对象之间的关系，通过配置文件或注解来声明依赖关系。</li>
+<li><strong>单例模式（Singleton Pattern）</strong>：Spring容器中管理的Bean默认是单例的，即每个Bean定义只会有一个实例。这样做可以减少对象的创建和销毁成本，并确保在整个应用程序中共享同一个实例。</li>
+<li><strong>工厂模式（Factory Pattern）</strong>：Spring框架广泛使用工厂模式来创建和管理Bean对象。BeanFactory和ApplicationContext作为工厂类，负责创建和管理Bean实例。</li>
+<li><strong>代理模式（Proxy Pattern）</strong>：Spring AOP（面向切面编程）基于代理模式实现。它通过动态代理技术，为目标对象创建一个代理对象，可以在目标对象的方法执行前后添加额外的逻辑，如事务管理、日志记录等。</li>
+<li><strong>观察者模式（Observer Pattern）</strong>：Spring框架中的事件机制基于观察者模式。通过定义事件源（Publisher）和监听器（Subscriber），实现了一种松耦合的事件通知机制。</li>
+</ul>
+<h2 id="二、RDB-和-Master"><a href="#二、RDB-和-Master" class="headerlink" title="二、RDB 和 Master"></a>二、RDB 和 Master</h2><h3 id="1-RDB"><a href="#1-RDB" class="headerlink" title="1.RDB"></a>1.RDB</h3><p><strong>RDB（Redis Database）是Redis的一种持久化方式</strong>，它将内存中的<strong>数据以二进制形式</strong>保存到磁盘上，以便在Redis重启后可以重新加载数据。RDB是Redis的默认持久化方式，相比于AOF（Append-Only File），RDB更加紧凑和高效。</p>
+<p><strong>RDB持久化的过程如下：</strong></p>
+<ul>
+<li>Redis服务器根据设定的策略（如指定间隔时间、修改次数等）自动触发持久化操作，或者通过手动执行SAVE或BGSAVE命令来进行持久化。</li>
+<li>在执行持久化操作时，Redis会fork出一个子进程，用于处理持久化过程，同时父进程继续处理客户端请求。</li>
+<li>子进程将当前内存中的数据以快照的形式写入到一个临时RDB文件中。</li>
+<li>当子进程完成数据写入后，会使用原子性操作将临时文件替换掉旧的RDB文件，确保数据的完整性。</li>
+<li>完成持久化后，Redis服务器继续处理客户端请求。</li>
+</ul>
+<p><strong>RDB持久化的优点包括：</strong></p>
+<ul>
+<li>性能好：RDB是将数据以二进制快照的形式保存到磁盘上，读写速度较快，适合用于备份和恢复大规模数据。</li>
+<li>文件紧凑：RDB文件是紧凑且压缩的，相对于AOF文件会占用较少的存储空间。</li>
+<li>适合灾难恢复：RDB可以定期备份数据，并在需要时快速恢复，适合灾难恢复和数据迁移操作。<br><strong>RDB方式也有一些缺点：</strong></li>
+<li>数据丢失：如果Redis发生突然崩溃，最后一次持久化之后的数据将会丢失。</li>
+<li>不适合频繁的写操作：由于RDB是定期持久化的方式，如果频繁进行写操作，可能会导致较长时间内的数据丢失。</li>
+<li>恢复速度较慢：RDB文件需要加载到内存中才能进行读取，如果数据量较大，可能会导致较长的恢复时间。</li>
+</ul>
+<blockquote>
+<p>总的来说，RDB是Redis的一种持久化方式，<strong>适合用于备份、灾难恢复和数据迁移</strong>等操作，但需要注意数据丢失和恢复速度的问题。在实际应用中，可以根据具体场景选择合适的持久化方式（如结合使用RDB和AOF）以满足需求。</p>
+</blockquote>
+<h3 id="2-Master"><a href="#2-Master" class="headerlink" title="2.Master"></a>2.Master</h3><p>在Redis中，Master（主节点）是指在主从复制（Master-Slave Replication）架构中负责处理写操作，并将数据同步到从节点的节点。主节点接收客户端的写请求，并将写操作记录到AOF日志或RDB文件中，然后将写命令发送给连接的从节点进行数据同步。</p>
+<p>主节点具有以下主要功能和特点：</p>
+<ul>
+<li>数据写入：主节点负责接收客户端的写操作，并将写命令记录到持久化日志（如AOF日志或RDB文件）中，确保数据持久化和恢复能力。</li>
+<li>数据同步：主节点将写命令发送给连接的从节点，进行数据同步。从节点会执行相同的写操作，从而达到数据在主从节点之间的一致性。</li>
+<li>故障切换：当主节点发生故障或不可用时，Redis可以进行自动或手动的故障切换。Redis Sentinel或Redis Cluster能够检测到主节点的故障，并从从节点中选出新的主节点继续处理写操作。</li>
+<li>高可靠性：通过主从复制，主节点可以提供高可靠性。即使主节点发生故障，从节点可以被晋升为新的主节点，继续提供服务并保持数据一致性。</li>
+</ul>
+<blockquote>
+<p>作为主节点，它对应的从节点是其数据的副本，一般不会直接处理客户端的读请求。客户端可以通过连接到主节点或从节点来执行读操作，但在写入数据时，只能通过主节点来保证数据的一致性。</p>
+</blockquote>
+<blockquote>
+<p>总结起来，Redis中的主节点负责接收写操作并进行数据同步，具有高可靠性和数据一致性的特点。它是Redis主从复制架构中的核心组件之一，用于提供数据持久化、故障切换和数据同步的功能。</p>
+</blockquote>
+<h2 id="三、哈希环"><a href="#三、哈希环" class="headerlink" title="三、哈希环"></a>三、哈希环</h2><p>哈希环（Hash Ring）是一种用于分布式系统中数据分片和负载均衡的数据结构。它通过将节点和数据映射到一个固定大小的环上来实现。<br>在哈希环中，每个节点和数据都被映射到环上的一个位置。节点可以是物理服务器、虚拟节点或其他资源，而数据可以是键值对、对象等。映射时使用哈希函数将节点和数据的标识映射到环上的某个点。</p>
+<p>哈希环的主要应用场景之一是用于构建分布式缓存系统，例如一致性哈希算法（Consistent Hashing）。在一致性哈希算法中，节点和数据的映射关系能够提供以下好处：</p>
+<ul>
+<li>数据分片：哈希环将数据均匀地分布在各个节点上，使得每个节点负责处理一部分数据，实现了数据的分片存储。</li>
+<li>负载均衡：当有新节点加入或节点离开时，由于哈希函数的平滑性质，只有少量的数据需要重新映射，大部分数据保持不变。这样可以避免数据迁移的成本，实现了负载均衡。</li>
+<li>容错性：由于数据在哈希环上的分布较为均匀且节点数量较多，当某个节点出现故障或离线时，只需将其对应的数据映射到相邻的节点，不会影响整个系统的稳定性。</li>
+</ul>
+<blockquote>
+<p>在哈希环中节点和数据的映射并不是完全随机的，而是按照哈希函数的规则进行分配。这样可以保证同一个节点或数据在多次映射中都能得到相同的结果，从而保证数据的一致性。</p>
+</blockquote>
+<blockquote>
+<p>总的来说，哈希环是一种用于实现数据分片和负载均衡的数据结构，在构建分布式系统、缓存系统等场景中具有重要的作用。它通过哈希函数和环形结构的设计，提供了高效、可扩展和容错的数据分布方案。</p>
+</blockquote>
+
                 
             </div>
             <hr/>
@@ -928,7 +983,7 @@
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;Total Words:&nbsp;<span
-                        class="white-color">63.9k</span>
+                        class="white-color">69.3k</span>
             
             
             
